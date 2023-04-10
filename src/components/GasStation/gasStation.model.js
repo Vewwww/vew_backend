@@ -1,0 +1,16 @@
+const mongoose=require("mongoose")
+const schema=mongoose.Schema({
+   name:{
+    type:String,
+    trim:true,
+    required:true
+   },
+   rate:{
+    type:Number
+   },
+   location:{
+    type:mongoose.Types.ObjectId,
+    ref:"location"
+   }
+})
+module.exports=mongoose.model(schema,"car")
