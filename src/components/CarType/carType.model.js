@@ -1,7 +1,8 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 const schema = mongoose.Schema({
-    name:{
-        type:String
-    }
-})
-module.exports = mongoose.model(schema, "carType")
+  name: {
+    ar: { type: String, required: [true, "arabic carType name required"] },
+    en: { type: String, required: [true, "arabic carType name required"] },
+  },
+});
+module.exports = mongoose.model("CarType", schema);
