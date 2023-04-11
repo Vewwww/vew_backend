@@ -14,12 +14,10 @@ const schema = mongoose.Schema({
       ref: "CarType",
     },
   ],
-  location: [
-    {
-      type: mongoose.Schema.ObjectId,
-      ref: "Location",
-    },
-  ],
+  location: {
+    type: mongoose.Schema.ObjectId,
+    ref: "Location",
+  },
   isVerified: {
     type: Boolean,
   },
