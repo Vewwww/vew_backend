@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const bcrypt=require("bcrypt")
 const schema = new mongoose.Schema({
     ownerName: {
         type: String,
@@ -50,5 +50,8 @@ const schema = new mongoose.Schema({
         default: false,
     },
 });
-
+schema.pre('save', async function (next) {
+    this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
+    next()
+  })
 module.exports = mongoose.model("mechanic workshop", schema);
