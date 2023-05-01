@@ -3,7 +3,7 @@ const bcrypt=require("bcrypt")
 const schema = mongoose.Schema({
   name: {
     type: String,
-    required: [true, "name required"],
+    required: ["name required",true],
     trim: true,
     minlength: [3, "too short name"],
     maxlength: [15, "too long name"],
