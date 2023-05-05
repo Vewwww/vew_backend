@@ -21,4 +21,4 @@ const schema=mongoose.Schema({
     ref:"location"
    }
 })
-module.exports=mongoose.model("gas station",schema)
+module.exports=mongoose.model("gasStation",schema)
