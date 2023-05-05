@@ -1,9 +1,17 @@
 const mongoose=require("mongoose")
 const schema=mongoose.Schema({
    name:{
-    type:String,
+    en_name: {
+        type:String,
+        trim:true,
+        required:true
+      },
+      ar_name: {
+        type:String,
     trim:true,
     required:true
+      }
+   
    },
    rate:{
     type:Number
@@ -13,4 +21,4 @@ const schema=mongoose.Schema({
     ref:"location"
    }
 })
-module.exports=mongoose.model(schema,"car")
+module.exports=mongoose.model("gasStation",schema)
