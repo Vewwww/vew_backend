@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
+const bcrypt=require("bcrypt")
 const schema = mongoose.Schema({
   name: {
     type: String,
-    required: [true, "name required"],
+    required: ["name required",true],
     trim: true,
     minlength: [3, "too short name"],
     maxlength: [15, "too long name"],
@@ -18,10 +19,10 @@ const schema = mongoose.Schema({
     required: [true, "password required"],
     minlength: [6, "minlength 6 characters"],
   },
-  passwordConfirmation: {
-    type: String,
-    required: [true, "password required"],
-  },
+  // passwordConfirmation: {
+  //   type: String,
+  //   required: [true, "password required"],
+  // },
   phoneNumber: {
     type: String,
     required: [true, "phone required"],
@@ -47,4 +48,10 @@ const schema = mongoose.Schema({
     type: Date,
   },
 });
+schema.pre('save', async function (next) {
+  this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
+  next()
+})
+
 module.exports = mongoose.model("Driver", schema);
+

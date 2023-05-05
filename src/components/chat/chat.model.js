@@ -1,21 +1,19 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const mongoose = require("mongoose");
 
-const chatShema =new Schema (
+var chatSchema = new mongoose.Schema({
+  room: {
+    type: String,
+    default: `${Date.now()}-${100000 + Math.random() * 900000}`,
+    required: true,
+  },
+  participants: [{ type: mongoose.Schema.Types.ObjectId }],
+  messages: [
     {
-        message:{
-            type:String,
-            required:[true,"message content name required"]
-        },
+      sender: { type: mongoose.Schema.Types.ObjectId },
+      content: { type: String, max: 2000 },
+      time: { type: Date, default: Date.now },
+    },
+  ],
+});
 
-        from:mongoose.Schema.Types.ObjectId,
-        to:mongoose.Schema.Types.ObjectId,
-
-        socketid:String
-        
-    },{timestamps:true}
-)
-
-const chat = mongoose.model ('Chat',chatShema)
-
-module.exports = chat;
+module.exports = mongoose.model("chat", chatSchema);
