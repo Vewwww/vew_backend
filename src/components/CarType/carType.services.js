@@ -1,7 +1,7 @@
-const asyncHandler = require("express-async-handler");
-const CarType = require("./carType.model");
+const asyncHandler = require("../../utils/CatchAsyncErr");
 const AppErr = require("../../utils/AppErr");
 
+const CarType = require("./carType.model");
 //@desc   get list of carTypes
 //@route  GET /api/v1/carType
 //@access Public
