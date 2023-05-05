@@ -1,4 +1,4 @@
-const asyncHandler = require("express-async-handler");
+const asyncHandler = require("../../utils/CatchAsyncErr");
 const CarType = require("./carType.model");
 const AppErr = require("../../utils/AppErr");
 
