@@ -49,6 +49,10 @@ const schema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    emailConfirm:{
+        type:Boolean,
+        default:false
+      }
 });
 schema.pre('save', async function (next) {
     this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
