@@ -7,7 +7,7 @@ module.exports=(err,req,res,next)=>{
     }
 }
 let devMode=(err,res)=>{
-    res.status(err.statusCode).json({status:err.statusCode,message:err.message,err,stack:err.stack})
+    res.status(err.statusCode).json({err,stack:err.stack})
 }
 let prodMode=(err,res)=>{
     res.status(err.statusCode).json({status:err.statusCode,message:err.message})

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-
+const bcrypt=require("bcrypt")
 const schema = new mongoose.Schema({
-  ownerName: {
+  name: {
     type: String,
     require:  [true,"owner name is required"],
   },
@@ -40,10 +40,14 @@ const schema = new mongoose.Schema({
     type: Boolean,
     default:false,
   },
-  isActive: {
-    type: Boolean,
-    default:false,
-  },
+  emailConfirm:{
+    type:Boolean,
+    default:false
+  }
 });
+schema.pre('save', async function (next) {
+  this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
+  next()
+})
 
 module.exports = mongoose.model("Winch", schema);
