@@ -3,7 +3,8 @@ const MechanicModel = require("./mechanicWorkshop.model");
 const factory = require('../Handlers/handler.factory')
 
 exports.signup=factory.signup(MechanicModel)
-exports.signin=factory.signin(MechanicModel)
+exports.signin=factory.signin()
+exports.emailVerify=factory.emailVerify(MechanicModel)
 
 
 // router.post("/", async (req, res) => {
