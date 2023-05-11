@@ -18,7 +18,7 @@ const schema = new mongoose.Schema({
         type: String,
         require:  [true,"mechanic phone number is required"],
     },
-    workshopName: {
+    name: {
         type: String,
         require:  [true,"workshop name is required"],
     },
