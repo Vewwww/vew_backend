@@ -3,7 +3,7 @@ const bcrypt=require("bcrypt")
 const schema = mongoose.Schema({
   name: {
     type: String,
-    required: ["name required",true],
+    required: [true, "name required"],
     trim: true,
     minlength: [3, "too short name"],
     maxlength: [15, "too long name"],
@@ -19,10 +19,7 @@ const schema = mongoose.Schema({
     required: [true, "password required"],
     minlength: [6, "minlength 6 characters"],
   },
-  // passwordConfirmation: {
-  //   type: String,
-  //   required: [true, "password required"],
-  // },
+  changedPasswordAt: Date,
   phoneNumber: {
     type: String,
     required: [true, "phone required"],
@@ -32,6 +29,11 @@ const schema = mongoose.Schema({
     type: String,
     enum: { values: ["male", "female"] },
     required: [true, "gender is required"],
+  },
+  role: {
+    type: String,
+    enum: ["admin", "user"],
+    default:"user"
   },
   numOfReports: {
     type: Number,
@@ -47,11 +49,18 @@ const schema = mongoose.Schema({
   LiscenceRenewalDate: {
     type: Date,
   },
+  emailConfirm:{
+    type:Boolean,
+    default:false
+  }
 });
 schema.pre('save', async function (next) {
   this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
   next()
 })
-
+schema.pre('findOneAndUpdate', async function () {
+  if (!this._update.password) return;
+  this._update.password = await bcrypt.hash(this._update.password, Number(process.env.ROUND));
+})
 module.exports = mongoose.model("Driver", schema);
 
