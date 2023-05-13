@@ -1,18 +1,19 @@
-const AppError = require("../../utils/AppError")
+const AppError = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 const driverModel = require("../driver/driver.model");
 const mechanicWorkshopModel = require("../MechanicWorkshop/mechanicWorkshop.model");
+const gasStationModel = require("../GasStation/gasStation.model");
+const maintenanceCenterModel = require("../MaintenanceCenter/maintenanceCenter.model");
 const winchModel = require("../winch/winch.model");
 const { sendEmail } = require("./email.factory");
 
 exports.signup = (model) => {
-    return catchAsyncErr(async (req, res, next) => {
-        email=req.body.email
-        const isUser = await model.findOne({ email })
-        if (isUser)
-            return next(new AppError("user already exists", 401));
+  return catchAsyncErr(async (req, res, next) => {
+    email = req.body.email;
+    const isUser = await model.findOne({ email });
+    if (isUser) return next(new AppError("user already exists", 401));
 
         let User = new model(req.body);
         await User.save();
@@ -24,6 +25,8 @@ exports.signup = (model) => {
 exports.signin = () => {
     return catchAsyncErr(async (req, res, next) => {
         let user = await driverModel.findOne({ email: req.body.email })
+
+
         if (!user || ! await bcrypt.compare(req.body.password, user.password)) {
             user = await mechanicWorkshopModel.findOne({ email: req.body.email })
             if (!user || ! await bcrypt.compare(req.body.password, user.password)) {
@@ -32,7 +35,9 @@ exports.signin = () => {
                     return next(new AppError("incorrect email or password", 401));
                 }
             }
+
         }
+       
         let token = jwt.sign({ name: user.name, userId: user._id }, process.env.JWT_KEY);
         if(user.emailConfirm==true){
             res.status(200).json({ token });
