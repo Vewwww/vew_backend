@@ -4,7 +4,7 @@ const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const DriverModel = require("../driver/driver.model");
 const WinchModel = require("../winch/winch.model");
 const MechanicWorkshopModel = require("../MechanicWorkshop/mechanicWorkshop.model");
-const AppErr = require("../../utils/AppErr");
+const AppErr = require("../../utils/AppError");
 // const ApiFeatures = require("../../utils/ApiFeatures");
 
 const populateUser = (userId) =>
