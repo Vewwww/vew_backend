@@ -1,5 +1,5 @@
 // const asyncHandler = require("express-async-handler");
-const AppErr = require("../../utils/AppErr");
+const AppErr = require("../../utils/AppError");
 const factory = require('../Handlers/handler.factory');
 const winchModel = require("./winch.model");
 
