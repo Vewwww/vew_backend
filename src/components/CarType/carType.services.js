@@ -1,11 +1,11 @@
-const asyncHandler = require("../../utils/CatchAsyncErr");
+const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const AppErr = require("../../utils/AppErr");
 
 const CarType = require("./carType.model");
 //@desc   get list of carTypes
 //@route  GET /api/v1/carType
 //@access Public
-exports.getCarTypes = asyncHandler(async (req, res) => {
+exports.getCarTypes = catchAsyncErr(async (req, res) => {
   const carTypes = await CarType.find();
 
   res.status(200).json({
@@ -18,7 +18,7 @@ exports.getCarTypes = asyncHandler(async (req, res) => {
 //@desc   get specific carTypes
 //@route  GET /api/v1/carType
 //@access Public
-exports.getCarType = asyncHandler(async (req, res, next) => {
+exports.getCarType = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
 
   const carType = await CarType.findById(id);
@@ -35,7 +35,7 @@ exports.getCarType = asyncHandler(async (req, res, next) => {
 //@desc   create carType
 //@route  POST /api/v1/carType
 //@access Private
-exports.createCarType = asyncHandler(async (req, res) => {
+exports.createCarType = catchAsyncErr(async (req, res) => {
   const { carType } = req.body;
   const createdCarType = await CarType.create(carType);
 
@@ -48,7 +48,7 @@ exports.createCarType = asyncHandler(async (req, res) => {
 //@desc   upadte carType
 //@route  PUT /api/v1/carType
 //@access Private
-exports.updateCarType = asyncHandler(async (req, res) => {
+exports.updateCarType = catchAsyncErr(async (req, res) => {
   const { id } = req.params;
   const { carType } = req.body;
   const updatedCarType = await CarType.findOneAndUpdate({ _id: id }, carType, {
@@ -68,7 +68,7 @@ exports.updateCarType = asyncHandler(async (req, res) => {
 //@desc   upadte carType
 //@route  PUT /api/v1/carType
 //@access Private
-exports.deleteCarType = asyncHandler(async (req, res) => {
+exports.deleteCarType = catchAsyncErr(async (req, res) => {
   const { id } = req.params;
   const deletedCarType = await CarType.findOneAndDelete({ _id: id });
 
