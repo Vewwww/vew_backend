@@ -18,7 +18,7 @@ const schema = new mongoose.Schema({
         type: String,
         require:  [true,"mechanic phone number is required"],
     },
-    workshopName: {
+    name: {
         type: String,
         require:  [true,"workshop name is required"],
     },
@@ -58,4 +58,8 @@ schema.pre('save', async function (next) {
     this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
     next()
   })
-module.exports = mongoose.model("mechanic workshop", schema);
+  schema.pre('findOneAndUpdate', async function () {
+    if (!this._update.password) return;
+    this._update.password = await bcrypt.hash(this._update.password, Number(process.env.ROUND));
+  })
+module.exports = mongoose.model("mechanicWorkshop", schema);

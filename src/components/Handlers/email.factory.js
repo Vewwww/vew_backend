@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
-module.exports.sendEmail=async(options)=>{
+module.exports.sendEmail=async(options,model)=>{
     let transporter = nodemailer.createTransport({
        service:"gmail",
         auth: {
@@ -9,6 +9,14 @@ module.exports.sendEmail=async(options)=>{
         },
       });
        
+
+      let modelApiName="driver";
+      if(model.collection.collectionName=== "winches") modelApiName = "winch";
+      if(model.collection.collectionName=== "mechanicworkshops") modelApiName = "mechanic";
+      
+      console.log(model.collection.collectionName);
+      console.log(modelApiName);
+
       let info =  transporter.sendMail({
         from: '"vewww 👻" <vewww.vew@gmail.com >', // sender address
         to: options.email, // list of receivers
@@ -17,7 +25,7 @@ module.exports.sendEmail=async(options)=>{
         html: `
         <div style="background:#bbf;padding:20px">
         <h1>${options.message}</h1>
-        <a href="http://localhost:3000/driver/verify/${options.token}">verify</a>
+        <a href="http://localhost:3000/${modelApiName}/verify/${options.token}">verify</a>
         </div>
         `, 
       },(err,info)=>{
