@@ -1,5 +1,5 @@
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
-const AppErr = require("../../utils/AppErr");
+const AppErr = require("../../utils/AppError");
 
 const CarType = require("./carType.model");
 //@desc   get list of carTypes
