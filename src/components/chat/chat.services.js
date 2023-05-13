@@ -1,15 +1,14 @@
 const ChatModel = require("./chat.model");
-const asyncHandler = require("../../utils/CatchAsyncErr");
 
+const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const DriverModel = require("../driver/driver.model");
 const WinchModel = require("../winch/winch.model");
 const MechanicWorkshopModel = require("../MechanicWorkshop/mechanicWorkshop.model");
-
 const AppErr = require("../../utils/AppErr");
 // const ApiFeatures = require("../../utils/ApiFeatures");
 
 const populateUser = (userId) =>
-  asyncHandler(async () => {
+catchAsyncErr(async () => {
     let user;
     user = await DriverModel.findById(userId);
     if (user) return user;
@@ -26,7 +25,7 @@ const populateUser = (userId) =>
   });
 
 const populateTheOtherUser = (usersIds, chatsOwnerId) =>
-  asyncHandler(async () => {
+  catchAsyncErr(async () => {
     let user;
 
     for (const userId of usersIds) {
@@ -38,13 +37,13 @@ const populateTheOtherUser = (usersIds, chatsOwnerId) =>
     return user;
   });
 
-exports.createChat = asyncHandler(async (req, res) => {
+exports.createChat = catchAsyncErr(async (req, res) => {
   let chat = await ChatModel.create(req.body);
 
   res.status(200).json({ status: "success", data: chat });
 });
 
-exports.addNewMessages = asyncHandler(async (req, res, next) => {
+exports.addNewMessages = catchAsyncErr(async (req, res, next) => {
   const chat = await ChatModel.findOneAndUpdate(
     { _id: req.params.id },
     { $push: { messages: { $each: req.body.messages } } },
@@ -56,7 +55,7 @@ exports.addNewMessages = asyncHandler(async (req, res, next) => {
   res.status(200).json({ status: "success", data: chat });
 });
 
-exports.getUserChats = asyncHandler(async (req, res, next) => {
+exports.getUserChats = catchAsyncErr(async (req, res, next) => {
   //get chats its participants contain userId and exclude chat messages
   const chats = await ChatModel.find({
     participants: { $type: "array", $elemMatch: { $eq: req.params.userId } },
@@ -101,7 +100,7 @@ exports.getUserChats = asyncHandler(async (req, res, next) => {
   //   const chats = await mongooseQuery;
 });
 
-exports.getChat = asyncHandler(async (req, res, next) => {
+exports.getChat = catchAsyncErr(async (req, res, next) => {
   const chat = await ChatModel.findById(req.params.id);
 
   if (!chat) return next(new AppErr("no chat found with this id", 404));
@@ -109,7 +108,7 @@ exports.getChat = asyncHandler(async (req, res, next) => {
   res.status(200).json({ data: chat });
 });
 
-exports.deleteChat = asyncHandler(async (req, res) => {
+exports.deleteChat = catchAsyncErr(async (req, res) => {
   const chat = await ChatModel.findOneAndDelete({ _id: req.params.id });
 
   if (!chat) return next(new AppErr("no chat found with this id", 404));
