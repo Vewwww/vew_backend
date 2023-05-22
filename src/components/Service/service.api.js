@@ -4,7 +4,7 @@ const {
   getServices,
   getService,
   updateService,
-deleteService,
+  deleteService,
 } = require("./service.services");
 
 const router = express.Router();
