@@ -31,6 +31,7 @@ function insertionSort(arr) {
     let j = i - 1;
     let temp = arr[i];
     while (j >= 0 && arr[j].distance > temp.distance) {
+
       arr[j + 1] = arr[j];
       j--;
     }
@@ -42,6 +43,7 @@ function insertionSort(arr) {
 exports.getNearestPlaces = (places, userLat, userLon) => {
   for (let i = 0; i < places.length; i++) {
     places[i].distance = calculateDistence(
+
       userLat,
       userLon,
       places[i]["location"]["latitude"],

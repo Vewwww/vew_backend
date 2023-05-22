@@ -13,5 +13,6 @@ exports.allRequires = (app) => {
   );
   app.use("/winch", require("../components/winch/winch.api"));
   app.use("/gasStation", require("../components/GasStation/gasStation.api"));
+
   // app.use("/",require("../components/Handlers/allUsers.api"));
 };
