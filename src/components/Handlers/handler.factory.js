@@ -17,39 +17,35 @@ exports.signup = (model) => {
     const isUser = await model.findOne({ email });
     if (isUser) return next(new AppError("user already exists", 401));
 
-    let User = new model(req.body);
-    await User.save();
-    let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
-    await sendEmail({ email, token, message: "Hello" });
-    res.status(200).json(User);
-  });
-};
+        let User = new model(req.body);
+        await User.save();
+        let token=jwt.sign({email},process.env.EMAIL_JWT_KEY)
+        await sendEmail({email,token,message:"Hello"},model)
+        res.status(200).json(User);
+    });
+}
 exports.signin = () => {
-  return catchAsyncErr(async (req, res, next) => {
-    let user = await driverModel.findOne({ email: req.body.email });
+    return catchAsyncErr(async (req, res, next) => {
+        let user = await driverModel.findOne({ email: req.body.email })
 
-    if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
-      user = await mechanicWorkshopModel.findOne({ email: req.body.email });
-      if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
-        user = await winchModel.findOne({ email: req.body.email });
-        if (
-          !user ||
-          !(await bcrypt.compare(req.body.password, user.password))
-        ) {
-          return next(new AppError("incorrect email or password", 401));
+
+        if (!user || ! await bcrypt.compare(req.body.password, user.password)) {
+            user = await mechanicWorkshopModel.findOne({ email: req.body.email })
+            if (!user || ! await bcrypt.compare(req.body.password, user.password)) {
+                user = await winchModel.findOne({ email: req.body.email })
+                if (!user || ! await bcrypt.compare(req.body.password, user.password)) {
+                    return next(new AppError("incorrect email or password", 401));
+                }
+            }
+
         }
-      }
-    }
-
-    let token = jwt.sign(
-      { name: user.name, userId: user._id },
-      process.env.JWT_KEY
-    );
-    if (user.emailConfirm == true) {
-      res.status(200).json({ token });
-    } else {
-      res.status(401).json({ message: "Please confirm your email" });
-    }
+       
+        let token = jwt.sign({ name: user.name, userId: user._id }, process.env.JWT_KEY);
+        if(user.emailConfirm==true){
+            res.status(200).json({ token });
+        }else{
+            res.status(401).json({ message:"Please confirm your email" });
+        }
   });
 };
 exports.emailVerify = (model) => {
