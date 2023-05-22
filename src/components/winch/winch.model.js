@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const bcrypt = require("bcrypt")
 const schema = new mongoose.Schema({
   name: {
@@ -12,6 +13,7 @@ const schema = new mongoose.Schema({
   password: {
     type: String,
     require: [true, "password is required"],
+
     min: 6
   },
   phoneNumber: {
@@ -25,6 +27,7 @@ const schema = new mongoose.Schema({
   report: {
     reportsNumber: {
       type: Number,
+
       default: 0
     },
     dateReport: {
@@ -35,18 +38,23 @@ const schema = new mongoose.Schema({
   rate: {
     type: Number,
     default: 4.5
+
   },
   isSuspended: {
     type: Boolean,
-    default: false,
+    default: false
   },
   emailConfirm: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
+  location: {
+    type: mongoose.Schema.ObjectId,
+    ref: "location",
+  
 });
-schema.pre('save', async function (next) {
-  this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
+schema.pre("save", async function (next) {
+  this.password = await bcrypt.hash(this.password, Number(process.env.ROUND
   next()
 })
 schema.pre('findOneAndUpdate', async function () {

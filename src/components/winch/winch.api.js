@@ -1,10 +1,16 @@
-const { signin, signup, emailVerify } = require("./winch.services");
+const {
+  signin,
+  signup,
+  emailVerify,
+  getNearestWinch,
+} = require("./winch.services");
 
 const router = require("express").Router();
 
-router.post('/signup', signup)
-router.post('/signin', signin)
-router.get('/verify/:token',emailVerify)
+router.post("/signup", signup);
+router.post("/signin", signin);
+router.get("/verify/:token", emailVerify);
+router.get("/getNearestWinch", getNearestWinch);
 // const {
 //   createWinch,
 //   getWinch,
