@@ -16,7 +16,7 @@ const schema = mongoose.Schema({
   ],
   location: {
     type: mongoose.Schema.ObjectId,
-    ref: "Location",
+    ref: "location",
   },
   isVerified: {
     type: Boolean,

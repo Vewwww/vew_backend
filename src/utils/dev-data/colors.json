@@ -1,0 +1,149 @@
+[
+  {
+    "code": "#000000",
+    "name": {
+      "en": "Black",
+      "ar": "أسود"
+    }
+  },
+  {
+    "code": "#0000ff",
+    "name": {
+      "en": "Blue",
+      "ar": "أزرق"
+    }
+  },
+  {
+    "code": "#000080",
+    "name": {
+      "en": "Dark Blue",
+      "ar": "أزرق داكن"
+    }
+  },
+  {
+    "code": "#008000",
+    "name": {
+      "en": "Green",
+      "ar": "أخضر"
+    }
+  },
+  {
+    "code": "#008080",
+    "name": {
+      "en": "Teal",
+      "ar": "تركوازى"
+    }
+  },
+  {
+    "code": "#00c000",
+    "name": {
+      "en": "Lime",
+      "ar": "أصفر مخضر"
+    }
+  },
+  {
+    "code": "#00ffff",
+    "name": {
+      "en": "Cyan",
+      "ar": "سماوي"
+    }
+  },
+  {
+    "code": "#00ff00",
+    "name": {
+      "en": "Yellow Green",
+      "ar": "أصفر ليموني"
+    }
+  },
+  {
+    "code": "#800000",
+    "name": {
+      "en": "Maroon",
+      "ar": "أحمر داكن"
+    }
+  },
+  {
+    "code": "#800080",
+    "name": {
+      "en": "Purple",
+      "ar": "أرجواني"
+    }
+  },
+  {
+    "code": "#808000",
+    "name": {
+      "en": "Olive",
+      "ar": "زيتوني"
+    }
+  },
+  {
+    "code": "#808080",
+    "name": {
+      "en": "Gray",
+      "ar": "رمادي"
+    }
+  },
+  {
+    "code": "#c00000",
+    "name": {
+      "en": "Red",
+      "ar": "أحمر"
+    }
+  },
+  {
+    "code": "#c000c0",
+    "name": {
+      "en": "Magenta",
+      "ar": "أرجواني"
+    }
+  },
+  {
+    "code": "#c0c000",
+    "name": {
+      "en": "Brown",
+      "ar": "بني"
+    }
+  },
+  {
+    "code": "#c0c0c0",
+    "name": {
+      "en": "White",
+      "ar": "أبيض"
+    }
+  },
+  {
+    "code": "#ff0000",
+    "name": {
+      "en": "Firebrick",
+      "ar": "أحمر ناري"
+    }
+  },
+  {
+    "code": "#ff00ff",
+    "name": {
+      "en": "Pink",
+      "ar": "وردي"
+    }
+  },
+  {
+    "code": "#ff8000",
+    "name": {
+      "en": "Orange",
+      "ar": "برتقالي"
+    }
+  },
+  {
+    "code": "#ffff00",
+    "name": {
+      "en": "Yellow",
+      "ar": "أصفر"
+    }
+  },
+  {
+    "code": "#ffffff",
+    "name": {
+      "en": "White",
+      "ar": "أبيض"
+    }
+  }
+]
