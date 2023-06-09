@@ -5,4 +5,4 @@ const schema = mongoose.Schema({
     en: { type: String, required: [true, "English Service name required"] },
   },
 });
-module.exports = mongoose.model("Service", schema);
+module.exports = mongoose.model("service", schema);
