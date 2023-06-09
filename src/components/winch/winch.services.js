@@ -7,7 +7,6 @@ require("../location/location.model");
 //create new winch
 
 exports.signup = factory.signup(winchModel);
-exports.signin = factory.signin();
 exports.emailVerify = factory.emailVerify(winchModel);
 
 exports.getNearestWinch = catchAsyncErr(async (req, res) => {

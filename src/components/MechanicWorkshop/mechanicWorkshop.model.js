@@ -64,7 +64,12 @@ const schema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "location",
   },
+  logedIn:{
+    type:Boolean,
+    default:false
+  }
 });
+
 schema.pre('save', async function (next) {
     this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
     next()
@@ -74,3 +79,5 @@ schema.pre('save', async function (next) {
     this._update.password = await bcrypt.hash(this._update.password, Number(process.env.ROUND));
   })
 module.exports = mongoose.model("mechanicWorkshop", schema);
+
+

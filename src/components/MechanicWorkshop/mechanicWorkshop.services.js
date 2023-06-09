@@ -6,7 +6,6 @@ const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 require("../location/location.model");
 
 exports.signup = factory.signup(MechanicModel);
-exports.signin = factory.signin();
 exports.emailVerify = factory.emailVerify(MechanicModel);
 
 exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
