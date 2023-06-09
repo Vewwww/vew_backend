@@ -9,7 +9,7 @@ const schema = mongoose.Schema({
     type: Number,
   },
   location: {
-    type: mongoose.Types.ObjectId,
+    type: mongoose.Schema.ObjectId,
     ref: "location",
   },
 });
