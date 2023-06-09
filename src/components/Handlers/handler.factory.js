@@ -24,34 +24,42 @@ exports.signup = (model) => {
     res.status(200).json(User);
   });
 };
-exports.signin = () => {
-  return catchAsyncErr(async (req, res, next) => {
-    let user = await driverModel.findOne({ email: req.body.email });
 
+exports.login = catchAsyncErr(async(req,res,next)=>{
+  let user = await driverModel.findOne({ email: req.body.email });
+  let modelName = "driver";
+  
+  if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
+    user = await mechanicWorkshopModel.findOne({ email: req.body.email });
+    modelName = "mechanicworkshops";
     if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
-      user = await mechanicWorkshopModel.findOne({ email: req.body.email });
-      if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
-        user = await winchModel.findOne({ email: req.body.email });
-        if (
-          !user ||
-          !(await bcrypt.compare(req.body.password, user.password))
-        ) {
-          return next(new AppError("incorrect email or password", 401));
-        }
+      user = await winchModel.findOne({ email: req.body.email });
+      modelName = "winches";
+      if (
+        !user ||
+        !(await bcrypt.compare(req.body.password, user.password))
+      ) {
+        return next(new AppError("incorrect email or password", 401));
       }
     }
+  }
 
-    let token = jwt.sign(
-      { name: user.name, userId: user._id },
-      process.env.JWT_KEY
-    );
-    if (user.emailConfirm == true) {
-      res.status(200).json({ token });
-    } else {
-      res.status(401).json({ message: "Please confirm your email" });
-    }
+  let token = jwt.sign({ modelName, userId: user._id }, process.env.JWT_KEY);
+
+  
+  if (user.emailConfirm === true) {
+    user.logedIn = true;
+    user.save();
+    res.status(200).json({ token, user });
+  } else {
+    res.status(401).json({ message: "Please confirm your email" });
+  }
+})
+
+exports.signin = catchAsyncErr(async (req, res, next) => {
+    console.log("entered here")
   });
-};
+
 exports.emailVerify = (model) => {
   return catchAsyncErr(async (req, res, next) => {
     const { token } = req.params;
@@ -73,6 +81,84 @@ exports.emailVerify = (model) => {
     });
   });
 };
+
+exports.authinticate = catchAsyncErr(async (req, res, next) => {
+  let token;
+  if (req.headers.authorization) {
+    token = req.headers.authorization.split(" ")[1];
+  }
+  if (!token) {
+    return next(
+      new AppError(
+        "you are not logedin, please login to get access to this route"
+      ),
+      401
+    );
+  }
+
+  const decoded = jwt.verify(token, process.env.JWT_KEY);
+
+  const currentUser = null;
+  if (decoded.modelName === "winches") {
+    currentUser = await winchModel.findById(decoded.userId);
+  } else if (decoded.modelName === "mechanicworkshops") {
+    currentUser = await mechanicWorkshopModel.findById(decoded.userId);
+  } else {
+    currentUser = await driverModel.findById(decoded.userId);
+  }
+
+  if (!currentUser) return next(new AppError("this user no longer exist", 401));
+
+  if (currentUser.logedIn === false)
+    return next(
+      new AppError(
+        "you are no longer logedin, please login to get access to this route",
+        401
+      )
+    );
+
+  // if (currentUser.passwordChangedAt) {
+  //   const passwordChangedTimeStamp = parseInt(currentUser.passwordChangedAt.getTime() / 1000, 10);
+  //   if (passwordChangedTimeStamp > decoded.iat)
+  //     return next(new ApiError('user recently changed his password, please login again'), 401);
+  // }
+  req.user = currentUser;
+  next();
+});
+
+exports.logout = catchAsyncErr(async (req, res, next) => {
+  let token=null;
+  if (req.headers.authorization) {
+    token = req.headers.authorization.split(" ")[1];
+  }
+  if (!token) {
+    return next(
+      new AppError(
+        "you are not logedin, please login to get access to this route"
+      ),
+      401
+    );
+  }
+  const decoded = jwt.verify(token, process.env.JWT_KEY);
+
+  let currentUser = null;
+  if (decoded.modelName === "winches") {
+    currentUser = await winchModel.findById(decoded.userId);
+  } else if (decoded.modelName === "mechanicworkshops") {
+    currentUser = await mechanicWorkshopModel.findById(decoded.userId);
+  } else {
+    currentUser = await driverModel.findById(decoded.userId);
+  }
+
+  if (!currentUser) return next(new AppError("this user no longer exist", 401));
+
+  if (currentUser.logedIn === true) {
+    currentUser.logedIn = false;
+    currentUser.save();
+  }
+
+  res.status(200).json({ message: "loged out successfuly" });
+});
 
 exports.search = catchAsyncErr(async (req, res, next) => {
   const { keyword } = req.query;

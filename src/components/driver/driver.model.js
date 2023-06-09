@@ -52,6 +52,10 @@ const schema = mongoose.Schema({
   emailConfirm:{
     type:Boolean,
     default:false
+  },
+  logedIn:{
+    type:Boolean,
+    default:false
   }
 });
 schema.pre('save', async function (next) {

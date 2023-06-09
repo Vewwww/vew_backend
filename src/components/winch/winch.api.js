@@ -1,5 +1,4 @@
 const {
-  signin,
   signup,
   emailVerify,
   getNearestWinch,
@@ -8,7 +7,6 @@ const {
 const router = require("express").Router();
 
 router.post("/signup", signup);
-router.post("/signin", signin);
 router.get("/verify/:token", emailVerify);
 router.get("/getNearestWinch", getNearestWinch);
 // const {
