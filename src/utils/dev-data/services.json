@@ -1,0 +1,140 @@
+[
+  {
+    "name": {
+      "ar": "خدمة تغيير الزيت",
+      "en": "Oil change service"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة الصيانة الدورية",
+      "en": "Regular maintenance service"
+    }
+  },
+  {
+    "name": {
+      "ar": "شحن وصيانة التكييف",
+      "en": "Charging and maintenance of the air conditioner"
+    }
+  },
+  {
+    "name": {
+      "ar": "ضبط زوايا و ترصيص",
+      "en": "Adjust angles and alignment"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة إصلاح الأعطال",
+      "en": "Breakdown repair service"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة إصلاح المفاتيح",
+      "en": "repair keys Service"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة الضبط والبرمجة",
+      "en": "Tuning and programming service"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة الإطارات و الجنوط",
+      "en": "Tire and rims service"
+    }
+  },
+  {
+    "name": {
+      "ar": "إصلاح اكصدام و فايبر",
+      "en": "Repair bumper and fiber"
+    }
+  },
+  {
+    "name": {
+      "ar": "بواجى",
+      "en": "Spark plug service"
+    }
+  },
+  {
+    "name": {
+      "ar": "صيانة ردياتير",
+      "en": "Radiator maintenance"
+    }
+  },
+  {
+    "name": {
+      "ar": "صيانة فتيس",
+      "en": "Repair gearbox service"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة الزجاج",
+      "en": "Glass service"
+    }
+  },
+  {
+    "name": {
+      "ar": "سمكرة و دهان",
+      "en": "Denting and painting service"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة البطاريات",
+      "en": "Battery service"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة الشمعدانات",
+      "en": "Candle service"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة التعليق أو العفشه",
+      "en": "Suspension service"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة الفرامل",
+      "en": "Brake service"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة العادم",
+      "en": "Exhaust service"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة التنظيف",
+      "en": "Cleaning service"
+    }
+  },
+  {
+    "name": {
+      "ar": "كماليات و اكسسوارات و نانو",
+      "en": "Acessories and nano"
+    }
+  },
+  {
+    "name": {
+      "ar": "خدمة العناية بالسيارة",
+      "en": "Car care service"
+    }
+  },
+  {
+    "name": {
+      "ar": "قطع غيار سيارات جديده",
+      "en": "New car parts"
+    }
+  }
+]
