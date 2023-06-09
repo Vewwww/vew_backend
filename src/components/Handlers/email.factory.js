@@ -23,13 +23,14 @@ module.exports.sendEmail=async(options)=>{
         <h1>${options.message}</h1>
         <a href="http://localhost:3000/${modelApiName}/verify/${options.token}">verify</a>
         </div>
-        `, 
-      },(err,info)=>{
-        if(err){
-            console.log(err);
-        }else{
-            console.log(info);
-        }
-
-      });
-}
+        `,
+    },
+    (err, info) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(info);
+      }
+    }
+  );
+};

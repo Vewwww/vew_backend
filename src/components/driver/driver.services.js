@@ -34,7 +34,7 @@ exports.updateUser = catchAsyncErr(async (req, res, next) => {
     !User && next(new AppError("User not found", 400));
     User && res.status(200).json(User);
 });
-
+//n7otaha f handler
 exports.changePassword = catchAsyncErr(async (req, res, next) => {
     const { id } = req.params;
     req.body.changedPasswordAt = Date.now()
