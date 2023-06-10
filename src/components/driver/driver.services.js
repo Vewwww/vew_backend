@@ -2,14 +2,20 @@
 const driverModel=require("./driver.model")
 const AppError = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
+const carModel = require("../Car/car.model");
 // to add new user
 exports.createUser = catchAsyncErr(async (req, res, next) => {
     const isUser = await driverModel.findOne({ email: req.body.email })
     if (isUser) return next(new AppError("user already exists", 401));
-
-    let User = new driverModel(req.body);
-    await User.save();
-    res.status(200).json(User);
+    let user = new driverModel(req.body);
+    await user.save();
+    let cars=[]
+    if(req.body.cars){
+        req.body.cars.owner=user._id
+        cars=new carModel(req.body.cars)
+        await cars.save();
+    }
+    res.status(200).json(user,{data:{user,car}});
 });
 
 // to get all Users
