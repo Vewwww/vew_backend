@@ -12,6 +12,7 @@ const {
   deleteUser,
   changePassword,
 } = require("./driver.services");
+const driverValidation = require("./driver.validator");
 
 const router = require("express").Router();
 router
@@ -24,7 +25,7 @@ router
   .put(ProtectedRoutes, updateUser)
   .delete(ProtectedRoutes, deleteUser);
 router.patch("/changePassword/:id", ProtectedRoutes, changePassword);
-router.post("/signup", signup,createUser);
+router.post("/signup",driverValidation ,signup,createUser);
 router.get("/verify/:token", emailVerify);
 
 module.exports = router;
