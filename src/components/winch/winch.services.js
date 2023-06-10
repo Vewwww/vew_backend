@@ -1,8 +1,9 @@
-const {catchAsyncErr} = require('../../utils/CatchAsyncErr')
+const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const factory = require("../Handlers/handler.factory");
 const AppErr = require("../../utils/AppError");
 
 const winchModel = require("./winch.model");
+const carModel = require("../Car/car.model");
 require("../location/location.model");
 //create new winch
 
@@ -20,19 +21,30 @@ exports.getNearestWinch = catchAsyncErr(async (req, res) => {
   res.status(200).json({ results: searchResult.length, data: searchResult });
 });
 
-// exports.createWinch = asyncHandler(async (req, res) => {
-//    const _winch= req.body;
-//     const createdwinch= await winch.create(_winch);
+exports.createWinch = catchAsyncErr(async (req, res) => {
+  let car = null;
+  if (req.body.car) {
+    car = req.body.car;
+    delete req.body.car;
+  }
 
-//     res.status(200).json({
-//       status: "success",
-//       data: createdwinch,
-//     });
-//   });
+  const createdwinch = await winchModel.create(req.body);
+
+  let carResult = {};
+  if (car !== null) {
+    car.owner = createdwinch._id;
+    const createdCar = await carModel.create(car);
+    carResult = createdCar;
+  }
+
+  res.status(200).json({
+    data: { ...createdwinch._doc, car },
+  });
+});
 
 //get all winches
 
-// exports.getWinches = asyncHandler(async (req, res) => {
+// exports.getWinches = catchAsyncErr(async (req, res) => {
 //   const winches = await winch.find();
 
 //   res.status(200).json({
@@ -44,7 +56,7 @@ exports.getNearestWinch = catchAsyncErr(async (req, res) => {
 
 //get specific winch with id
 
-//   exports.getWinch = asyncHandler(async (req, res, next) => {
+//   exports.getWinch = catchAsyncErr(async (req, res, next) => {
 //     const { id } = req.params;
 
 //     const _winch = await winch.findById(id);
@@ -59,7 +71,7 @@ exports.getNearestWinch = catchAsyncErr(async (req, res) => {
 //   });
 
 // // update specific winch with id
-//   exports.updateWinch = asyncHandler(async (req, res) => {
+//   exports.updateWinch = catchAsyncErr(async (req, res) => {
 //     const { id } = req.params;
 //     const  _winch  = req.body;
 //     const updatedWinch = await winch.findOneAndUpdate({ _id: id }, _winch, {
@@ -80,7 +92,7 @@ exports.getNearestWinch = catchAsyncErr(async (req, res) => {
 
 // // delete specific winch with id
 
-//   exports.deleteWinch = asyncHandler(async (req, res) => {
+//   exports.deleteWinch = catchAsyncErr(async (req, res) => {
 //     const { id } = req.params;
 //     const deletedWinch = await winch.findOneAndDelete({ _id: id });
 

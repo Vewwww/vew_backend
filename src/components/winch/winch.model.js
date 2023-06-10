@@ -20,10 +20,6 @@ const schema = new mongoose.Schema({
     type: String,
     require: [true, "phone number is required"],
   },
-  plateNumber: {
-    type: String,
-    require: [true, "plate number is required"]
-  },
   report: {
     reportsNumber: {
       type: Number,
@@ -55,6 +51,10 @@ const schema = new mongoose.Schema({
   logedIn:{
     type:Boolean,
     default:false
+  },
+  role:{
+    type:String,
+    default:"winch"
   }
 });
 schema.pre("save", async function (next) {
