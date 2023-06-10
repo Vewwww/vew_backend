@@ -1,8 +1,7 @@
 const gasStationModel = require("./gasStation.model");
-//const AppErr = require("../../utils/AppErr");
-const AppError = require("../utils/AppErr");
-const { catchAsyncErr } = require("../utils/CatchAsyncErr");
-const factory=require("../handlers/handlers.factory");
+const AppErr = require("../../utils/AppErr");
+const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
+const factory=require("../Handlers/handler.factory");
 //create new gas station
 
 exports.createGasStation = factory.createService(gasStationModel);
