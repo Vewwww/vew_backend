@@ -1,6 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const request = require("./request.model");
-const AppErr = require("../../utils/AppErr");
+const AppErr = require("../../utils/AppError");
 
 //create new request
 
