@@ -73,9 +73,10 @@ exports.emailVerify = (model) => {
             { email: decoded.email },
             { emailConfirm: true }
           );
-          res.json({ message: "verified" });
+          res.status(200).send(`<h1 style="background:#fff">Email verified successfully!!!</h1>
+          <h3>Now you can login</h3>`);
         } else {
-          res.json({ message: "user not found" });
+          res.status(404).send(`<h1 style="background:#fff">user not found</h1>`);
         }
       }
     });

@@ -24,7 +24,7 @@ router
   .put(ProtectedRoutes, updateUser)
   .delete(ProtectedRoutes, deleteUser);
 router.patch("/changePassword/:id", ProtectedRoutes, changePassword);
-router.post("/signup", signup);
+router.post("/signup", signup,createUser);
 router.get("/verify/:token", emailVerify);
 
 module.exports = router;
