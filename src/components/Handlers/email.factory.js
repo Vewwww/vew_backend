@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
-module.exports.sendEmail=async(options)=>{
+module.exports.sendEmail=async(options,model)=>{
     let transporter = nodemailer.createTransport({
        service:"gmail",
         auth: {
