@@ -3,10 +3,10 @@ const {
   emailVerify,
   getNearestWinch,
 } = require("./winch.services");
-
+winchValidation=require("./winch.validator");
 const router = require("express").Router();
 
-router.post("/signup", signup);
+router.post("/signup", winchValidation,signup);
 router.get("/verify/:token", emailVerify);
 router.get("/getNearestWinch", getNearestWinch);
 // const {
