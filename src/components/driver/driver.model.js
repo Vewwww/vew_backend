@@ -45,10 +45,6 @@ const schema = mongoose.Schema({
     type: Boolean,
     default: false,
   },
-
-  LiscenceRenewalDate: {
-    type: Date,
-  },
   emailConfirm:{
     type:Boolean,
     default:false

@@ -6,8 +6,8 @@ const schema = mongoose.Schema({
         trim:true
     },
     carModel: {
-        type: String,
-        trim:true
+        type: mongoose.Types.ObjectId,
+        ref:"carModel"
     },
     year: {
         type: String
@@ -19,7 +19,8 @@ const schema = mongoose.Schema({
         type: Date
     },
     color: {
-        type: String
+        type: mongoose.Types.ObjectId,
+        ref:"color"
     },
     miles: {
         type: Number
@@ -33,7 +34,7 @@ const schema = mongoose.Schema({
     },
     owner:{
         type:mongoose.Types.ObjectId,
-        ref:"location"
+        ref:"driver"
     }
 })
-module.exports = mongoose.model(schema, "car")
+module.exports = mongoose.model("car",schema)
