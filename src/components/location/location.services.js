@@ -1,61 +1,49 @@
-const asyncHandler = require("express-async-handler");
-const AppErr = require("../../utils/AppErr");
 const locationModel = require("./location.model");
+const AppErr = require("../../utils/AppErr");
+const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
+const factory=require("../Handlers/handler.factory");
 
 //@desc   create location
 //@route  POST /api/v1/location
 //@access Private
-exports.createLocation = asyncHandler(async (req, res) => {
-  const  location  = req.body;
-  const createdLocation = await locationModel.create(location);
-
-  res.status(200).json({
-    status: "success",
-    data: createdLocation,
-  });
-});
+exports.createLocation = factory.createService(locationModel);
 
 
-exports.getLocations = asyncHandler(async (req, res) => {
+
+exports.getLocations = catchAsyncErr(async (req, res, next) => {
   const locations = await locationModel.find();
+  if (!locations) { return next(new AppError("no location fount", 404)); }
 
   res.status(200).json({
     status: "success",
     results: locations.length,
     data: locations,
   });
-});  
-
+});
 
 
 //get specific location with id
 
-exports.getLocation = asyncHandler(async (req, res, next) => {
+exports.getLocation = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
-
-  const _location = await locationModel.findById(id);
-  if (!_location) {
-    return next(new AppErr("No location found for this id", 404));
+  const location = await locationModel.findById(id);
+  if (!location) {
+    return next(new AppError("No location found for this id", 404));
   }
-
   res.status(200).json({
     status: "success",
-    data: _location,
+    data: location,
   });
 });
-
 // update specific location with id
-exports.updateLocation = asyncHandler(async (req, res) => {
+exports.updateLocation = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
-  const  _location  = req.body;
-  const updatedLocation = await locationModel.findOneAndUpdate({ _id: id }, _location, {
+  const location = req.body;
+  const updatedLocation = await locationModel.findOneAndUpdate({ _id: id }, location, {
     new: true,
   });
-
-  console.log(_location);
-
-  if (!updatedLocation) {
-    return next(new AppErr("No location found for this id", 404));
+  if (!location) {
+    return next(new AppError("No location found for this id", 404));
   }
 
   res.status(201).json({
@@ -66,12 +54,12 @@ exports.updateLocation = asyncHandler(async (req, res) => {
 
 // delete specific location with id
 
-exports.deleteLocation = asyncHandler(async (req, res) => {
+exports.deleteLocation = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
   const deletedLocation = await locationModel.findOneAndDelete({ _id: id });
 
   if (!deletedLocation) {
-    return next(new AppErr("No location found for this id", 404));
+    return next(new AppError("No location found for this id", 404));
   }
 
   res.status(204).send();

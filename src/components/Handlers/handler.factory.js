@@ -11,6 +11,19 @@ const { getNearestPlaces } = require("./getNearestPlaces");
 const winchModel = require("../winch/winch.model");
 const { sendEmail } = require("./email.factory");
 
+
+exports.createService = (model) => {
+    return catchAsyncErr(async (req, res, next) => {
+      const obj = req.body;
+      const createdService = await model.create(obj);
+      console.log(createdService);
+      res.status(200).json({
+        status: "success",
+        data: createdService,
+      });
+    });
+  }
+
 exports.signup = (model) => {
   return catchAsyncErr(async (req, res, next) => {
     email = req.body.email;
@@ -67,6 +80,7 @@ exports.emailVerify = (model) => {
             { email: decoded.email },
             { emailConfirm: true }
           );
+
           res.status(200)
             .send(`<h1 style="background:#fff">Email verified successfully!!!</h1>
           <h3>Now you can login</h3>`);

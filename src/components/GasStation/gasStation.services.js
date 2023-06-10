@@ -1,8 +1,81 @@
-const express = require("express");
 const gasStationModel = require("./gasStation.model");
-const router = express.Router();
+const AppErr = require("../../utils/AppErr");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
-require("../location/location.model");
+const factory=require("../Handlers/handler.factory");
+//create new gas station
+
+exports.createGasStation = factory.createService(gasStationModel);
+
+
+//get all gas station
+
+exports.getGasStations = catchAsyncErr(async (req, res, next) => {
+  const gasStations = await gasStationModel.find();
+  if (!gasStations) { return next(new AppError("no gas stations fount", 404)); }
+
+  res.status(200).json({
+    status: "success",
+    results: gasStations.length,
+    data: gasStations,
+  });
+});
+
+
+
+
+
+
+//get specific gas station with id
+
+exports.getGasStation = catchAsyncErr(async (req, res, next) => {
+  const { id } = req.params;
+  const gasStation = await gasStationModel.findById(id);
+  if (!gasStation) {
+    return next(new AppError("No gas station found for this id", 404));
+  }
+  res.status(200).json({
+    status: "success",
+    data: gasStation,
+  });
+});
+
+
+
+// update specific gas station with id
+exports.updateGasStation = catchAsyncErr(async (req, res, next) => {
+  const { id } = req.params;
+  const gasStation = req.body;
+  const updatedGasStations = await gasStationModel.findOneAndUpdate({ _id: id }, gasStation, {
+    new: true,
+  });
+  if (!gasStation) {
+    return next(new AppError("No gas station found for this id", 404));
+  }
+
+  res.status(201).json({
+    status: "success",
+    data: updatedGasStations,
+  });
+});
+
+
+
+
+
+
+
+// delete specific gas station with id
+
+exports.deleteGasStation =  catchAsyncErr(async (req, res, next) => {
+  const { id } = req.params;
+  const deletedGasStation = await gasStationModel.findOneAndDelete({ _id: id });
+
+  if (!deletedGasStation) {
+    return next(new AppError("No gas station found for this id", 404));
+  }
+
+  res.status(204).send();
+});
 
 exports.getNearestGasStations = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;
@@ -14,6 +87,9 @@ exports.getNearestGasStations = catchAsyncErr(async (req, res) => {
   searchResult = getNearestPlaces(manitenceCenters, latitude, longitude);
   res.status(200).json({ results: searchResult.length, data: searchResult });
 });
+
+
+
 
 // router.post("/", async (req, res) => {
 //   await gasStationModel.create({
@@ -72,3 +148,4 @@ exports.getNearestGasStations = catchAsyncErr(async (req, res) => {
 //   router,
 //   getNearestGasStations,
 // };
+

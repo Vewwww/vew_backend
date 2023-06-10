@@ -1,10 +1,11 @@
-const express = require("express");
+const maintenanceCenterModel = require("./maintenanceCenter.model");
+const AppErr = require("../../utils/AppErr");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
-const MaintanenceCenterModel = require("./maintenanceCenter.model");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 require("../location/location.model");
-const router = express.Router();
+//create new service
 
+exports.createMaintenanceCenter = factory.createService(maintenanceCenterModel);
 const getNearestMaintenanceCenters = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;
   let filter = {};
@@ -20,6 +21,87 @@ const getNearestMaintenanceCenters = catchAsyncErr(async (req, res) => {
   searchResult = getNearestPlaces(manitenceCenters, latitude, longitude);
   res.status(200).json({ results: searchResult.length, data: searchResult });
 });
+
+//get all maintenance center
+
+exports.getMaintenanceCenters = catchAsyncErr(async (req, res, next) => {
+  const maintenanceCenters = await maintenanceCenterModel.find();
+  if (!maintenanceCenters) { return next(new AppError("no maintenance center fount", 404)); }
+
+  res.status(200).json({
+    status: "success",
+    results: maintenanceCenters.length,
+    data: maintenanceCenters,
+  });
+});
+
+
+
+
+
+
+//get specific maintenance center with id
+
+exports.getMaintenanceCenter = catchAsyncErr(async (req, res, next) => {
+  const { id } = req.params;
+  const maintenanceCenter = await maintenanceCenterModel.findById(id);
+  if (!maintenanceCenter) {
+    return next(new AppError("No maintenance center found for this id", 404));
+  }
+  res.status(200).json({
+    status: "success",
+    data: maintenanceCenter,
+  });
+});
+
+
+
+// update specific maintenance center with id
+exports.updateMaintenanceCenter = catchAsyncErr(async (req, res, next) => {
+  const { id } = req.params;
+  const maintenanceCenter = req.body;
+  const updatedMaintenanceCenter = await maintenanceCenterModel.findOneAndUpdate({ _id: id }, maintenanceCenter, {
+    new: true,
+  });
+  if (!maintenanceCenter) {
+    return next(new AppError("No maintenance center found for this id", 404));
+  }
+
+  res.status(201).json({
+    status: "success",
+    data: updatedMaintenanceCenter,
+  });
+});
+
+
+
+
+
+
+
+// delete specific maintenance center with id
+
+exports.deleteMaintenanceCenter =  catchAsyncErr(async (req, res, next) => {
+  const { id } = req.params;
+  const deletedMaintenanceCenter = await maintenanceCenterModel.findOneAndDelete({ _id: id });
+
+  if (!deletedMaintenanceCenter) {
+    return next(new AppError("No maintenance center found for this id", 404));
+  }
+
+  res.status(204).send();
+});
+
+
+/*
+const express = require("express");
+const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
+const MaintanenceCenterModel = require("./maintenanceCenter.model");
+const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
+require("../location/location.model");
+const router = express.Router();
+
+
 
 router.post("/", async (req, res) => {
   await MaintanenceCenterModel.create({
@@ -84,3 +166,4 @@ module.exports = {
   router,
   getNearestMaintenanceCenters,
 };
+*/
