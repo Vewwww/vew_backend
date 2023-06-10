@@ -1,63 +1,49 @@
-const asyncHandler = require("express-async-handler");
-const winch = require("./winch.model");
+const winchModel = require("./winch.model");
 const AppErr = require("../../utils/AppErr");
-
+const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
+const factory=require("../Handlers/handler.factory");
 //create new winch
 
  
-exports.createWinch = asyncHandler(async (req, res) => {
-   const _winch= req.body;
-    const createdwinch= await winch.create(_winch);
-  
-    res.status(200).json({
-      status: "success",
-      data: createdwinch,
-    });
-  });
+exports.createWinch =factory.createService(winchModel);
 
 
 //get all winches
 
-  exports.getWinches = asyncHandler(async (req, res) => {
-    const winches = await winch.find();
+  exports.getWinches = catchAsyncErr(async (req, res, next) => {
+    const winches = await winchModel.find();
+    if (!winches) { return next(new AppError("no winch fount", 404)); }
   
     res.status(200).json({
       status: "success",
       results: winches.length,
       data: winches,
     });
-  });  
-
+  });
 
 
 //get specific winch with id
 
-  exports.getWinch = asyncHandler(async (req, res, next) => {
+  exports.getWinch = catchAsyncErr(async (req, res, next) => {
     const { id } = req.params;
-  
-    const _winch = await winch.findById(id);
-    if (!_winch) {
-      return next(new AppErr("No winch found for this id", 404));
+    const winch = await winchModel.findById(id);
+    if (!winch) {
+      return next(new AppError("No winch found for this id", 404));
     }
-  
     res.status(200).json({
       status: "success",
-      data: _winch,
+      data: winch,
     });
   });
-
 // update specific winch with id
-  exports.updateWinch = asyncHandler(async (req, res) => {
+  exports.updateWinch = catchAsyncErr(async (req, res, next) => {
     const { id } = req.params;
-    const  _winch  = req.body;
-    const updatedWinch = await winch.findOneAndUpdate({ _id: id }, _winch, {
+    const winch = req.body;
+    const updatedWinch = await winchModel.findOneAndUpdate({ _id: id }, winch, {
       new: true,
     });
-
-    console.log(_winch);
-  
-    if (!updatedWinch) {
-      return next(new AppErr("No winch found for this id", 404));
+    if (!winch) {
+      return next(new AppError("No winch found for this id", 404));
     }
   
     res.status(201).json({
@@ -68,12 +54,12 @@ exports.createWinch = asyncHandler(async (req, res) => {
 
 // delete specific winch with id
 
-  exports.deleteWinch = asyncHandler(async (req, res) => {
+  exports.deleteWinch = catchAsyncErr(async (req, res, next) => {
     const { id } = req.params;
-    const deletedWinch = await winch.findOneAndDelete({ _id: id });
+    const deletedWinch = await winchModel.findOneAndDelete({ _id: id });
   
     if (!deletedWinch) {
-      return next(new AppErr("No winch found for this id", 404));
+      return next(new AppError("No winch found for this id", 404));
     }
   
     res.status(204).send();
