@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const schema = mongoose.Schema({
+const schema = new mongoose.Schema({
   description: {
     ar: { type: String, required: [true, "Arabic description required"] },
     en: { type: String, required: [true, "English description required"] },
@@ -13,4 +13,4 @@ const schema = mongoose.Schema({
     required: [true, "Longitude required"],
   },
 });
-module.exports = mongoose.model("Location", schema);
+module.exports = mongoose.model("location", schema);
