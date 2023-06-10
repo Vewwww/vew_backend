@@ -1,5 +1,5 @@
 
-const mechanicModel = require("./mechanicWorkshop.api");
+const mechanicModel = require("./mechanicWorkshop.model");
 const AppErr = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
