@@ -2,6 +2,7 @@ const maintenanceCenterModel = require("./maintenanceCenter.model");
 const AppErr = require("../../utils/AppErr");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
+const factory=require("../Handlers/handler.factory");
 require("../location/location.model");
 //create new service
 

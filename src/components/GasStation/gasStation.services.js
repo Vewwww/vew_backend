@@ -1,7 +1,9 @@
 const gasStationModel = require("./gasStation.model");
 const AppErr = require("../../utils/AppErr");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
+const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory=require("../Handlers/handler.factory");
+require("../location/location.model");
 //create new gas station
 
 exports.createGasStation = factory.createService(gasStationModel);
