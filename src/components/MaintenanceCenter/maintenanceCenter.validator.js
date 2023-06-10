@@ -1,5 +1,5 @@
 const Joi = require("joi");
-const AppError = require("../utils/AppErr");
+const AppError = require("../../utils/AppError");
 
 const validation = Joi.object({
     name: {

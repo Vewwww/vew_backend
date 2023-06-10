@@ -1,6 +1,6 @@
 
 const mechanicModel = require("./mechanicWorkshop.api");
-const AppErr = require("../../utils/AppErr");
+const AppErr = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory=require("../Handlers/handler.factory");
@@ -10,8 +10,8 @@ require("../location/location.model");
 
 exports.createMechanicWorkshop = factory.createService(mechanicModel);
 
-exports.signup = factory.signup(MechanicModel);
-exports.emailVerify = factory.emailVerify(MechanicModel);
+exports.signup = factory.signup(mechanicModel);
+exports.emailVerify = factory.emailVerify(mechanicModel);
 
 exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;
@@ -21,7 +21,7 @@ exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
         service: { $type: "array", $elemMatch: { $eq: req.query.service} },
       }
   }
-  const manitenceCenters = await MechanicModel.find(filter)
+  const manitenceCenters = await mechanicModel.find(filter)
     .populate({ path: "location", select: "latitude longitude -_id" })
     .populate("service");
 
