@@ -1,6 +1,6 @@
 
 const winchModel = require("./winch.model");
-const AppErr = require("../../utils/AppErr");
+const AppError = require("../../utils/AppErr");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const factory=require("../Handlers/handler.factory");
 require("../location/location.model");
