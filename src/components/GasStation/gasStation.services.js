@@ -1,5 +1,5 @@
 const gasStationModel = require("./gasStation.model");
-const AppErr = require("../../utils/AppErr");
+const AppErr = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory=require("../Handlers/handler.factory");
