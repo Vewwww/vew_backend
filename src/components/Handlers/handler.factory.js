@@ -11,18 +11,17 @@ const { getNearestPlaces } = require("./getNearestPlaces");
 const winchModel = require("../winch/winch.model");
 const { sendEmail } = require("./email.factory");
 
-
 exports.createService = (model) => {
-    return catchAsyncErr(async (req, res, next) => {
-      const obj = req.body;
-      const createdService = await model.create(obj);
-      console.log(createdService);
-      res.status(200).json({
-        status: "success",
-        data: createdService,
-      });
+  return catchAsyncErr(async (req, res, next) => {
+    const obj = req.body;
+    const createdService = await model.create(obj);
+    console.log(createdService);
+    res.status(200).json({
+      status: "success",
+      data: createdService,
     });
-  }
+  });
+};
 
 exports.signup = (model) => {
   return catchAsyncErr(async (req, res, next) => {
@@ -260,8 +259,9 @@ exports.getOne = (Model) =>
     });
   });
 
-exports.getAll = (Model, modelName = "") =>
+exports.getAll = (Model) =>
   catchAsyncErr(async (req, res) => {
+    console.log("got here");
     let filter = {};
     if (req.filterObject) {
       filter = req.filterObject;
