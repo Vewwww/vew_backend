@@ -32,7 +32,7 @@ driverValidation = async (req, res, next) => {
   const { error } = validation.validate(obj);
   if (error) {
     console.log(error);
-    return next(new AppError(error.details[0].message, 406));
+    return next(new AppError(error.details[0].message, 400));
   }
   next();
 };
