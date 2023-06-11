@@ -36,6 +36,7 @@ const schema = new mongoose.Schema({
       required: true
   }
   },
+
   report: {
     reportsNumber: {
       type: Number,
@@ -67,6 +68,10 @@ const schema = new mongoose.Schema({
   logedIn:{
     type:Boolean,
     default:false
+  },
+  role:{
+    type:String,
+    default:"winch"
   }
 });
 schema.pre("save", async function (next) {
