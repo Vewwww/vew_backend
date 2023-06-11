@@ -20,21 +20,21 @@ const schema = new mongoose.Schema({
     type: String,
     require: [true, "phone number is required"],
   },
-  car:{
+  car: {
     carType: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'carType',
       required: true
-  },
-  color: {
+    },
+    color: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'color',
       required: true
-  },
-  plateNumber: {
+    },
+    plateNumber: {
       type: String,
       required: true
-  }
+    }
   },
 
   report: {
@@ -65,13 +65,13 @@ const schema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "location",
   },
-  logedIn:{
-    type:Boolean,
-    default:false
+  logedIn: {
+    type: Boolean,
+    default: false
   },
-  role:{
-    type:String,
-    default:"winch"
+  role: {
+    type: String,
+    default: "winch"
   }
 });
 schema.pre("save", async function (next) {
