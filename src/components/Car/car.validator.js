@@ -2,8 +2,8 @@ const Joi = require("joi");
 const AppError = require("../../utils/AppError");
 
 const validation = Joi.object({
-    carType: Joi.required(),
-    carModel: Joi.required(),
+    carType: Joi.string().required(),
+    carModel: Joi.string().required(),
     year: Joi.string().required(),
     plateNumber: Joi.string().alphanum().min(3).trim(true).required(),
 });

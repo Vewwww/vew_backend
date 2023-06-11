@@ -20,6 +20,23 @@ const schema = new mongoose.Schema({
     type: String,
     require: [true, "phone number is required"],
   },
+  car:{
+    carType: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'carType',
+      required: true
+  },
+  color: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'color',
+      required: true
+  },
+  plateNumber: {
+      type: String,
+      required: true
+  }
+  },
+
   report: {
     reportsNumber: {
       type: Number,

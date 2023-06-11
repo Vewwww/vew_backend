@@ -1,6 +1,7 @@
+
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const factory = require("../Handlers/handler.factory");
-const AppErr = require("../../utils/AppError");
+const AppError = require("../../utils/AppError");
 const winchModel = require("./winch.model");
 const carModel = require("../Car/car.model");
 require("../location/location.model");
