@@ -1,5 +1,5 @@
 const Joi = require("joi");
-const AppError = require("../utils/AppErr");
+const AppError = require("../../utils/AppError");
 
 const validation = Joi.object({
     name: Joi.string().min(3).trim(true).required(),
@@ -30,5 +30,7 @@ winchValidation = async (req, res, next) => {
         console.log(error);
         return next(new AppError(error.details[0].message, 400));
     } 
+    next();
+
 };
 module.exports = winchValidation;

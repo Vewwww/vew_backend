@@ -1,5 +1,5 @@
 const Joi = require("joi");
-const AppError = require("../utils/AppErr");
+const AppError = require("../../utils/AppError");
 
 const validation = Joi.object({
     name: {
@@ -19,5 +19,7 @@ maintenanceValidation = async (req, res, next) => {
         console.log(error);
         return next(new AppError("no maintenanceCenter found", 406));
     } 
+    next();
+
 };
 module.exports = maintenanceValidation;
