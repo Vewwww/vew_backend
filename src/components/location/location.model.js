@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const schema = new mongoose.Schema({
   description: {
-    ar: { type: String, required: [true, "Arabic description required"] },
-    en: { type: String, required: [true, "English description required"] },
+    ar: { type: String},
+    en: { type: String},
   },
   latitude: {
     type: Number,

@@ -30,10 +30,6 @@ exports.getNearestWinch = catchAsyncErr(async (req, res) => {
 
 exports.createWinch = catchAsyncErr(async (req, res) => {
   const location = await LocationModel.create({
-    description:{
-      en:'..',
-      ar:'..'
-    },
     latitude: req.body.latitude,
     longitude: req.body.longitude,
   });
@@ -41,7 +37,7 @@ exports.createWinch = catchAsyncErr(async (req, res) => {
   let car = null;
   if (req.body.car) {
     car = req.body.car;
-    // delete req.body.car;
+    delete req.body.car;
   }
 
   delete req.body.latitude;
