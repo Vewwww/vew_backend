@@ -6,9 +6,10 @@ const validation = Joi.object({
         ar: Joi.string().alphanum().min(3).trim(true).required(),
         en: Joi.string().alphanum().min(3).trim(true).required(),
       },
-      carType: Joi.array().items(Joi.string().regex(/^[0-9a-fA-F]{24}$/)).required(),
-      location: Joi.string().regex(/^[0-9a-fA-F]{24}$/).required(),
+      phoneNumber:Joi.string().required(),
+      carType:Joi.array().items(Joi.string()),
       isVerified: Joi.boolean(),
+      rate:Joi.number(),
 });
 
 maintenanceValidation = async (req, res, next) => {
@@ -17,7 +18,7 @@ maintenanceValidation = async (req, res, next) => {
     const { error } = validation.validate(obj);
 	if (error) {
         console.log(error);
-        return next(new AppError("no maintenanceCenter found", 406));
+        return next(new AppError(error.details[0].message, 400));
     } 
     next();
 

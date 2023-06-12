@@ -1,9 +1,11 @@
+
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const factory = require("../Handlers/handler.factory");
-const AppErr = require("../../utils/AppError");
+const AppError = require("../../utils/AppError");
+
 const winchModel = require("./winch.model");
 const carModel = require("../Car/car.model");
-require("../location/location.model");
+const LocationModel=require("../location/location.model");
 
 //create new winch
 
@@ -39,7 +41,7 @@ exports.createWinch = catchAsyncErr(async (req, res) => {
   }
 
   delete req.body.latitude;
-  delete req.body.latitude;
+  delete req.body.longitude;
   req.body.location = location._id;
   const createdwinch = await winchModel.create(req.body);
 
@@ -49,6 +51,7 @@ exports.createWinch = catchAsyncErr(async (req, res) => {
     const createdCar = await carModel.create(car);
     carResult = createdCar;
   }
+  
 
   res.status(200).json({
     data: { ...createdwinch._doc, car },

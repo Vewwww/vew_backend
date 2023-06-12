@@ -20,6 +20,7 @@ const schema = new mongoose.Schema({
     type: String,
     require: [true, "phone number is required"],
   },
+
   report: {
     reportsNumber: {
       type: Number,
@@ -48,13 +49,13 @@ const schema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "location",
   },
-  logedIn:{
-    type:Boolean,
-    default:false
+  logedIn: {
+    type: Boolean,
+    default: false
   },
-  role:{
-    type:String,
-    default:"winch"
+  role: {
+    type: String,
+    default: "winch"
   }
 });
 schema.pre("save", async function (next) {
