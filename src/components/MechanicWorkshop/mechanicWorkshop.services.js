@@ -7,6 +7,8 @@ require("../location/location.model");
 
 exports.signup = factory.signup(MechanicModel);
 exports.emailVerify = factory.emailVerify(MechanicModel);
+exports.authenticate=factory.authinticate()
+exports.changePassword=factory.changePassword(MechanicModel)
 
 exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;
@@ -24,18 +26,3 @@ exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
   res.status(200).json({ results: searchResult.length, data: searchResult });
 });
 
-// router.post("/", async (req, res) => {
-//     await winch.create({
-//      ownerName: req.body.ownerName,
-//       email: req.body.email,
-//       password: req.body.password,
-//       mechanicPhone:req.body.mechanicPhone,
-//       workshopName:req.body.workshopName,
-//       phoneNumber:req.body.phoneNumber,
-//       hasDelivery:req.body.hasDelivery,
-//       services:req.body.services
-//         });
-//     res.send({ message: "created" });
-//   });
-
-//   module.exports=router;

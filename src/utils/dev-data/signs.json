@@ -1,0 +1,375 @@
+[
+  {
+    "name": {
+      "en_name": "Engine Temperature Warning Light",
+      "ar_name": "مؤشر حرارة المحرك"
+    },
+    "image": {
+      "data": "<base64-encoded-image-data>",
+      "contentType": "image/png"
+    },
+    "description": {
+      "en_description": "Indicates a problem with the engine temperature. It could be high engine temperature, low coolant level, or a malfunctioning cooling system.",
+      "ar_description": "يشير إلى وجود مشكلة في حرارة المحرك. قد يكون السبب ارتفاع درجة حرارة المحرك، نقص في سائل التبريد، أو عطل في نظام التبريد."
+    },
+    "solution": {
+      "en_solution": "You need to check the engine temperature, coolant level, and perform necessary maintenance or repair the cooling system.",
+      "ar_solution": "تحتاج إلى التحقق من درجة حرارة المحرك ومستوى سائل التبريد وإجراء الصيانة اللازمة أو إصلاح نظام التبريد."
+    }
+  },
+  {
+    "name": {
+      "en_name": "Battery Charge Warning Light",
+      "ar_name": "مؤشر شحن البطارية"
+    },
+    "image": {
+      "data": "<base64-encoded-image-data>",
+      "contentType": "image/png"
+    },
+    "description": {
+      "en_description": "Indicates a problem with the battery charge. It could be a weak battery or a malfunctioning charging system.",
+      "ar_description": "يشير إلى وجود مشكلة في شحن البطارية. قد يكون السبب بطارية ضعيفة أو عطل في نظام الشحن."
+    },
+    "solution": {
+      "en_solution": "You need to check the battery charge and perform necessary maintenance or repair the charging system.",
+      "ar_solution": "تحتاج إلى التحقق من شحن البطارية وإجراء الصيانة اللازمة أو إصلاح نظام الشحن."
+    }
+  },
+  {
+    "name": {
+      "en_name": "Oil Pressure Warning Light",
+      "ar_name": "مؤشر ضغط الزيت"
+    },
+    "image": {
+      "data": "<base64-encoded-image-data>",
+      "contentType": "image/png"
+    },
+    "description": {
+      "en_description": "Indicates a problem with the oil pressure. It could be low oil pressure or a malfunctioning lubrication system.",
+      "ar_description": "يشير إلى وجود مشكلة في ضغط الزيت. قد يكون السبب انخفاض ضغط الزيت أو عطل في نظام التشحيم."
+    },
+    "solution": {
+      "en_solution": "You need to check the oil pressure and perform necessary maintenance or repair the lubrication system.",
+      "ar_solution": "عند رؤية مؤشر ضغط الزيت، يجب التصرف على الفور. قم بالتوقف في مكان آمن وأغلق المحرك فورًا. انتظر لمدة دقيقة تقريبًا للسماح للزيت بالتجمع في الطرق وقياس ضغطه مرة أخرى باستخدام عداد الضغط. إذا استمر المؤشر في الإضاءة، قم بالاتصال بخدمة السحب أو فني متخصص لفحص وإصلاح المشكلة في نظام الزيت."
+    }
+  },
+  {
+    "name": {
+      "en_name": "Brake Warning Light",
+      "ar_name": "مؤشر الفرامل"
+    },
+    "image": {
+      "data": "<base64-encoded-image-data>",
+      "contentType": "image/png"
+    },
+    "description": {
+      "en_description": "Indicates a problem with the brake system. It could be low brake fluid level, worn brake pads, or a malfunctioning brake component.",
+      "ar_description": "يشير إلى وجود مشكلة في نظام الفرامل. قد يكون السبب انخفاض مستوى سائل الفرامل، تآكل في أقراص الفرامل، أو عطل في أجزاء الفرامل."
+    },
+    "solution": {
+      "en_solution": "You need to check the brake fluid level and perform necessary maintenance or repair the brake pads or brake components.",
+      "ar_solution": "تحتاج إلى التحقق من مستوى سائل الفرامل وإجراء الصيانة اللازمة أو إصلاح المشكلة في أقراص الفرامل أو أجزاء الفرامل."
+    }
+  },
+  {
+    "name": {
+      "en_name": "Transmission Temperature Warning Light",
+      "ar_name": "مؤشر حرارة النقل"
+    },
+    "image": {
+      "data": "<base64-encoded-image-data>",
+      "contentType": "image/png"
+    },
+    "description": {
+      "en_description": "Indicates a problem with the transmission temperature. It could be high transmission temperature, low transmission fluid level, or a malfunctioning transmission system.",
+      "ar_description": "يشير إلى وجود مشكلة في حرارة النقل. قد يكون السبب ارتفاع درجة حرارة الناقل، نقص في سائل النقل، أو عطل في نظام النقل."
+    },
+    "solution": {
+      "en_solution": "You need to check the transmission temperature, transmission fluid level, and perform necessary maintenance or repair the transmission system.",
+      "ar_solution": "تحتاج إلى التحقق من درجة حرارة النقل ومستوى سائل النقل وإجراء الصيانة اللازمة أو إصلاح نظام النقل."
+    }
+  },
+  {
+    "name": {
+      "en_name": "Tire Pressure Warning Light",
+      "ar_name": "مؤشر ضغط الإطارات"
+    },
+    "image": {
+      "data": "<base64-encoded-image-data>",
+      "contentType": "image/png"
+    },
+    "description": {
+      "en_description": "Indicates a problem with the tire pressure. It could be low air pressure in the tires.",
+      "ar_description": "يشير إلى وجود مشكلة في ضغط الإطارات. قد يكون السبب انخفاض ضغط الهواء في الإطارات."
+    },
+    "solution": {
+      "en_solution": "You need to check the air pressure in the tires and adjust it according to the recommended values.",
+      "ar_solution": "تحتاج إلى التحقق من ضغط الهواء في الإطارات وضبطه وفقًا للقيم الموصى بها."
+    }
+  },
+  {
+    "name": {
+      "en_name": "Traction Control Off",
+      "ar_name": "تحكم الثبات معطل"
+    },
+    "image": {
+      "data": "<base64-encoded-image-data>",
+      "contentType": "image/png"
+    },
+    "description": {
+      "en_description": "Indicates that the traction control system is disabled. The traction control system is turned off when this light is illuminated.",
+      "ar_description": "يشير إلى تعطل نظام تحكم الثبات. يتم تعطيل نظام تحكم الثبات عند تشغيل هذا المؤشر."
+    },
+    "solution": {
+      "en_solution": "The traction control system should be reactivated to ensure improved stability and control of the vehicle. Please refer to the owner's manual for instructions on how to activate the traction control system.",
+      "ar_solution": "ينبغي تفعيل نظام تحكم الثبات مرة أخرى لضمان تحسين الثبات والتحكم في المركبة. يرجى مراجعة دليل المالك للحصول على تعليمات حول كيفية تفعيل نظام تحكم الثبات."
+    }
+  },
+  {
+    "name": {
+      "en_name": "Steering Wheel Lock",
+      "ar_name": "قفل عجلة القيادة"
+    },
+    "image": {
+      "data": "<base64-encoded-image-data>",
+      "contentType": "image/png"
+    },
+    "description": {
+      "en_description": "Indicates that the steering wheel is locked. This light is illuminated when the steering wheel is secured to prevent vehicle theft.",
+      "ar_description": "يشير إلى قفل عجلة القيادة. يتم تشغيل هذا المؤشر عندما يتم تأمين عجلة القيادة لمنع سرقة المركبة."
+    },
+    "solution": {
+      "en_solution": "The steering wheel lock should be released before starting the vehicle. This is typically done by gently moving the steering wheel in both directions until the lock is released. Please refer to the owner's manual for more details and instructions.",
+      "ar_solution": "يجب إلغاء قفل عجلة القيادة قبل تشغيل المركبة. يتم ذلك عادةً عن طريق تحريك عجلة القيادة بلطف في الاتجاهين حتى يتم إلغاء القفل. يرجى الرجوع إلى دليل المالك للمزيد من التفاصيل والإرشادات."
+    }
+  },
+  {
+    "name": {
+      "en_name": "Trailer Tow Hitch Warning",
+      "ar_name": "تحذير مشبك سحب المقطورة"
+    },
+    "image": {
+      "data": "<base64-encoded-image-data>",
+      "contentType": "image/png"
+    },
+    "description": {
+      "en_description": "Indicates a problem with the trailer tow hitch. It could be due to improper trailer attachment or a malfunctioning trailer tow hitch.",
+      "ar_description": "يشير إلى وجود مشكلة في مشبك سحب المقطورة. قد يكون السبب عدم تأمين المقطورة بشكل صحيح أو وجود خلل في مشبك سحب المقطورة."
+    },
+    "solution": {
+      "en_solution": "You should check for proper trailer attachment and ensure that there are no issues with the trailer tow hitch. It may be necessary to reattach the trailer or repair the hitch to ensure safety.",
+      "ar_solution": "يجب التحقق من تأمين المقطورة بشكل صحيح والتأكد من عدم وجود أي خلل في مشبك سحب المقطورة. قد يكون من الضروري إعادة تثبيت المقطورة أو إصلاح المشبك لضمان السلامة."
+    }
+  },
+
+  {
+    "name": {
+      "en": "Traction Control Light",
+      "ar": "مؤشر تحكم الثبات"
+    },
+    "description": {
+      "en": "Indicates the operation of the traction control system. This light is illuminated when the traction control system is active or when there is a malfunction in the system.",
+      "ar": "يشير إلى عملية تحكم الثبات. يتم تشغيل هذا المؤشر عندما يكون نظام تحكم الثبات نشطًا أو عندما يحدث خلل في النظام."
+    },
+    "solution": {
+      "en": "When the traction control system is active, it helps improve stability and control of the vehicle in challenging driving conditions. If the light is flashing or remains illuminated continuously, there may be a malfunction in the traction control system, and it should be inspected and repaired by a qualified technician.",
+      "ar": "عندما يكون نظام تحكم الثبات نشطًا، يساعد في تحسين الثبات والتحكم في المركبة في ظروف القيادة الصعبة. إذا كان المؤشر يومض أو يظل مضيئًا باستمرار، قد يكون هناك خلل في نظام تحكم الثبات ويجب فحصه وإصلاحه بواسطة فني متخصص."
+    }
+  },
+  {
+    "name": {
+      "en": "Service Vehicle Soon",
+      "ar": "خدمة المركبة قريبًا"
+    },
+    "description": {
+      "en": "Indicates the need for servicing the vehicle soon. This light signifies the presence of an error or a general warning related to one of the vehicle's systems and requires immediate attention.",
+      "ar": "يشير إلى ضرورة صيانة المركبة قريبًا. يشير هذا المؤشر إلى وجود خطأ أو تحذير عام يتعلق بأحد أنظمة المركبة ويتطلب التدخل الفوري."
+    },
+    "solution": {
+      "en": "The vehicle should be inspected and serviced as soon as possible. It is recommended to take the vehicle to an authorized service center to diagnose the issue and perform the necessary repairs.",
+      "ar": "يجب على المركبة أن تخضع للفحص والصيانة بأسرع وقت ممكن. ينبغي أخذ المركبة إلى ورشة الصيانة المعتمدة لتشخيص المشكلة وإجراء الإصلاحات اللازمة."
+    }
+  },
+  {
+    "name": {
+      "en": "Security Alert",
+      "ar": "تنبيه الأمان"
+    },
+    "description": {
+      "en": "Indicates a security alert in the vehicle. This alert may signify an unauthorized attempt to access the vehicle or a breach in the security system.",
+      "ar": "يشير إلى وجود تنبيه أمان في المركبة. قد يشير هذا التنبيه إلى محاولة غير مصرح بها للوصول إلى المركبة أو وجود خرق في نظام الأمان."
+    },
+    "solution": {
+      "en": "When seeing this security alert, necessary measures should be taken to secure the vehicle. These measures may include securely locking the doors, activating the alarm system, or contacting the local police or emergency assistance service.",
+      "ar": "عند رؤية هذا التنبيه، يجب اتخاذ التدابير اللازمة لتأمين المركبة. قد تشمل هذه الإجراءات إغلاق الأبواب بإحكام، تشغيل نظام الإنذار، أو الاتصال بالشرطة أو خدمة المساعدة المحلية في حالة الطوارئ."
+    }
+  },
+  {
+    "name": {
+      "en": "Side Airbag",
+      "ar": "وسادة هوائية جانبية"
+    },
+    "description": {
+      "en": "The side airbag works to protect the occupants in the event of a side collision. The side airbag is typically deployed in the doors or side pillars of the vehicle and rapidly inflates when a side impact is detected.",
+      "ar": "تعمل وسادة الهواء الجانبية على حماية الركاب في حالة وقوع حادث جانبي. تنتشر وسادة الهواء الجانبية عادة في الأبواب أو الأعمدة الجانبية للمركبة وتنتفخ فورًا عندما يتم اكتشاف اصطدام جانبي."
+    },
+    "solution": {
+      "en": "To ensure the proper functioning of the side airbag, it is important to ensure that the airbag system is in good condition and has not been damaged. It is recommended to refer to the owner's manual for more details on the maintenance of side airbags.",
+      "ar": "لضمان تشغيل وسادة الهواء الجانبية بشكل صحيح، يجب التأكد من الحفاظ على نظام الوسائد الهوائية في حالة جيدة وأنه لم يتعرض لأي ضرر. يُنصح بالاطلاع على دليل المالك للمزيد من التفاصيل حول صيانة وسادات الهواء الجانبية."
+    }
+  },
+  {
+    "name": {
+      "en": "Reduced Power Warning",
+      "ar": "تحذير الطاقة المخفضة"
+    },
+    "description": {
+      "en": "Indicates a warning of reduced power in the vehicle. This could be due to a malfunction in the power system or limitations on the vehicle's performance due to a technical issue.",
+      "ar": "يشير إلى تحذير بانخفاض الطاقة في المركبة. قد يكون السبب وجود خلل في نظام القدرة أو قيود على أداء المركبة بسبب مشكلة تقنية."
+    },
+    "solution": {
+      "en": "It is recommended to check the vehicle's condition and ensure there are no issues with the power systems such as fuel, ignition, and ventilation. If the warning persists, it is advised to bring the vehicle to an authorized repair workshop for inspection and necessary repairs.",
+      "ar": "يجب التحقق من حالة المركبة والتأكد من عدم وجود مشاكل في أنظمة القدرة مثل الوقود والإشعال والتهوية. إذا استمر التحذير، ينصح بإحضار المركبة إلى ورشة إصلاح معتمدة لفحصها وإجراء الإصلاحات اللازمة."
+    }
+  },
+  {
+    "name": {
+      "en": "Seat Belt Indicator",
+      "ar": "مؤشر حزام الأمان"
+    },
+    "description": {
+      "en": "Indicates the seat belt is not fastened. This indicator is illuminated when a seat belt is not buckled for one of the occupants in the vehicle.",
+      "ar": "يشير إلى عدم تثبيت حزام الأمان. يتم تشغيل هذا المؤشر عندما لا يتم ربط حزام الأمان لأحد الركاب في المركبة."
+    },
+    "solution": {
+      "en": "It is important to properly fasten the seat belt for all occupants in the vehicle. Please ensure that the seat belt is buckled for personal safety and compliance with traffic laws.",
+      "ar": "يجب تثبيت حزام الأمان بشكل صحيح لجميع الركاب في المركبة. يرجى التأكد من ربط حزام الأمان للسلامة الشخصية والامتثال للقوانين المرورية."
+    }
+  },
+  {
+    "name": {
+      "en": "Press Clutch Pedal",
+      "ar": "اضغط على دواسة القابض"
+    },
+    "description": {
+      "en": "Indicates the need to press the clutch pedal. This warning is activated when operating the vehicle requires a gear change or coming to a stop.",
+      "ar": "تشير إلى ضرورة الضغط على دواسة القابض. يتم تشغيل هذا التنبيه عندما يتطلب تشغيل المركبة تغيير سرعة أو إيقافها."
+    },
+    "solution": {
+      "en": "When this warning appears, it is necessary to fully press the clutch pedal before changing gears or coming to a stop. It is advised to follow proper driving instructions and ensure the clutch pedal is used correctly.",
+      "ar": "عندما يظهر هذا التنبيه، يجب الضغط على دواسة القابض بالكامل قبل تغيير سرعة المركبة أو إيقافها. يُنصح باتباع تعليمات القيادة المناسبة والحرص على استخدام دواسة القابض بشكل صحيح."
+    }
+  },
+  {
+    "name": {
+      "en": "Powertrain Fault",
+      "ar": "خلل في نظام القدرة"
+    },
+    "description": {
+      "en": "Indicates a fault in the powertrain system of the vehicle. This may include the car's engine, transmission, fuel system, and emissions systems.",
+      "ar": "يشير إلى وجود خلل في نظام القدرة في المركبة. قد يشمل ذلك محرك السيارة ونقل الحركة ونظام الوقود وأنظمة الانبعاثات."
+    },
+    "solution": {
+      "en": "When this warning appears, it is important to stop the vehicle and check the condition of powertrain systems such as oil level and fuel level. If the warning persists, it is advised to bring the vehicle to an authorized repair workshop for inspection and necessary repairs.",
+      "ar": "عند ظهور هذا التحذير، يجب إيقاف المركبة والتحقق من حالة أنظمة القدرة مثل مستوى الزيت ومستوى الوقود. إذا استمر التحذير، ينصح بإحضار المركبة إلى ورشة إصلاح معتمدة لفحصها وإجراء الإصلاحات اللازمة."
+    }
+  },
+  {
+    "name": {
+      "en": "Power Steering Warning Light",
+      "ar": "مؤشر تحذير نظام المقود الهيدروليكي"
+    },
+    "description": {
+      "en": "Indicates a fault in the power steering system. This light signifies a possible system failure, low fluid level, or a sensor error.",
+      "ar": "يشير إلى وجود خلل في نظام المقود الهيدروليكي. يشير هذا المؤشر إلى احتمالية فشل النظام أو نقص في مستوى السوائل أو خطأ في الاستشعار."
+    },
+    "solution": {
+      "en": "When this warning appears, it is important to check the fluid level in the power steering system and ensure it is within the recommended range. If fluid levels are normal, there may be a fault in the system that requires inspection and repair by a qualified technician.",
+      "ar": "عند ظهور هذا التنبيه، يجب التحقق من مستوى السائل في نظام المقود والتأكد من أنه يتوافق مع المستوى الموصى به. إذا كانت مستويات السوائل عادية، قد يكون هناك خلل في النظام يتطلب فحصه وإصلاحه بواسطة فني متخصص."
+    }
+  },
+  {
+    "name": {
+      "en": "Press Brake Pedal",
+      "ar": "اضغط على دواسة الفرامل"
+    },
+    "description": {
+      "en": "Indicates the need to press the brake pedal. This warning is activated when coming to a stop or reducing speed is required.",
+      "ar": "تشير إلى ضرورة الضغط على دواسة الفرامل. يتم تشغيل هذا التنبيه عندما يتطلب الوقوف أو تخفيف السرعة."
+    },
+    "solution": {
+      "en": "When this warning appears, it is important to firmly press the brake pedal to ensure the vehicle comes to a safe stop or to appropriately reduce speed. Pay attention and ensure proper use of the brake system, and maintain a safe braking distance from other vehicles.",
+      "ar": "عند ظهور هذا التنبيه، يجب الضغط بقوة على دواسة الفرامل للتأكد من توقف المركبة بشكل آمن أو تخفيض السرعة بشكل مناسب. يجب الانتباه والحرص على استخدام نظام الفرامل بشكل صحيح والالتزام بمسافة الفرامل الآمنة بين المركبات الأخرى."
+    }
+  },
+  {
+    "name": {
+      "en": "Parking Brake Light",
+      "ar": "مؤشر فرامل الوقوف"
+    },
+    "description": {
+      "en": "Indicates the activation or release of the parking brake system. This light is illuminated when the parking brake is engaged or when it is released.",
+      "ar": "يشير إلى تشغيل أو تحرير نظام الفرامل اليدوي. يُشعَل هذا المؤشر عند تشغيل الفرامل اليدوية أو عندما يتم تحريرها."
+    },
+    "solution": {
+      "en": "When this light appears unexpectedly, it is important to check the status of the parking brake system. If the parking brake is engaged unintentionally, it should be fully released before driving. If there is a fault in the parking brake system, it is advised to bring the vehicle to an authorized repair workshop for inspection and necessary repairs.",
+      "ar": "عند ظهور هذا المؤشر بشكل غير متوقع، يجب التحقق من حالة نظام الفرامل اليدوي. إذا كان الفرامل اليدوية مشغولة بشكل غير مقصود، يجب تحريرها بالكامل قبل القيادة. إذا كان هناك خلل في نظام الفرامل اليدوي، ينصح بإحضار المركبة إلى ورشة إصلاح معتمدة لفحصها وإجراء الإصلاحات اللازمة."
+    }
+  },
+  {
+    "name": {
+      "en": "Overdrive Light",
+      "ar": "مؤشر الإضافة الزائدة"
+    },
+    "description": {
+      "en": "Indicates the activation or deactivation of overdrive in the transmission. This light is illuminated when overdrive is engaged or when it is disengaged.",
+      "ar": "يشير إلى تشغيل أو إيقاف الإضافة الزائدة في ناقل الحركة. يُشعَل هذا المؤشر عند تشغيل الإضافة الزائدة أو عند إيقافها."
+    },
+    "solution": {
+      "en": "When this light appears unexpectedly, it is important to check the status of the overdrive in the transmission. If overdrive is engaged unintentionally, it can be disabled by pressing the overdrive (OD) button or by controlling the transmission mode. If there is a fault in the overdrive system, it is advised to bring the vehicle to an authorized repair workshop for inspection and necessary repairs.",
+      "ar": "عند ظهور هذا المؤشر بشكل غير متوقع، يجب التحقق من حالة الإضافة الزائدة في ناقل الحركة. إذا كان الإضافة الزائدة مشغولة بشكل غير مقصود، يمكن تعطيلها بالضغط على زر الإضافة الزائدة (OD) أو عن طريق التحكم في وضعية الناقل. إذا كان هناك خلل في نظام الإضافة الزائدة، ينصح بإحضار المركبة إلى ورشة إصلاح معتمدة لفحصها وإجراء الإصلاحات اللازمة."
+    }
+  },
+  {
+    "name": {
+      "en": "Oil Change Reminder",
+      "ar": "تذكير تغيير الزيت"
+    },
+    "description": {
+      "en": "Indicates the need to change the engine oil. This warning serves as a reminder that it is time to change the engine oil and perform regular maintenance.",
+      "ar": "يشير إلى ضرورة تغيير زيت المحرك. يعمل هذا التنبيه على تذكيرك بأنه حان الوقت لتغيير زيت المحرك وإجراء الصيانة الدورية."
+    },
+    "solution": {
+      "en": "When this warning appears, it is important to schedule an appointment to change the engine oil and perform regular maintenance on the vehicle. Follow the manufacturer's recommendations regarding the appropriate oil type and oil change schedule. It is recommended to adhere to the vehicle's maintenance schedule to maintain good engine performance and extend the engine's lifespan.",
+      "ar": "عند ظهور هذا التنبيه، يجب جدولة موعد لتغيير زيت المحرك والقيام بصيانة دورية للمركبة. يجب اتباع توصيات الشركة المصنعة بشأن نوع الزيت المناسب وجدول تغيير الزيت. يُنصح بالالتزام بمواعيد صيانة المركبة للحفاظ على أداء المحرك الجيد وتمديد عمر المحرك."
+    }
+  },
+  {
+    "name": {
+      "en": "Master Warning Light",
+      "ar": "مؤشر التحذير الرئيسي"
+    },
+    "description": {
+      "en": "Indicates a general fault or issue with the vehicle. This light is illuminated when a multi-system fault or warning is detected in the vehicle.",
+      "ar": "يشير إلى وجود خطأ عام أو مشكلة في المركبة. يُشعَل هذا المؤشر عندما يتم الكشف عن خطأ أو تحذير متعدد النظم في المركبة."
+    },
+    "solution": {
+      "en": "When this light appears, it is important to take the following steps: 1) Check the instrument cluster for additional information on other system warnings. 2) Check other warning lights and refer to the owner's manual or guide to understand the necessary instructions. 3) Stop the vehicle and check the status of major systems such as the brake system, steering system, and operation system. If the light continues to flash or error messages appear, it is advised to bring the vehicle to an authorized repair workshop for inspection and necessary repairs.",
+      "ar": "عند ظهور هذا المؤشر، يجب القيام بالخطوات التالية: 1) التحقق من لوحة العدادات لمزيد من المعلومات حول التنبيهات النظامية الأخرى. 2) التحقق من أضواء التحذير الأخرى والتحقق من الكتيب أو دليل المالك لمعرفة التعليمات اللازمة. 3) إيقاف المركبة والتحقق من حالة النظامات الرئيسية مثل نظام الفرامل ونظام التوجيه ونظام التشغيل. إذا استمر المؤشر في الوميض أو ظهور رسائل الخطأ، ينصح بإحضار المركبة إلى ورشة إصلاح معتمدة لفحصها وإجراء الإصلاحات اللازمة."
+    }
+  },
+  {
+    "name": {
+      "en": "Information Warning Light",
+      "ar": "مؤشر التحذير بالمعلومات"
+    },
+    "description": {
+      "en": "Indicates the availability of additional information or alerts in the vehicle. This light is activated to inform you of important information or non-urgent alerts.",
+      "ar": "يشير إلى توفر معلومات إضافية أو تنبيهات في المركبة. يتم تشغيل هذا المؤشر لإبلاغك بمعلومات مهمة أو تنبيهات غير طارئة."
+    },
+    "solution": {
+      "en": "When this light appears, it is important to refer to the instrument cluster or information display to access the additional information available. This information may include non-urgent warnings, instructions, or additional information about vehicle functions. You may need to consult the owner's manual or guide to understand specific information or instructions.",
+      "ar": "عند ظهور هذا المؤشر، يجب الاطلاع على لوحة العدادات أو شاشة المعلومات لمعرفة المعلومات الإضافية المتاحة. يمكن أن تتضمن هذه المعلومات تحذيرات غير طارئة أو توجيهات أو معلومات إضافية عن وظائف المركبة. قد تحتاج إلى مراجعة الكتيب أو دليل المالك لفهم معلومات أو تعليمات محددة."
+    }
+  }
+]

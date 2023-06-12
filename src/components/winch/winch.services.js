@@ -8,6 +8,8 @@ require("../location/location.model");
 
 exports.signup = factory.signup(winchModel);
 exports.emailVerify = factory.emailVerify(winchModel);
+exports.authenticate=factory.authinticate()
+exports.changePassword=factory.changePassword(winchModel)
 
 exports.getNearestWinch = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;
