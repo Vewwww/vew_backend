@@ -12,12 +12,10 @@ const validation = Joi.object({
   gender: Joi.string().required().valid("male", "female"),
   role: Joi.string().valid("admin", "user").default("user"),
   lisenceRenewalDate: Joi.date()
-  
 });
 
 driverValidation = async (req, res, next) => {
   const obj = req.body;
-
   const { error } = validation.validate(obj);
   if (error) {
     console.log(error);
