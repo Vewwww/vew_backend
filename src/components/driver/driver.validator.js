@@ -24,7 +24,7 @@ const validation = Joi.object({
   emailConfirm:Joi.boolean().default(false),
   logedIn:Joi.boolean().default(false),
 
-});
+}).options({ allowUnknown: true });
 
 driverValidation = async (req, res, next) => {
   const obj = req.body;

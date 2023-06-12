@@ -1,31 +1,46 @@
 const {
   signup,
-  ProtectedRoutes,
-  allowedTo,
   emailVerify,
+  changePassword,
+  authinticate,
 } = require("./driver.auth");
 const {
   createUser,
   getUsers,
   getUser,
   updateUser,
-  deleteUser,
-  changePassword,
 } = require("./driver.services");
-const driverValidation = require("./driver.validator");
+const { allowedTo } = require("../Handlers/auth.factory");
 
+const driverValidation = require("./driver.validator");
+const maintenanceRoute = require("../MaintenanceCenter/maintenanceCenter.api");
 const router = require("express").Router();
-router
-  .route("/")
-  .post(ProtectedRoutes, createUser)
-  .get(ProtectedRoutes, getUsers);
+
+router.use(
+  "/maintenanceCenter",
+  authinticate,
+  allowedTo("user"),
+  maintenanceRoute
+);
+router.use(
+  "/maintenanceCenter",
+  authinticate,
+  allowedTo("user"),
+  maintenanceRoute
+);
+
+router.route("/").get(authinticate, allowedTo("admin"), getUsers);
 router
   .route("/:id")
-  .get(ProtectedRoutes, getUser)
-  .put(ProtectedRoutes, updateUser)
-  .delete(ProtectedRoutes, deleteUser);
-router.patch("/changePassword/:id", ProtectedRoutes, changePassword);
-router.post("/signup",driverValidation ,signup,createUser);
+  .get(authinticate, allowedTo("admin"), getUser)
+  .put(authinticate, allowedTo("user"), driverValidation, updateUser);
+router.patch(
+  "/changePassword/:id",
+  authinticate,
+  allowedTo("user"),
+  changePassword
+);
+router.post("/signup", driverValidation, signup, createUser);
 router.get("/verify/:token", emailVerify);
 
 module.exports = router;

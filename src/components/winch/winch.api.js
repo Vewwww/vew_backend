@@ -1,9 +1,12 @@
 const {
-  signup,
-  emailVerify,
   getNearestWinch,
   createWinch
 } = require("./winch.services");
+const {
+  signup,
+  emailVerify,
+  authinticate
+} = require("./winch.auth");
 winchValidation=require("./winch.validator");
 const router = require("express").Router();
 

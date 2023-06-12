@@ -67,6 +67,10 @@ const schema = new mongoose.Schema({
   logedIn:{
     type:Boolean,
     default:false
+  },
+  role:{
+    type:String,
+    default:"mechanic"
   }
 });
 
