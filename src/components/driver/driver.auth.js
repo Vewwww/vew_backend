@@ -4,7 +4,6 @@ const { catchAsyncErr } = require("../../utils/CatchAsyncErr")
 const jwt = require('jsonwebtoken');
 const AppError = require("../../utils/AppError")
 exports.signup=factory.signup(driverModel)
-exports.signin=factory.signin()
 exports.emailVerify=factory.emailVerify(driverModel)
 exports.authenticate=factory.authinticate()
 exports.changePassword=factory.changePassword(driverModel)
