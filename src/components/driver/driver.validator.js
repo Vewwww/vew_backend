@@ -23,12 +23,11 @@ const validation = Joi.object({
   isSuspended:Joi.boolean().default(false),
   emailConfirm:Joi.boolean().default(false),
   logedIn:Joi.boolean().default(false),
-  
+
 });
 
 driverValidation = async (req, res, next) => {
   const obj = req.body;
-
   const { error } = validation.validate(obj);
   if (error) {
     console.log(error);

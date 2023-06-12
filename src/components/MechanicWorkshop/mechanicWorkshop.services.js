@@ -3,17 +3,21 @@ const AppErr = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory = require("../Handlers/handler.factory");
-const LocationModel=require("../location/location.model");
+
+const LocationModel = require("../location/location.model");
+require("../location/location.model");
 
 //create new service
-
 exports.createMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   const location = await LocationModel.create({
     latitude: req.body.latitude,
     longitude: req.body.longitude,
+    description: req.body.description,
   });
   delete req.body.latitude;
   delete req.body.longitude;
+  delete req.body.description;
+
 
   req.body.location = location._id;
   const mechanic = await mechanicModel.create(req.body);
