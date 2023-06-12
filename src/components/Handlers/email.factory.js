@@ -30,8 +30,6 @@ module.exports.sendEmail = async (options, model) => {
     (err, info) => {
       if (err) {
         console.log(err);
-      } else {
-        console.log(info);
       }
     }
   );

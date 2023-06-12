@@ -20,7 +20,7 @@ const validation = Joi.object({
     longitude:Joi.number(),
     logedIn:Joi.boolean().default(false),
     role:Joi.string().default("winch"),
-});
+}).options({ allowUnknown: true });
 
 winchValidation = async (req, res, next) => {
 	const obj = req.body;

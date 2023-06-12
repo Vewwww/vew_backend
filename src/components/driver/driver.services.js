@@ -22,7 +22,7 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
       carsResult.push(createdCar);
     }
   }
-  res.status(200).json({ data: { ...user._doc, cars: carsResult } });
+  res.status(200).json({message:"Verify your email"});
 });
 
 // to get all Users
@@ -47,20 +47,44 @@ exports.updateUser = catchAsyncErr(async (req, res, next) => {
   !User && next(new AppError("User not found", 400));
   User && res.status(200).json(User);
 });
-//n7otaha f handler
-exports.changePassword = catchAsyncErr(async (req, res, next) => {
-  const { id } = req.params;
-  req.body.changedPasswordAt = Date.now();
-  let User = await driverModel.findByIdAndUpdate(id, req.body, { new: true });
 
-  !User && next(new AppError("User not found", 400));
-  User && res.status(200).json(User);
-});
-exports.deleteUser = catchAsyncErr(async (req, res, next) => {
-  const { id } = req.params;
-  let user = await driverModel.findByIdAndDelete(id);
-  if (!user) {
-    return next(new AppError("user not found", 400));
+
+exports.search = catchAsyncErr(async (req, res, next) => {
+  const { keyword } = req.query;
+  const { latitude, longitude } = req.body;
+
+  const ar_en_name_query = {
+    $or: [
+      { "name.ar": { $regex: ".*" + keyword + ".*", $options: "i" } },
+      { "name.en": { $regex: ".*" + keyword + ".*", $options: "i" } },
+    ],
+  };
+
+  const name_query = {
+    name: { $regex: ".*" + keyword + ".*", $options: "i" },
+  };
+
+  if (keyword) {
+    const workshops = await mechanicWorkshopModel
+      .find(name_query)
+      .populate({ path: "location", select: "latitude longitude -_id" });
+    const maintenceCenters = await maintenanceCenterModel
+      .find(ar_en_name_query)
+      .populate({ path: "location", select: "latitude longitude -_id" });
+    const gasStations = await gasStationModel
+      .find(name_query)
+      .populate({ path: "location", select: "latitude longitude -_id" });
+
+    let searchResult = [];
+    if (workshops) searchResult.push(...workshops);
+    if (maintenceCenters) searchResult.push(...maintenceCenters);
+    if (gasStations) searchResult.push(...gasStations);
+
+    searchResult = getNearestPlaces(searchResult, latitude, longitude);
+
+    res.status(200).json({ results: searchResult.length, data: searchResult });
+  } else {
+    return next(AppError("No search keyword is provided", 400));
   }
-  res.status(200).json({ result: user });
 });
+

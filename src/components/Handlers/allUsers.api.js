@@ -1,7 +1,7 @@
-const factory = require("./handler.factory")
+const authFactory = require("./auth.factory")
 
 const router=require("express").Router()
-router.post('/login', factory.login)
-router.get('/logout', factory.logout)
+router.post('/login', authFactory.login)
+router.get('/logout', authFactory.logout)
 
 module.exports=router
