@@ -126,6 +126,17 @@ exports.authinticate = catchAsyncErr(async (req, res, next) => {
   req.user = currentUser;
   next();
 });
+exports.changePassword = (model)=>{catchAsyncErr(async (req, res, next) => {
+  const { id } = req.params;
+  req.body.changedPasswordAt = Date.now()
+  let user = await model.findById(id);
+  !user && next(new AppError("User not found", 400));
+  if(user.password==req.body.password){
+      return next(new AppError("This is already your current password", 400));
+  }
+  user=await model.findByIdAndUpdate(id,{password:req.body.password},{new:true})
+  res.status(200).json(user);
+})};
 
 exports.logout = catchAsyncErr(async (req, res, next) => {
   let token=null;

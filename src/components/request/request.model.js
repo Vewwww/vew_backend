@@ -15,3 +15,4 @@ const schema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("request", schema);
+//car,location,rideid,winch or mechanic id,accepted
