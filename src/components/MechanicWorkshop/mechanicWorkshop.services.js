@@ -4,6 +4,7 @@ const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory = require("../Handlers/handler.factory");
 
+
 const LocationModel = require("../location/location.model");
 require("../location/location.model");
 
@@ -26,10 +27,8 @@ exports.createMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   req.body.location = location._id;
   const mechanic = await mechanicModel.create(req.body);
 
-  res.status(200).json({ data: mechanic });
+  res.status(200).json({message:"Verify your email"})
 });
-
-
 
 exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;
@@ -49,7 +48,6 @@ exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
 });
 
 //get all mechanic
-
 exports.getMechanicWorkshops = catchAsyncErr(async (req, res, next) => {
   const mechanics = await mechanicModel.find();
   if (!mechanics) {

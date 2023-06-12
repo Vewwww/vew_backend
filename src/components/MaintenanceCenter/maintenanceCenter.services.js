@@ -4,9 +4,10 @@ const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory=require("../Handlers/handler.factory");
 require("../location/location.model");
+require("../carType/carType.model");
 //create new service
 
-exports.createMaintenanceCenter = factory.createService(MaintanenceCenterModel);
+exports.createMaintenanceCenter = factory.createOne(MaintanenceCenterModel);
 exports.getNearestMaintenanceCenters = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;
   let filter = {};

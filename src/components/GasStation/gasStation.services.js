@@ -6,7 +6,7 @@ const factory=require("../Handlers/handler.factory");
 require("../location/location.model");
 //create new gas station
 
-exports.createGasStation = factory.createService(gasStationModel);
+exports.createGasStation = factory.createOne(gasStationModel);
 
 
 //get all gas station

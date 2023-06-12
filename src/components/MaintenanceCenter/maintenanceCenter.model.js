@@ -11,7 +11,7 @@ const schema = mongoose.Schema({
   carType: [
     {
       type: mongoose.Schema.ObjectId,
-      ref: "CarType",
+      ref: "carType",
     },
   ],
   location: {
