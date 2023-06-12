@@ -11,34 +11,41 @@ const { getNearestPlaces } = require("./getNearestPlaces");
 const winchModel = require("../winch/winch.model");
 const { sendEmail } = require("./email.factory");
 
+exports.createService = (model) => {
+  return catchAsyncErr(async (req, res, next) => {
+    const obj = req.body;
+    const createdService = await model.create(obj);
+    console.log(createdService);
+    res.status(200).json({
+      status: "success",
+      data: createdService,
+    });
+  });
+};
+
 exports.signup = (model) => {
   return catchAsyncErr(async (req, res, next) => {
     email = req.body.email;
     const isUser = await model.findOne({ email });
     if (isUser) return next(new AppError("user already exists", 401));
 
-    let User = new model(req.body);
-    await User.save();
     let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
-    await sendEmail({ email, token, message: "Hello" });
-    res.status(200).json(User);
+    await sendEmail({ email, token, message: "Hello" }, model);
+    next();
   });
 };
 
-exports.login = catchAsyncErr(async(req,res,next)=>{
+exports.login = catchAsyncErr(async (req, res, next) => {
   let user = await driverModel.findOne({ email: req.body.email });
   let modelName = "driver";
-  
+
   if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
     user = await mechanicWorkshopModel.findOne({ email: req.body.email });
     modelName = "mechanicworkshops";
     if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
       user = await winchModel.findOne({ email: req.body.email });
       modelName = "winches";
-      if (
-        !user ||
-        !(await bcrypt.compare(req.body.password, user.password))
-      ) {
+      if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
         return next(new AppError("incorrect email or password", 401));
       }
     }
@@ -46,7 +53,6 @@ exports.login = catchAsyncErr(async(req,res,next)=>{
 
   let token = jwt.sign({ modelName, userId: user._id }, process.env.JWT_KEY);
 
-  
   if (user.emailConfirm === true) {
     user.logedIn = true;
     user.save();
@@ -54,11 +60,11 @@ exports.login = catchAsyncErr(async(req,res,next)=>{
   } else {
     res.status(401).json({ message: "Please confirm your email" });
   }
-})
+});
 
 exports.signin = catchAsyncErr(async (req, res, next) => {
-    console.log("entered here")
-  });
+  console.log("entered here");
+});
 
 exports.emailVerify = (model) => {
   return catchAsyncErr(async (req, res, next) => {
@@ -73,10 +79,14 @@ exports.emailVerify = (model) => {
             { email: decoded.email },
             { emailConfirm: true }
           );
-          res.status(200).send(`<h1 style="background:#fff">Email verified successfully!!!</h1>
+
+          res.status(200)
+            .send(`<h1 style="background:#fff">Email verified successfully!!!</h1>
           <h3>Now you can login</h3>`);
         } else {
-          res.status(404).send(`<h1 style="background:#fff">user not found</h1>`);
+          res
+            .status(404)
+            .send(`<h1 style="background:#fff">user not found</h1>`);
         }
       }
     });
@@ -139,7 +149,7 @@ exports.changePassword = (model)=>{catchAsyncErr(async (req, res, next) => {
 })};
 
 exports.logout = catchAsyncErr(async (req, res, next) => {
-  let token=null;
+  let token = null;
   if (req.headers.authorization) {
     token = req.headers.authorization.split(" ")[1];
   }
@@ -260,8 +270,9 @@ exports.getOne = (Model) =>
     });
   });
 
-exports.getAll = (Model, modelName = "") =>
+exports.getAll = (Model) =>
   catchAsyncErr(async (req, res) => {
+    console.log("got here");
     let filter = {};
     if (req.filterObject) {
       filter = req.filterObject;
