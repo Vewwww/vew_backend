@@ -8,6 +8,10 @@ const factory = require("../Handlers/handler.factory");
 const LocationModel = require("../location/location.model");
 require("../location/location.model");
 
+exports.signup = factory.signup(MechanicModel);
+exports.emailVerify = factory.emailVerify(MechanicModel);
+exports.authenticate=factory.authinticate()
+exports.changePassword=factory.changePassword(MechanicModel)
 //create new service
 exports.createMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   const location = await LocationModel.create({
