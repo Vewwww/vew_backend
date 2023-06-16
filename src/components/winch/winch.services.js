@@ -1,23 +1,11 @@
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const factory = require("../Handlers/handler.factory");
-const authFactory = require("../Handlers/auth.factory");
 const AppError = require("../../utils/AppError");
 
 const winchModel = require("./winch.model");
 const carModel = require("../Car/car.model");
 const LocationModel = require("../location/location.model");
 
-exports.signup = authFactory.signup(winchModel);
-
-<<<<<<< HEAD
-exports.emailVerify = authFactory.emailVerify(winchModel);
-=======
-exports.signup = factory.signup(winchModel);
-
-exports.emailVerify = factory.emailVerify(winchModel);
-exports.authenticate=factory.authinticate()
-exports.changePassword=factory.changePassword(winchModel)
->>>>>>> a21d2ac98756d0e54db0934b96297e85350b29bc
 
 exports.getNearestWinch = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;

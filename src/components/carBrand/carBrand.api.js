@@ -5,7 +5,7 @@ const {
   getCarType,
   updateCarType,
   deleteCarType,
-} = require("./carType.services");
+} = require("./carBrand.services");
 
 const router = express.Router();
 
