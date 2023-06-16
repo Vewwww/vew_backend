@@ -35,8 +35,17 @@ const schema = mongoose.Schema({
     enum: ["admin", "user"],
     default:"user"
   },
-  numOfReports: {
-    type: Number,
+  report: {
+    reportsNumber: {
+      type: Number,
+      default: 0,
+    },
+    dateReport: {
+      type: Date,
+      default: function () {
+        return Date.now();
+      },
+    },
   },
   lisenceRenewalDate: {
     type: Date,

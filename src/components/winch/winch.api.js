@@ -1,6 +1,7 @@
 const {
   getNearestWinch,
-  createWinch
+  createWinch,
+  reportWinch
 } = require("./winch.services");
 const {
   signup,
@@ -13,4 +14,5 @@ const router = require("express").Router();
 router.post("/signup", winchValidation,signup,createWinch);
 router.get("/verify/:token", emailVerify);
 router.get("/getNearestWinch", getNearestWinch);
+router.patch("/report/:id",reportWinch);
 module.exports = router;

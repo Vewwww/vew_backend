@@ -5,6 +5,8 @@ const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory = require("../Handlers/handler.factory");
 require("../location/location.model");
 const LocationModel = require("../location/location.model");
+//report
+exports.reportMechanic=factory.report(mechanicModel);
 
 //create new service
 exports.createMechanicWorkshop = catchAsyncErr(async (req, res, next) => {

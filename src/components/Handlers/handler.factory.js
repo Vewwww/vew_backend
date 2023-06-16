@@ -10,7 +10,48 @@ const maintenanceCenterModel = require("../MaintenanceCenter/maintenanceCenter.m
 const { getNearestPlaces } = require("./getNearestPlaces");
 const winchModel = require("../winch/winch.model");
 const { sendEmail } = require("./email.factory");
+const schedule = require("node-schedule");
 
+exports.report = (Model) =>
+  catchAsyncErr(async (req, res, next) => {
+    const max_num_of_reports = 10;
+    const { id } = req.params;
+
+    // const document = await Model.findByIdAndUpdate( id ,{});
+
+    // 1 find the document
+    const document = await Model.findById(id);
+    if (!document) {
+      return next(new AppError(`No document found for this id ${id}`, 400));
+    }
+    // run schedule with cron job on document to run after after week if reports number is 0 
+    if (document.report.reportsNumber == 0) {
+      const date = new Date();
+      date.setDate(date.getDate() + 7);
+      const job = schedule.scheduleJob(date, async function () {
+        // get docuemnt
+        const document = await Model.findById(id);
+        if (!document) {
+          return next(new AppError(`No document found for this id ${id}`, 400));
+        }
+
+        // if document not susspended then reset reports number
+        if (document.isSuspended === false)
+          await Model.findByIdAndUpdate(id, {
+            report: { reportsNumber: 0 },
+          });
+      });
+    }
+
+    console.log(document.report.reportsNumber);
+    // 2 check the reposts number and update
+    await Model.findByIdAndUpdate(id, {
+      report: { reportsNumber: document.report.reportsNumber + 1 },
+      isSuspended: document.report.reportsNumber >= max_num_of_reports - 1,
+    });
+
+    res.status(204).send();
+  });
 
 exports.deleteOne = (Model) =>
   catchAsyncErr(async (req, res, next) => {
