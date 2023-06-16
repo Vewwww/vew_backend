@@ -18,8 +18,11 @@ const validation = Joi.object({
       color: Joi.string().required(),
       plateNumber: Joi.string().required()
     })).required(),
-  numOfReports:Joi.number().default(0),
-  lisenceRenewalDate: Joi.date(),
+    report: Joi.object({
+      reportsNumber: Joi.number().default(0),
+      dateReport: Joi.date(),
+    }),
+     lisenceRenewalDate: Joi.date(),
   isSuspended:Joi.boolean().default(false),
   emailConfirm:Joi.boolean().default(false),
   logedIn:Joi.boolean().default(false),

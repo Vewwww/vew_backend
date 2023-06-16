@@ -2,6 +2,9 @@ const driverModel = require("./driver.model");
 const AppError = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const carModel = require("../Car/car.model");
+const factory = require("../Handlers/handler.factory")
+//report
+exports.reportDriver=factory.report(driverModel);
 // to add new user
 exports.createUser = catchAsyncErr(async (req, res, next) => {
   let cars = [];
