@@ -15,8 +15,7 @@ const schema = new mongoose.Schema({
 
   },
   image: {
-    data: Buffer,
-    contentType: String
+    type:String
   },
   description: {
     en_description: {

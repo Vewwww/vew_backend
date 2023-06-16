@@ -15,5 +15,6 @@ exports.allRequires = (app) => {
   app.use("/gasStation", require("../components/GasStation/gasStation.api"));
   app.use("/allusers",require("../components/Handlers/allUsers.api"));
   app.use("/car", require("../components/Car/car.api"));
+  app.use("/sign", require("../components/Sign/sign.api"));
 
 };

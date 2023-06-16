@@ -1,58 +1,21 @@
-const express = require("express");
 const signModel = require("./sign.model");
-const router = express.Router();
+const factory=require("../Handlers/handler.factory");
+const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 
-
-router.post("/", async (req, res) => {
-    await signModel.create({
-      name: req.body.name,
-      image: req.body.image,
-      description: req.body.description,
-      solution:req.body.solution
-    });
-    res.send({ message: "created" });
+exports.createSign = catchAsyncErr(async (req, res) => {
+    req.body.image=req.file.filename
+    let sign = new signModel(req.body)
+    await sign.save()
+    res.status(200).json(sign)
   });
 
-  router.get("/", async (req, res) => {
-    try {
-      res.send(await signModel.find());
-    } catch (error) {
-      res.status(404).send({ message: "not found" });
-    }
-  });
+exports.getSigns = factory.getAll(signModel);
 
-  router.get("/one", async (req, res) => {
-    try {
-      nameSign= req.body.name,
-      //const Sign = await userModel.findOne({ email: myemail });
-      res.send(await signModel.findOne({name:nameSign}));
-    } catch (error) {
-      res.status(404).send({ message: "not found" });
-    }
-  });
+exports.getSign = factory.getOne(signModel);
 
-  router.patch("/", async (req, res) => {
-    try {
-      newId=req.body.id
-      newName = req.body.name;
-      newDescription=req.body.description;
-      newSolution=req.body.solution;
-      await signModel.findByIdAndUpdate(newId,{name: newName, description: newDescription, solution:newSolution });
-      res.send({ message: "updated" });
-    } catch (error) {
-      res.status(404).send({ message: "is not updated" });
-    }
-  });
-  
+// exports.updateSign = factory.updateOne(signModel);
 
-  router.delete("/", async (req, res) => {
-    try {
-      name = req.body.name;
-      await signModel.findOneAndDelete({ name: name });
-      res.send({ message: "deleted" });
-    } catch (error) {
-      res.status(404).send({ message: "is not deleted" });
-    }
-  });
 
-  module.exports=router;
+
+
+
