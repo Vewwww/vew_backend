@@ -3,15 +3,9 @@ const AppErr = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory = require("../Handlers/handler.factory");
-
-
-const LocationModel = require("../location/location.model");
 require("../location/location.model");
+const LocationModel = require("../location/location.model");
 
-exports.signup = factory.signup(MechanicModel);
-exports.emailVerify = factory.emailVerify(MechanicModel);
-exports.authenticate=factory.authinticate()
-exports.changePassword=factory.changePassword(MechanicModel)
 //create new service
 exports.createMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   const location = await LocationModel.create({
@@ -23,11 +17,10 @@ exports.createMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   delete req.body.longitude;
   delete req.body.description;
 
-
   req.body.location = location._id;
   const mechanic = await mechanicModel.create(req.body);
 
-  res.status(200).json({message:"Verify your email"})
+  res.status(200).json({ message: "Verify your email" });
 });
 
 exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
