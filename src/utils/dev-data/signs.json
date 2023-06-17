@@ -4,7 +4,7 @@
       "en_name": "Engine Temperature Warning Light",
       "ar_name": "مؤشر حرارة المحرك"
     },
-    "image": "",
+    "image": "engine-temperature-warning-light.jpg",
     "description": {
       "en_description": "Indicates a problem with the engine temperature. It could be high engine temperature, low coolant level, or a malfunctioning cooling system.",
       "ar_description": "يشير إلى وجود مشكلة في حرارة المحرك. قد يكون السبب ارتفاع درجة حرارة المحرك، نقص في سائل التبريد، أو عطل في نظام التبريد."
@@ -19,7 +19,7 @@
       "en_name": "Battery Charge Warning Light",
       "ar_name": "مؤشر شحن البطارية"
     },
-    "image": "",
+    "image": "battery-charge.jpg",
     "description": {
       "en_description": "Indicates a problem with the battery charge. It could be a weak battery or a malfunctioning charging system.",
       "ar_description": "يشير إلى وجود مشكلة في شحن البطارية. قد يكون السبب بطارية ضعيفة أو عطل في نظام الشحن."
@@ -34,7 +34,7 @@
       "en_name": "Oil Pressure Warning Light",
       "ar_name": "مؤشر ضغط الزيت"
     },
-    "image": "",
+    "image": "oil-pressure.jpg",
     "description": {
       "en_description": "Indicates a problem with the oil pressure. It could be low oil pressure or a malfunctioning lubrication system.",
       "ar_description": "يشير إلى وجود مشكلة في ضغط الزيت. قد يكون السبب انخفاض ضغط الزيت أو عطل في نظام التشحيم."
@@ -49,7 +49,7 @@
       "en_name": "Brake Warning Light",
       "ar_name": "مؤشر الفرامل"
     },
-    "image": "",
+    "image": "brake.jpg",
     "description": {
       "en_description": "Indicates a problem with the brake system. It could be low brake fluid level, worn brake pads, or a malfunctioning brake component.",
       "ar_description": "يشير إلى وجود مشكلة في نظام الفرامل. قد يكون السبب انخفاض مستوى سائل الفرامل، تآكل في أقراص الفرامل، أو عطل في أجزاء الفرامل."
@@ -64,7 +64,7 @@
       "en_name": "Transmission Temperature Warning Light",
       "ar_name": "مؤشر حرارة النقل"
     },
-    "image": "",
+    "image": "transmission-temp.jpg",
     "description": {
       "en_description": "Indicates a problem with the transmission temperature. It could be high transmission temperature, low transmission fluid level, or a malfunctioning transmission system.",
       "ar_description": "يشير إلى وجود مشكلة في حرارة النقل. قد يكون السبب ارتفاع درجة حرارة الناقل، نقص في سائل النقل، أو عطل في نظام النقل."
@@ -79,7 +79,7 @@
       "en_name": "Tire Pressure Warning Light",
       "ar_name": "مؤشر ضغط الإطارات"
     },
-    "image": "",
+    "image": "tire-pressure.jpg",
     "description": {
       "en_description": "Indicates a problem with the tire pressure. It could be low air pressure in the tires.",
       "ar_description": "يشير إلى وجود مشكلة في ضغط الإطارات. قد يكون السبب انخفاض ضغط الهواء في الإطارات."
@@ -94,7 +94,7 @@
       "en_name": "Traction Control Off",
       "ar_name": "تحكم الثبات معطل"
     },
-    "image": "",
+    "image": "traction-control-off.jpg",
     "description": {
       "en_description": "Indicates that the traction control system is disabled. The traction control system is turned off when this light is illuminated.",
       "ar_description": "يشير إلى تعطل نظام تحكم الثبات. يتم تعطيل نظام تحكم الثبات عند تشغيل هذا المؤشر."
@@ -109,7 +109,7 @@
       "en_name": "Steering Wheel Lock",
       "ar_name": "قفل عجلة القيادة"
     },
-    "image": "",
+    "image": "steering-wheel-lock.jpg",
     "description": {
       "en_description": "Indicates that the steering wheel is locked. This light is illuminated when the steering wheel is secured to prevent vehicle theft.",
       "ar_description": "يشير إلى قفل عجلة القيادة. يتم تشغيل هذا المؤشر عندما يتم تأمين عجلة القيادة لمنع سرقة المركبة."
@@ -124,7 +124,7 @@
       "en_name": "Trailer Tow Hitch Warning",
       "ar_name": "تحذير مشبك سحب المقطورة"
     },
-    "image": "",
+    "image": "trailer-tow-hitch-warning.jpg",
     "description": {
       "en_description": "Indicates a problem with the trailer tow hitch. It could be due to improper trailer attachment or a malfunctioning trailer tow hitch.",
       "ar_description": "يشير إلى وجود مشكلة في مشبك سحب المقطورة. قد يكون السبب عدم تأمين المقطورة بشكل صحيح أو وجود خلل في مشبك سحب المقطورة."
@@ -140,7 +140,7 @@
       "en": "Traction Control Light",
       "ar": "مؤشر تحكم الثبات"
     },
-    "image": "",
+    "image": "traction-control-light.jpg",
     "description": {
       "en": "Indicates the operation of the traction control system. This light is illuminated when the traction control system is active or when there is a malfunction in the system.",
       "ar": "يشير إلى عملية تحكم الثبات. يتم تشغيل هذا المؤشر عندما يكون نظام تحكم الثبات نشطًا أو عندما يحدث خلل في النظام."
@@ -155,7 +155,7 @@
       "en": "Service Vehicle Soon",
       "ar": "خدمة المركبة قريبًا"
     },
-    "image": "",
+    "image": "sevice-vehicle-soon.jpg",
     "description": {
       "en": "Indicates the need for servicing the vehicle soon. This light signifies the presence of an error or a general warning related to one of the vehicle's systems and requires immediate attention.",
       "ar": "يشير إلى ضرورة صيانة المركبة قريبًا. يشير هذا المؤشر إلى وجود خطأ أو تحذير عام يتعلق بأحد أنظمة المركبة ويتطلب التدخل الفوري."
@@ -170,7 +170,7 @@
       "en": "Security Alert",
       "ar": "تنبيه الأمان"
     },
-    "image": "",
+    "image": "security-alert.jpg",
     "description": {
       "en": "Indicates a security alert in the vehicle. This alert may signify an unauthorized attempt to access the vehicle or a breach in the security system.",
       "ar": "يشير إلى وجود تنبيه أمان في المركبة. قد يشير هذا التنبيه إلى محاولة غير مصرح بها للوصول إلى المركبة أو وجود خرق في نظام الأمان."
@@ -185,7 +185,7 @@
       "en": "Side Airbag",
       "ar": "وسادة هوائية جانبية"
     },
-    "image": "",
+    "image": "side-airbag.jpg",
     "description": {
       "en": "The side airbag works to protect the occupants in the event of a side collision. The side airbag is typically deployed in the doors or side pillars of the vehicle and rapidly inflates when a side impact is detected.",
       "ar": "تعمل وسادة الهواء الجانبية على حماية الركاب في حالة وقوع حادث جانبي. تنتشر وسادة الهواء الجانبية عادة في الأبواب أو الأعمدة الجانبية للمركبة وتنتفخ فورًا عندما يتم اكتشاف اصطدام جانبي."
@@ -200,7 +200,7 @@
       "en": "Reduced Power Warning",
       "ar": "تحذير الطاقة المخفضة"
     },
-    "image": "",
+    "image": "reduced-power-warning.jpg",
     "description": {
       "en": "Indicates a warning of reduced power in the vehicle. This could be due to a malfunction in the power system or limitations on the vehicle's performance due to a technical issue.",
       "ar": "يشير إلى تحذير بانخفاض الطاقة في المركبة. قد يكون السبب وجود خلل في نظام القدرة أو قيود على أداء المركبة بسبب مشكلة تقنية."
@@ -215,7 +215,7 @@
       "en": "Seat Belt Indicator",
       "ar": "مؤشر حزام الأمان"
     },
-    "image": "",
+    "image": "seat-belt.jpg",
     "description": {
       "en": "Indicates the seat belt is not fastened. This indicator is illuminated when a seat belt is not buckled for one of the occupants in the vehicle.",
       "ar": "يشير إلى عدم تثبيت حزام الأمان. يتم تشغيل هذا المؤشر عندما لا يتم ربط حزام الأمان لأحد الركاب في المركبة."
@@ -230,7 +230,7 @@
       "en": "Press Clutch Pedal",
       "ar": "اضغط على دواسة القابض"
     },
-    "image": "",
+    "image": "press-clutch-pedal.jpg",
     "description": {
       "en": "Indicates the need to press the clutch pedal. This warning is activated when operating the vehicle requires a gear change or coming to a stop.",
       "ar": "تشير إلى ضرورة الضغط على دواسة القابض. يتم تشغيل هذا التنبيه عندما يتطلب تشغيل المركبة تغيير سرعة أو إيقافها."
@@ -245,7 +245,7 @@
       "en": "Powertrain Fault",
       "ar": "خلل في نظام القدرة"
     },
-    "image": "",
+    "image": "powertrain-fault.jpg",
     "description": {
       "en": "Indicates a fault in the powertrain system of the vehicle. This may include the car's engine, transmission, fuel system, and emissions systems.",
       "ar": "يشير إلى وجود خلل في نظام القدرة في المركبة. قد يشمل ذلك محرك السيارة ونقل الحركة ونظام الوقود وأنظمة الانبعاثات."
@@ -260,7 +260,7 @@
       "en": "Power Steering Warning Light",
       "ar": "مؤشر تحذير نظام المقود الهيدروليكي"
     },
-    "image": "",
+    "image": "power-steering-warning.jpg",
     "description": {
       "en": "Indicates a fault in the power steering system. This light signifies a possible system failure, low fluid level, or a sensor error.",
       "ar": "يشير إلى وجود خلل في نظام المقود الهيدروليكي. يشير هذا المؤشر إلى احتمالية فشل النظام أو نقص في مستوى السوائل أو خطأ في الاستشعار."
@@ -275,7 +275,7 @@
       "en": "Press Brake Pedal",
       "ar": "اضغط على دواسة الفرامل"
     },
-    "image": "",
+    "image": "press-brake-pedal.jpg",
     "description": {
       "en": "Indicates the need to press the brake pedal. This warning is activated when coming to a stop or reducing speed is required.",
       "ar": "تشير إلى ضرورة الضغط على دواسة الفرامل. يتم تشغيل هذا التنبيه عندما يتطلب الوقوف أو تخفيف السرعة."
@@ -290,7 +290,7 @@
       "en": "Parking Brake Light",
       "ar": "مؤشر فرامل الوقوف"
     },
-    "image": "",
+    "image": "parking-brake-light.jpg",
     "description": {
       "en": "Indicates the activation or release of the parking brake system. This light is illuminated when the parking brake is engaged or when it is released.",
       "ar": "يشير إلى تشغيل أو تحرير نظام الفرامل اليدوي. يُشعَل هذا المؤشر عند تشغيل الفرامل اليدوية أو عندما يتم تحريرها."
@@ -305,7 +305,7 @@
       "en": "Overdrive Light",
       "ar": "مؤشر الإضافة الزائدة"
     },
-    "image": "",
+    "image": "overdrive-light.jpg",
     "description": {
       "en": "Indicates the activation or deactivation of overdrive in the transmission. This light is illuminated when overdrive is engaged or when it is disengaged.",
       "ar": "يشير إلى تشغيل أو إيقاف الإضافة الزائدة في ناقل الحركة. يُشعَل هذا المؤشر عند تشغيل الإضافة الزائدة أو عند إيقافها."
@@ -320,7 +320,7 @@
       "en": "Oil Change Reminder",
       "ar": "تذكير تغيير الزيت"
     },
-    "image": "",
+    "image": "oil-change.jpg",
     "description": {
       "en": "Indicates the need to change the engine oil. This warning serves as a reminder that it is time to change the engine oil and perform regular maintenance.",
       "ar": "يشير إلى ضرورة تغيير زيت المحرك. يعمل هذا التنبيه على تذكيرك بأنه حان الوقت لتغيير زيت المحرك وإجراء الصيانة الدورية."
@@ -335,7 +335,7 @@
       "en": "Master Warning Light",
       "ar": "مؤشر التحذير الرئيسي"
     },
-    "image": "",
+    "image": "master-warning.jpg",
     "description": {
       "en": "Indicates a general fault or issue with the vehicle. This light is illuminated when a multi-system fault or warning is detected in the vehicle.",
       "ar": "يشير إلى وجود خطأ عام أو مشكلة في المركبة. يُشعَل هذا المؤشر عندما يتم الكشف عن خطأ أو تحذير متعدد النظم في المركبة."
@@ -350,7 +350,7 @@
       "en": "Information Warning Light",
       "ar": "مؤشر التحذير بالمعلومات"
     },
-    "image": "",
+    "image": "information-light-warning.jpg",
     "description": {
       "en": "Indicates the availability of additional information or alerts in the vehicle. This light is activated to inform you of important information or non-urgent alerts.",
       "ar": "يشير إلى توفر معلومات إضافية أو تنبيهات في المركبة. يتم تشغيل هذا المؤشر لإبلاغك بمعلومات مهمة أو تنبيهات غير طارئة."
@@ -365,7 +365,7 @@
       "en": "Icy Road Warning Light",
       "ar": "مؤشر التحذير من الطرق الجليدية"
     },
-    "image": "",
+    "image": "icy-road-warning-light.jpg",
     "description": {
       "en": "Indicates the presence of icy road conditions. This light is activated to warn you about potentially dangerous driving conditions caused by ice on the road.",
       "ar": "يشير إلى وجود ظروف طرق جليدية. يتم تشغيل هذا المؤشر لتحذيرك من ظروف القيادة الخطرة المحتملة الناجمة عن وجود طبقة من الجليد على الطريق."
@@ -380,7 +380,7 @@
       "en": "Gas/Fuel Cap",
       "ar": "غطاء الوقود"
     },
-    "image": "",
+    "image": "gas-cap.jpg",
     "description": {
       "en": "The gas/fuel cap is a cover that seals the opening of the fuel tank in a vehicle. It is designed to prevent fuel leakage, maintain fuel quality, and protect the fuel system from debris and contaminants. The cap is typically threaded or latched onto the fuel filler neck.",
       "ar": "غطاء الوقود هو غطاء يحكم فتحة خزان الوقود في المركبة. تم تصميمه لمنع تسرب الوقود والحفاظ على جودة الوقود وحماية نظام الوقود من الشوائب والملوثات. يتم عادة تثبيت الغطاء بشكل ملولب أو مقفل على عنق ملء الوقود."
@@ -395,7 +395,7 @@
       "en": "ESP Fault/Traction Control Malfunction",
       "ar": "عطل ESP/عطل التحكم في الثبات"
     },
-    "image": "",
+    "image": "esp-fault-traction-control-malfunction.jpg",
     "description": {
       "en": "This warning indicates a fault or malfunction in the Electronic Stability Program (ESP) or Traction Control System (TCS) of the vehicle. ESP and TCS are safety systems that help maintain stability and traction during various driving conditions.",
       "ar": "يشير هذا التحذير إلى وجود عطل أو خلل في نظام الاستقرار الإلكتروني (ESP) أو نظام التحكم في الثبات (TCS) في المركبة. نظامي ESP و TCS هما نظامان للسلامة يساعدان على الحفاظ على الاستقرار والثبات أثناء ظروف القيادة المختلفة."
@@ -410,7 +410,7 @@
       "en": "Electric Park Brake",
       "ar": "فرامل الوقوف الكهربائية"
     },
-    "image": "",
+    "image": "electric-park-brake.jpg",
     "description": {
       "en": "An electric park brake is a system in modern vehicles that replaces the traditional hand-operated parking brake lever or pedal. It is electronically controlled and activated by a switch or button inside the vehicle.",
       "ar": "فرامل الوقوف الكهربائية هي نظام في المركبات الحديثة يحل محل ذراع أو دواسة فرامل الوقوف التقليدية التي تعمل يدويًا. يتم التحكم فيها إلكترونيًا وتُشغل بواسطة مفتاح أو زر داخل المركبة."
@@ -425,7 +425,7 @@
       "en": "Distance Warning",
       "ar": "تحذير المسافة"
     },
-    "image": "",
+    "image": "distance-warning.jpg",
     "description": {
       "en": "Distance Warning is a feature in vehicles that alerts the driver when the vehicle is too close to the vehicle in front. It helps maintain a safe distance and avoid potential collisions.",
       "ar": "تحذير المسافة هو ميزة في المركبات تُنبِّه السائق عندما تكون المركبة قريبة جدًا من المركبة الأمامية. يساعد في الحفاظ على مسافة آمنة وتجنب التصادمات المحتملة."
@@ -440,7 +440,7 @@
       "en": "Child Safety Lock",
       "ar": "قفل الأمان للأطفال"
     },
-    "image": "",
+    "image": "child-safety-lock.jpg",
     "description": {
       "en": "Child Safety Lock is a feature in vehicles that allows the rear doors to be locked or unlocked from the inside, preventing children from opening the doors from the inside while the vehicle is in motion.",
       "ar": "قفل الأمان للأطفال هو ميزة في المركبات تتيح قفل أو فتح الأبواب الخلفية من الداخل، مما يمنع الأطفال من فتح الأبواب من الداخل أثناء تحرك المركبة."
@@ -455,7 +455,7 @@
       "en": "Check Engine or Malfunction Indicator Light (MIL)",
       "ar": "مؤشر فحص المحرك أو مؤشر العطل (MIL)"
     },
-    "image": "",
+    "image": "check-engine.jpg",
     "description": {
       "en": "The Check Engine or Malfunction Indicator Light (MIL) is a warning light on the vehicle's dashboard that illuminates when the vehicle's onboard diagnostic system detects a potential issue with the engine, emissions system, or other related components. It serves as an indication that there is a malfunction or problem that requires attention.",
       "ar": "مؤشر فحص المحرك أو مؤشر العطل (MIL) هو مؤشر تحذيري على لوحة القيادة يضيء عندما يكتشف نظام التشخيص الذاتي للمركبة وجود مشكلة محتملة في المحرك أو نظام الانبعاثات أو مكونات أخرى ذات صلة. يعمل كدليل على وجود خلل أو مشكلة تتطلب اهتمامًا."
@@ -470,7 +470,7 @@
       "en": "Catalytic Converter Warning",
       "ar": "تحذير محول العوادم الحفاز"
     },
-    "image": "",
+    "image": "catalytic-converter-warning.jpg",
     "description": {
       "en": "The Catalytic Converter Warning is a warning indication that there may be an issue with the catalytic converter in the vehicle's exhaust system. The catalytic converter is responsible for reducing harmful emissions by converting them into less harmful gases. When the catalytic converter is not functioning properly, it can lead to increased emissions and potential damage to the vehicle's engine.",
       "ar": "تحذير محول العوادم الحفاز هو إشارة تحذيرية بأنه قد يكون هناك مشكلة في محول العوادم الحفاز في نظام العوادم للمركبة. يتحمل محول العوادم الحفاز مسؤولية تقليل الانبعاثات الضارة عن طريق تحويلها إلى غازات أقل ضررًا. عندما لا يعمل محول العوادم الحفاز بشكل صحيح، يمكن أن يؤدي ذلك إلى زيادة الانبعاثات وتلف المحرك في المركبة."
@@ -485,7 +485,7 @@
       "en": "Brake Fluid",
       "ar": "سائل الفرامل"
     },
-    "image": "",
+    "image": "brake-fluid.jpg",
     "description": {
       "en": "Brake fluid is a specially formulated hydraulic fluid used in the braking system of a vehicle. It is responsible for transmitting the force applied to the brake pedal to the brake components, allowing the vehicle to slow down or stop. Brake fluid operates under high temperatures and pressures, making it essential for the proper functioning of the braking system.",
       "ar": "سائل الفرامل هو سائل هيدروليكي مصنوع خصيصًا يستخدم في نظام الفرامل للمركبة. يعمل على نقل القوة المطبقة على دواسة الفرامل إلى مكونات الفرامل، مما يتيح للمركبة التباطؤ أو التوقف. يعمل سائل الفرامل تحت درجات حرارة وضغوط عالية، مما يجعله ضروريًا للعمل السليم لنظام الفرامل."
@@ -500,7 +500,7 @@
       "en": "Brake Pad Warning",
       "ar": "تحذير الأقمشة الفرامل"
     },
-    "image": "",
+    "image": "brake-pad.jpg",
     "description": {
       "en": "The Brake Pad Warning is an indication that the brake pads in the vehicle's braking system are worn and need to be replaced. Brake pads are essential components that create friction against the brake rotors to slow down or stop the vehicle. Over time, brake pads wear down due to normal use, and when they reach a certain thickness, a warning light is triggered to alert the driver that it's time for replacement.",
       "ar": "تحذير الأقمشة الفرامل هو إشارة تشير إلى أن أقمشة الفرامل في نظام الفرامل للمركبة قد تآكلت وتحتاج إلى استبدال. تعد أقمشة الفرامل مكونات أساسية تولد احتكاكًا مع أقراص الفرامل للتباطؤ أو التوقف عند السيارة. مع مرور الوقت، تتآكل أقمشة الفرامل بسبب الاستخدام العادي، وعندما تصل إلى سماكة معينة، يتم تشغيل مؤشر تحذيري لتنبيه السائق بضرورة الاستبدال."
@@ -515,7 +515,7 @@
       "en": "Brake Lights Warning",
       "ar": "تحذير الأضواء الفرامل"
     },
-    "image": "",
+    "image": "brake-lights-warning.jpg",
     "description": {
       "en": "The Brake Lights Warning is an indication that there may be an issue with the brake lights of the vehicle. The brake lights are essential safety features that alert other drivers when the vehicle is slowing down or stopping. When the Brake Lights Warning light is illuminated, it could mean that one or more of the brake lights are not functioning properly or have burnt out.",
       "ar": "تحذير الأضواء الفرامل هو إشارة بأنه قد يكون هناك مشكلة في أضواء الفرامل في المركبة. تعتبر أضواء الفرامل ميزات سلامة أساسية تنبه السائقين الآخرين عندما يتباطأ أو يتوقف المركبة. عندما يكون مؤشر تحذير الأضواء الفرامل مضاءً، يمكن أن يعني أن إحدى أو أكثر من أضواء الفرامل لا تعمل بشكل صحيح أو قد احترقت."
@@ -530,7 +530,7 @@
       "en": "Automatic Gearbox Warning",
       "ar": "تحذير صندوق التروس الأوتوماتيكي"
     },
-    "image": "",
+    "image": "automatic-gearbox-warning.jpg",
     "description": {
       "en": "The Automatic Gearbox Warning is an indication that there may be an issue with the automatic transmission system of the vehicle. The automatic gearbox is responsible for shifting gears smoothly and efficiently without the need for manual input from the driver. When the Automatic Gearbox Warning light is illuminated, it could mean that there is a malfunction or a problem with the automatic transmission system.",
       "ar": "تحذير صندوق التروس الأوتوماتيكي هو إشارة بأنه قد يكون هناك مشكلة في نظام النقل التلقائي للمركبة. يتحمل صندوق التروس الأوتوماتيكي مسؤولية تحويل التروس بسلاسة وبكفاءة دون الحاجة إلى إدخال يدوي من السائق. عندما يكون مؤشر تحذير صندوق التروس الأوتوماتيكي مضاءً، فقد يعني ذلك وجود عطل أو مشكلة في نظام النقل التلقائي."
@@ -545,7 +545,7 @@
       "en": "Anti-lock Braking System (ABS) Warning",
       "ar": "تحذير نظام مكابح مانعة للانغلاق (ABS)"
     },
-    "image": "",
+    "image": "anti-lock-braking-system.jpg",
     "description": {
       "en": "The Anti-lock Braking System (ABS) Warning is an indication that there may be an issue with the ABS system in the vehicle. ABS is a safety feature that prevents the wheels from locking up during braking, allowing the driver to maintain steering control and reduce the risk of skidding. When the ABS Warning light is illuminated, it could mean that there is a malfunction or a problem with the ABS system, and it may not function properly in case of emergency braking.",
       "ar": "تحذير نظام مكابح مانعة للانغلاق (ABS) هو إشارة بأنه قد يكون هناك مشكلة في نظام ABS في المركبة. يعتبر ABS ميزة أمان تمنع قفل العجلات أثناء الفرملة، مما يتيح للسائق الحفاظ على التحكم في المقود وتقليل خطر الانزلاق. عندما يكون مؤشر تحذير نظام مكابح مانعة للانغلاق (ABS) مضاءً، فقد يعني ذلك وجود عطل أو مشكلة في نظام ABS، وقد لا يعمل بشكل صحيح في حالة الفرملة الطارئة."
@@ -560,7 +560,7 @@
       "en": "All Wheel Drive (AWD)/Four-Wheel Drive (4WD) Warning",
       "ar": "تحذير نظام الدفع الرباعي (AWD/4WD)"
     },
-    "image": "",
+    "image": "all-wheel-drive.jpg",
     "description": {
       "en": "The All Wheel Drive (AWD) or Four-Wheel Drive (4WD) Warning is an indication that there may be an issue with the AWD or 4WD system in the vehicle. AWD or 4WD is a drivetrain configuration that provides power to all four wheels of the vehicle simultaneously, enhancing traction and stability in challenging driving conditions. When the AWD/4WD Warning light is illuminated, it could mean that there is a malfunction or a problem with the AWD or 4WD system, and it may not engage or function properly when needed.",
       "ar": "تحذير نظام الدفع الرباعي (AWD/4WD) هو إشارة بأنه قد يكون هناك مشكلة في نظام AWD أو 4WD في المركبة. يعتبر AWD أو 4WD تكوينًا لنظام الدفع يوفر القدرة إلى جميع العجلات الأربع في المركبة بشكل متزامن، مما يعزز الثبات والتوازن في ظروف القيادة الصعبة. عندما يكون مؤشر تحذير نظام الدفع الرباعي (AWD/4WD) مضاءً، فقد يعني ذلك وجود عطل أو مشكلة في نظام AWD أو 4WD، وقد لا يتم التشغيل أو العمل بشكل صحيح عند الحاجة."
@@ -575,7 +575,7 @@
       "en": "Airbag Indicator",
       "ar": "مؤشر وسادة الهواء"
     },
-    "image": "",
+    "image": "airbag.jpg",
     "description": {
       "en": "The Airbag Indicator is a warning light that alerts you to a potential issue with the airbag system in your vehicle. Airbags are a critical safety feature designed to protect occupants in the event of a collision. When the Airbag Indicator light is illuminated, it indicates that there may be a malfunction or a problem with one or more components of the airbag system. This could mean that the airbags may not deploy properly in case of an accident.",
       "ar": "مؤشر وسادة الهواء هو مؤشر تحذير ينبهك إلى وجود مشكلة محتملة في نظام وسادة الهواء في مركبتك. تعتبر الوسائد الهوائية ميزة سلامة حاسمة مصممة لحماية ركاب المركبة في حالة وقوع تصادم. عندما يكون مؤشر وسادة الهواء مضاءً، فإن ذلك يشير إلى وجود عطل أو مشكلة في أحد أجزاء نظام وسادة الهواء. قد يعني هذا أن الوسائد الهوائية قد لا تنتشل بشكل صحيح في حالة وقوع حادث."
@@ -590,7 +590,7 @@
       "en": "Airbag Deactivated",
       "ar": "تعطيل وسادة الهواء"
     },
-    "image": "",
+    "image": "airbag-deactivated.jpg",
     "description": {
       "en": "The Airbag Deactivated warning indicates that one or more airbags in your vehicle have been deactivated and will not deploy in the event of a collision. This warning is usually accompanied by a specific message or symbol on the instrument cluster or dashboard. Airbags are essential safety features designed to provide protection to vehicle occupants during accidents, and their deactivation may increase the risk of injury in case of a collision.",
       "ar": "تشير تحذيرات تعطيل وسادة الهواء إلى أن وسادة الهواء واحدة أو أكثر في مركبتك قد تم تعطيلها ولن تنتشل في حالة وقوع تصادم. يتم عادةً مرافقة هذا التحذير برسالة أو رمز محدد على لوحة العدادات أو لوحة القيادة. تعتبر وسائد الهواء ميزات سلامة أساسية مصممة لتوفير حماية لركاب المركبة خلال الحوادث، وقد يزيد تعطيلها من خطر الإصابة في حالة وقوع تصادم."
@@ -605,7 +605,7 @@
       "en": "Adaptive Suspension Dampers",
       "ar": "أمانيات تعليق متكيفة"
     },
-    "image": "",
+    "image": "adaptive-suspension-dampers.jpg",
     "description": {
       "en": "Adaptive Suspension Dampers are a system that automatically adjusts the damping characteristics of the suspension in response to changing road conditions and driving dynamics. By continuously monitoring sensors and receiving input from the vehicle's control system, the adaptive dampers can modify the stiffness or softness of the suspension to optimize ride comfort, stability, and handling performance. This technology provides a smoother and more controlled driving experience, especially on uneven or challenging road surfaces.",
       "ar": "أمانيات تعليق متكيفة هي نظام يقوم بضبط خصائص التوجيه لتحسين الراحة والاستقرار. تقوم هذه الأمانيات بضبط تعليق السيارة تلقائيًا استنادًا إلى ظروف الطريق المتغيرة والديناميكيات أثناء القيادة. من خلال رصد الاستشعارات بشكل مستمر واستقبال إشارات من نظام التحكم في المركبة، يمكن للأمانيات التعديل على صلابة أو نعومة التعليق لتحقيق أقصى درجات الراحة والاستقرار وأداء التحكم في المنعطفات. هذه التكنولوجيا توفر تجربة قيادة أكثر سلاسة وسيطرة، خاصةً على الطرق غير المستوية أو التحديات الصعبة."
@@ -620,7 +620,7 @@
       "en": "4 Wheel Drive (4WD) LOCK Indicator Light",
       "ar": "مؤشر تأمين نظام الدفع الرباعي (4WD) قفل"
     },
-    "image": "",
+    "image": "4WD-lock-indicator.jpg",
     "description": {
       "en": "The 4 Wheel Drive (4WD) LOCK Indicator Light is a warning light that indicates when the 4WD system is engaged in the locked mode. When the 4WD lock mode is activated, power is distributed evenly to all four wheels, providing maximum traction and stability. This mode is typically used in off-road or low-traction conditions, such as deep snow, mud, or steep inclines, where extra traction is needed. The 4WD lock indicator light is usually located on the instrument cluster or dashboard and will illuminate when the system is engaged.",
       "ar": "مؤشر تأمين نظام الدفع الرباعي (4WD) قفل هو مؤشر تحذير يشير إلى تشغيل نظام الدفع الرباعي في وضع القفل. عند تفعيل وضع القفل 4WD ، يتم توزيع القوة بالتساوي على العجلات الأربعة ، مما يوفر أقصى قدر من الالتصاق والثبات. يُستخدم هذا الوضع عادةً في ظروف القيادة خارج الطريق أو ظروف الثبات المنخفضة ، مثل الثلوج العميقة أو الطين أو المنحدرات الشديدة ، حيث يكون الالتصاق الإضافي مطلوبًا. يتم وضع مؤشر قفل 4WD عادةً على لوحة العدادات أو لوحة القيادة وسوف يضيء عند تشغيل النظام."
@@ -635,7 +635,7 @@
       "en": "Air Suspension",
       "ar": "نظام التعليق الهوائي"
     },
-    "image": "",
+    "image": "air-suspension.jpg",
     "description": {
       "en": "Air Suspension is a suspension system that uses air-filled rubber bags or air springs to support the vehicle's weight and provide a smoother and more comfortable ride. The air suspension system replaces traditional coil or leaf spring suspensions and allows the driver to adjust the ride height and stiffness of the suspension based on driving conditions or personal preferences. It is commonly found in luxury vehicles and certain off-road vehicles.",
       "ar": "نظام التعليق الهوائي هو نظام تعليق يستخدم أكياس مطاطية مملوءة بالهواء أو ينابيع هوائية لدعم وزن المركبة وتوفير رحلة أكثر سلاسة وراحة. يحل نظام التعليق الهوائي محل التعليقات التقليدية بالزنبرك أو الورقة ويسمح للسائق بضبط ارتفاع الركوب وصلابة التعليق بناءً على ظروف القيادة أو التفضيلات الشخصية. يُعثر على هذا النوع من التعليق بشكل شائع في المركبات الفاخرة وبعض المركبات الخارجة عن الطريق."
@@ -650,7 +650,7 @@
       "en": "Low Beam Indicator Light",
       "ar": "مؤشر الشعاع المنخفض"
     },
-    "image": "",
+    "image": "low-beam-indicator-light.jpg",
     "description": {
       "en": "The Low Beam Indicator Light is a warning light on the vehicle's instrument cluster that indicates when the low beam headlights are turned on. The low beam headlights provide forward visibility for the driver in low-light conditions or when driving at night. When this indicator light is illuminated, it indicates that the low beam headlights are active and functioning properly.",
       "ar": "مؤشر الشعاع المنخفض هو مؤشر تحذير على لوحة العدادات في المركبة يشير إلى تشغيل المصابيح الأمامية للشعاع المنخفض. توفر المصابيح الأمامية للشعاع المنخفض رؤية أمامية للسائق في ظروف الإضاءة المنخفضة أو عند القيادة في الليل. عندما يكون مؤشر التحذير هذا مضاءً ، فإنه يشير إلى تشغيل المصابيح الأمامية للشعاع المنخفض وعملها بشكل صحيح."
@@ -665,7 +665,7 @@
       "en": "Lamp Out",
       "ar": "تلف المصباح"
     },
-    "image": "",
+    "image": "lamp-out.jpg",
     "description": {
       "en": "The Lamp Out warning indicates that one or more lamps or bulbs in the vehicle's lighting system are not functioning properly or have burned out. This warning can apply to various lights, including headlights, taillights, brake lights, turn signals, or any other exterior or interior lights on the vehicle. When this warning is displayed, it is important to inspect the affected lights and replace any defective bulbs to ensure proper visibility and compliance with road safety regulations.",
       "ar": "يشير تحذير تلف المصباح إلى أن مصابيح أو لمبات واحدة أو أكثر في نظام الإضاءة في المركبة لا تعمل بشكل صحيح أو قد احترقت. يمكن أن ينطبق هذا التحذير على مصابيح مختلفة ، بما في ذلك المصابيح الأمامية والمصابيح الخلفية والفرامل وإشارات الانعطاف أو أي مصابيح أخرى خارجية أو داخلية على المركبة. عند ظهور هذا التحذير ، من المهم فحص المصابيح المتضررة واستبدال أي لمبات معيبة لضمان رؤية سليمة والامتثال للوائح سلامة الطرق."
@@ -680,7 +680,7 @@
       "en": "High Beam Light Indicator",
       "ar": "مؤشر الأضواء العالية"
     },
-    "image": "",
+    "image": "high-beam-light-indicator.jpg",
     "description": {
       "en": "The High Beam Light Indicator is a warning light on the vehicle's instrument cluster that illuminates when the high beam headlights are turned on. The high beam headlights provide enhanced visibility in dark or poorly lit conditions and are typically used when there are no oncoming vehicles or when driving on open highways. The purpose of the indicator is to inform the driver that the high beam headlights are currently activated.",
       "ar": "مؤشر الأضواء العالية هو مؤشر تحذير على لوحة العدادات في المركبة يضيء عند تشغيل أضواء الشعاع العالي. توفر أضواء الشعاع العالي رؤية محسّنة في الظروف المظلمة أو ضوءًا ضعيفًا وعادةً ما يتم استخدامها عند عدم وجود مركبات مقابلة أو عند القيادة في الطرق السريعة المفتوحة. يكون الغرض من المؤشر هو إبلاغ السائق بأن أضواء الشعاع العالي تعمل حاليًا."
@@ -695,7 +695,7 @@
       "en": "Headlight Range Control",
       "ar": "تحكم في مدى أضواء الشعاع الأمامية"
     },
-    "image": "",
+    "image": "headlight-range-control.jpg",
     "description": {
       "en": "Headlight Range Control is a feature in some vehicles that allows the driver to adjust the vertical aim or range of the headlights. It is designed to ensure optimal visibility while driving at night or in low-light conditions. The control is typically located on the interior of the vehicle, near the headlight switch or on the dashboard. By adjusting the headlight range, the driver can align the headlights to properly illuminate the road ahead without blinding oncoming drivers or compromising the visibility.",
       "ar": "تحكم في مدى أضواء الشعاع الأمامية هو ميزة متوفرة في بعض المركبات تتيح للسائق ضبط الانحناء العمودي أو مدى أضواء الشعاع الأمامية. تم تصميمها لضمان رؤية مثلى أثناء القيادة في الليل أو في ظروف الإضاءة المنخفضة. يتم توضيب التحكم عادةً في الداخل من المركبة ، بالقرب من مفتاح الأضواء الأمامية أو على لوحة القيادة. عن طريق ضبط مدى أضواء الشعاع الأمامية ، يمكن للسائق محاذاة الأضواء الأمامية لإضاءة الطريق بشكل صحيح دون إعاقة السائقين الآخرين أو المساس بالرؤية."
@@ -710,7 +710,7 @@
       "en": "Front Fog Lights",
       "ar": "أضواء الضباب الأمامية"
     },
-    "image": "",
+    "image": "front-fog-light.jpg",
     "description": {
       "en": "Front fog lights are auxiliary lights located on the front of a vehicle, typically mounted low on the bumper or in the grille. These lights are designed to improve visibility in foggy or misty conditions, as they emit a wide, low beam pattern that is directed towards the road surface. The light from front fog lights helps to illuminate the area close to the ground, making it easier for the driver to see the road markings, curbs, and other obstacles in poor visibility conditions.",
       "ar": "أضواء الضباب الأمامية هي أضواء إضافية موجودة على الجزء الأمامي للمركبة ، وعادة ما تكون مثبتة بشكل منخفض على الصدام أو في الشبكة. تم تصميم هذه الأضواء لتحسين الرؤية في ظروف الضباب أو الرذاذ ، حيث تنبعث منها شعاع عريض ومنخفض يتجه نحو سطح الطريق. تساعد أضواء الضباب الأمامية في إضاءة المنطقة القريبة من الأرض ، مما يجعل من السهل على السائق رؤية علامات الطريق والأرصفة والعوائق الأخرى في ظروف الرؤية السيئة."
@@ -725,7 +725,7 @@
       "en_name": "Exterior Light Fault",
       "ar_name": "عطل في الإضاءة الخارجية"
     },
-    "image": "",
+    "image": "exterior-light-fault.jpg",
     "description": {
       "en_description": "Indicates a problem with the exterior lighting system. It could be a malfunctioning bulb, wiring issue, or a problem with the control module.",
       "ar_description": "يشير إلى وجود مشكلة في نظام الإضاءة الخارجية. قد يكون السبب عبارة عن مصباح معطل، مشكلة في الأسلاك أو عطل في وحدة التحكم."
@@ -740,7 +740,7 @@
       "en_name": "Auto High Beam",
       "ar_name": "الشعاع العالي التلقائي"
     },
-    "image": "",
+    "image": "auto-high-beam.jpg",
     "description": {
       "en_description": "Auto High Beam is a feature in vehicles that automatically switches between high and low beam headlights based on the surrounding conditions. It uses sensors to detect oncoming traffic or the presence of other vehicles and adjusts the headlights accordingly to provide optimal visibility without causing glare to other drivers.",
       "ar_description": "الشعاع العالي التلقائي هو ميزة في السيارات تقوم بالتبديل التلقائي بين شعاع الضوء العالي والمنخفض وفقًا لظروف المحيط. يستخدم حساسات لاكتشاف حركة المرور القادمة أو وجود مركبات أخرى ويعدل الأضواء الأمامية وفقًا لذلك لتوفير رؤية مثلى دون أن يسبب وهجًا للسائقين الآخرين."
@@ -755,7 +755,7 @@
       "en_name": "Adaptive Light System",
       "ar_name": "نظام الإضاءة المتكيفة"
     },
-    "image": "",
+    "image": "adaptive-light-system.jpg",
     "description": {
       "en_description": "The Adaptive Light System is a feature in vehicles that adjusts the direction and intensity of the headlights based on driving conditions. It uses sensors and cameras to detect the vehicle's speed, steering angle, and the environment to provide optimal lighting. The headlights can swivel or pivot in the direction of the steering wheel, providing enhanced visibility around corners and curves. This system helps improve safety by illuminating the road ahead more effectively.",
       "ar_description": "نظام الإضاءة المتكيفة هو ميزة في السيارات يقوم بضبط اتجاه وشدة الأضواء الأمامية بناءً على ظروف القيادة. يستخدم النظام حساسات وكاميرات لاكتشاف سرعة السيارة وزاوية المقود والبيئة المحيطة لتوفير إضاءة مثلى. يمكن للأضواء الأمامية أن تدور أو تتحرك في اتجاه عجلة القيادة، مما يوفر رؤية محسنة حول المنعطفات والمنحنيات. يساعد هذا النظام على تحسين السلامة من خلال إضاءة الطريق بشكل أكثر فعالية."
@@ -770,7 +770,7 @@
       "en_name": "Side Light Indicator",
       "ar_name": "مؤشر الضوء الجانبي"
     },
-    "image": "",
+    "image": "side-light-indicator-light.jpg",
     "description": {
       "en_description": "The Side Light Indicator is a visual indicator on the dashboard of a vehicle that alerts the driver when the side lights are turned on. Side lights, also known as parking lights or position lights, are a set of low-intensity lights that are used to increase the visibility of a parked or stationary vehicle. They are typically amber or white in color and are located on the front and rear sides of the vehicle.",
       "ar_description": "مؤشر الضوء الجانبي هو مؤشر بصري على لوحة القيادة في السيارة ينبه السائق عندما يتم تشغيل الأضواء الجانبية. الأضواء الجانبية، المعروفة أيضًا باسم أضواء الوقوف أو أضواء الموقف، هي مجموعة من الأضواء ذات الشدة المنخفضة التي تستخدم لزيادة رؤية السيارة عندما تكون متوقفة أو ثابتة. وعادة ما تكون بلون العنبر أو الأبيض وتوضع على الجانبين الأمامي والخلفي من السيارة."
@@ -785,7 +785,7 @@
       "en_name": "Rear Fog Lights",
       "ar_name": "أضواء الضباب الخلفية"
     },
-    "image": "",
+    "image": "rear-fog-lights.jpg",
     "description": {
       "en_description": "Rear Fog Lights are additional lights on a vehicle that are used in low visibility conditions, such as fog, to enhance the visibility of the vehicle to other drivers. They emit a red light and are positioned at the rear of the vehicle. When switched on, the Rear Fog Lights should be clearly visible to drivers approaching from behind.",
       "ar_description": "أضواء الضباب الخلفية هي أضواء إضافية على السيارة تستخدم في ظروف الرؤية المتدنية، مثل الضباب، لزيادة رؤية السيارة من قبل السائقين الآخرين. تنبعث منها ضوء أحمر وتوضع في الجزء الخلفي من السيارة. عند تشغيلها، يجب أن تكون أضواء الضباب الخلفية مرئية بشكل واضح للسائقين القادمين من الخلف."
@@ -800,7 +800,7 @@
       "en_name": "Rain and Light Sensor",
       "ar_name": "مستشعر المطر والإضاءة"
     },
-    "image": "",
+    "image": "rain-and-light-sensor.jpg",
     "description": {
       "en_description": "The Rain and Light Sensor is a feature in vehicles that automatically detects rain and adjusts the operation of various systems, such as windshield wipers and headlights. It uses optical sensors to detect the presence of raindrops on the windshield and ambient light levels. When rain is detected, the sensor activates the windshield wipers at an appropriate speed. Additionally, it can also detect low-light conditions and automatically turn on the headlights or adjust their intensity.",
       "ar_description": "مستشعر المطر والإضاءة هو ميزة في السيارات يكتشف تلقائيًا المطر ويعدل تشغيل العديد من الأنظمة مثل مساحات الزجاج الأمامية والأضواء الأمامية. يستخدم مستشعرات بصرية لاكتشاف وجود قطرات المطر على زجاج السيارة ومستويات الإضاءة المحيطة. عند اكتشاف المطر، يقوم المستشعر بتشغيل مساحات الزجاج الأمامية بسرعة مناسبة. بالإضافة إلى ذلك، يمكنه أيضًا اكتشاف ظروف الإضاءة المنخفضة وتشغيل الأضواء الأمامية تلقائيًا أو ضبط شدتها."
@@ -815,7 +815,7 @@
       "en_name": "Windshield Defrost",
       "ar_name": "تسخين زجاج السيارة الأمامي"
     },
-    "image": "",
+    "image": "windshield-defrost.jpg",
     "description": {
       "en_description": "The Windshield Defrost system is designed to remove ice, frost, and condensation from the windshield of a vehicle. It uses a combination of warm air and sometimes the vehicle's air conditioning system to rapidly heat the windshield and defrost it. The warm air is directed onto the windshield through dedicated vents or a set of windshield defroster ducts. This system helps to improve visibility by quickly clearing the windshield during cold weather conditions.",
       "ar_description": "نظام تسخين زجاج السيارة الأمامي مصمم لإزالة الجليد والصقيع والتكثف من زجاج السيارة. يستخدم تيار هواء دافئ وأحيانًا نظام تكييف الهواء في السيارة لتسخين زجاج السيارة الأمامي وإذابة الجليد عنه بسرعة. يتم توجيه التيار الهوائي الدافئ على زجاج السيارة من خلال فتحات مخصصة أو مجموعة من قنوات تهوية خاصة بتسخين زجاج السيارة. يساعد هذا النظام في تحسين الرؤية عن طريق تنظيف زجاج السيارة بسرعة خلال ظروف الطقس الباردة."
@@ -830,7 +830,7 @@
       "en_name": "Washer Fluid Reminder",
       "ar_name": "تذكير بسائل التنظيف"
     },
-    "image": "",
+    "image": "washer-fluid-reminder.jpg",
     "description": {
       "en_description": "The Washer Fluid Reminder is a feature in vehicles that alerts the driver when the windshield washer fluid level is low. It helps ensure that the washer fluid reservoir is adequately filled to maintain clear visibility through the windshield. When the washer fluid level drops below a certain threshold, a warning light or message will appear on the vehicle's instrument cluster or dashboard. This serves as a reminder for the driver to refill the washer fluid reservoir.",
       "ar_description": "تذكير بسائل التنظيف هو ميزة في السيارات تنبه السائق عندما يكون مستوى سائل غسيل الزجاج منخفضًا. يساعد هذا في التأكد من أن خزان سائل غسيل الزجاج ممتلئ بشكل كاف للحفاظ على رؤية واضحة من خلال الزجاج الأمامي. عندما ينخفض مستوى سائل التنظيف أدناه إلى مستوى محدد، ستظهر إشارة تحذيرية أو رسالة على لوحة العدادات أو لوحة القيادة في السيارة. ويكون هذا التذكير للسائق ليقوم بإعادة ملء خزان سائل غسيل الزجاج."
@@ -845,7 +845,7 @@
       "en_name": "Rear Window Defrost",
       "ar_name": "تسخين زجاج النافذة الخلفية"
     },
-    "image": "",
+    "image": "rear-window-defrost.jpg",
     "description": {
       "en_description": "The Rear Window Defrost system is designed to remove ice, frost, and condensation from the rear window of a vehicle. It helps improve visibility by quickly clearing the rear window during cold weather conditions. The system typically uses an electrical heating element embedded in the rear window glass to generate heat. When activated, the Rear Window Defrost system warms up the rear window, melting any ice or frost buildup and clearing the condensation. This allows for a clear view through the rear window.",
       "ar_description": "تم تصميم نظام تسخين زجاج النافذة الخلفية لإزالة الجليد والصقيع والتكثف من النافذة الخلفية للسيارة. يساعد في تحسين الرؤية عن طريق تنظيف زجاج النافذة الخلفية بسرعة خلال ظروف الطقس الباردة. يستخدم النظام عادة عنصر تسخين كهربائي مضمن في زجاج النافذة الخلفية لتوليد الحرارة. عند التشغيل، يقوم نظام تسخين زجاج النافذة الخلفية بتسخين الزجاج، مما يذيب أي تجمع للجليد أو الصقيع ويزيل التكثف. وهذا يسمح برؤية واضحة عبر النافذة الخلفية."
@@ -860,7 +860,7 @@
       "en_name": "Low Fuel Level",
       "ar_name": "مستوى وقود منخفض"
     },
-    "image": "",
+    "image": "low-fuel-level.jpg",
     "description": {
       "en_description": "The Low Fuel Level warning is a feature in vehicles that alerts the driver when the fuel level in the fuel tank is low. It serves as a reminder to refuel the vehicle to avoid running out of fuel while driving. When the fuel level drops below a certain threshold, a warning light or message will appear on the vehicle's instrument cluster or dashboard. The Low Fuel Level warning is important for the driver to take immediate action and find a nearby gas station to refuel the vehicle.",
       "ar_description": "تحذير مستوى وقود منخفض هو ميزة في السيارات تنبه السائق عندما يكون مستوى الوقود في خزان الوقود منخفضًا. ويعمل كتذكير بتعبئة الوقود لتجنب نفاد الوقود أثناء القيادة. عندما ينخفض مستوى الوقود أدناه إلى مستوى محدد، ستظهر إشارة تحذيرية أو رسالة على لوحة العدادات أو لوحة القيادة في السيارة. يعتبر تحذير مستوى وقود منخفض مهمًا بالنسبة للسائق لاتخاذ إجراء فوري والعثور على محطة وقود قريبة لتعبئة الوقود."
@@ -875,7 +875,7 @@
       "en_name": "Key Not in Vehicle",
       "ar_name": "المفتاح ليس داخل السيارة"
     },
-    "image": "",
+    "image": "key-not-in-vehicle.jpg",
     "description": {
       "en_description": "The 'Key Not in Vehicle' warning is a feature in vehicles that alerts the driver when the key or key fob is not detected inside the vehicle. This warning is designed to prevent the driver from accidentally leaving the vehicle without the key, which could result in the vehicle being locked or the engine being immobilized. When the vehicle detects that the key is not inside, it may display a warning message or emit a sound to remind the driver to retrieve the key before exiting the vehicle.",
       "ar_description": " تحذير' المفتاح ليس داخل السيارة' هو ميزة موجودة في السيارات تنبه السائق عند عدم اكتشاف المفتاح أو جهاز التحكم عن بعد داخل السيارة. تم تصميم هذا التحذير لمنع السائق من ترك السيارة دون قصد بدون المفتاح، مما قد يؤدي إلى قفل السيارة أو تعطيل المحرك. عندما تكتشف السيارة أن المفتاح غير موجود، قد يعرض رسالة تحذيرية أو يصدر صوتًا لتذكير السائق بالحصول على المفتاح قبل مغادرة السيارة."
@@ -890,7 +890,7 @@
       "en_name": "Hood/Bonnet Open",
       "ar_name": "فتحة الغطاء/الكبوت مفتوحة"
     },
-    "image": "",
+    "image": "hood-bonnet-open.jpg",
     "description": {
       "en_description": "The Hood/Bonnet Open warning is a feature in vehicles that alerts the driver when the hood or bonnet of the vehicle is not securely closed. This warning is important for the safety of the vehicle and its occupants, as driving with the hood open can obstruct the driver's view and potentially cause damage to the hood or other parts of the vehicle. When the vehicle detects that the hood is not properly closed, a warning message or indicator light will appear on the instrument cluster or dashboard, notifying the driver to check and securely close the hood before continuing to drive.",
       "ar_description": "تحذير 'فتحة الغطاء/الكبوت مفتوحة' هو ميزة موجودة في السيارات تنبه السائق عندما لا يتم إغلاق غطاء السيارة أو الكبوت بشكل آمن. يعتبر هذا التحذير مهمًا لسلامة السيارة وركابها، حيث يمكن أن يعوق قيادة السيارة بفتح الكبوت رؤية السائق ويتسبب في تلف الكبوت أو أجزاء أخرى من السيارة. عندما يكتشف السيارة أن الكبوت لم يتم إغلاقه بشكل صحيح، ستظهر رسالة تحذيرية أو مصباح تنبيه على لوحة العدادات أو لوحة القيادة، مما يُخطِر السائق بالتحقق وإغلاق الكبوت بإحكام قبل مواصلة القيادة."
@@ -906,7 +906,7 @@
       "en_name": "Hazard Lights On",
       "ar_name": "تشغيل أضواء الطوارئ"
     },
-    "image": "",
+    "image": "hazard-lights-on.jpg",
     "description": {
       "en_description": "The Hazard Lights On warning indicates that the hazard lights, also known as the emergency flashers or warning lights, are activated in the vehicle. Hazard lights are a safety feature that activates all four turn signal lights simultaneously to indicate a hazard or emergency situation. When the hazard lights are turned on, they emit a flashing or blinking light to alert other drivers on the road. This warning is a reminder to the driver that the hazard lights are currently active.",
       "ar_description": "تشير تحذير 'تشغيل أضواء الطوارئ'إلى تنشيط أضواء الطوارئ، والمعروفة أيضًا باسم مصابيح الفلاش الطارئة أو مصابيح الإنذار، في السيارة. أضواء الطوارئ هي ميزة أمان تقوم بتشغيل جميع مصابيح الإشارة بشكل متزامن للإشارة إلى وجود خطر أو حالة طارئة. عند تشغيل أضواء الطوارئ، تنبعث منها ضوء وامض أو وميض لتنبيه السائقين الآخرين على الطريق. يعتبر هذا التحذير تذكيرًا للسائق بأن أضواء الطوارئ قيد التشغيل حاليًا."
@@ -921,7 +921,7 @@
       "en_name": "Fan",
       "ar_name": "المروحة"
     },
-    "image": "",
+    "image": "fan.jpg",
     "description": {
       "en_description": "The fan in a vehicle refers to the electric fan that helps cool the engine and maintain optimal operating temperature. The fan draws air through the radiator to dissipate heat from the engine coolant. It is controlled by the engine's cooling system and may have multiple speed settings to adjust the airflow based on the engine's temperature. The fan is an essential component in preventing the engine from overheating during operation.",
       "ar_description": "تشير المروحة في السيارة إلى المروحة الكهربائية التي تساعد في تبريد المحرك والحفاظ على درجة حرارة التشغيل المثلى. تقوم المروحة بسحب الهواء عبر المبرد لتبديد الحرارة من سائل التبريد في المحرك. يتم التحكم فيها بواسطة نظام تبريد المحرك وقد تحتوي على إعدادات سرعة متعددة لضبط تدفق الهواء بناءً على درجة حرارة المحرك. المروحة هي جزء أساسي في منع المحرك من الاحترار أثناء التشغيل."
@@ -936,7 +936,7 @@
       "en_name": "Door Ajar",
       "ar_name": "باب مفتوح"
     },
-    "image": "",
+    "image": "door-ajar.jpg",
     "description": {
       "en_description": "The Door Ajar warning indicates that one or more doors of the vehicle are not fully closed or latched properly. This warning is designed to alert the driver that a door is open, which can pose safety risks such as the possibility of passengers or objects falling out of the vehicle while in motion. The Door Ajar warning is typically accompanied by a visual indicator on the dashboard, which may specify the particular door that is open. It is important to ensure that all doors are securely closed before driving to maintain the safety and integrity of the vehicle.",
       "ar_description": "تشير تحذير 'باب مفتوح' إلى عدم إغلاق أحد أو أكثر من أبواب السيارة بشكل كامل أو إقفالها بشكل صحيح. تم تصميم هذا التحذير لتنبيه السائق بأن بابًا مفتوحًا، والذي قد يشكل مخاطر أمان مثل احتمال سقوط الركاب أو الأشياء من السيارة أثناء التحرك. يتم ربط تحذير 'باب مفتوح' عادة بمؤشر بصري على لوحة القيادة، والذي قد يحدد الباب الذي ما زال مفتوحًا. من المهم التأكد من إغلاق جميع الأبواب بإحكام قبل القيادة للحفاظ على سلامة السيارة وسلامة ركابها."
@@ -951,7 +951,7 @@
       "en_name": "Direction/Signal Indicators",
       "ar_name": "مؤشرات الاتجاه / الإشارة"
     },
-    "image": "",
+    "image": "direction-signal-indicators.jpg",
     "description": {
       "en_description": "Direction/Signal Indicators, also known as turn signals or blinkers, are a crucial safety feature in vehicles. These indicators are located at the front and rear of the vehicle and are used to communicate the driver's intention to change direction or make a turn. When the driver activates the direction indicator by flipping the lever or pushing a button, a blinking light is emitted on the corresponding side of the vehicle. This alerts other drivers and pedestrians of the intended action, allowing them to anticipate the vehicle's movement and take appropriate actions.",
       "ar_description": "مؤشرات الاتجاه / الإشارة، والمعروفة أيضًا باسم أضواء التوجيه أو المؤشرات، هي ميزة أمان حاسمة في السيارات. تقع هذه المؤشرات في الأمام والخلف من السيارة وتستخدم للتواصل بنية السائق بنية تغيير اتجاهه أو قيامه بعملية تحويل. عندما يقوم السائق بتشغيل مؤشر الاتجاه عن طريق تحريك الرافعة أو الضغط على زر، يتم إطلاق ضوء وامض على الجانب المقابل في السيارة. ينبه هذا الضوء السائقين والمشاة الآخرين بالإجراء المقصود، مما يتيح لهم التوقع لحركة السيارة واتخاذ التدابير المناسبة."
@@ -966,7 +966,7 @@
       "en_name": "Car on Ramp",
       "ar_name": "السيارة على منحدر"
     },
-    "image": "",
+    "image": "car-on-ramp.jpg",
     "description": {
       "en_description": "When the term 'Car on Ramp' is used, it typically refers to a situation where a car is positioned on an inclined ramp or an elevated surface. This could occur during maintenance or repair work when the car needs to be lifted or elevated for better access to the underside or certain components. Ramps provide a safe and stable platform for working underneath the vehicle.",
       "ar_description": "عند استخدام مصطلح 'السيارة على منحدر'، يشير عادة إلى الحالة التي يتم فيها وضع السيارة على منحدر مائل أو سطح مرتفع. قد يحدث ذلك أثناء الصيانة أو أعمال الإصلاح عندما يحتاج السيارة إلى رفعها أو رفعها للوصول الأفضل إلى الجانب السفلي أو بعض المكونات. توفر المنحدرات منصة آمنة ومستقرة للعمل تحت السيارة."
@@ -981,7 +981,7 @@
       "en_name": "Recirculated Cabin Air",
       "ar_name": "تدوير هواء المقصورة"
     },
-    "image": "",
+    "image": "recirculated-cabin-air.jpg",
     "description": {
       "en_description": "Recirculated cabin air refers to a feature in vehicles that allows the air inside the cabin to be recirculated rather than drawing in fresh air from outside. When the recirculation mode is activated, the air conditioning or heating system recirculates the air already present in the cabin, filtering it to remove dust, pollutants, and odors. This mode can be useful in certain situations, such as when driving in heavy traffic or polluted areas, as it helps maintain a more comfortable and cleaner environment inside the vehicle by reducing the intake of external air.",
       "ar_description": "تدوير هواء المقصورة يشير إلى ميزة في السيارات تسمح بإعادة تدوير الهواء داخل المقصورة بدلاً من سحب الهواء النقي من الخارج. عند تشغيل وضع التدوير، يعيد نظام تكييف الهواء أو التدفئة تدوير الهواء الموجود بالفعل في المقصورة، ويقوم بتصفيته لإزالة الغبار والشوائب والروائح. يمكن أن يكون هذا الوضع مفيدًا في بعض الحالات، مثل القيادة في حركة المرور الكثيفة أو المناطق الملوثة، حيث يساعد في الحفاظ على بيئة أكثر راحة ونظافة داخل المركبة من خلال تقليل امتصاص الهواء الخارجي."
@@ -996,7 +996,7 @@
       "en_name": "Rear Spoiler Warning",
       "ar_name": "تحذير الجناح الخلفي"
     },
-    "image": "",
+    "image": "rear-spoiler-warning.jpg",
     "description": {
       "en_description": "The rear spoiler warning refers to a notification or alert indicating an issue with the rear spoiler of a vehicle. The rear spoiler is a aerodynamic device typically mounted on the trunk or rear of a car, designed to improve stability and reduce drag at higher speeds. The warning may indicate a malfunction in the spoiler mechanism, such as failure to deploy or retract properly, or it could be related to the spoiler's position or adjustment. It is important to address this warning to ensure proper functioning and safety of the vehicle.",
       "ar_description": "يشير تحذير الجناح الخلفي إلى إشعار أو تنبيه يشير إلى وجود مشكلة في الجناح الخلفي للمركبة. يعتبر الجناح الخلفي جهازًا هوائيًا يُثبت عادة على الصندوق الخلفي أو الجزء الخلفي من السيارة، مصمم لتحسين الاستقرار وتقليل السحب عند السرعات العالية. قد يشير التحذير إلى خلل في آلية الجناح، مثل عدم القدرة على الانبعاث أو الانسحاب بشكل صحيح، أو قد يكون متعلقًا بموضع الجناح أو ضبطه. من المهم معالجة هذا التحذير لضمان الوظيفة السليمة والسلامة للمركبة."
@@ -1011,7 +1011,7 @@
       "en_name": "Parking with Park Assist Pilot",
       "ar_name": "الوقوف باستخدام نظام مساعدة الركن"
     },
-    "image": "",
+    "image": "parking-with-park-assist-pilot.jpg",
     "description": {
       "en_description": "Parking with Park Assist Pilot refers to a feature in vehicles that assists the driver in parking the vehicle. The Park Assist Pilot system uses sensors and cameras to detect the surrounding environment and provide guidance to the driver during parking maneuvers. It can help with both parallel and perpendicular parking, providing visual and audible cues to assist the driver in maneuvering the vehicle into a parking space. The system may also take control of the steering wheel to perform the parking maneuver automatically, with the driver only needing to operate the accelerator, brake, and gear selector. This feature can enhance parking safety and convenience.",
       "ar_description": "الوقوف باستخدام نظام مساعدة الركن يشير إلى ميزة موجودة في السيارات تساعد السائق على ركن المركبة. يستخدم نظام مساعدة الركن أجهزة استشعار وكاميرات لاكتشاف البيئة المحيطة وتوفير التوجيه للسائق أثناء عمليات الركن. يمكن أن يساعد في الركن الموازي والركن العمودي، ويوفر إشارات بصرية وصوتية لمساعدة السائق في المناورة بالمركبة إلى مساحة وقوف. قد يتولى النظام أيضًا التحكم في عجلة القيادة لأداء عملية الركن تلقائيًا، مع السائق الذي يحتاج فقط لتشغيل دواسة الوقود والفرامل ومحدد السرعة. يمكن لهذه الميزة تعزيز سلامة الركن والراحة."
@@ -1026,7 +1026,7 @@
       "en_name": "Lane Departure Warning",
       "ar_name": "تحذير الابتعاد عن المسار"
     },
-    "image": "",
+    "image": "lane-departure-warning.jpg",
     "description": {
       "en_description": "Lane Departure Warning is a safety feature in vehicles designed to alert the driver when the vehicle deviates from its current lane without using the turn signal. The system uses cameras or sensors to monitor the vehicle's position within the lane markings. If the vehicle starts to drift or cross the lane markings unintentionally, the system triggers a visual and/or audible warning to alert the driver. Lane Departure Warning can help prevent accidents caused by unintentional lane changes, driver distraction, or drowsiness. It serves as a reminder for the driver to stay within their lane and take corrective action if necessary.",
       "ar_description": "تحذير الابتعاد عن المسار هو ميزة أمان موجودة في السيارات تهدف إلى تنبيه السائق عند انحراف المركبة عن مسارها الحالي دون استخدام إشارة التحول. يستخدم النظام الكاميرات أو الاستشعارات لمراقبة موضع المركبة داخل علامات المسار. إذا بدأت المركبة في الانجراف أو تجاوز علامات المسار بشكل غير مقصود، يقوم النظام بتنبيه بصري و/أو صوتي لتنبيه السائق. يمكن أن يساعد تحذير الابتعاد عن المسار في منع الحوادث الناجمة عن تغييرات المسار غير المقصودة أو تشتت السائق أو النعاس. إنه يعمل كتذكير للسائق بالبقاء ضمن المسار الخاص به واتخاذ إجراء تصحيحي إذا لزم الأمر."
@@ -1041,7 +1041,7 @@
       "en_name": "Lane Assist",
       "ar_name": "مساعدة المسار"
     },
-    "image": "",
+    "image": "lane-assist.jpg",
     "description": {
       "en_description": "Lane Assist is a driver assistance feature in vehicles that helps keep the vehicle within its lane. It utilizes cameras or sensors to monitor the lane markings on the road. If the vehicle starts to drift out of its lane without the use of a turn signal, the Lane Assist system provides corrective steering inputs to bring the vehicle back into the lane. It can provide gentle steering interventions or vibrate the steering wheel to alert the driver. Lane Assist is designed to enhance driving safety and reduce the risk of unintentional lane departures, especially on highways or roads with clear lane markings.",
       "ar_description": "مساعدة المسار هي ميزة لمساعدة السائق في السيارات تساعد على البقاء ضمن المسار المناسب. يستخدم النظام كاميرات أو أجهزة استشعار لمراقبة علامات المسار على الطريق. إذا بدأت المركبة في الانحراف عن المسار بدون استخدام إشارة التحول، يوفر نظام مساعدة المسار إدخالات توجيهية تصحيحية للعجلة لإعادة المركبة إلى المسار الصحيح. يمكنه تقديم تدخلات توجيهية لطيفة أو اهتزاز عجلة القيادة لتنبيه السائق. تم تصميم مساعدة المسار لتعزيز سلامة القيادة وتقليل مخاطر الانحراف عن المسار غير المقصود، خاصةً على الطرق السريعة أو الطرق ذات علامات المسار الواضحة."
@@ -1056,7 +1056,7 @@
       "en_name": "Key Fob Battery Low",
       "ar_name": "بطارية المفتاح الذكي منخفضة"
     },
-    "image": "",
+    "image": "key-fob-battery-low.jpg",
     "description": {
       "en_description": "Key Fob Battery Low is a warning message that appears when the battery of your key fob or smart key is running low. The key fob or smart key is the remote control device used to lock, unlock, and start your vehicle. When the battery level of the key fob is low, it may result in reduced range or difficulty in operating the remote functions. It is important to replace the key fob battery as soon as possible to ensure uninterrupted functionality. The specific battery type and replacement procedure may vary depending on the vehicle make and model.",
       "ar_description": "بطارية المفتاح الذكي منخفضة هو رسالة تحذير تظهر عندما تنخفض بطارية المفتاح الذكي أو المفتاح البعيد الخاص بك. المفتاح الذكي أو المفتاح البعيد هو جهاز التحكم عن بُعد المستخدم لقفل وفتح وتشغيل المركبة. عندما تكون مستوى بطارية المفتاح الذكي منخفضًا، قد ينتج عن ذلك تقليل في المدى أو صعوبة في استخدام وظائف التحكم عن بُعد. من المهم استبدال بطارية المفتاح الذكي في أقرب وقت ممكن لضمان استمرار الوظائف بشكل سلس. يمكن أن يختلف نوع البطارية المطلوبة وإجراءات الاستبدال تبعًا لصنع المركبة وطرازها."
@@ -1071,7 +1071,7 @@
       "en_name": "Ignition Switch Warning",
       "ar_name": "تحذير التشغيل"
     },
-    "image": "",
+    "image": "ignition-switch-warning.jpg",
     "description": {
       "en_description": "Ignition Switch Warning is a warning message or indicator that alerts the driver when there is an issue with the ignition switch of the vehicle. The ignition switch is the component that is used to start and stop the engine. If there is a problem with the ignition switch, it may prevent the engine from starting or cause other electrical issues in the vehicle. The warning message or indicator serves as a reminder to the driver to check the ignition switch and take appropriate action.",
       "ar_description": "تحذير التشغيل هو رسالة تحذير أو مؤشر ينبه السائق عند وجود مشكلة في مفتاح التشغيل للمركبة. مفتاح التشغيل هو الجزء المستخدم لتشغيل وإيقاف تشغيل المحرك. إذا كان هناك مشكلة في مفتاح التشغيل، فقد يمنع تشغيل المحرك أو يتسبب في مشاكل كهربائية أخرى في المركبة. تعمل رسالة التحذير أو المؤشر كتذكير للسائق لفحص مفتاح التشغيل واتخاذ إجراء مناسب."
@@ -1086,7 +1086,7 @@
       "en_name": "Hill Descent Control",
       "ar_name": "نظام تحكم في الهبوط على التل"
     },
-    "image": "",
+    "image": "hill-descent-control.jpg",
     "description": {
       "en_description": "Hill Descent Control is a feature in vehicles that helps the driver maintain control and a steady speed when driving downhill on steep or slippery terrain. It uses the vehicle's braking system to automatically control the speed and apply individual brakes to each wheel as needed. This helps to prevent the vehicle from skidding or sliding down the hill and provides the driver with more confidence and control while descending. Hill Descent Control is particularly useful in off-road situations or when driving on mountainous roads with steep gradients.",
       "ar_description": "نظام تحكم في الهبوط على التل هو ميزة في المركبات تساعد السائق على الحفاظ على التحكم وسرعة ثابتة عند القيادة في المنحدرات على التضاريس الوعرة أو الانزلاقية. يستخدم نظام الفرامل في المركبة للتحكم تلقائيًا في السرعة وتطبيق الفرامل الفردية على كل عجلة حسب الحاجة. يساعد هذا على منع الانزلاق أو الانزلاق النزول الجبلي ويوفر للسائق المزيد من الثقة والتحكم أثناء النزول. يكون نظام تحكم في الهبوط على التل مفيدًا بشكل خاص في القيادة في الطرق الوعرة أو على الطرق الجبلية ذات المنحدرات الشديدة."
@@ -1101,7 +1101,7 @@
       "en_name": "Forward Collision Warning",
       "ar_name": "تحذير التصادم الأمامي"
     },
-    "image": "",
+    "image": "forward-collision.jpg",
     "description": {
       "en_description": "Forward Collision Warning is a safety feature in vehicles that alerts the driver when a potential front-end collision is detected. It uses sensors, such as radar or cameras, to monitor the distance and relative speed between the vehicle and the vehicle or object ahead. If the system determines that a collision is imminent or the driver's following distance is too short, it provides a visual, auditory, or haptic warning to prompt the driver to take action and avoid the collision. Forward Collision Warning is designed to enhance driver awareness and assist in preventing or mitigating accidents caused by inattentiveness or delayed reactions.",
       "ar_description": "تحذير التصادم الأمامي هو ميزة أمان في المركبات تنبه السائق عند اكتشاف تهديد اصطدام أمامي. يستخدم النظام حساسات مثل الرادار أو الكاميرات لمراقبة المسافة والسرعة النسبية بين المركبة والمركبة أو العنصر الموجود أمامها. إذا حدد النظام أن الاصطدام قريب المنال أو أن مسافة السائق الخلفية قصيرة جدًا، فإنه يوفر تحذيرًا بصريًا أو سمعيًا أو حسيًا لتحفيز السائق على اتخاذ إجراء وتجنب الاصطدام. تم تصميم تحذير التصادم الأمامي لتعزيز وعي السائق والمساعدة في منع الحوادث أو التخفيف من آثارها التي تسببها الانشغال أو التأخر في التصرف."
@@ -1116,7 +1116,7 @@
       "en_name": "Eco Driving Indicator",
       "ar_name": "مؤشر القيادة الاقتصادية"
     },
-    "image": "",
+    "image": "eco-driving-indicator.jpg",
     "description": {
       "en_description": "The Eco Driving Indicator is a feature in vehicles that provides real-time feedback to drivers about their driving habits and encourages fuel-efficient driving. It uses various sensors and algorithms to monitor factors such as acceleration, speed, braking, and gear shifting patterns. The indicator typically uses a visual display, such as a light or icon, to inform the driver about their driving efficiency.\n\nThe Eco Driving Indicator aims to promote eco-friendly driving practices, including smooth acceleration and deceleration, maintaining a consistent speed, and avoiding unnecessary idling. By following the indicator's guidance, drivers can optimize fuel consumption, reduce emissions, and potentially improve their overall driving efficiency.",
       "ar_description": "مؤشر القيادة الاقتصادية هو ميزة في المركبات توفر ردود فعل فورية للسائقين حول عادات القيادة الخاصة بهم وتشجع القيادة الاقتصادية للوقود. يستخدم مؤشر القيادة الاقتصادية مجموعة من الحساسات والخوارزميات لمراقبة عوامل مثل التسارع والسرعة والفرملة وأنماط تغيير السرعات. يستخدم المؤشر عادة عرضًا بصريًا مثل ضوء أو رمز لإبلاغ السائق عن كفاءة قيادته.\n\nيهدف مؤشر القيادة الاقتصادية إلى تعزيز ممارسات القيادة الصديقة للبيئة، بما في ذلك التسارع والتباطؤ السلس، والحفاظ على سرعة ثابتة، وتجنب التوقف الغير ضروري. من خلال اتباع إرشادات المؤشر، يمكن للسائقين تحسين استهلاك الوقود وتقليل انبعاثات العادم وتحسين كفاءة القيادة العامة."
@@ -1131,7 +1131,7 @@
       "en_name": "Cruise Control",
       "ar_name": "مثبت السرعة"
     },
-    "image": "",
+    "image": "cruise-control.jpg",
     "description": {
       "en_description": "Cruise Control is a feature in vehicles that allows the driver to set and maintain a desired speed without having to continuously press the accelerator pedal. It is designed to provide convenience and reduce driver fatigue, especially during long highway drives.\n\nWhen activated, Cruise Control takes over the control of throttle input to maintain the set speed. The driver can typically set the desired speed using controls on the steering wheel or dashboard. The vehicle then automatically adjusts the throttle and, in some cases, the brakes to keep the vehicle moving at a constant speed.\n\nCruise Control usually disengages when the driver applies the brakes, accelerates, or deactivates the system. Some advanced systems may also include features like adaptive cruise control, which can automatically adjust the vehicle's speed based on the distance to the vehicle ahead.\n\nIt is important for drivers to use Cruise Control responsibly and be aware of traffic conditions, road hazards, and any changes in speed limits.",
       "ar_description": "مثبت السرعة هو ميزة في المركبات تسمح للسائق بضبط السرعة المطلوبة والحفاظ عليها دون الحاجة إلى الضغط باستمرار على دواسة الوقود. تم تصميمه لتوفير الراحة وتقليل تعب السائق، خاصةً أثناء القيادة لفترات طويلة على الطرق السريعة.\n\nعند التفعيل، يتولى مثبت السرعة التحكم في إدخال الوقود للحفاظ على السرعة المضبوطة. يمكن للسائق عادةً ضبط السرعة المطلوبة باستخدام وحدات التحكم على عجلة القيادة أو لوحة القيادة. تقوم المركبة بضبط الوقود وفي بعض الحالات الفرامل تلقائيًا للحفاظ على حركة المركبة بسرعة ثابتة.\n\nغالبًا ما يتم إلغاء مثبت السرعة عندما يقوم السائق بالضغط على الفرامل، أو يسرع، أو يعطل النظام. قد يتضمن بعض الأنظمة المتقدمة ميزات مثل مثبت السرعة المتكيف، الذي يمكنه ضبط سرعة المركبة تلقائيًا بناءً على المسافة من المركبة المقدمة.\n\nمن الأهمية بمكان أن يستخدم السائق مثبت السرعة بشكل مسؤول وأن يكون على علم بظروف المرور ومخاطر الطريق وأي تغييرات في حدود السرعة."
@@ -1146,7 +1146,7 @@
       "en_name": "Convertible Roof Warning Light",
       "ar_name": "مؤشر تحذير سقف المكشوفة"
     },
-    "image": "",
+    "image": "convertible-roof-warning-light.jpg",
     "description": {
       "en_description": "The Convertible Roof Warning Light is a warning indicator that alerts the driver to an issue or malfunction with the convertible roof system of the vehicle. Convertible roofs, also known as retractable roofs or soft tops, are designed to open or close to provide an open-air driving experience or protect the interior from the elements.\n\nWhen the Convertible Roof Warning Light illuminates, it indicates that there is a problem with the roof system. This could be due to various reasons, such as a mechanical issue, sensor malfunction, hydraulic fluid leakage, or electrical problem. The specific cause of the warning light will depend on the vehicle's make and model.\n\nIt is important to address the issue when the Convertible Roof Warning Light is illuminated. Continuing to operate the convertible roof system with a malfunction can lead to further damage or safety risks. It is recommended to consult the vehicle's manual or contact a qualified technician or authorized dealer for diagnosis and repair.",
       "ar_description": "مؤشر تحذير سقف المكشوفة هو مؤشر تحذير ينبه السائق إلى وجود مشكلة أو خلل في نظام سقف المكشوفة في المركبة. تم تصميم سقف المكشوفة، المعروف أيضًا بالسقف القابل للطي أو السقف القماشي، لفتح أو إغلاقه لتوفير تجربة القيادة في الهواء الطلق أو حماية المقصورة الداخلية من العوامل الجوية.\n\nعندما يُضيء مؤشر تحذير سقف المكشوفة، فإنه يشير إلى وجود مشكلة في نظام السقف. قد يكون ذلك بسبب أسباب مختلفة، مثل وجود خلل ميكانيكي، عطل في الحساسات، تسرب سوائل هيدروليكية أو مشكلة كهربائية. سبب المؤشر التحذيري سيعتمد على نوع وطراز المركبة.\n\nمن الأهمية بمكان معالجة المشكلة عندما يُضيء مؤشر تحذير سقف المكشوفة. مواصلة تشغيل نظام سقف المكشوفة في حالة عطل يمكن أن يؤدي إلى تلف أكثر أو مخاطر أمان. يُوصى بالاطلاع على دليل المركبة أو الاتصال بفني مؤهل أو الوكيل المعتمد للتشخيص والإصلاح."
@@ -1161,7 +1161,7 @@
       "en_name": "Brake Hold Indicator Light",
       "ar_name": "مؤشر تحذير تثبيت الفرامل"
     },
-    "image": "",
+    "image": "brake-hold-indicator.jpg",
     "description": {
       "en_description": "The Brake Hold Indicator Light is a warning light that illuminates to indicate the activation or deactivation status of the brake hold function in the vehicle. Brake hold is a feature that keeps the vehicle stationary without the need to keep your foot on the brake pedal.\n\nWhen the Brake Hold Indicator Light is on, it means that the brake hold function is engaged, and the vehicle will remain stationary even if you release your foot from the brake pedal. This is useful, especially in stop-and-go traffic or when waiting at traffic lights.\n\nConversely, when the Brake Hold Indicator Light is off, it indicates that the brake hold function is deactivated, and the vehicle will not automatically hold its position when you release the brake pedal. In such cases, you will need to keep your foot on the brake pedal to prevent the vehicle from moving.\n\nIt is important to consult your vehicle's manual for specific instructions on how to use the brake hold function and understand the meaning of the Brake Hold Indicator Light in your particular vehicle model.",
       "ar_description": "مؤشر تحذير تثبيت الفرامل هو مؤشر تحذير يضيء ليشير إلى حالة تنشيط أو إلغاء وظيفة تثبيت الفرامل في المركبة. تثبيت الفرامل هو ميزة تبقي المركبة ثابتة دون الحاجة لوضع قدمك على دواسة الفرامل.\n\nعندما يكون مؤشر تحذير تثبيت الفرامل قيد التشغيل، فإنه يعني أن وظيفة تثبيت الفرامل قد تم تفعيلها وستبقى المركبة ثابتة حتى لو قمت برفع قدمك عن دواسة الفرامل. هذا مفيد خاصة في حركة المرور التوقف والانطلاق المتكررة أو عند الانتظار عند إشارات المرور.\n\nعلى العكس، عندما يكون مؤشر تحذير تثبيت الفرامل مطفأً، فإنه يشير إلى أن وظيفة تثبيت الفرامل قد تم إلغاؤها ولن تقوم المركبة تلقائيًا بالثبات في مكانها عندما ترفع قدمك عن دواسة الفرامل. في مثل هذه الحالات، ستحتاج إلى وضع قدمك على دواسة الفرامل لمنع حركة المركبة.\n\nمن المهم الاطلاع على دليل المركبة الخاص بك للحصول على تعليمات محددة حول كيفية استخدام وظيفة تثبيت الفرامل وفهم معنى مؤشر تحذير تثبيت الفرامل في طراز المركبة الخاص بك."
@@ -1176,7 +1176,7 @@
       "en_name": "Blind Spot Indicator Light",
       "ar_name": "مؤشر تحذير النقاط العمياء"
     },
-    "image": "",
+    "image": "blind-spot-indicator.jpg",
     "description": {
       "en_description": "The Blind Spot Indicator Light is a warning light that is designed to alert the driver when there is a vehicle detected in the blind spot area. The blind spot refers to the areas around the vehicle that are not visible in the side mirrors or the rearview mirror.\n\nWhen the Blind Spot Indicator Light illuminates or flashes, it indicates that there is a vehicle in the blind spot zone. The light is typically located on the side mirrors or the side panels of the vehicle. It serves as a visual warning to the driver to exercise caution and check the blind spot before changing lanes or making a maneuver.\n\nThe Blind Spot Indicator Light is usually accompanied by other safety features such as blind spot monitoring systems or sensors that detect the presence of vehicles in the blind spot. These systems use radar, ultrasonic sensors, or cameras to monitor the surrounding areas and provide visual or audible alerts to the driver.",
       "ar_description": "مؤشر تحذير النقاط العمياء هو مؤشر تحذير مصمم لتنبيه السائق عند اكتشاف مركبة في منطقة النقطة العمياء. النقطة العمياء تشير إلى المناطق حول المركبة التي لا يمكن رؤيتها في المرايا الجانبية أو المرايا الخلفية.\n\nعندما يُضيء أو يُومض مؤشر تحذير النقاط العمياء، فإنه يشير إلى وجود مركبة في منطقة النقطة العمياء. يوجد المؤشر عادةً على المرايا الجانبية أو الألواح الجانبية للمركبة. يعمل كتحذير بصري للسائق ليكون حذرًا ويتحقق من النقطة العمياء قبل تغيير المسار أو إجراء مناورة.\n\nيترافق مؤشر تحذير النقاط العمياء عادةً مع ميزات أمان أخرى مثل أنظمة مراقبة النقاط العمياء أو أجهزة استشعار تكتشف وجود المركبات في النقطة العمياء. تستخدم هذه الأنظمة الرادار وأجهزة الاستشعار بالموجات فوق الصوتية أو الكاميرات لمراقبة المناطق المحيطة وتوفير تحذيرات بصرية أو سمعية للسائق."
@@ -1191,7 +1191,7 @@
       "en_name": "Auto Windscreen Wiping",
       "ar_name": "تنظيف الزجاج الأمامي التلقائي"
     },
-    "image": "",
+    "image": "auto-windscreen-wiping.jpg",
     "description": {
       "en_description": "Auto Windscreen Wiping is a feature in vehicles that automatically activates the windscreen wipers to clean the front windshield. It is designed to improve visibility during inclement weather conditions such as rain or snow.\n\nWhen the Auto Windscreen Wiping feature is enabled, the vehicle's sensors detect moisture on the windscreen. Once a certain threshold is reached, the wipers are automatically activated to wipe away the water or debris, ensuring a clear view for the driver.\n\nThe sensitivity of the auto windscreen wiping feature can often be adjusted to suit the driver's preference. This allows for customization of the wiper activation based on the intensity of the rain or the driver's comfort level.\n\nIt is important to note that while Auto Windscreen Wiping enhances visibility, it is still essential for the driver to maintain focus and adapt their driving to the current weather conditions.",
       "ar_description": "تنظيف الزجاج الأمامي التلقائي هو ميزة في المركبات تقوم بتنشيط مساحات الزجاج الأمامي لتنظيف الزجاج التلقائيًا. صممت لتحسين الرؤية أثناء الظروف الجوية السيئة مثل المطر أو الثلج.\n\nعندما يتم تمكين ميزة تنظيف الزجاج الأمامي التلقائي، يكشف أجهزة استشعار المركبة عن وجود رطوبة على الزجاج الأمامي. بمجرد الوصول إلى مستوى معين، يتم تنشيط مساحات الزجاج التلقائيًا لمسح الماء أو الحطام، مما يضمن رؤية واضحة للسائق.\n\nيمكن ضبط حساسية ميزة تنظيف الزجاج الأمامي التلقائي بشكل متكرر لتناسب تفضيلات السائق. يتيح ذلك تخصيص تنشيط المساحات بناءً على شدة الأمطار أو مستوى الراحة السائق.\n\nمن المهم أن نلاحظ أنه على الرغم من أن تنظيف الزجاج الأمامي التلقائي يعزز الرؤية، إلا أنه لا يزال من الضروري أن يحافظ السائق على التركيز ويتكيف بقيادته وفقًا للظروف الجوية الحالية."
@@ -1206,7 +1206,7 @@
       "en_name": "Automatic Emergency Braking (AEB)",
       "ar_name": "نظام الفرملة التلقائية في حالات الطوارئ"
     },
-    "image": "",
+    "image": "automatic-emegency-braking.jpg",
     "description": {
       "en_description": "Automatic Emergency Braking (AEB) is a safety feature in vehicles that helps prevent or reduce the severity of a collision by automatically applying the brakes when a potential collision is detected.\n\nAEB systems use various sensors, such as radar, cameras, or lidar, to monitor the road ahead and detect objects, including vehicles, pedestrians, or obstacles. When the system identifies a potential collision, it provides a warning to the driver, and if the driver does not take appropriate action, the AEB system activates the brakes autonomously to mitigate or avoid the collision.\n\nThe effectiveness of AEB systems can vary depending on the vehicle's speed, the type of object detected, and the specific capabilities of the system. Some AEB systems are designed to work at higher speeds, while others are optimized for lower speeds, such as city driving.\n\nAEB is an important safety feature that can assist drivers in avoiding or reducing the impact of collisions, but it should not replace attentive and responsible driving.",
       "ar_description": "نظام الفرملة التلقائية في حالات الطوارئ (AEB) هو ميزة أمان في المركبات تساعد في منع أو تقليل شدة التصادم عن طريق تطبيق الفرامل تلقائيًا عند اكتشاف تصادم محتمل.\n\nتستخدم أنظمة AEB مستشعرات متنوعة مثل الرادار والكاميرات والليدار لمراقبة الطريق أمام المركبة واكتشاف العوائق والمشاة والمركبات. عندما يتعرف النظام على تصادم محتمل، يقدم تحذيرًا للسائق، وإذا لم يتخذ السائق إجراء مناسب، يقوم نظام AEB بتنشيط الفرامل تلقائيًا للحد من شدة التصادم أو تجنبه.\n\nقد تختلف فعالية أنظمة AEB اعتمادًا على سرعة المركبة ونوع العائق المكتشف وقدرات النظام المحددة. تم تصميم بعض أنظمة AEB للعمل عند سرعات أعلى، بينما يتم تحسين البعض الآخر للسرعات الأقل مثل قيادة المدينة.\n\nنظام الفرملة التلقائية في حالات الطوارئ هو ميزة أمان مهمة يمكن أن تساعد السائقين على تجنب التصادمات أو تقليل تأثيرها، ولكنها لا تستبدل القيادة المركزة والمسؤولة."
@@ -1221,7 +1221,7 @@
       "en_name": "Adaptive Cruise Control (ACC)",
       "ar_name": "نظام التحكم في السرعة المتكيف"
     },
-    "image": "",
+    "image": "adaptive-cruise-control.jpg",
     "description": {
       "en_description": "Adaptive Cruise Control (ACC) is a driving assistance feature that enhances traditional cruise control by automatically adjusting the vehicle's speed to maintain a safe following distance from the vehicle ahead.\n\nACC utilizes sensors, such as radar or lidar, to detect the distance and speed of the vehicle ahead. Based on this information, it automatically adjusts the speed by accelerating or decelerating to keep a set distance, as selected by the driver.\n\nThe system continuously monitors the road ahead and can adjust the speed accordingly, allowing for a more convenient and comfortable driving experience, especially in traffic situations. ACC can reduce driver fatigue and provide an additional layer of safety by helping to mitigate the risk of rear-end collisions.\n\nHowever, it is important for the driver to remain attentive and ready to take control of the vehicle at any time, as ACC is not a fully autonomous driving system.",
       "ar_description": "نظام التحكم في السرعة المتكيف (ACC) هو ميزة مساعدة للقيادة تعزز نظام التحكم في السرعة التقليدي عن طريق ضبط سرعة المركبة تلقائيًا للحفاظ على مسافة آمنة من المركبة الأمامية.\n\nيستخدم نظام ACC مستشعرات مثل الرادار أو الليدار لكشف المسافة والسرعة للمركبة الأمامية. بناءً على هذه المعلومات، يقوم النظام تلقائيًا بضبط السرعة عن طريق التسارع أو التباطؤ للحفاظ على المسافة المحددة والتي تم اختيارها من قبل السائق.\n\nيقوم النظام بمراقبة الطريق المتقدم باستمرار ويمكنه ضبط السرعة وفقًا لذلك، مما يوفر تجربة قيادة أكثر راحة وسهولة، خاصة في حالات الحركة المرورية الكثيفة. يمكن لنظام ACC تقليل تعب السائق وتوفير طبقة إضافية من السلامة عن طريق المساعدة في التخفيف من خطر التصادم الخلفي.\n\nومع ذلك، من المهم أن يظل السائق متنبهًا وجاهزًا للسيطرة على المركبة في أي وقت، حيث أن نظام ACC ليس نظامًا للقيادة الذاتية بالكامل."
@@ -1247,7 +1247,7 @@
       "en_name": "Start/Stop Warning Light",
       "ar_name": "مؤشر تحذير التشغيل/الإيقاف"
     },
-    "image": "",
+    "image": "winter-mode.jpg",
     "description": {
       "en_description": "The Start/Stop Warning Light is an indicator that alerts the driver when there is a problem with the start/stop system of the vehicle. The start/stop system, also known as the idle-stop or auto-stop system, is designed to automatically shut off the engine when the vehicle is stationary to save fuel and reduce emissions. When the system is functioning properly, the engine restarts automatically when the driver releases the brake or presses the accelerator.\n\nIf the Start/Stop Warning Light illuminates or flashes, it indicates a malfunction in the start/stop system. Possible causes for the warning light to come on include a low battery voltage, a faulty sensor, a malfunctioning starter motor, or other issues related to the start/stop system.\n\nWhen the Start/Stop Warning Light is on, it is recommended to have the vehicle inspected and diagnosed by a qualified mechanic or contact your authorized dealer for assistance. They will be able to identify the specific cause of the warning and recommend the necessary repairs or replacements.",
       "ar_description": "مؤشر تحذير التشغيل/الإيقاف هو مؤشر ينبه السائق عند وجود مشكلة في نظام التشغيل/الإيقاف للمركبة. يتم تصميم نظام التشغيل/الإيقاف، المعروف أيضًا بنظام السكون التلقائي أو الإيقاف التلقائي، لإيقاف تشغيل المحرك تلقائيًا عند توقف المركبة لتوفير الوقود وتقليل انبعاثات العادم. عندما يعمل النظام بشكل صحيح، يتم إعادة تشغيل المحرك تلقائيًا عندما يقوم السائق بتحرير الفرامل أو الضغط على دواسة الوقود.\n\nإذا اشتعل مؤشر تحذير التشغيل/الإيقاف أو ومض، فإن ذلك يشير إلى وجود خلل في نظام التشغيل/الإيقاف. من أسباب احتمالية لتشغيل مؤشر التحذير تشمل الجهد المنخفض للبطارية، وجود حساس معيب، تعطل محرك البدء، أو مشاكل أخرى متعلقة بنظام التشغيل/الإيقاف.\n\nعندما يكون مؤشر تحذير التشغيل/الإيقاف مضاء، يُوصى بفحص المركبة وتشخيصها من قبل فني مؤهل أو الاتصال بالوكيل المعتمد للحصول على المساعدة. سيتمكنون من تحديد السبب المحدد للتحذير وتوصية بالإصلاحات أو الاستبدالات اللازمة."
@@ -1262,7 +1262,7 @@
       "en_name": "Speed Limiter",
       "ar_name": "محدد السرعة"
     },
-    "image": "",
+    "image": "speed-limiter.jpg",
     "description": {
       "en_description": "A Speed Limiter is a feature in vehicles that allows the driver to set a maximum speed limit for the vehicle. It is designed to help promote safe driving by preventing the vehicle from exceeding a pre-set speed.\n\nWhen the Speed Limiter is activated, the vehicle will not accelerate beyond the set speed limit, even if the driver presses the accelerator pedal fully. The Speed Limiter works by controlling the fuel or ignition system to restrict the engine power and maintain the desired speed limit.\n\nThe driver can usually set the speed limit using controls on the steering wheel or through the vehicle's infotainment system. Once the speed limit is set, the driver can still accelerate, but the vehicle will not go beyond the predetermined limit.\n\nThe Speed Limiter is particularly useful in situations where it is important to adhere to speed limits, such as urban areas or road construction zones. It can help prevent unintentional speeding and promote safer driving practices.",
       "ar_description": "محدد السرعة هو ميزة في المركبات تتيح للسائق تحديد حد أقصى للسرعة للمركبة. يتم تصميمه للمساعدة في تعزيز القيادة الآمنة عن طريق منع المركبة من تجاوز السرعة المحددة.\n\nعند تنشيط محدد السرعة، لن تتسارع المركبة فوق حد السرعة المحدد، حتى إذا ضغط السائق على دواسة الوقود بالكامل. يعمل محدد السرعة عن طريق التحكم في نظام الوقود أو الإشعال لتقييد قوة المحرك والحفاظ على حد السرعة المطلوب.\n\nعادةً ما يمكن للسائق تحديد حد السرعة باستخدام أزرار على عجلة القيادة أو من خلال نظام المعلومات والترفيه في المركبة. بمجرد تحديد حد السرعة، يمكن للسائق ما زال التسارع، ولكن المركبة لن تتجاوز الحد المحدد مسبقًا.\n\nمحدد السرعة مفيد بشكل خاص في الحالات التي يكون فيها من المهم الالتزام بحدود السرعة، مثل المناطق الحضرية أو مناطق البناء على الطرق. يمكن أن يساعد في منع القيادة بسرعة غير مقصودة وتعزيز ممارسات القيادة الآمنة."
@@ -1277,7 +1277,7 @@
       "en_name": "Seat Temperature",
       "ar_name": "درجة حرارة المقعد"
     },
-    "image": "",
+    "image": "seat-temperature.jpg",
     "description": {
       "en_description": "Seat Temperature refers to the level of heat or cooling provided by the vehicle's seats. Many modern vehicles offer heated and ventilated seats that allow occupants to adjust the temperature according to their preference.\n\nHeated Seats: Heated seats have built-in heating elements that warm up the seat surface and provide a comfortable and cozy environment during cold weather. The heat level can usually be adjusted to different settings, such as low, medium, or high.\n\nVentilated Seats: Ventilated seats are designed to provide airflow and cool the seat surface, especially during hot weather. They usually have fans or air vents that circulate air through the seat, providing a cooling effect.\n\nThe seat temperature controls are typically located on the vehicle's dashboard or the side of the seats. Occupants can adjust the seat temperature based on their comfort level, allowing for a more pleasant driving experience.\n\nIt's important to note that seat temperature controls may vary depending on the vehicle make and model.",
       "ar_description": "درجة حرارة المقعد تشير إلى مستوى الحرارة أو التبريد المقدم من مقاعد المركبة. تقدم العديد من المركبات الحديثة مقاعد مدفأة ومهواة تسمح للركاب بضبط درجة الحرارة وفقًا لتفضيلاتهم.\n\nالمقاعد المدفأة: تحتوي المقاعد المدفأة على عناصر تسخين مدمجة تسخن سطح المقعد وتوفر بيئة مريحة ودافئة خلال الطقس البارد. يمكن ضبط مستوى الحرارة عادةً إلى إعدادات مختلفة مثل منخفض ومتوسط وعالي.\n\nالمقاعد المهواة: تم تصميم المقاعد المهواة لتوفير تدفق هواء وتبريد سطح المقعد، خاصةً خلال الطقس الحار. عادةً ما تحتوي على مراوح أو فتحات تهوية تدور الهواء عبر المقعد، مما يوفر تأثير التبريد.\n\nعادةً ما يتم توضع أزرار ضبط درجة حرارة المقعد على لوحة القيادة للمركبة أو جانب المقاعد. يمكن للركاب ضبط درجة حرارة المقعد بناءً على مستوى راحتهم، مما يتيح تجربة قيادة أكثر متعة.\n\nمن المهم ملاحظة أن أزرار ضبط درجة حرارة المقعد قد تختلف اعتمادًا على صنع وطراز المركبة."
@@ -1292,7 +1292,7 @@
       "en_name": "Glow Plug Indicator",
       "ar_name": "مؤشر شمعة التسخين"
     },
-    "image": "",
+    "image": "glow-plug.jpg",
     "description": {
       "en_description": "The Glow Plug Indicator is a warning light found in diesel vehicles equipped with glow plugs. Glow plugs are heating devices used to help start diesel engines, especially in cold weather conditions. The Glow Plug Indicator illuminates when the engine is cold and the glow plugs are activated to preheat the combustion chambers.\n\nWhen you turn on the ignition, the Glow Plug Indicator should light up for a short period and then turn off once the glow plugs have sufficiently heated the engine. This indicates that the engine is ready to be started. If the Glow Plug Indicator stays on or flashes continuously, it may indicate a problem with the glow plug system or the engine itself.\n\nIt's important to note that gasoline engines do not have glow plugs, so the Glow Plug Indicator is specific to diesel vehicles.",
       "ar_description": "مؤشر شمعة التسخين هو مؤشر تحذير يوجد في المركبات الديزل المزودة بشمعات التسخين. شمعات التسخين هي أجهزة تسخين تستخدم للمساعدة في بدء تشغيل المحركات الديزل، خاصةً في ظروف الطقس البارد. يضيء مؤشر شمعة التسخين عندما يكون المحرك باردًا وتتم تشغيل شمعات التسخين لتسخين غرف الاحتراق مسبقًا.\n\nعند تشغيل الإشعال، يجب أن يضيء مؤشر شمعة التسخين لفترة قصيرة ثم ينطفئ بمجرد أن تسخن شمعات التسخين المحرك بشكل كافٍ. يشير ذلك إلى أن المحرك جاهز للتشغيل. إذا استمر مؤشر شمعة التسخين في الوضع التشغيلي أو وميض بشكل مستمر، فقد يشير ذلك إلى وجود مشكلة في نظام شمعة التسخين أو المحرك نفسه.\n\nمن المهم ملاحظة أن المحركات البنزين لا تحتوي على شمعات تسخين، لذا يكون مؤشر شمعة التسخين محددًا للمركبات الديزل فقط."
@@ -1307,7 +1307,7 @@
       "en_name": "Fuel Filter Warning",
       "ar_name": "تحذير فلتر الوقود"
     },
-    "image": "",
+    "image": "fuel-filter-warning.jpg",
     "description": {
       "en_description": "The Fuel Filter Warning is a warning message or indicator that alerts the driver when there is a problem with the fuel filter in the vehicle. The fuel filter is a component that helps remove impurities and contaminants from the fuel before it reaches the engine. Over time, the fuel filter can become clogged or dirty, reducing its effectiveness and potentially causing issues with fuel flow to the engine.\n\nWhen the Fuel Filter Warning illuminates, it indicates that the fuel filter may need to be replaced or cleaned. Driving with a clogged or malfunctioning fuel filter can lead to poor engine performance, decreased fuel efficiency, and potential damage to the fuel system.\n\nIt is recommended to have the fuel filter inspected and serviced by a qualified mechanic or contact your authorized dealer for assistance. They will be able to determine if the fuel filter needs to be replaced or if there are any other underlying issues with the fuel system.",
       "ar_description": "تحذير فلتر الوقود هو رسالة تحذير أو مؤشر ينبه السائق عند وجود مشكلة في فلتر الوقود في المركبة. فلتر الوقود هو جزء يساعد في إزالة الشوائب والملوثات من الوقود قبل وصوله إلى المحرك. مع مرور الوقت، يمكن أن يصبح فلتر الوقود مسدودًا أو قذرًا، مما يقلل من فعاليته ويسبب مشاكل في تدفق الوقود إلى المحرك.\n\nعندما يضيء تحذير فلتر الوقود، يشير إلى أنه قد يكون الفلتر بحاجة إلى استبداله أو تنظيفه. القيادة بفلتر الوقود المسدود أو غير الصالح للاستخدام يمكن أن يؤدي إلى سوء أداء المحرك، وتقليل كفاءة استهلاك الوقود، وحدوث أضرار محتملة لنظام الوقود.\n\nيُوصى بفحص فلتر الوقود وصيانته من قبل فني مؤهل أو الاتصال بالوكيل المعتمد للحصول على المساعدة. سيتمكنون من تحديد ما إذا كان يجب استبدال فلتر الوقود أو ما إذا كان هناك أي مشاكل أخرى في نظام الوقود."
@@ -1322,7 +1322,7 @@
       "en_name": "Exhaust Fluid",
       "ar_name": "سائل العادم"
     },
-    "image": "",
+    "image": "exhaust-fluid.jpg",
     "description": {
       "en_description": "Exhaust Fluid, also known as Diesel Exhaust Fluid (DEF) or AdBlue, is a solution used in modern diesel engines equipped with selective catalytic reduction (SCR) systems. The purpose of the exhaust fluid is to reduce harmful nitrogen oxide (NOx) emissions from the vehicle's exhaust gases.\n\nWhen the exhaust gases pass through the SCR system, the exhaust fluid is injected into the exhaust stream. It reacts with the harmful NOx emissions and converts them into harmless nitrogen and water vapor. This process helps to minimize the environmental impact of diesel engines and meet emission standards.\n\nExhaust fluid is typically stored in a separate tank in the vehicle, and the level of fluid is monitored by a dedicated sensor. When the exhaust fluid level becomes low, a warning message or indicator will alert the driver to refill the fluid tank.\n\nIt is important to refill the exhaust fluid in a timely manner to ensure the proper functioning of the SCR system and to comply with emission regulations. Refer to the vehicle's owner manual for the correct type and specification of exhaust fluid to use and follow the recommended refill intervals.",
       "ar_description": "سائل العادم، المعروف أيضًا بسائل العادم الديزل (DEF) أو أدبلو، هو محلول يستخدم في محركات الديزل الحديثة المجهزة بأنظمة الحفز الانتقائي الذي تعمل بالتحفيز (SCR). يهدف سائل العادم إلى تقليل انبعاثات أكسيد النيتروجين الضارة (NOx) من غازات العادم للمركبة.\n\nعندما تمر الغازات العادمة من خلال نظام SCR، يتم حقن سائل العادم في تيار العادم. يتفاعل مع انبعاثات NOx الضارة ويحولها إلى نيتروجين غير ضار وبخار الماء. يساعد هذا العملية على تقليل التأثير البيئي لمحركات الديزل والامتثال لمعايير الانبعاثات.\n\nيتم تخزين سائل العادم عادة في خزان منفصل في المركبة، ويتم مراقبة مستوى السائل بواسطة مستشعر مخصص. عندما يصبح مستوى سائل العادم منخفضًا، سيتم تنبيه السائق برسالة تحذير أو مؤشر لإعادة تعبئة خزان السائل.\n\nمن المهم إعادة تعبئة سائل العادم في الوقت المناسب لضمان الوظيفة السليمة لنظام SCR والامتثال للوائح الانبعاثات. يُرجى الاطلاع على دليل مالك المركبة لمعرفة النوع والمواصفات الصحيحة لسائل العادم الذي يجب استخدامه واتباع فترات إعادة التعبئة الموصى بها."
@@ -1337,7 +1337,7 @@
       "en_name": "AdBlue Tank is Empty",
       "ar_name": "خزان أدبلو فارغ"
     },
-    "image": "",
+    "image": "adblue-tank-empty.jpg",
     "description": {
       "en_description": "When the AdBlue tank is empty, it is important to refill it to ensure the proper functioning of the selective catalytic reduction (SCR) system in your vehicle. AdBlue is a diesel exhaust fluid that helps reduce harmful emissions from diesel engines.\n\nTo refill the AdBlue tank:\n1. Locate the AdBlue tank filler cap, which is usually marked with a blue symbol or labeled 'AdBlue'.\n2. Open the filler cap by turning it counterclockwise.\n3. Purchase a container of AdBlue fluid that meets the specifications recommended by your vehicle manufacturer.\n4. Carefully pour the AdBlue fluid into the tank, ensuring not to spill any fluid on the vehicle's exterior or engine components.\n5. Close the filler cap tightly by turning it clockwise.\n\nIt is important to use the correct type and specification of AdBlue fluid as specified in your vehicle's owner manual. Using improper or contaminated fluid can potentially damage the SCR system and affect its performance. If you are unsure about the process or need assistance, it is recommended to consult your vehicle's manual or contact a qualified mechanic or authorized dealer for guidance.",
       "ar_description": "عندما يكون خزان أدبلو فارغًا، من المهم إعادة تعبئته لضمان الوظيفة السليمة لنظام الحفز الانتقائي الذي يعمل بالتحفيز (SCR) في مركبتك. أدبلو هو سائل عادم الديزل الذي يساعد على تقليل الانبعاثات الضارة من محركات الديزل.\n\nلإعادة تعبئة خزان أدبلو:\n1. اعثر على غطاء ملء خزان أدبلو، والذي عادةً ما يتم تحديده برمز أزرق أو بالتسمية 'AdBlue'.\n2. قم بفتح غطاء الملء عن طريق تدويره عكس اتجاه عقارب الساعة.\n3. قم بشراء عبوة من سائل أدبلو وفقًا للمواصفات الموصى بها من قبل مصنع المركبة.\n4. قم بسكب سائل أدبلو بعناية في الخزان، مع التأكد من عدم انسكاب أي سائل على الجزء الخارجي للمركبة أو مكونات المحرك.\n5. قم بإغلاق غطاء الملء بإحكام عن طريق تدويره عقارب الساعة.\n\nمن المهم استخدام النوع والمواصفات الصحيحة لسائل أدبلو حسبما هو محدد في دليل مالك المركبة الخاص بك. استخدام سائل غير صحيح أو ملوث قد يؤدي إلى تلف نظام SCR وتأثير أداءه. إذا كنت غير متأكد من العملية أو تحتاج إلى مساعدة، فمن المستحسن الاطلاع على دليل مركبتك أو الاتصال بفني مؤهل أو الوكيل المعتمد للحصول على الإرشادات اللازمة."
@@ -1352,7 +1352,7 @@
       "en_name": "AdBlue Malfunction",
       "ar_name": "عطل في أدبلو"
     },
-    "image": "",
+    "image": "adblue-tank-malfunction.jpg",
     "description": {
       "en_description": "An AdBlue malfunction indicates an issue with the AdBlue system in your vehicle. AdBlue is a diesel exhaust fluid that helps reduce harmful emissions from diesel engines.\n\nWhen you encounter an AdBlue malfunction, follow these steps:\n1. Check the AdBlue level in the tank. If the level is low or empty, refill the AdBlue tank following the manufacturer's instructions.\n2. Inspect the AdBlue tank and associated components for any visible signs of damage or leaks. If you notice any issues, it is recommended to have the system inspected and repaired by a qualified mechanic.\n3. If the AdBlue warning persists even after refilling the tank and ensuring there are no visible issues, it may indicate a malfunction in the AdBlue system. In such cases, it is advisable to have your vehicle diagnosed and repaired by an authorized service center or a qualified technician.\n\nIgnoring an AdBlue malfunction or driving with a malfunctioning system can result in increased emissions and potential damage to the vehicle's exhaust system. It is essential to address the issue promptly to ensure proper vehicle operation and compliance with emission regulations.",
       "ar_description": "يشير عطل أدبلو إلى وجود مشكلة في نظام أدبلو في مركبتك. أدبلو هو سائل عادم الديزل الذي يساعد على تقليل الانبعاثات الضارة من محركات الديزل.\n\nعند مواجهة عطل أدبلو، اتبع الخطوات التالية:\n1. تحقق من مستوى أدبلو في الخزان. إذا كان المستوى منخفضًا أو فارغًا، قم بإعادة تعبئة خزان أدبلو وفقًا لتعليمات الشركة المصنعة.\n2. قم بفحص خزان أدبلو والمكونات المرتبطة به للتحقق من وجود أي علامات ظاهرة للتلف أو التسربات. إذا لاحظت أي مشاكل، فمن المستحسن فحص النظام وإصلاحه من قبل فني مؤهل.\n3. إذا استمر تحذير أدبلو رغم إعادة تعبئة الخزان والتأكد من عدم وجود مشاكل ظاهرة، فقد يشير ذلك إلى وجود عطل في نظام أدبلو. في مثل هذه الحالات، من النصح بتشخيص المركبة وإصلاحها في مركز خدمة معتمد أو بواسطة فني مؤهل.\n\nتجاهل عطل أدبلو أو القيادة بنظام معطل يمكن أن يؤدي إلى زيادة الانبعاثات وتلف النظام العادم للمركبة. من الضروري التعامل مع المشكلة بسرعة لضمان سلامة تشغيل المركبة والامتثال للتشريعات البيئية."
@@ -1367,7 +1367,7 @@
       "en_name": "Water Fluid Filter Warning",
       "ar_name": "تحذير فلتر سائل الماء"
     },
-    "image": "",
+    "image": "water-fluid-filter.jpg",
     "description": {
       "en_description": "The Water Fluid Filter Warning is a warning message or indicator that alerts the driver when there is an issue with the water fluid filter in the vehicle. The water fluid filter is responsible for filtering the water used in various systems of the vehicle, such as the windshield washer system.\n\nWhen you see the Water Fluid Filter Warning, follow these steps:\n1. Check the water fluid filter location. Consult your vehicle's manual for the exact location and instructions on how to access the filter.\n2. Inspect the filter for any signs of damage, clogging, or contamination. If you notice any issues, it is recommended to replace the water fluid filter.\n3. If the warning persists even after replacing the filter, it may indicate a problem with the sensor or the system itself. In such cases, it is advisable to have your vehicle inspected and diagnosed by a qualified mechanic or contact your authorized dealer for assistance.\n\nIgnoring the Water Fluid Filter Warning or driving with a faulty filter can compromise the performance of water-dependent systems in your vehicle. It is important to address the issue promptly to maintain the proper functioning of these systems.",
       "ar_description": "تحذير فلتر سائل الماء هو رسالة تحذير أو مؤشر ينبه السائق عند وجود مشكلة في فلتر سائل الماء في المركبة. يقوم فلتر سائل الماء بتنقية الماء المستخدم في أنظمة مختلفة في المركبة، مثل نظام غسيل الزجاج الأمامي.\n\nعند رؤية تحذير فلتر سائل الماء، اتبع الخطوات التالية:\n1. تحقق من موقع فلتر سائل الماء. استشر دليل المركبة الخاص بك لمعرفة الموقع الدقيق وتعليمات الوصول إلى الفلتر.\n2. قم بفحص الفلتر للتأكد من عدم وجود علامات على التلف أو الانسداد أو التلوث. إذا لاحظت أي مشاكل، فمن المستحسن استبدال فلتر سائل الماء.\n3. إذا استمر التحذير رغم استبدال الفلتر، فقد يشير ذلك إلى وجود مشكلة في المستشعر أو النظام نفسه. في مثل هذه الحالات، يُوصى بفحص المركبة وتشخيصها من قبل فني مؤهل أو الاتصال بالوكيل المعتمد للحصول على المساعدة.\n\nتجاهل تحذير فلتر سائل الماء أو القيادة بفلتر معيب يمكن أن يؤثر على أداء أنظمة الماء في المركبة. من المهم التعامل مع المشكلة على الفور للحفاظ على العمل السليم لهذه الأنظمة."

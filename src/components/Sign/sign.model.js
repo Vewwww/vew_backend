@@ -42,5 +42,27 @@ const schema = new mongoose.Schema({
   },
 
 });
+const setImageUrl = (doc) => {
+  //return image base url + image name
+  if (doc.image) {
+    const imageUrl = `${process.env.BaseUrl}/signs/${doc.image}`;
+    doc.image = imageUrl;
+  }
+};
+schema.post('init', (doc) => {
+  setImageUrl(doc);
+});
 
+// schema.pre('create', (doc) => {
+//   setImageUrl(doc);
+// });
+
+// schema.post('find', function(doc, next) {
+//   doc.image = `${process.env.BaseUrl}/uploads/${doc.image}`
+//   next();
+// });
+// schema.pre('create', function(doc,next) {
+//   doc.image = `${process.env.BaseUrl}/uploads/signs/${doc.image}`
+//   next();
+// });
 module.exports = mongoose.model("sign", schema);
