@@ -1,7 +1,8 @@
 const {
   getNearestMechanicWorkshop,
   createMechanicWorkshop,
-  reportMechanic
+  reportMechanic,
+  rateMechanic,
 } = require("./mechanicWorkshop.services");
 const {
   signup,
@@ -19,5 +20,6 @@ router.post("/signup", mechanicValidation, signup, createMechanicWorkshop);
 router.get("/getNearestMechanicWorkshop",getNearestMechanicWorkshop);
 router.get("/verify/:token", emailVerify);
 router.patch("/report/:id",reportMechanic);
+router.patch("/rate/:id",rateMechanic);
 
 module.exports = router;

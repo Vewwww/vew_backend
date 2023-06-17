@@ -5,6 +5,10 @@ const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory = require("../Handlers/handler.factory");
 require("../location/location.model");
 const LocationModel = require("../location/location.model");
+
+//rate
+exports.rateMechanic=factory.rate(mechanicModel);
+
 //report
 exports.reportMechanic=factory.report(mechanicModel);
 
