@@ -5,7 +5,7 @@ const carModel = require("../Car/car.model");
 const factory = require("../Handlers/handler.factory")
 
 //Gender had problem analytic
-exports.genderAnalytic=catchAsyncErr(async(req,res,next)=>{
+exports.getGenderAnalytic=catchAsyncErr(async(req,res,next)=>{
   const document= await driverModel.find();
   let driverLength=document.length;
   console.log(typeof document, document);

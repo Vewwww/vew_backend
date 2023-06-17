@@ -10,7 +10,7 @@ const {
   getUser,
   updateUser,
   reportDriver,
-  genderAnalytic,
+  getGenderAnalytic,
 
 } = require("./driver.services");
 const { allowedTo } = require("../Handlers/auth.factory");
@@ -32,7 +32,7 @@ router.use(
 );
 
 router.route("/").get(authinticate, allowedTo("admin"), getUsers);
-router.get("/genderAnalytic",genderAnalytic);
+router.get("/genderAnalytic",getGenderAnalytic);
 
 router
   .route("/:id")
