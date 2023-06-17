@@ -13,8 +13,8 @@ const router = express.Router();
 
 // router.route("/").post(createRequest).get(getRequests);
 router.route("/").post(createRequest)
-router.get("/getDriverPendingRequests", authinticate, getDriverPendingRequests);
-router.get("/getDriverCurrentRequests", authinticate, getDriverCurrentRequests);
+router.get("/getDriverPendingRequests", getDriverPendingRequests);
+router.get("/getDriverCurrentRequests", getDriverCurrentRequests);
 
 router.route("/:id").get(getRequest).put(updateRequest).delete(deleteRequest);
 
