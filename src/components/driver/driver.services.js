@@ -3,6 +3,20 @@ const AppError = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const carModel = require("../Car/car.model");
 const factory = require("../Handlers/handler.factory")
+
+//Gender had problem analytic
+exports.genderAnalytic=catchAsyncErr(async(req,res,next)=>{
+  const document= await driverModel.find();
+  let driverLength=document.length;
+  console.log(typeof document, document);
+  let maleLength=document.filter(driver=>driver.gender=='male').length;
+  let femaleLength=document.filter(driver=>driver.gender=='female').length;
+  let maleRatio=maleLength/driverLength;
+  let femaleRatio=femaleLength/driverLength;
+  console.log(maleLength, femaleLength);
+
+  res.status(200).json({maleRatio,femaleRatio});
+})
 //report
 exports.reportDriver=factory.report(driverModel);
 // to add new user

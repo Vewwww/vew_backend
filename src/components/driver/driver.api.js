@@ -9,7 +9,9 @@ const {
   getUsers,
   getUser,
   updateUser,
-  reportDriver
+  reportDriver,
+  genderAnalytic,
+
 } = require("./driver.services");
 const { allowedTo } = require("../Handlers/auth.factory");
 const driverValidation = require("./driver.validator");
@@ -30,6 +32,8 @@ router.use(
 );
 
 router.route("/").get(authinticate, allowedTo("admin"), getUsers);
+router.get("/genderAnalytic",genderAnalytic);
+
 router
   .route("/:id")
   .get(authinticate, allowedTo("admin"), getUser)
