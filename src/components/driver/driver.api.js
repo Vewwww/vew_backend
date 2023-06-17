@@ -16,6 +16,8 @@ const {
 const { allowedTo } = require("../Handlers/auth.factory");
 const driverValidation = require("./driver.validator");
 const maintenanceRoute = require("../MaintenanceCenter/maintenanceCenter.api");
+const requestRoute = require("../request/request.api");
+
 const router = require("express").Router();
 
 router.use(
@@ -30,7 +32,11 @@ router.use(
   allowedTo("user"),
   maintenanceRoute
 );
-
+router.use(
+  "/request",
+  authinticate,
+  requestRoute
+);
 router.route("/").get(authinticate, allowedTo("admin"), getUsers);
 router.get("/genderAnalytic",getGenderAnalytic);
 
