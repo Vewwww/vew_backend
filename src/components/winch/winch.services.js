@@ -5,6 +5,9 @@ const AppError = require("../../utils/AppError");
 const winchModel = require("./winch.model");
 const carModel = require("../Car/car.model");
 const LocationModel = require("../location/location.model");
+
+//rate
+exports.rateWinch=factory.rate(winchModel);
 //report
 exports.reportWinch=factory.report(winchModel);
 

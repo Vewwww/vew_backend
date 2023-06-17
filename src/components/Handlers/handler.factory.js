@@ -12,19 +12,37 @@ const winchModel = require("../winch/winch.model");
 const { sendEmail } = require("./email.factory");
 const schedule = require("node-schedule");
 
+exports.rate = (Model) =>
+  catchAsyncErr(async (req, res, next) => {
+    const { id } = req.params;
+    let {rating} = req.body;
+    // 1 find the document
+    const document = await Model.findById(id);
+    if (!document) {
+      return next(new AppError(`No document found for this id ${id}`, 400));
+    }
+
+    console.log(document.rate,rating);
+    // 2 update rates
+    console.log(typeof document.rate,typeof rating);
+
+    await Model.findByIdAndUpdate(id, { rate: (document.rate + rating) / 2 });
+
+
+    res.status(204).send();
+  });
+
 exports.report = (Model) =>
   catchAsyncErr(async (req, res, next) => {
     const max_num_of_reports = 10;
     const { id } = req.params;
-
-    // const document = await Model.findByIdAndUpdate( id ,{});
 
     // 1 find the document
     const document = await Model.findById(id);
     if (!document) {
       return next(new AppError(`No document found for this id ${id}`, 400));
     }
-    // run schedule with cron job on document to run after after week if reports number is 0 
+    // run schedule with cron job on document to run after after week if reports number is 0
     if (document.report.reportsNumber == 0) {
       const date = new Date();
       date.setDate(date.getDate() + 7);
