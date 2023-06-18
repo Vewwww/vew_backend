@@ -41,7 +41,7 @@ io.on("connection", (socket) => {
 });
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'uploads')));
+// app.use(express.static(path.join(__dirname, 'uploads')));
 if(process.env.MODE_ENV=="developmet"){
   app.use(morgan("dev"));
 }
