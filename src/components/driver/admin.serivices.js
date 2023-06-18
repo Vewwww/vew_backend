@@ -16,6 +16,14 @@ exports.userStatistics=catchAsyncErr(async(req,res)=>{
   res.status(200).json({numOfAllUsers:numOfAllUsers,numOfMechanists:pecerntageMechanists,numOfWinches:pecerntageWinches,numOfDrivers:pecerntageDrivers})
   }
 )
-// exports.highestTenModelIssues=catchAsyncErr(async(req,res)=>{
-  
+// exports.tenModelsHadIssues=catchAsyncErr(async(req,res)=>{
+//   const requests=await requestModel.find()
+//   modelsHadIssues={}
+//   for(request in requests) {
+//     carModel=request.car.carType.carModel
+//     if(!(carModel in modelsHadIssues)){
+//       modelsHadIssues.add(0)
+//     }
+
+//   }
 // })
