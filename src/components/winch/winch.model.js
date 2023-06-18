@@ -14,7 +14,7 @@ const schema = new mongoose.Schema({
     type: String,
     require: [true, "password is required"],
 
-    min: 6
+    min: 6,
   },
   phoneNumber: {
     type: String,
@@ -25,21 +25,26 @@ const schema = new mongoose.Schema({
     reportsNumber: {
       type: Number,
 
-      default: 0
+      default: 0,
     },
     dateReport: {
       type: Date,
-      default: function () { return Date.now() }
-    }
+      default: function () {
+        return Date.now();
+      },
+    },
   },
   rate: {
     type: Number,
-    default: 4.5
-
+    default: 4.5,
+  },
+  numOfRates: {
+    type: Number,
+    default: 0,
   },
   isSuspended: {
     type: Boolean,
-    default: false
+    default: false,
   },
   emailConfirm: {
     type: Boolean,
@@ -51,12 +56,12 @@ const schema = new mongoose.Schema({
   },
   logedIn: {
     type: Boolean,
-    default: false
+    default: false,
   },
   role: {
     type: String,
-    default: "winch"
-  }
+    default: "winch",
+  },
 });
 schema.pre("save", async function (next) {
   this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
