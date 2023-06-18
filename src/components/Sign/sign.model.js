@@ -53,9 +53,9 @@ schema.post('init', (doc) => {
   setImageUrl(doc);
 });
 
-// schema.pre('create', (doc) => {
-//   setImageUrl(doc);
-// });
+schema.post('save', (doc) => {
+  setImageUrl(doc);
+});
 
 // schema.post('find', function(doc, next) {
 //   doc.image = `${process.env.BaseUrl}/uploads/${doc.image}`
