@@ -47,7 +47,7 @@ const schema = mongoose.Schema({
       },
     },
   },
-  lisenceRenewalDate: {
+  driverLisenceRenewalDate: {
     type: Date,
   },
   isSuspended: {

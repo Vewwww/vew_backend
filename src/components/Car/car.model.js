@@ -15,7 +15,7 @@ const schema = mongoose.Schema({
     plateNumber: {
         type: String
     },
-    licenseRenewalDate: {
+    CarLicenseRenewalDate: {
         type: Date
     },
     color: {
