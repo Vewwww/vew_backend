@@ -22,8 +22,12 @@ exports.getDriverPendingRequests = catchAsyncErr(async (req, res) => {
     accepted: false,
     driver: req.user._id,
   });
-  res.statu(200).json({ data: document });
+  res.status(200).json({ data: document });
 });
+exports.getPreviousRequests=catchAsyncErr(async(req,res)=>{
+  const requests = await RequestModel.find({isActive: false,accepted: true,driver: req.user._id,});
+  res.status(200).json({ previousRequests: requests });
+})
 
 exports.createfilterObject = catchAsyncErr((req, res, next) => {
   let filterObject = {};
