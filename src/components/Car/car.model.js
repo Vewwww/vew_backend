@@ -27,7 +27,6 @@ const schema = mongoose.Schema({
     },
     averageMilesPerMonth: {
         type: Number
-
     },
     lastPeriodicMaintenanceDate: {
         type: Date,
