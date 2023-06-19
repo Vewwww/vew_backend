@@ -8,7 +8,7 @@ exports.addAdmin=factory.createOne(driverModel)
 exports.userStatistics=catchAsyncErr(async(req,res)=>{
   const numOfMechanists=await mechanicWorkshopModel.find({}).count()
   const numOfWinches=await winchModel.find({}).count()
-  const numOfDrivers=await driverModel.find({role:"user"}).count()
+  const numOfDrivers=await driverModel.find({role:"user",emailConfirm:"true"}).count()
   const numOfAllUsers=numOfDrivers+numOfMechanists+numOfWinches
   const pecerntageDrivers=(numOfDrivers/numOfAllUsers)*100
   const pecerntageMechanists=(numOfMechanists/numOfAllUsers)*100
