@@ -3,6 +3,7 @@ const AppError = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const carModel = require("../Car/car.model");
 const factory = require("../Handlers/handler.factory")
+const createNotification=require("../notification/notification.services")
 
 //Gender had problem analytic
 exports.getGenderAnalytic=catchAsyncErr(async(req,res,next)=>{
@@ -29,6 +30,7 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
 
   let user = new driverModel(req.body);
   await user.save();
+  createNotification(driverLisenceRenewalDate,CarLicenseRenewalDate,lastPeriodicMaintenanceDate,_id)
 
   let carsResult = [];
   if (cars.length) {

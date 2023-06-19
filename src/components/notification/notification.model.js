@@ -1,14 +1,18 @@
 const mongoose = require("mongoose");
 const schema=mongoose.Schema({
     message:{
-        type:string
+        type:String
     },
     date:{
         type:Date
     },
     to:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:driver
+        ref:"driver"
+    },
+    seen:{
+        type:Boolean,
+        default:false
     }
 })
 module.exports=mongoose.model("notification",schema)

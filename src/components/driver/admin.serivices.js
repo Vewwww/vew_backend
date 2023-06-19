@@ -16,14 +16,18 @@ exports.userStatistics=catchAsyncErr(async(req,res)=>{
   res.status(200).json({numOfAllUsers:numOfAllUsers,numOfMechanists:pecerntageMechanists,numOfWinches:pecerntageWinches,numOfDrivers:pecerntageDrivers})
   }
 )
-// exports.tenModelsHadIssues=catchAsyncErr(async(req,res)=>{
-//   const requests=await requestModel.find()
-//   modelsHadIssues={}
-//   for(request in requests) {
-//     carModel=request.car.carType.carModel
-//     if(!(carModel in modelsHadIssues)){
-//       modelsHadIssues.add(0)
-//     }
-
-//   }
-// })
+exports.tenModelsHadIssues=catchAsyncErr(async(req,res)=>{
+  const requests=await requestModel.find()
+  modelsHadIssues=[]
+  for(const request in requests) {
+    carModel=request.car.carType.carModel
+    if(!(modelsHadIssues.contains(carModel))){
+     carModel=0
+     modelsHadIssues.add(carModel)
+    }
+    carModel++
+  }
+  modelsHadIssues.sort();
+  //me7taga azbot el type wel model
+  res.status(200).json(modelsHadIssues)
+})
