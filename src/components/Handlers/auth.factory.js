@@ -7,7 +7,6 @@ const mechanicWorkshopModel = require("../MechanicWorkshop/mechanicWorkshop.mode
 const winchModel = require("../winch/winch.model");
 const { sendEmail } = require("./email.factory");
 
-
 exports.signup = (model) => {
   return catchAsyncErr(async (req, res, next) => {
     email = req.body.email;

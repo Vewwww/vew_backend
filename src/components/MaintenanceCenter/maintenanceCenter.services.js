@@ -3,7 +3,6 @@ const AppError = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory = require("../Handlers/handler.factory");
-require("../location/location.model");
 require("../carBrand/carBrand.model");
 //create new service
 
@@ -13,12 +12,20 @@ exports.getNearestMaintenanceCenters = catchAsyncErr(async (req, res) => {
   let filter = {};
   if (req.query.carType) {
     filter = {
-      carType: { $type: "array", $elemMatch: { $eq: req.query.carType } },
+      carType: {
+        $type: "array",
+        $elemMatch: { $eq: req.query.carType },
+      },
     };
   }
-  const manitenceCenters = await MaintanenceCenterModel.find(filter)
-    .populate({ path: "location", select: "latitude longitude -_id" })
-    .populate("carType");
+  if (req.query.isVerified) {
+    filter.isVerified = req.query.isVerified;
+  }
+
+  console.log(filter);
+  const manitenceCenters = await MaintanenceCenterModel.find(filter).populate(
+    "carType"
+  );
 
   searchResult = getNearestPlaces(manitenceCenters, latitude, longitude);
   res.status(200).json({ results: searchResult.length, data: searchResult });

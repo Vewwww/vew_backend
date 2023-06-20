@@ -22,12 +22,6 @@ router.use(
   allowedTo("user"),
   maintenanceRoute
 );
-router.use(
-  "/maintenanceCenter",
-  authinticate,
-  allowedTo("user"),
-  maintenanceRoute
-);
 
 router.route("/").get(authinticate, allowedTo("admin"), getUsers);
 router

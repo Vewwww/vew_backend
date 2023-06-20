@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const schema = mongoose.Schema({
   name: {
-    ar: { type: String, required: [true, "Arabic carType name required"] },
-    en: { type: String, required: [true, "English carType name required"] },
+    ar: { type: String, required: [true, "Arabic maintenance name required"] },
+    en: { type: String, required: [true, "English maintenance name required"] },
   },
   phoneNumber: {
     type: String,
@@ -15,8 +15,21 @@ const schema = mongoose.Schema({
     },
   ],
   location: {
-    type: mongoose.Schema.ObjectId,
-    ref: "location",
+    description: {
+      ar: { type: String, default: "no arabic location description available" },
+      en: {
+        type: String,
+        default: "no english location description available",
+      },
+    },
+    latitude: {
+      type: Number,
+      required: [true, "Latitude required"],
+    },
+    longitude: {
+      type: Number,
+      required: [true, "Longitude required"],
+    },
   },
   isVerified: {
     type: Boolean,
@@ -28,4 +41,4 @@ const schema = mongoose.Schema({
     type: Number,
   },
 });
-module.exports = mongoose.model("MaintenanceCenter", schema);
+module.exports = mongoose.model("maintenancecenter", schema);

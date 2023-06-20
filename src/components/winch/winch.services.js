@@ -9,30 +9,19 @@ const LocationModel = require("../location/location.model");
 
 exports.getNearestWinch = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;
-  const manitenceCenters = await winchModel.find().populate({
-    path: "location",
-    select: "latitude longitude -_id",
-  });
+  const winches = await winchModel.find()
 
-  searchResult = getNearestPlaces(manitenceCenters, latitude, longitude);
+  searchResult = getNearestPlaces(winches, latitude, longitude);
   res.status(200).json({ results: searchResult.length, data: searchResult });
 });
 
 exports.createWinch = catchAsyncErr(async (req, res) => {
-  const location = await LocationModel.create({
-    latitude: req.body.latitude,
-    longitude: req.body.longitude,
-  });
-
+  
   let car = null;
   if (req.body.car) {
     car = req.body.car;
     delete req.body.car;
   }
-
-  delete req.body.latitude;
-  delete req.body.longitude;
-  req.body.location = location._id;
   const createdwinch = await winchModel.create(req.body);
 
   let carResult = {};

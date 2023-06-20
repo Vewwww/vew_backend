@@ -7,7 +7,7 @@ const {
   getMaintenanceCenters,
   getMaintenanceCenter,
   updateMaintenanceCenter,
-deleteMaintenanceCenter,
+  deleteMaintenanceCenter,
   getNearestMaintenanceCenters
 } = require("./maintenanceCenter.services");
 
