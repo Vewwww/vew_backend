@@ -9,12 +9,12 @@ const signs = JSON.parse(
 dbConnection();
 
 const createSign = async (sign) => {
-  // for (const sign of signs) {
-    const document = await signModel.create(signs[0]);
+  for (const sign of signs) {
+    const document = await signModel.create(sign);
     if (document) {
       console.log(`${document}sign Added successfuly`);
     }
-  // }
+  }
 };
 
 createSign();

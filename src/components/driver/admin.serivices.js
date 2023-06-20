@@ -3,7 +3,7 @@ const mechanicWorkshopModel = require("../MechanicWorkshop/mechanicWorkshop.mode
 const winchModel = require("../winch/winch.model");
 const driverModel = require("./driver.model");
 const factory=require("../Handlers/handler.factory")
-
+const carModel = require("../carModel/carModel.model");
 exports.addAdmin=factory.createOne(driverModel)
 exports.userStatistics=catchAsyncErr(async(req,res)=>{
   const numOfMechanists=await mechanicWorkshopModel.find({}).count()
@@ -28,6 +28,10 @@ exports.tenModelsHadIssues=catchAsyncErr(async(req,res)=>{
     carModel++
   }
   modelsHadIssues.sort();
-  //me7taga azbot el type wel model
-  res.status(200).json(modelsHadIssues)
+  //get top 10
+  for(const model in modelsHadIssues){
+    const hadIssues=await carModel.find().populate({path:"carType"})
+    res.status(200).json(hadIssues)
+  }
+  
 })
