@@ -1,0 +1,478 @@
+{
+  "catMake": [
+    {
+      "name": {
+        "ar": "جيتور",
+        "en": "Jetour"
+      }
+    },
+    {
+      "name": {
+        "ar": "بيجو",
+        "en": "Peugeot"
+      }
+    },
+    {
+      "name": {
+        "ar": "شانجان",
+        "en": "Changan"
+      }
+    },
+    {
+      "name": {
+        "ar": "لادا",
+        "en": "Lada"
+      }
+    },
+    {
+      "name": {
+        "ar": "جيلي",
+        "en": "Geely"
+      }
+    },
+    {
+      "name": {
+        "ar": "جاكوار",
+        "en": "Jaguar"
+      }
+    },
+    {
+      "name": {
+        "ar": "بروتون",
+        "en": "Proton"
+      }
+    },
+    {
+      "name": {
+        "ar": "بورش",
+        "en": "Porsche"
+      }
+    },
+    {
+      "name": {
+        "ar": "بيستون",
+        "en": "Bestune"
+      }
+    },
+    {
+      "name": {
+        "ar": "فولفو",
+        "en": "Volvo"
+      }
+    },
+    {
+      "name": {
+        "ar": "كاي ي",
+        "en": "Kaiyi"
+      }
+    },
+    {
+      "name": {
+        "ar": "كوبرا",
+        "en": "Cupra"
+      }
+    },
+    {
+      "name": {
+        "ar": "لكزس",
+        "en": "Lexus"
+      }
+    },
+    {
+      "name": {
+        "ar": "فورثينج",
+        "en": "Forthing"
+      }
+    },
+    {
+      "name": {
+        "ar": "لاند روفر",
+        "en": "Land Rover"
+      }
+    },
+    {
+      "name": {
+        "ar": "دونج فنج",
+        "en": "Dongfeng"
+      }
+    },
+    {
+      "name": {
+        "ar": "جاك",
+        "en": "Jac"
+      }
+    },
+
+    {
+      "name": {
+        "ar": "مازيراتي",
+        "en": "Meserati"
+      }
+    },
+    {
+      "name": {
+        "ar": "ساوايست",
+        "en": "Soueast"
+      }
+    },
+    {
+      "name": {
+        "ar": "هافال",
+        "en": "Haval"
+      }
+    },
+    {
+      "name": {
+        "ar": "شانجى",
+        "en": "Canghe"
+      }
+    },
+    {
+      "name": {
+        "ar": "مينى",
+        "en": "Mini"
+      }
+    },
+    {
+      "name": {
+        "ar": "اوبل",
+        "en": "Opel"
+      }
+    },
+    {
+      "name": {
+        "ar": "استون مارتن",
+        "en": "Aston Martin"
+      }
+    },
+    {
+      "name": {
+        "ar": "بايك",
+        "en": "Baic"
+      }
+    },
+    {
+      "name": {
+        "ar": "شيفروليه",
+        "en": "Chevrolet"
+      }
+    },
+    {
+      "name": {
+        "ar": "بي ام دبليو",
+        "en": "BMW"
+      }
+    },
+    {
+      "name": {
+        "ar": "بى واى دى",
+        "en": "Byd"
+      }
+    },
+    {
+      "name": {
+        "ar": "بريليانس",
+        "en": "Brilliance"
+      }
+    },
+    {
+      "name": {
+        "ar": "فيات",
+        "en": "FIAT"
+      }
+    },
+    {
+      "name": {
+        "ar": "كيا",
+        "en": "Kia"
+      }
+    },
+
+    {
+      "name": {
+        "ar": "شيرى",
+        "en": "Chery"
+      }
+    },
+    {
+      "name": {
+        "ar": "مرسيدس",
+        "en": "Mercedes"
+      }
+    },
+    {
+      "name": {
+        "ar": "سوبارو",
+        "en": "Subaru"
+      }
+    },
+    {
+      "name": {
+        "ar": "تويوتا",
+        "en": "Toyota"
+      }
+    },
+
+    {
+      "name": {
+        "ar": "فولكس فاغن",
+        "en": "Volkswagen"
+      }
+    },
+    {
+      "name": {
+        "ar": "رينو",
+        "en": "Renault"
+      }
+    },
+    {
+      "name": {
+        "ar": "دايهاتسو",
+        "en": "Daihatsu"
+      }
+    },
+    {
+      "name": {
+        "ar": "سوزوكى",
+        "en": "Suzuki"
+      }
+    },
+    {
+      "name": {
+        "ar": "اودي",
+        "en": "Audi"
+      }
+    },
+    {
+      "name": {
+        "ar": "نيسان",
+        "en": "Nissan"
+      }
+    },
+
+    {
+      "name": {
+        "ar": "مازدا",
+        "en": "MAZDA"
+      }
+    },
+    {
+      "name": {
+        "ar": "دايو",
+        "en": "Daewoo"
+      }
+    },
+    {
+      "name": {
+        "ar": "ميتسوبيشي",
+        "en": "Mitsubishi"
+      }
+    },
+    {
+      "name": {
+        "ar": "هيونداي",
+        "en": "Hyundai"
+      }
+    },
+    {
+      "name": {
+        "ar": "سيتروين",
+        "en": "Citroën"
+      }
+    },
+
+    {
+      "name": {
+        "ar": "ام جى",
+        "en": "MG"
+      }
+    },
+    {
+      "name": {
+        "ar": "سانج يونج",
+        "en": "Ssang Yong"
+      }
+    },
+    {
+      "name": {
+        "ar": "الفاروميو",
+        "en": "Alfa Romeo"
+      }
+    },
+    {
+      "name": {
+        "ar": "سيات",
+        "en": "Seat"
+      }
+    },
+    {
+      "name": {
+        "ar": "فورد",
+        "en": "Ford"
+      }
+    },
+
+    {
+      "name": {
+        "ar": "سكودا",
+        "en": "Skoda"
+      }
+    },
+    {
+      "name": {
+        "ar": "هوندا",
+        "en": "Honda"
+      }
+    },
+    {
+      "name": {
+        "ar": "دفسك",
+        "en": "DFSK"
+      }
+    },
+    {
+      "name": {
+        "ar": "دى اس",
+        "en": "Ds"
+      }
+    },
+    {
+      "name": {
+        "ar": "جيب",
+        "en": "Jeep"
+      }
+    },
+    {
+      "name": {
+        "ar": "ساب",
+        "en": "Saab"
+      }
+    },
+    {
+      "name": {
+        "ar": "لمبرجيني",
+        "en": "Lamborghini"
+      }
+    },
+    {
+      "name": {
+        "ar": "هامر",
+        "en": "HUMMER"
+      }
+    },
+    {
+      "name": {
+        "ar": "بويك",
+        "en": "Buick"
+      }
+    },
+    {
+      "name": {
+        "ar": "دودج",
+        "en": "Dodge"
+      }
+    },
+    {
+      "name": {
+        "ar": "جي ام سى",
+        "en": "GMC"
+      }
+    },
+    {
+      "name": {
+        "ar": "لينكولن",
+        "en": "Lincoln"
+      }
+    },
+    {
+      "name": {
+        "ar": "كرايسلر",
+        "en": "Chrysler"
+      }
+    },
+    {
+      "name": {
+        "ar": "بينتلى",
+        "en": "Bentley"
+      }
+    },
+    {
+      "name": {
+        "ar": "مرسيدس-بنز",
+        "en": "Mercedes-Benz"
+      }
+    },
+    {
+      "name": {
+        "ar": "بوتياك",
+        "en": "Pontiac"
+      }
+    },
+    {
+      "name": {
+        "ar": "كاديلاك",
+        "en": "Cadillac"
+      }
+    },
+    {
+      "name": {
+        "ar": "اكيورا",
+        "en": "Acura"
+      }
+    },
+    {
+      "name": {
+        "ar": "ساتورن",
+        "en": "Saturn"
+      }
+    },
+    {
+      "name": {
+        "ar": "ايسوزو",
+        "en": "Isuzu"
+      }
+    },
+    {
+      "name": {
+        "ar": "فيرارى",
+        "en": "Ferrari"
+      }
+    },
+    {
+      "name": {
+        "ar": "تسلا",
+        "en": "Tesla"
+      }
+    },
+    {
+      "name": {
+        "ar": "ايجل",
+        "en": "Eagle"
+      }
+    },
+    {
+      "name": {
+        "ar": "رولز رويس",
+        "en": "Rolls-Royce"
+      }
+    },
+    {
+      "name": {
+        "ar": "فكتورى",
+        "en": "Victory"
+      }
+    },
+    {
+      "name": {
+        "ar": "ميركرى",
+        "en": "Mercury"
+      }
+    },
+    {
+      "name": {
+        "ar": "لوتس",
+        "en": "Lotus"
+      }
+    }
+  ]
+}

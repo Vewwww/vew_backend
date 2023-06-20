@@ -18,13 +18,32 @@ const schema = new mongoose.Schema({
   },
   driver: { type: mongoose.Types.ObjectId, ref: "driver" },
   car: { type: mongoose.Types.ObjectId, ref: "car" },
-  location: { type: mongoose.Types.ObjectId, ref: "location" },
-  mechanist: { type: mongoose.Types.ObjectId, ref: "mechanicWorkshop" },
+  mechanic: { type: mongoose.Types.ObjectId, ref: "mechanicWorkshop" },
   winch: { type: mongoose.Types.ObjectId, ref: "winch" },
-
+  location: {
+    description: {
+      ar: { type: String, default: "no arabic location description available" },
+      en: {
+        type: String,
+        default: "no english location description available",
+      },
+    },
+    latitude: {
+      type: Number,
+      required: [true, "Latitude required"],
+    },
+    longitude: {
+      type: Number,
+      required: [true, "Longitude required"],
+    },
+  },
   created_at: {
     type: Date,
     default: new Date(),
+  },
+  isSeen: {
+    type: Boolean,
+    default: false,
   },
 });
 

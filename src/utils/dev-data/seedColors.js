@@ -8,7 +8,7 @@ const colors = JSON.parse(
 
 dbConnection();
 
-const createColor = async (color) => {
+const createColor = async () => {
   for (const color of colors) {
     const document = await ColorModel.create(color);
     if (document) {

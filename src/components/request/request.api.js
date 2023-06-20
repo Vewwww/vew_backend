@@ -1,10 +1,12 @@
 const express = require("express");
 const {
   createRequest,
-  getRequest,
-  getRequests,
-  updateRequest,
-  deleteRequest,
+  acceptWinchRequest,
+  getWinchUpcomingRequests,
+  getWinchAcceptedRequests,
+  acceptMechanicRequest,
+  getMechanicUpcomingRequests,
+  geteMchanicAcceptedRequests,
   getDriverPendingRequests,
   getDriverCurrentRequests,
   getPreviousRequests,
@@ -12,12 +14,21 @@ const {
 const { authinticate } = require("../driver/driver.auth");
 const router = express.Router();
 
-// router.route("/").post(createRequest).get(getRequests);
+
+//////////////////    WINCH    ///////////////////
+router.route("/acceptWinchRequest").get(acceptWinchRequest);
+router.route("/getWinchUpcomingRequests").get(getWinchUpcomingRequests);
+router.route("/getWinchAcceptedRequests").get(getWinchAcceptedRequests);
+
+//////////////////    Mechanic    ///////////////////
+router.route("/acceptMechanicRequest").get(acceptMechanicRequest);
+router.route("/getMechanicUpcomingRequests").get(getMechanicUpcomingRequests);
+router.route("/geteMchanicAcceptedRequests").get(geteMchanicAcceptedRequests);
+
+//////////////////    Driver    ///////////////////
 router.route("/").post(createRequest)
 router.get("/getDriverPendingRequests", getDriverPendingRequests);
 router.get("/getDriverCurrentRequests", getDriverCurrentRequests);
 router.get("/previousRequests",getPreviousRequests)
 
-router.route("/:id").get(getRequest).put(updateRequest).delete(deleteRequest);
-
-module.exports = router;
+module.exports = router

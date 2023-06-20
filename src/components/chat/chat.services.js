@@ -1,5 +1,4 @@
 const ChatModel = require("./chat.model");
-
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const DriverModel = require("../driver/driver.model");
 const WinchModel = require("../winch/winch.model");
@@ -8,7 +7,7 @@ const AppErr = require("../../utils/AppError");
 // const ApiFeatures = require("../../utils/ApiFeatures");
 
 const populateUser = (userId) =>
-catchAsyncErr(async () => {
+  catchAsyncErr(async () => {
     let user;
     user = await DriverModel.findById(userId);
     if (user) return user;
@@ -37,10 +36,13 @@ const populateTheOtherUser = (usersIds, chatsOwnerId) =>
     return user;
   });
 
-exports.createChat = catchAsyncErr(async (req, res) => {
-  let chat = await ChatModel.create(req.body);
-
-  res.status(200).json({ status: "success", data: chat });
+exports.createChat = catchAsyncErr(async (driverId, serviceProvider) => {
+  const chatObject = {
+    participants: [driverId, serviceProvider],
+    messages: [],
+  };
+  const chat = await ChatModel.create(chatObject);
+  return chat;
 });
 
 exports.addNewMessages = catchAsyncErr(async (req, res, next) => {

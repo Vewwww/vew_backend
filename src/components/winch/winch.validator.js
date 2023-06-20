@@ -2,7 +2,7 @@ const Joi = require("joi");
 const AppError = require("../../utils/AppError");
 
 const validation = Joi.object({
-    name: Joi.string().min(3).trim(true).required(),
+    name: Joi.string().min(3).trim(true).allow(' ,.\'').required(),
     email: Joi.string().email().trim(true).required(),
     password: Joi.string().min(6).trim(true).required(),
     phoneNumber:  Joi.string().length(11).pattern(/^01\d{9}$/).required(),
@@ -16,8 +16,10 @@ const validation = Joi.object({
     rate:Joi.number().default(4.5),
     isSuspended:Joi.boolean(),
     emailConfirm:Joi.boolean(),
-    latitude:Joi.number(),
-    longitude:Joi.number(),
+    location:Joi.object({
+        latitude:Joi.number(),
+        longitude:Joi.number(),
+    }),
     logedIn:Joi.boolean().default(false),
     role:Joi.string().default("winch"),
 }).options({ allowUnknown: true });

@@ -27,12 +27,6 @@ router.use(
   maintenanceRoute
 );
 router.use(
-  "/maintenanceCenter",
-  authinticate,
-  allowedTo("user"),
-  maintenanceRoute
-);
-router.use(
   "/request",
   authinticate,
   requestRoute

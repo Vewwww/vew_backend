@@ -64,7 +64,9 @@ const schema = mongoose.Schema({
   }
 });
 schema.pre('save', async function (next) {
-  this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
+  if(!this.password.startsWith("$")){
+    this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
+  }
   next()
 })
 schema.pre('findOneAndUpdate', async function () {

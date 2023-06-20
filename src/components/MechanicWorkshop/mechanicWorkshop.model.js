@@ -65,8 +65,18 @@ const schema = new mongoose.Schema({
     default: false,
   },
   location: {
-    type: mongoose.Schema.ObjectId,
-    ref: "location",
+    description: {
+      ar: { type: String , default:"no arabic location description available"},
+      en: { type: String , default:"no english location description available"},
+    },
+    latitude: {
+      type: Number,
+      required: [true, "Latitude required"],
+    },
+    longitude: {
+      type: Number,
+      required: [true, "Longitude required"],
+    },
   },
   logedIn: {
     type: Boolean,
