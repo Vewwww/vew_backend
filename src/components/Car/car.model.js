@@ -15,7 +15,7 @@ const schema = mongoose.Schema({
     plateNumber: {
         type: String
     },
-    licenseRenewalDate: {
+    CarLicenseRenewalDate: {
         type: Date
     },
     color: {
@@ -27,7 +27,6 @@ const schema = mongoose.Schema({
     },
     averageMilesPerMonth: {
         type: Number
-
     },
     lastPeriodicMaintenanceDate: {
         type: Date,

@@ -6,6 +6,10 @@ const winchModel = require("./winch.model");
 const carModel = require("../Car/car.model");
 const LocationModel = require("../location/location.model");
 
+//rate
+exports.rateWinch=factory.rate(winchModel);
+//report
+exports.reportWinch=factory.report(winchModel);
 
 exports.getNearestWinch = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;

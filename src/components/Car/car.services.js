@@ -5,8 +5,6 @@ const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const factory=require("../Handlers/handler.factory");
 
 
-
-
 exports.createCar = factory.createOne(carModel);
 
 exports.getCars = factory.getAll(carModel);

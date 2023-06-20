@@ -16,4 +16,7 @@ exports.allRequires = (app) => {
   app.use("/allusers", require("../components/Handlers/allUsers.api"));
   app.use("/car", require("../components/Car/car.api"));
   app.use("/color", require("../components/color/color.api"));
+  app.use("/sign", require("../components/Sign/sign.api"));
+  app.use("/request", require("../components/request/request.api"));
+  app.use("/admin",require("../components/driver/admin.api"))
 };

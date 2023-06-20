@@ -7,9 +7,13 @@ const {
   acceptMechanicRequest,
   getMechanicUpcomingRequests,
   geteMchanicAcceptedRequests,
+  getDriverPendingRequests,
+  getDriverCurrentRequests,
+  getPreviousRequests,
 } = require("./request.services");
-
+const { authinticate } = require("../driver/driver.auth");
 const router = express.Router();
+
 
 //////////////////    WINCH    ///////////////////
 router.route("/acceptWinchRequest").get(acceptWinchRequest);
@@ -22,5 +26,9 @@ router.route("/getMechanicUpcomingRequests").get(getMechanicUpcomingRequests);
 router.route("/geteMchanicAcceptedRequests").get(geteMchanicAcceptedRequests);
 
 //////////////////    Driver    ///////////////////
-router.route("/").post(createRequest);
-module.exports = router;
+router.route("/").post(createRequest)
+router.get("/getDriverPendingRequests", getDriverPendingRequests);
+router.get("/getDriverCurrentRequests", getDriverCurrentRequests);
+router.get("/previousRequests",getPreviousRequests)
+
+module.exports = router

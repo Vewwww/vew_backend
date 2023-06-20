@@ -2,6 +2,24 @@ const driverModel = require("./driver.model");
 const AppError = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const carModel = require("../Car/car.model");
+const factory = require("../Handlers/handler.factory")
+const createNotification=require("../notification/notification.services")
+
+//Gender had problem analytic
+exports.getGenderAnalytic=catchAsyncErr(async(req,res,next)=>{
+  const document= await driverModel.find();
+  let driverLength=document.length;
+  console.log(typeof document, document);
+  let maleLength=document.filter(driver=>driver.gender=='male').length;
+  let femaleLength=document.filter(driver=>driver.gender=='female').length;
+  let maleRatio=maleLength/driverLength;
+  let femaleRatio=femaleLength/driverLength;
+  console.log(maleLength, femaleLength);
+
+  res.status(200).json({maleRatio,femaleRatio});
+})
+//report
+exports.reportDriver=factory.report(driverModel);
 // to add new user
 exports.createUser = catchAsyncErr(async (req, res, next) => {
   let cars = [];
@@ -12,6 +30,7 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
 
   let user = new driverModel(req.body);
   await user.save();
+  createNotification(driverLisenceRenewalDate,CarLicenseRenewalDate,lastPeriodicMaintenanceDate,_id)
 
   let carsResult = [];
   if (cars.length) {
@@ -87,4 +106,5 @@ exports.search = catchAsyncErr(async (req, res, next) => {
     return next(AppError("No search keyword is provided", 400));
   }
 });
+
 

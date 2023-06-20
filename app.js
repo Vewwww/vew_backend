@@ -1,6 +1,7 @@
 const express = require("express");
 const { dbConnection } = require("./src/database/dbConnection");
 require("dotenv").config({ path: "./config/.env" });
+const path = require('path');
 const app = express();
 const morgan = require("morgan");
 const cors = require("cors");
@@ -20,7 +21,11 @@ const io = new Server(server, {
 
 
 app.use(express.json());
-app.use(morgan("dev"));
+app.use(express.static(path.join(__dirname, 'uploads')));
+if(process.env.MODE_ENV=="developmet"){
+  app.use(morgan("dev"));
+}
+
 allRequires(app);
 
 app.all("/*", (req, res, next) => {
@@ -54,3 +59,5 @@ io.on("connection", (socket) => {
     }
   });
 });
+
+

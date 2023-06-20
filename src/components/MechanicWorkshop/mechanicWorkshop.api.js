@@ -1,6 +1,8 @@
 const {
   getNearestMechanicWorkshop,
   createMechanicWorkshop,
+  reportMechanic,
+  rateMechanic,
 } = require("./mechanicWorkshop.services");
 const {
   signup,
@@ -17,4 +19,7 @@ router.use("/request", authinticate, allowedTo("winch"), requestRoutes);
 router.post("/signup", mechanicValidation, signup, createMechanicWorkshop);
 router.get("/getNearestMechanicWorkshop",getNearestMechanicWorkshop);
 router.get("/verify/:token", emailVerify);
+router.patch("/report/:id",reportMechanic);
+router.patch("/rate/:id",rateMechanic);
+
 module.exports = router;

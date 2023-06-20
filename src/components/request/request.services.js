@@ -4,9 +4,32 @@ const MechanistModel = require("./request.model");
 const AppErr = require("../../utils/AppError");
 const { createChat } = require("../chat/chat.services");
 const factory = require("../Handlers/handler.factory");
-const { request } = require("express");
 
-exports.createfilterObject = (req, res, next) => {
+//get Driver Current Requests
+exports.getDriverCurrentRequests = catchAsyncErr(async (req, res) => {
+  const document = await RequestModel.find({
+    isActive: true,
+    accepted: true,
+    driver: req.user._id,
+  });
+  res.statu(200).json({ data: document });
+});
+
+//get driver pending req
+exports.getDriverPendingRequests = catchAsyncErr(async (req, res) => {
+  const document = await RequestModel.find({
+    isActive: false,
+    accepted: false,
+    driver: req.user._id,
+  });
+  res.status(200).json({ data: document });
+});
+exports.getPreviousRequests=catchAsyncErr(async(req,res)=>{
+  const requests = await RequestModel.find({isActive: false,accepted: true,driver: req.user._id,});
+  res.status(200).json({ previousRequests: requests });
+})
+
+exports.createfilterObject = catchAsyncErr((req, res, next) => {
   let filterObject = {};
   if (req.params.mechnistId) {
     filterObject = { mechanist: req.params.mechnistId };
@@ -16,7 +39,7 @@ exports.createfilterObject = (req, res, next) => {
   }
   req.filterObject = filterObject;
   next();
-};
+});
 
 //create new request
 
@@ -25,7 +48,7 @@ exports.createfilterObject = (req, res, next) => {
 //isactive false | accepted true       || previos request [user]  ||
 
 //protectedRoute
-exports.getDriverPendingRequests = catchAsyncErr(async (req, res, next) => {
+exports.getMechanicPendingRequests = catchAsyncErr(async (req, res, next) => {
   const upcomingRequests = await RequestModel.findOne({
     isActive: false,
     accepted: false,

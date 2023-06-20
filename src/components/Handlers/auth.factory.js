@@ -61,7 +61,8 @@ exports.emailVerify = (model) => {
           );
 
           res.status(200)
-            .send(`<h1 style="background:#fff">Email verified successfully!!!</h1>
+            .send(`
+            <h1 style="background:#fff">Email verified successfully!!!</h1>
             <h3>Now you can login</h3>`);
         } else {
           res
