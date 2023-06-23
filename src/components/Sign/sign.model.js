@@ -45,7 +45,7 @@ const schema = new mongoose.Schema({
 const setImageUrl = (doc) => {
   //return image base url + image name
   if (doc.image) {
-    const imageUrl = `${process.env.BaseUrl}/signs/${doc.image}`;
+    const imageUrl = `${process.env.BaseUrl}/public/signs/${doc.image}`;
     doc.image = imageUrl;
   }
 };
