@@ -21,7 +21,7 @@ const io = new Server(server, {
 
 
 app.use(express.json());
-app.use("public",express.static(path.join(__dirname, 'public')));
+app.use("/public",express.static(path.join(__dirname, 'public')));
 if(process.env.MODE_ENV=="developmet"){
   app.use(morgan("dev"));
 }
