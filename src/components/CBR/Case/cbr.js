@@ -41,24 +41,5 @@ class CBR {
     return bestMatch;
   }
 }
-/*
-const caseBase = [
-  {
-    caseKeyWords: ["engine", "won't start", "crank"],
-    solution: "Check the battery and starter motor. Ensure the fuel pump is functioning properly.",
-  },
-  {
-    caseKeyWords: ["overheating", "temperature", "coolant"],
-    solution: "Check the coolant level and radiator for any leaks. Verify the functionality of the thermostat.",
-  },
-  {
-    caseKeyWords: ["brakes", "squeaking", "noise"],
-    solution: "Inspect and possibly replace the brake pads. Check for any issues with the brake calipers or rotors.",
-  },
-];
-
-const cbr = new CBR(caseBase);
-console.log(cbr.solve(["brakes", "noise", "temperature"]));
-*/
 
 module.exports = CBR;
