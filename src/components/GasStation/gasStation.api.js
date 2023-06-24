@@ -10,7 +10,7 @@ deleteGasStation,
 } = require("./gasStation.services");
 
 const router = express.Router();
-router.get("/getNearestGasStations", getNearestGasStations);
+router.get("/", getNearestGasStations);
 router.route("/").post(createGasStation).get(getGasStations);
 router.route("/:id").get(getGasStation).put(updateGasStation).delete(deleteGasStation);
 
