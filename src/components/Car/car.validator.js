@@ -6,7 +6,7 @@ const validation = Joi.object({
     carModel: Joi.string().required(),
     year: Joi.string().required(),
     plateNumber: Joi.string().alphanum().min(3).trim(true).required(),
-});
+}).options({ allowUnknown: true });
 
 carValidation = async (req, res, next) => {
 	const obj = req.body;

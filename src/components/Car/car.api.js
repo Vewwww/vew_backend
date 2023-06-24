@@ -9,6 +9,6 @@ const {
 const carValidation = require("./car.validator");
 const {authinticate}=require("../driver/driver.auth")
 const { allowedTo } = require("../Handlers/auth.factory");
-router.route("/").post(authinticate,allowedTo("driver"),carValidation,createCar).get(authinticate,allowedTo("driver"),getCars);
-router.route("/:id").get(authinticate,allowedTo("driver"),getCar).put(authinticate,allowedTo("driver"),updateCar).delete(authinticate,allowedTo("driver"),deleteCar);
+router.route("/").post(authinticate,allowedTo("user"),carValidation,createCar).get(authinticate,allowedTo("user"),getCars);
+router.route("/:id").get(authinticate,allowedTo("user"),getCar).put(authinticate,allowedTo("user"),updateCar).delete(authinticate,allowedTo("user"),deleteCar);
 module.exports = router;

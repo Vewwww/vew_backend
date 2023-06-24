@@ -8,8 +8,9 @@ const {
 } = require("./color.services");
 
 const router = express.Router();
-
-router.route("/").post(createColor).get(getColors);
-router.route("/:id").get(getColor).put(updateColor).delete(deleteColor);
+const {authinticate}=require("../driver/driver.auth")
+const { allowedTo } = require("../Handlers/auth.factory");
+router.route("/").post(authinticate,allowedTo("admin"),createColor).get(authinticate,allowedTo("user"),getColors);
+router.route("/:id").get(authinticate,allowedTo("admin"),getColor).put(authinticate,allowedTo("user"),updateColor).delete(authinticate,allowedTo("admin"),deleteColor);
 
 module.exports = router;
