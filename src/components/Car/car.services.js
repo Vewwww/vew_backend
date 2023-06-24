@@ -6,16 +6,9 @@ const factory=require("../Handlers/handler.factory");
 
 
 exports.createCar = factory.createOne(carModel);
-
 exports.getCars = factory.getAll(carModel);
-
-
 exports.getCar = factory.getOne(carModel);
-
 exports.updateCar = factory.updateOne(carModel);
-
-
-
 exports.deleteCar =  catchAsyncErr(async (req, res, next) => {
     const { id } = req.params;
     const deletedCar = await carModel.findOneAndDelete({ _id: id });

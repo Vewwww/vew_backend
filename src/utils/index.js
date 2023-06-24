@@ -23,7 +23,4 @@ exports.allRequires = (app) => {
   app.use("/question", require("../components/CBR/Question/question.api"));
   app.use("/case", require("../components/CBR/Case/case.api"));
   app.use("/problem", require("../components/CBR/problem/problem.api"));
-
-
-
 };
