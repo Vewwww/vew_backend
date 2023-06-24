@@ -8,9 +8,8 @@ require("../location/location.model");
 exports.getNearestGasStations = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;
   const gasStations = await gasStationModel.find();
-
   searchResult = getNearestPlaces(gasStations, latitude, longitude);
-  res.status(200).json({ results: searchResult.length, data: searchResult });
+  res.status(200).json({ results: searchResult.length, data: searchResult});
 });
 
 exports.createGasStation = factory.createOne(gasStationModel);
