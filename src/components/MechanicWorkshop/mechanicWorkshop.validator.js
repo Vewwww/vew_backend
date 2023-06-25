@@ -2,14 +2,14 @@ const Joi = require("joi");
 const AppError = require("../../utils/AppError");
 
 const validation = Joi.object({
-  ownerName: Joi.string().alphanum().min(3).trim(true).allow(' ,.\'').required(),
+  ownerName: Joi.string().min(3).trim(true).allow(' ,.\'').required(),
   email: Joi.string().email().trim(true).required(),
   password: Joi.string().min(6).trim(true).required(),
   mechanicPhone: Joi.string()
     .length(11)
     .pattern(/^01\d{9}$/)
     .required(),
-  name: Joi.string().alphanum().min(3).trim(true).allow(' ,.\'').required(),
+  name: Joi.string().min(3).trim(true).allow(' ,.\'').required(),
   phoneNumber: Joi.string()
     .length(11)
     .pattern(/^01\d{9}$/)
@@ -24,8 +24,8 @@ const validation = Joi.object({
   isSuspended: Joi.boolean().default(false),
   emailConfirm: Joi.boolean().default(false),
   logedIn: Joi.boolean().default(false),
-  latitude: Joi.number(),
-  longitude: Joi.number(),
+  // latitude: Joi.number(),
+  // longitude: Joi.number(),
 }).options({ allowUnknown: true });
 
 mechanicValidation = async (req, res, next) => {

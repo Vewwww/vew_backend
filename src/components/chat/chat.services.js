@@ -1,31 +1,28 @@
 const ChatModel = require("./chat.model");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
+const factory = require("../Handlers/handler.factory")
 const DriverModel = require("../driver/driver.model");
 const WinchModel = require("../winch/winch.model");
 const MechanicWorkshopModel = require("../MechanicWorkshop/mechanicWorkshop.model");
 const AppErr = require("../../utils/AppError");
-// const ApiFeatures = require("../../utils/ApiFeatures");
 
-const populateUser = (userId) =>
-  catchAsyncErr(async () => {
-    let user;
-    user = await DriverModel.findById(userId);
+const populateUser = async (userId) => {
+    var user;
+    user = await DriverModel.findById(userId).select("name -_id");
     if (user) return user;
     else {
-      const user = await WinchModel.findById(userId);
+       user = await WinchModel.findById(userId).select("name -_id");
       if (user) return user;
       else {
-        user = MechanicWorkshopModel.findById(userId);
+        user = MechanicWorkshopModel.findById(userId).select("name -_id");
         if (user) return user;
       }
     }
-
     return user;
-  });
+  };
 
-const populateTheOtherUser = (usersIds, chatsOwnerId) =>
-  catchAsyncErr(async () => {
-    let user;
+const populateTheOtherUser = async (usersIds, chatsOwnerId) =>{
+    var user;
 
     for (const userId of usersIds) {
       if (userId !== chatsOwnerId) {
@@ -34,72 +31,85 @@ const populateTheOtherUser = (usersIds, chatsOwnerId) =>
     }
 
     return user;
-  });
+  };
 
-exports.createChat = catchAsyncErr(async (driverId, serviceProvider) => {
+exports.createChat = async (driverId, serviceProvider) => {
   const chatObject = {
     participants: [driverId, serviceProvider],
     messages: [],
   };
   const chat = await ChatModel.create(chatObject);
   return chat;
-});
+};
 
-exports.addNewMessages = catchAsyncErr(async (req, res, next) => {
-  const chat = await ChatModel.findOneAndUpdate(
-    { _id: req.params.id },
-    { $push: { messages: { $each: req.body.messages } } },
-    { new: true }
+exports.addSeenMessage = async (data) =>
+  (chat = await ChatModel.findByIdAndUpdate(
+    { _id: data.chatId },
+    {
+      $push: {
+        messages: {
+          sender: data.sender,
+          content: data.content,
+          time: new Date(),
+          seen: true,
+        },
+      },
+    }
+  ));
+exports.addUnSeenMessage = async (data) => {
+  chat = await ChatModel.findByIdAndUpdate(
+    { _id: data.chatId },
+    {
+      $push: {
+        messages: {
+          sender: data.sender,
+          content: data.content,
+          time: new Date(),
+          seen: false,
+        },
+      },
+    }
   );
-
-  if (!chat) return next(new AppErr("no chat found with this id", 404));
-
-  res.status(200).json({ status: "success", data: chat });
-});
+};
 
 exports.getUserChats = catchAsyncErr(async (req, res, next) => {
-  //get chats its participants contain userId and exclude chat messages
+  let newChats = false;
+
   const chats = await ChatModel.find({
-    participants: { $type: "array", $elemMatch: { $eq: req.params.userId } },
-  }).select("-messages -__v");
+    participants: { $type: "array", $elemMatch: { $eq: req.user._id } },
+  });
 
-  if (chats.length < 0)
-    return next(new AppErr("no chats found with this id", 404));
+  if (chats.length <1) res.status(200).json({ newChats, data: [] });
 
-  //populate info of chat particpants
-  const chatsOwner = await populateUser(req.params.userId);
-  if (!chatsOwner) return next(new AppErr("no chats found with this id", 404));
-
-  for (let i = 0; i < chats.length; i++) {
-    let participants = [];
-    participants.push(chatsOwner);
-    const otherChatOwner = await populateTheOtherUser(
+  for (let i = 0 ; i<chats.length; i++) {
+    chats[i].chatName = await populateTheOtherUser(
       chats[i].participants,
-      req.params.userId
+      req.user._id
     );
-    participants.push(otherChatOwner);
-    if (participants.length < 2) break;
-    chats[i].participants = participants;
+
+    if (chats[i].messages.length < 1) {
+      newChats = true;
+    }
+    for (let j=0; j < chats[i].messages.length; j++) {
+      if (chats[i].messages[j].sender != req.user._id && chats[i].messages[j].seen === false) {
+        newChats = true;
+        await ChatModel.findOneAndUpdate(
+          { _id: chats[i]._id, "messages._id": chats[i].messages[j]._id },
+          {
+            $set: {
+              "messages.$.seen": true,
+            },
+          }
+        );
+      }
+    }
   }
 
-  //return the chats
   res.status(200).json({
-    status: "success",
+    newChats,
     result: chats.length,
     data: chats,
   });
-
-  //get chats its participants contain userId and exclude chat messages by app-features way, but above way is cleaner
-  //   const apiFeatures = new ApiFeatures(
-  //     ChatModel.find({
-  //       participants: { $type: "array", $elemMatch: { $eq: req.params.id } },
-  //     }),
-  //     { fields: "-messages , -__v" }
-  //   ).fields();
-
-  //   const { mongooseQuery } = apiFeatures;
-
-  //   const chats = await mongooseQuery;
 });
 
 exports.getChat = catchAsyncErr(async (req, res, next) => {
@@ -109,7 +119,7 @@ exports.getChat = catchAsyncErr(async (req, res, next) => {
 
   res.status(200).json({ data: chat });
 });
-
+exports.createChatCrud = factory.createOne(ChatModel)
 exports.deleteChat = catchAsyncErr(async (req, res) => {
   const chat = await ChatModel.findOneAndDelete({ _id: req.params.id });
 

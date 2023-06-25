@@ -1,0 +1,127 @@
+[
+  {
+    "name": { "en": "76 Gas Station", "ar": "76 Gas Station" },
+    "location": {
+      "description": {
+        "en": "The Dalles, OR 97058",
+        "ar": "The Dalles, OR 97058"
+      },
+      "latitude": 45.603205,
+      "longitude": -121.187405
+    }
+  },
+  {
+    "name": { "en": "76 Gas Station", "ar": "76 Gas Station" },
+    "location": {
+      "description": {
+        "en": "3902 W 6th St, The Dalles, OR 97058",
+        "ar": "3902 W 6th St, The Dalles, OR 97058"
+      },
+      "latitude": 45.628954,
+      "longitude": -121.215497
+    }
+  },
+  {
+    "name": { "en": "76 Gas Station", "ar": "76 Gas Station" },
+    "location": {
+      "description": {
+        "en": "100 Lone Pine Dr, The Dalles, OR 97058",
+        "ar": "100 Lone Pine Dr, The Dalles, OR 97058"
+      },
+      "latitude": 45.603658,
+      "longitude": -121.139303
+    }
+  },
+  {
+    "name": { "en": "Safeway Fuel Station", "ar": "Safeway Fuel Station" },
+    "location": {
+      "description": {
+        "en": "540 Mount Hood St, The Dalles, OR 97058",
+        "ar": "540 Mount Hood St, The Dalles, OR 97058"
+      },
+      "latitude": 45.60475,
+      "longitude": -121.194858
+    }
+  },
+  {
+    "name": {
+      "en": "Total Body Salon",
+      "ar": "\u062a\u0648\u062a\u0627\u0644 Body Salon"
+    },
+    "location": {
+      "description": {
+        "en": "102 E 2nd St, The Dalles, OR 97058",
+        "ar": "102 E 2nd St, The Dalles, OR 97058"
+      },
+      "latitude": 45.602047,
+      "longitude": -121.18397
+    }
+  },
+  {
+    "name": {
+      "en": "Northwest Natural Gas Co.",
+      "ar": "Northwest Natural Gas Co."
+    },
+    "location": {
+      "description": {
+        "en": "309 E 2nd St, The Dalles, OR 97058",
+        "ar": "309 E 2nd St, The Dalles, OR 97058"
+      },
+      "latitude": 45.601263,
+      "longitude": -121.181183
+    }
+  },
+  {
+    "name": {
+      "en": "Klindts Book Sellers & Stationers",
+      "ar": "Klindts Book Sellers & Stationers"
+    },
+    "location": {
+      "description": {
+        "en": "315 E 2nd St, The Dalles, OR 97058",
+        "ar": "315 E 2nd St, The Dalles, OR 97058"
+      },
+      "latitude": 45.601179,
+      "longitude": -121.1811
+    }
+  },
+  {
+    "name": {
+      "en": "AmeriGas Propane Exchange",
+      "ar": "AmeriGas Propane Exchange"
+    },
+    "location": {
+      "description": {
+        "en": "500 E 3rd St, The Dalles, OR 97058",
+        "ar": "500 E 3rd St, The Dalles, OR 97058"
+      },
+      "latitude": 45.598773,
+      "longitude": -121.17979
+    }
+  },
+  {
+    "name": {
+      "en": "Electric Charging Station",
+      "ar": "Electric Charging Station"
+    },
+    "location": {
+      "description": {
+        "en": "E 1ST St, The Dalles, OR 97058",
+        "ar": "E 1ST St, The Dalles, OR 97058"
+      },
+      "latitude": 45.600262,
+      "longitude": -121.178071
+    }
+  },
+  {
+    "name": { "en": "Ameri Gas", "ar": "Ameri Gas" },
+    "location": {
+      "description": {
+        "en": "747 W 2nd St, The Dalles, OR 97058",
+        "ar": "747 W 2nd St, The Dalles, OR 97058"
+      },
+      "latitude": 45.605757,
+      "longitude": -121.191153
+    }
+  }
+]

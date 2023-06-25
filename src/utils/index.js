@@ -4,7 +4,7 @@ exports.allRequires = (app) => {
     "/maintenanceCenter",
     require("../components/MaintenanceCenter/maintenanceCenter.api")
   );
-  // app.use("/chat", require("../components/chat/chat.api"));
+  app.use("/chat", require("../components/chat/chat.api"));
   app.use("/cartype", require("../components/carBrand/carBrand.api.js"));
   app.use("/service", require("../components/Service/service.api"));
   app.use(
@@ -18,5 +18,6 @@ exports.allRequires = (app) => {
   app.use("/color", require("../components/color/color.api"));
   app.use("/sign", require("../components/Sign/sign.api"));
   app.use("/request", require("../components/request/request.api"));
-  app.use("/admin",require("../components/driver/admin.api"))
+  app.use("/admin",require("../components/driver/admin.api"));
+  app.use("/admin",require("../components/driver/admin.api"));
 };

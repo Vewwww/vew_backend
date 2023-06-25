@@ -1,0 +1,2937 @@
+[
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Shohadaa Street, Heliopolis",
+        "ar": "شارع الشهداء، مصر الجديدة"
+      },
+      "latitude": 3.26515651,
+      "longitude": 3.259515
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Tayeran Street, Nasr City",
+        "ar": "شارع الطيران، مدينة نصر"
+      },
+      "latitude": 3.14938349,
+      "longitude": 31.427734
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "South Teseen Road, New Cairo",
+        "ar": "طريق النصر، التجمع الخامس"
+      },
+      "latitude": 30.0668906,
+      "longitude": 31.4495844
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "Masr We Al Sodan Street, Downtown Cairo",
+        "ar": "شارع مصر والسودان، وسط البلد"
+      },
+      "latitude": 30.056772,
+      "longitude": 31.249731
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "Suez Road, Nasr City",
+        "ar": "طريق السويس، مدينة نصر"
+      },
+      "latitude": 3.1473933,
+      "longitude": 31.428848
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sahel Road, El-Marg",
+        "ar": "طريق الساحل، المرج"
+      },
+      "latitude": 30.108531,
+      "longitude": 31.362092
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Ahram Street, Downtown Cairo",
+        "ar": "شارع الأهرام، وسط البلد"
+      },
+      "latitude": 30.056645,
+      "longitude": 31.249832
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Giza Street, Giza",
+        "ar": "شارع الجيزة، الجيزة"
+      },
+      "latitude": 30.024303,
+      "longitude": 31.24412
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Azhar Street, El-Darb El-Ahmar",
+        "ar": "شارع الأزهر، الدرب الأحمر"
+      },
+      "latitude": 30.051374,
+      "longitude": 31.241389
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Kobri Street, Shubra",
+        "ar": "شارع الكوبري، شبرا"
+      },
+      "latitude": 30.032321,
+      "longitude": 31.249604
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Warraq Street, El-Warraq",
+        "ar": "شارع الوراق، الوراق"
+      },
+      "latitude": 30.143829,
+      "longitude": 31.355386
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Masry Street, El-Marg",
+        "ar": "شارع المصري، المرج"
+      },
+      "latitude": 30.107715,
+      "longitude": 31.36272
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Galaa Street, Giza",
+        "ar": "شارع الجلاء، الجيزة"
+      },
+      "latitude": 30.021888,
+      "longitude": 31.243628
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Amin Street, El-Obour City",
+        "ar": "شارع الأمين، مدينة العبور"
+      },
+      "latitude": 30.086999,
+      "longitude": 31.419558
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Road, 6th of October City",
+        "ar": "طريق الشيخ زايد، مدينة 6 أكتوبر"
+      },
+      "latitude": 30.063274,
+      "longitude": 31.429804
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Nil Street, Maadi",
+        "ar": "شارع النيل، المعادي"
+      },
+      "latitude": 30.041518,
+      "longitude": 31.241428,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Tahrir Street, Mohandiseen",
+        "ar": "شارع التحرير، المهندسين"
+      },
+      "latitude": 30.055935,
+      "longitude": 31.251227,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "26th of July Street, Zamalek",
+        "ar": "شارع 26 يوليو، الزمالك"
+      },
+      "latitude": 30.045464,
+      "longitude": 31.245411,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Galaa Street, Abbassia",
+        "ar": "شارع الجلاء، العباسية"
+      },
+      "latitude": 30.040566,
+      "longitude": 31.239361,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Amir Ibn El-Khair Street, Heliopolis",
+        "ar": "شارع الأمير ابن الخير، مصر الجديدة"
+      },
+      "latitude": 3.26515651,
+      "longitude": 3.259515,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Amir Ibn El-Khair Street, Heliopolis",
+        "ar": "شارع الأمير ابن الخير، مصر الجديدة"
+      },
+      "latitude": 3.26515651,
+      "longitude": 3.259515,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Tahrir Street, Mohandiseen",
+        "ar": "شارع التحرير، المهندسين"
+      },
+      "latitude": 30.055935,
+      "longitude": 31.251227,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "26th of July Street, Zamalek",
+        "ar": "شارع 26 يوليو، الزمالك"
+      },
+      "latitude": 30.045464,
+      "longitude": 31.245411,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Galaa Street, Abbassia",
+        "ar": "شارع الجلاء، العباسية"
+      },
+      "latitude": 30.040566,
+      "longitude": 31.239361,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Road, 6th of October City",
+        "ar": "طريق الشيخ زايد، مدينة 6 أكتوبر"
+      },
+      "latitude": 30.063274,
+      "longitude": 31.429804,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Galaa Street, Midan Tahrir, Downtown Cairo",
+        "ar": "شارع الجلاء، ميدان التحرير، وسط البلد"
+      },
+      "latitude": 30.056645,
+      "longitude": 31.249832,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Masry Street, El-Marg",
+        "ar": "شارع المصري، المرج"
+      },
+      "latitude": 30.107715,
+      "longitude": 31.36272,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Warraq Street, El-Warraq",
+        "ar": "شارع الوراق، الوراق"
+      },
+      "latitude": 30.143829,
+      "longitude": 31.355386,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Amin Street, El-Obour City",
+        "ar": "شارع الأمين، مدينة العبور"
+      },
+      "latitude": 30.086999,
+      "longitude": 31.419558,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Total",
+      "ar": "توتال"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Road, 6th of October City",
+        "ar": "طريق الشيخ زايد، مدينة 6 أكتوبر"
+      },
+      "latitude": 30.063274,
+      "longitude": 31.429804,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Shohadaa Street, Heliopolis",
+        "ar": "شارع الشهداء، مصر الجديدة"
+      },
+      "latitude": 3.26515651,
+      "longitude": 3.259515,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Galaa Street, Downtown Cairo",
+        "ar": "شارع الجلاء، وسط البلد"
+      },
+      "latitude": 30.056645,
+      "longitude": 31.249832,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Road, New Cairo",
+        "ar": "طريق الشيخ زايد، التجمع الخامس"
+      },
+      "latitude": 30.0668906,
+      "longitude": 31.4495844,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Amin Street, El-Obour City",
+        "ar": "شارع الأمين، مدينة العبور"
+      },
+      "latitude": 30.086999,
+      "longitude": 31.419558,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "26th of July Street, Zamalek",
+        "ar": "شارع 26 يوليو، الزمالك"
+      },
+      "latitude": 30.045464,
+      "longitude": 31.245411,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Demerdash Street, Downtown Cairo",
+        "ar": "شارع المدرّش، وسط البلد"
+      },
+      "latitude": 30.067917,
+      "longitude": 31.252444,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Kobri Street, Nasr City",
+        "ar": "شارع الكوبري، مدينة نصر"
+      },
+      "latitude": 30.088558,
+      "longitude": 31.347893,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Ahram Street, Maadi",
+        "ar": "شارع الأهرام، المعادي"
+      },
+      "latitude": 30.047669,
+      "longitude": 31.248451,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "Abbassia Square, Abbassia",
+        "ar": "ميدان العباسية، العباسية"
+      },
+      "latitude": 30.044014,
+      "longitude": 31.241035,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "90th Street, New Cairo",
+        "ar": "شارع 90، التجمع الخامس"
+      },
+      "latitude": 30.0668906,
+      "longitude": 31.4495844,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Obour Road, Obour City",
+        "ar": "طريق العبور، مدينة العبور"
+      },
+      "latitude": 30.086999,
+      "longitude": 31.419558,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Matar Street, Heliopolis",
+        "ar": "شارع المطر، مصر الجديدة"
+      },
+      "latitude": 3.26810166,
+      "longitude": 3.25886722,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Amir Ibn El-Khair Street, Heliopolis",
+        "ar": "شارع الأمير ابن الخير، مصر الجديدة"
+      },
+      "latitude": 3.26515651,
+      "longitude": 3.259515,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Galaa Street, Giza",
+        "ar": "شارع الجلاء، الجيزة"
+      },
+      "latitude": 30.018322,
+      "longitude": 31.228227,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Tahrir Street, Dokki, Giza",
+        "ar": "شارع التحرير، الدقي، الجيزة"
+      },
+      "latitude": 30.043869,
+      "longitude": 31.227632,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Giza Street, Nasr City",
+        "ar": "شارع الجيزة، مدينة نصر"
+      },
+      "latitude": 30.089444,
+      "longitude": 31.347222,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Bustan Street, Heliopolis",
+        "ar": "شارع البستان، مصر الجديدة"
+      },
+      "latitude": 3.269532,
+      "longitude": 3.258496,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Road, 6th of October City",
+        "ar": "طريق الشيخ زايد، مدينة 6 أكتوبر"
+      },
+      "latitude": 30.065361,
+      "longitude": 31.449423,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Azhar Street, Nasr City",
+        "ar": "شارع الأهرام، مدينة نصر"
+      },
+      "latitude": 30.091528,
+      "longitude": 31.347983,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Golf Club Street, Maadi",
+        "ar": "شارع نادي الغولف، المعادي"
+      },
+      "latitude": 30.048221,
+      "longitude": 31.249683,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sa'ada Street, Heliopolis",
+        "ar": "شارع السعادة، مصر الجديدة"
+      },
+      "latitude": 3.26874,
+      "longitude": 3.259206,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Road, 5th Settlement",
+        "ar": "طريق الشيخ زايد، التجمع الخامس"
+      },
+      "latitude": 30.068688,
+      "longitude": 31.447955,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Galaa Street, El-Marg",
+        "ar": "شارع الجلاء، المرج"
+      },
+      "latitude": 30.109223,
+      "longitude": 31.362884,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Nile Corniche, Zamalek",
+        "ar": "النيل كورنيش، الزمالك"
+      },
+      "latitude": 30.044868,
+      "longitude": 31.245795,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maadi Road, Maadi",
+        "ar": "طريق المعادي، المعادي"
+      },
+      "latitude": 30.049458,
+      "longitude": 31.249219,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Road, Katameya",
+        "ar": "طريق الشيخ زايد، القطامية"
+      },
+      "latitude": 30.064117,
+      "longitude": 31.452335,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Total_Gas_Station_in_Cairo.jpg/1200px-Total_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Nile Corniche, Heliopolis",
+        "ar": "النيل كورنيش، مصر الجديدة"
+      },
+      "latitude": 3.269282,
+      "longitude": 3.258004,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Ahram Street, Nasr City",
+        "ar": "شارع الأهرام، مدينة نصر"
+      },
+      "latitude": 30.091037,
+      "longitude": 31.347721,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Fath Street, Nasr City",
+        "ar": "شارع الفتح، مدينة نصر"
+      },
+      "latitude": 30.091419,
+      "longitude": 31.351132,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Shohadaa Street, Nasr City",
+        "ar": "شارع الشهداء، مدينة نصر"
+      },
+      "latitude": 30.090514,
+      "longitude": 31.349276,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Galaa Street, El-Maadi",
+        "ar": "شارع الجلاء، المعادي"
+      },
+      "latitude": 30.097222,
+      "longitude": 31.247222,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Okba Ibn Nafi Street, Giza",
+        "ar": "شارع عقبة بن نافع، الجيزة"
+      },
+      "latitude": 30.021492,
+      "longitude": 31.228782,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Obour Road, El-Sheikh Zayed",
+        "ar": "طريق العبور، الشيخ زايد"
+      },
+      "latitude": 30.08625,
+      "longitude": 31.419167,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Gomhoria Street, Nasr City",
+        "ar": "شارع الجمهورية، مدينة نصر"
+      },
+      "latitude": 30.092222,
+      "longitude": 31.35,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sherouk City",
+        "ar": "مدينة الشروق"
+      },
+      "latitude": 30.049167,
+      "longitude": 31.375,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Tawq Street, Nasr City",
+        "ar": "شارع الطوبجي، مدينة نصر"
+      },
+      "latitude": 30.091389,
+      "longitude": 31.350278,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Salam City",
+        "ar": "مدينة السلام"
+      },
+      "latitude": 30.1075,
+      "longitude": 31.388333,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Golf Club Street, Heliopolis",
+        "ar": "شارع نادي الغولف، مصر الجديدة"
+      },
+      "latitude": 30.048333,
+      "longitude": 31.249667,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sofeya Street, Garden City",
+        "ar": "شارع السوْفية، جاردن سيتي"
+      },
+      "latitude": 30.046667,
+      "longitude": 31.241667,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maadi Road, El-Maadi",
+        "ar": "طريق المعادي، المعادي"
+      },
+      "latitude": 30.04875,
+      "longitude": 31.249333,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Kobri Road, El-Marg",
+        "ar": "شارع الكوبري، المرج"
+      },
+      "latitude": 30.1125,
+      "longitude": 31.361667,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Road, New Cairo",
+        "ar": "طريق الشيخ زايد، القاهرة الجديدة"
+      },
+      "latitude": 30.071667,
+      "longitude": 31.448333,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Emarat Road, Nasr City",
+        "ar": "شارع الإمارات، مدينة نصر"
+      },
+      "latitude": 30.090833,
+      "longitude": 31.348333,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maadi Road, Heliopolis",
+        "ar": "طريق المعادي، مصر الجديدة"
+      },
+      "latitude": 30.050833,
+      "longitude": 31.248333,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Mobil",
+      "ar": "موبيل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Tahrir Street, Heliopolis",
+        "ar": "شارع التحرير، مصر الجديدة"
+      },
+      "latitude": 30.044667,
+      "longitude": 31.2455,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mobil_Gas_Station_in_Cairo.jpg/1200px-Mobil_Gas_Station_in_Cairo.jpg"
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maadi Road, Heliopolis",
+        "ar": "طريق المعادي، مصر الجديدة"
+      },
+      "latitude": 30.050833,
+      "longitude": 31.248333
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Ahram Street, Downtown Cairo",
+        "ar": "شارع الهرم، وسط البلد"
+      },
+      "latitude": 30.044444,
+      "longitude": 31.238333
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Nasser Road, Giza",
+        "ar": "طريق النصر، الجيزة"
+      },
+      "latitude": 30.016667,
+      "longitude": 31.216667
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Kobri Road, 6th of October City",
+        "ar": "طريق الكوبري، مدينة السادس من أكتوبر"
+      },
+      "latitude": 29.977778,
+      "longitude": 31.305556
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Salam City, New Cairo",
+        "ar": "مدينة السلام، القاهرة الجديدة"
+      },
+      "latitude": 30.05,
+      "longitude": 31.35
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Road, New Cairo",
+        "ar": "طريق الشيخ زايد، القاهرة الجديدة"
+      },
+      "latitude": 30.075,
+      "longitude": 31.375
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Matar Al-Khamis Road, Nasr City",
+        "ar": "طريق المطرية، مدينة نصر"
+      },
+      "latitude": 30.033333,
+      "longitude": 31.333333
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Giza Square, Giza",
+        "ar": "ميدان الجيزة، الجيزة"
+      },
+      "latitude": 30.027778,
+      "longitude": 31.227778
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Obour City, Obour",
+        "ar": "مدينة العبور، العبور"
+      },
+      "latitude": 30.1,
+      "longitude": 31.4
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Marg City, El-Marg",
+        "ar": "مدينة المرج، المرج"
+      },
+      "latitude": 30.083333,
+      "longitude": 31.383333
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Tahrir Square, Downtown Cairo",
+        "ar": "ميدان التحرير، وسط البلد"
+      },
+      "latitude": 30.0525,
+      "longitude": 31.245833
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Aziziya Street, Mohandessin",
+        "ar": "شارع الآزيزية، المهندسين"
+      },
+      "latitude": 30.039167,
+      "longitude": 31.248333
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Galaa Street, El-Obour City",
+        "ar": "شارع الجلاء، مدينة العبور"
+      },
+      "latitude": 30.0925,
+      "longitude": 31.3975
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Qasr Al-Aini Street, Downtown Cairo",
+        "ar": "شارع قصر العيني، وسط البلد"
+      },
+      "latitude": 30.055,
+      "longitude": 31.25
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maadi Corniche, Heliopolis",
+        "ar": "الكورنيش، المعادي"
+      },
+      "latitude": 30.045,
+      "longitude": 31.25
+    }
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Shohadaa Street, Nasr City",
+        "ar": "شارع الشهداء، مدينة نصر"
+      },
+      "latitude": 30.036667,
+      "longitude": 31.333333
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Galaa Street, Giza",
+        "ar": "شارع الجلاء، الجيزة"
+      },
+      "latitude": 30.03,
+      "longitude": 31.22
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Bustan Street, Heliopolis",
+        "ar": "شارع البستان، مصر الجديدة"
+      },
+      "latitude": 30.055,
+      "longitude": 31.245
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Ahram Street, Nasr City",
+        "ar": "شارع الهرم، مدينة نصر"
+      },
+      "latitude": 30.045,
+      "longitude": 31.335
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Matar Al-Khamis Road, Obour City",
+        "ar": "طريق المطرية، مدينة العبور"
+      },
+      "latitude": 30.105,
+      "longitude": 31.405
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Marg Road, El-Marg",
+        "ar": "طريق المرج، المرج"
+      },
+      "latitude": 30.075,
+      "longitude": 31.375
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Nasr City Petrol Station, Nasr City",
+        "ar": "محطة بنزين مدينة نصر، مدينة نصر"
+      },
+      "latitude": 30.04,
+      "longitude": 31.34
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Tahrir Square Petrol Station, Downtown Cairo",
+        "ar": "محطة بنزين ميدان التحرير، وسط البلد"
+      },
+      "latitude": 30.0525,
+      "longitude": 31.245833
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Warraq Petrol Station, El-Warraq",
+        "ar": "محطة بنزين الوراق، الوراق"
+      },
+      "latitude": 30.09,
+      "longitude": 31.31
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Petrol Station, New Cairo",
+        "ar": "محطة بنزين الشيخ زايد، القاهرة الجديدة"
+      },
+      "latitude": 30.075,
+      "longitude": 31.375
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Matar Al-Khamis Petrol Station, 6th of October City",
+        "ar": "محطة بنزين طريق المطرية، مدينة 6 أكتوبر"
+      },
+      "latitude": 29.977778,
+      "longitude": 31.305556
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Salam Petrol Station, New Cairo",
+        "ar": "محطة بنزين مدينة السلام، القاهرة الجديدة"
+      },
+      "latitude": 30.05,
+      "longitude": 31.35
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maadi Petrol Station, Heliopolis",
+        "ar": "محطة بنزين المعادي، مصر الجديدة"
+      },
+      "latitude": 30.050833,
+      "longitude": 31.248333
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Ahram Petrol Station, Downtown Cairo",
+        "ar": "محطة بنزين شارع الهرم، وسط البلد"
+      },
+      "latitude": 30.044444,
+      "longitude": 31.238333
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Nasser Petrol Station, Giza",
+        "ar": "محطة بنزين طريق النصر، الجيزة"
+      },
+      "latitude": 30.016667,
+      "longitude": 31.216667
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Galaa Petrol Station, Obour City",
+        "ar": "محطة بنزين شارع الجلاء، مدينة العبور"
+      },
+      "latitude": 30.0925,
+      "longitude": 31.3975
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Qasr Al-Aini Petrol Station, Downtown Cairo",
+        "ar": "محطة بنزين شارع قصر العيني، وسط البلد"
+      },
+      "latitude": 30.055,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Shohadaa Petrol Station, Nasr City",
+        "ar": "محطة بنزين شارع الشهداء، مدينة نصر"
+      },
+      "latitude": 30.036667,
+      "longitude": 31.333333
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Shohadaa Petrol Station, Giza",
+        "ar": "محطة بنزين شارع الشهداء، الجيزة"
+      },
+      "latitude": 30.025,
+      "longitude": 31.225
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Bustan Petrol Station, Giza",
+        "ar": "محطة بنزين شارع البستان، الجيزة"
+      },
+      "latitude": 30.035,
+      "longitude": 31.225
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Aziziya Petrol Station, Mohandessin",
+        "ar": "محطة بنزين شارع الآزيزية، المهندسين"
+      },
+      "latitude": 30.039167,
+      "longitude": 31.248333
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Ahram Petrol Station, Nasr City",
+        "ar": "محطة بنزين شارع الهرم، مدينة نصر"
+      },
+      "latitude": 30.045,
+      "longitude": 31.335
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Marg Petrol Station, El-Marg",
+        "ar": "محطة بنزين طريق المرج، المرج"
+      },
+      "latitude": 30.075,
+      "longitude": 31.375
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Al-Matar Al-Khamis Petrol Station, Obour City",
+        "ar": "محطة بنزين طريق المطرية، مدينة العبور"
+      },
+      "latitude": 30.105,
+      "longitude": 31.405
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Warraq Petrol Station, El-Warraq",
+        "ar": "محطة بنزين الوراق، الوراق"
+      },
+      "latitude": 30.09,
+      "longitude": 31.31
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Petrol Station, New Cairo",
+        "ar": "محطة بنزين الشيخ زايد، القاهرة الجديدة"
+      },
+      "latitude": 30.075,
+      "longitude": 31.375
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Ain Shams Petrol Station, Ain Shams",
+        "ar": "محطة بنزين عين شمس، عين شمس"
+      },
+      "latitude": 30.06,
+      "longitude": 31.26
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Dokki Petrol Station, Dokki",
+        "ar": "محطة بنزين الدقي، الدقي"
+      },
+      "latitude": 30.04,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Zamalek Petrol Station, Zamalek",
+        "ar": "محطة بنزين الزمالك، الزمالك"
+      },
+      "latitude": 30.05,
+      "longitude": 31.24
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "Masr Al-Gedida Petrol Station, Masr Al-Gedida",
+        "ar": "محطة بنزين مصر الجديدة، مصر الجديدة"
+      },
+      "latitude": 30.05,
+      "longitude": 31.24
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Kobri Petrol Station, Heliopolis",
+        "ar": "محطة بنزين الكوبري، مصر الجديدة"
+      },
+      "latitude": 30.05,
+      "longitude": 31.24
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Nozha Petrol Station, El-Nozha",
+        "ar": "محطة بنزين النزهة، النزهة"
+      },
+      "latitude": 30.06,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Gamaa Petrol Station, El-Gamaa",
+        "ar": "محطة بنزين الجامعة، الجامعة"
+      },
+      "latitude": 30.05,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sahel Petrol Station, El-Sahel",
+        "ar": "محطة بنزين الساحل، الساحل"
+      },
+      "latitude": 30.02,
+      "longitude": 31.2
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Mahalla El-Kubra Petrol Station, El-Mahalla El-Kubra",
+        "ar": "محطة بنزين المحلة الكبرى، المحلة الكبرى"
+      },
+      "latitude": 30.55,
+      "longitude": 30.9
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sherouk Petrol Station, El-Sherouk City",
+        "ar": "محطة بنزين الشروق، مدينة الشروق"
+      },
+      "latitude": 30.08,
+      "longitude": 31.42
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maadi Petrol Station, El-Maadi",
+        "ar": "محطة بنزين المعادي، المعادي"
+      },
+      "latitude": 30.06,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Obour Petrol Station, Obour City",
+        "ar": "محطة بنزين العبور، مدينة العبور"
+      },
+      "latitude": 30.095,
+      "longitude": 31.415
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Hammam Petrol Station, El-Hammam",
+        "ar": "محطة بنزين الحمام، الحمام"
+      },
+      "latitude": 30.15,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Warraq Petrol Station, El-Warraq",
+        "ar": "محطة بنزين الوراق، الوراق"
+      },
+      "latitude": 30.09,
+      "longitude": 31.31
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Babtain Petrol Station, Nasr City",
+        "ar": "محطة بنزين البطين، مدينة نصر"
+      },
+      "latitude": 30.05,
+      "longitude": 31.34
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Golf Petrol Station, El-Golf",
+        "ar": "محطة بنزين الجولف، الجولف"
+      },
+      "latitude": 30.03,
+      "longitude": 31.24
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Fayrouz Petrol Station, El-Fayrouz",
+        "ar": "محطة بنزين الفيروز، الفيروز"
+      },
+      "latitude": 30.07,
+      "longitude": 31.32
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Tawfiqiya Petrol Station, El-Tawfiqiya",
+        "ar": "محطة بنزين التوفيقية، التوفيقية"
+      },
+      "latitude": 30.06,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Shell",
+      "ar": "شل"
+    },
+    "location": {
+      "description": {
+        "en": "El-Shoubra Petrol Station, Shoubra",
+        "ar": "محطة بنزين شبرا، شبرا"
+      },
+      "latitude": 30.06,
+      "longitude": 31.26
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Shell_Egypt_logo.svg/1200px-Shell_Egypt_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Petrol Station, New Cairo",
+        "ar": "محطة بنزين الشيخ زايد، القاهرة الجديدة"
+      },
+      "latitude": 30.075,
+      "longitude": 31.375
+    }
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "Nasr City Petrol Station, Nasr City",
+        "ar": "محطة بنزين مدينة نصر، مدينة نصر"
+      },
+      "latitude": 30.05,
+      "longitude": 31.34
+    }
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maadi Petrol Station, El-Maadi",
+        "ar": "محطة بنزين المعادي، المعادي"
+      },
+      "latitude": 30.06,
+      "longitude": 31.25
+    }
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Warraq Petrol Station, El-Warraq",
+        "ar": "محطة بنزين الوراق، الوراق"
+      },
+      "latitude": 30.09,
+      "longitude": 31.31
+    }
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "Giza Petrol Station, Giza",
+        "ar": "محطة بنزين الجيزة، الجيزة"
+      },
+      "latitude": 30.035,
+      "longitude": 31.225
+    }
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Kottab Petrol Station, El-Kottab",
+        "ar": "محطة بنزين التحرير، التحرير"
+      },
+      "latitude": 30.05,
+      "longitude": 31.24
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Fayrouz Petrol Station, El-Fayrouz",
+        "ar": "محطة بنزين الفيروز، الفيروز"
+      },
+      "latitude": 30.07,
+      "longitude": 31.32
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sherouk Petrol Station, El-Sherouk City",
+        "ar": "محطة بنزين الشروق، مدينة الشروق"
+      },
+      "latitude": 30.08,
+      "longitude": 31.42
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Obour Petrol Station, Obour City",
+        "ar": "محطة بنزين العبور، مدينة العبور"
+      },
+      "latitude": 30.095,
+      "longitude": 31.415
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Babtain Petrol Station, Nasr City",
+        "ar": "محطة بنزين البطين، مدينة نصر"
+      },
+      "latitude": 30.05,
+      "longitude": 31.34
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Nozha Petrol Station, El-Nozha",
+        "ar": "محطة بنزين النزهة، النزهة"
+      },
+      "latitude": 30.06,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Hammam Petrol Station, El-Hammam",
+        "ar": "محطة بنزين الحمام، الحمام"
+      },
+      "latitude": 30.15,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Tawfiqiya Petrol Station, El-Tawfiqiya",
+        "ar": "محطة بنزين التوفيقية، التوفيقية"
+      },
+      "latitude": 30.06,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Shoubra Petrol Station, Shoubra",
+        "ar": "محطة بنزين شبرا، شبرا"
+      },
+      "latitude": 30.06,
+      "longitude": 31.26
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Golf Petrol Station, El-Golf",
+        "ar": "محطة بنزين الجولف، الجولف"
+      },
+      "latitude": 30.03,
+      "longitude": 31.24
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Ard El-Gedida Petrol Station, El-Ard El-Gedida",
+        "ar": "محطة بنزين الارض الجديدة، الارض الجديدة"
+      },
+      "latitude": 30.03,
+      "longitude": 31.3
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Marg Petrol Station, El-Marg",
+        "ar": "محطة بنزين المرج، المرج"
+      },
+      "latitude": 30.08,
+      "longitude": 31.28
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maadi 2 Petrol Station, El-Maadi 2",
+        "ar": "محطة بنزين المعادي 2، المعادي 2"
+      },
+      "latitude": 30.05,
+      "longitude": 31.26
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Obour City Petrol Station, El-Obour City",
+        "ar": "محطة بنزين مدينة العبور، مدينة العبور"
+      },
+      "latitude": 30.1,
+      "longitude": 31.4
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Warraq Petrol Station, El-Warraq",
+        "ar": "محطة بنزين الوراق، الوراق"
+      },
+      "latitude": 30.09,
+      "longitude": 31.31
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Agouza Petrol Station, El-Agouza",
+        "ar": "محطة بنزين الهرم، الهرم"
+      },
+      "latitude": 30.04,
+      "longitude": 31.23
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Salam Petrol Station, El-Salam",
+        "ar": "محطة بنزين السلام، السلام"
+      },
+      "latitude": 30.11,
+      "longitude": 31.33
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Demerdash Petrol Station, El-Demerdash",
+        "ar": "محطة بنزين الدمرداش، الدمرداش"
+      },
+      "latitude": 30.06,
+      "longitude": 31.27
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maspero Petrol Station, El-Maspero",
+        "ar": "محطة بنزين المعصرة، المعصرة"
+      },
+      "latitude": 30.07,
+      "longitude": 31.29
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Gamaa Petrol Station, El-Gamaa",
+        "ar": "محطة بنزين الجامعة، الجامعة"
+      },
+      "latitude": 30.05,
+      "longitude": 31.27
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Abbassiya Petrol Station, El-Abbassiya",
+        "ar": "محطة بنزين العباسية، العباسية"
+      },
+      "latitude": 30.05,
+      "longitude": 31.24
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Roda Petrol Station, El-Roda",
+        "ar": "محطة بنزين الروضة، الروضة"
+      },
+      "latitude": 30.06,
+      "longitude": 31.24
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Dokki Petrol Station, El-Dokki",
+        "ar": "محطة بنزين الدقي، الدقي"
+      },
+      "latitude": 30.05,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Darasa Petrol Station, El-Darasa",
+        "ar": "محطة بنزين الدرّاسة، الدرّاسة"
+      },
+      "latitude": 30.05,
+      "longitude": 31.26
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Nasr Petrol Station, El-Nasr",
+        "ar": "محطة بنزين النصر، النصر"
+      },
+      "latitude": 30.05,
+      "longitude": 31.34
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Shoubra El-Kheima Petrol Station, El-Shoubra El-Kheima",
+        "ar": "محطة بنزين شبرا الخيمة، شبرا الخيمة"
+      },
+      "latitude": 30.12,
+      "longitude": 31.27
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maadi Petrol Station, El-Maadi",
+        "ar": "محطة بنزين المعادي، المعادي"
+      },
+      "latitude": 30.06,
+      "longitude": 31.26
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Tahrir Petrol Station, El-Tahrir",
+        "ar": "محطة بنزين التحرير، التحرير"
+      },
+      "latitude": 30.05,
+      "longitude": 31.24
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Golf Petrol Station, El-Golf",
+        "ar": "محطة بنزين الجولف، الجولف"
+      },
+      "latitude": 30.03,
+      "longitude": 31.24
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Fayrouz Petrol Station, El-Fayrouz",
+        "ar": "محطة بنزين الفيروز، الفيروز"
+      },
+      "latitude": 30.07,
+      "longitude": 31.32
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sherouk Petrol Station, El-Sherouk City",
+        "ar": "محطة بنزين الشروق، مدينة الشروق"
+      },
+      "latitude": 30.08,
+      "longitude": 31.42
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Obour Petrol Station, Obour City",
+        "ar": "محطة بنزين العبور، مدينة العبور"
+      },
+      "latitude": 30.095,
+      "longitude": 31.415
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Marg Petrol Station, El-Marg",
+        "ar": "محطة بنزين المرج، المرج"
+      },
+      "latitude": 30.08,
+      "longitude": 31.28
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Nozha Petrol Station, El-Nozha",
+        "ar": "محطة بنزين النزهة، النزهة"
+      },
+      "latitude": 30.06,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Hammam Petrol Station, El-Hammam",
+        "ar": "محطة بنزين الحمام، الحمام"
+      },
+      "latitude": 30.15,
+      "longitude": 31.25
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maadi 2 Petrol Station, El-Maadi 2",
+        "ar": "محطة بنزين المعادي 2، المعادي 2"
+      },
+      "latitude": 30.05,
+      "longitude": 31.26
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Tawq Petrol Station, El-Tawq",
+        "ar": "محطة بنزين الطوق، الطوق"
+      },
+      "latitude": 30.1,
+      "longitude": 31.42
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed Petrol Station, El-Sheikh Zayed",
+        "ar": "محطة بنزين الشيخ زايد، الشيخ زايد"
+      },
+      "latitude": 30.06,
+      "longitude": 31.37
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Giza Petrol Station, El-Giza",
+        "ar": "محطة بنزين الجيزة، الجيزة"
+      },
+      "latitude": 30.02,
+      "longitude": 31.25
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Warraq Petrol Station, El-Warraq",
+        "ar": "محطة بنزين الوراق، الوراق"
+      },
+      "latitude": 30.09,
+      "longitude": 31.31
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sheikh Zayed 2 Petrol Station, El-Sheikh Zayed 2",
+        "ar": "محطة بنزين الشيخ زايد 2، الشيخ زايد 2"
+      },
+      "latitude": 30.06,
+      "longitude": 31.38
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maadi 3 Petrol Station, El-Maadi 3",
+        "ar": "محطة بنزين المعادي 3، المعادي 3"
+      },
+      "latitude": 30.06,
+      "longitude": 31.27
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Nozha 2 Petrol Station, El-Nozha 2",
+        "ar": "محطة بنزين النزهة 2، النزهة 2"
+      },
+      "latitude": 30.06,
+      "longitude": 31.26
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Agouza 2 Petrol Station, El-Agouza 2",
+        "ar": "محطة بنزين الهرم 2، الهرم 2"
+      },
+      "latitude": 30.04,
+      "longitude": 31.24
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Maspero 2 Petrol Station, El-Maspero 2",
+        "ar": "محطة بنزين المعصرة 2، المعصرة 2"
+      },
+      "latitude": 30.07,
+      "longitude": 31.29
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Warraq 2 Petrol Station, El-Warraq 2",
+        "ar": "محطة بنزين الوراق 2، الوراق 2"
+      },
+      "latitude": 30.1,
+      "longitude": 31.32
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Matar Petrol Station, El-Matar",
+        "ar": "محطة بنزين المطر، المطر"
+      },
+      "latitude": 30.06,
+      "longitude": 31.35
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Bab Al-Hadid Petrol Station, El-Bab Al-Hadid",
+        "ar": "محطة بنزين باب الحديد، باب الحديد"
+      },
+      "latitude": 30.06,
+      "longitude": 31.3
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Marg 2 Petrol Station, El-Marg 2",
+        "ar": "محطة بنزين المرج 2، المرج 2"
+      },
+      "latitude": 30.08,
+      "longitude": 31.29
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Sherouk 3 Petrol Station, El-Sherouk 3",
+        "ar": "محطة بنزين الشروق 3، الشروق 3"
+      },
+      "latitude": 30.08,
+      "longitude": 31.43
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Obour 2 Petrol Station, El-Obour 2",
+        "ar": "محطة بنزين العبور 2، العبور 2"
+      },
+      "latitude": 30.1,
+      "longitude": 31.42
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Nozha 3 Petrol Station, El-Nozha 3",
+        "ar": "محطة بنزين النزهة 3، النزهة 3"
+      },
+      "latitude": 30.07,
+      "longitude": 31.27
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Nasr 2 Petrol Station, El-Nasr 2",
+        "ar": "محطة بنزين النصر 2، النصر 2"
+      },
+      "latitude": 30.05,
+      "longitude": 31.35
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Matariya Petrol Station, El-Matariya",
+        "ar": "محطة بنزين المطرية، المطرية"
+      },
+      "latitude": 30.07,
+      "longitude": 31.28
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  },
+  {
+    "name": {
+      "en": "Wataniya Petroleum",
+      "ar": "وطنية"
+    },
+    "location": {
+      "description": {
+        "en": "El-Agouza 3 Petrol Station, El-Agouza 3",
+        "ar": "محطة بنزين الهرم 3، الهرم 3"
+      },
+      "latitude": 30.05,
+      "longitude": 31.25
+    },
+    "image": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Wataniya_Petroleum_logo.svg/1200px-Wataniya_Petroleum_logo.svg.png"
+    ]
+  }
+]
