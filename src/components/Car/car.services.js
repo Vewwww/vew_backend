@@ -33,7 +33,7 @@ exports.deleteCar =  catchAsyncErr(async (req, res, next) => {
     
    
     
-    const car = await carModel.findOne({ owner: driverId });
+    const car = await carModel.find({ owner: driverId });
     
     if (!car) {
       return next(new AppError(`No document found for this owner ${driverId}`, 400));
