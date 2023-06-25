@@ -9,13 +9,13 @@ const validation = Joi.object({
 }).options({ allowUnknown: true });
 
 carValidation = async (req, res, next) => {
-	const obj = req.body;
+    const obj = req.body;
 
     const { error } = validation.validate(obj);
-	if (error) {
+    if (error) {
         console.log(error);
         return next(new AppError("invalid input", 406));
-    } 
+    }
     next();
 
 };
