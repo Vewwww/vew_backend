@@ -104,14 +104,15 @@ exports.updateOne = (Model) =>
     });
   });
 
-exports.createOne = (Model) =>
-  catchAsyncErr(async (req, res) => {
-    const document = await Model.create(req.body);
+exports.createOne = (Model) =>{
+  return catchAsyncErr(async (req, res) => {
+  const document = await Model.create(req.body);
 
-    res.status(200).json({
-      data: document,
-    });
+  res.status(200).json({
+    data: document,
   });
+});}
+  
 
 exports.getOne = (Model) =>
   catchAsyncErr(async (req, res, next) => {

@@ -2,12 +2,12 @@ const mongoose = require("mongoose");
 
 const schema = new mongoose.Schema({
   name: {
-    en_name: {
+    en: {
       type: String,
       trim:true,
       require: [true, "Sign name is required"],
     },
-    ar_name: {
+    ar: {
       type: String,
       trim:true,
       require: [true, "من فضلك، ادخل عنوان العلامة"],
@@ -18,11 +18,11 @@ const schema = new mongoose.Schema({
     type:String
   },
   description: {
-    en_description: {
+    en: {
       type: String,
       require: [true, "Sign description is required"],
     },
-    ar_description: {
+    ar: {
       type: String,
       require: [true, "من فضلك، ادخل معلومات عن العلامة"],
     },
@@ -30,12 +30,12 @@ const schema = new mongoose.Schema({
   },
 
   solution: {
-    en_solution: {
+    en: {
       type: String,
       require: [true, "Solution is required"],
 
     },
-    ar_solution: {
+    ar: {
       type: String,
       require: [true, "من فضلك، ادخل حل المشكلة"],
     },
@@ -45,7 +45,7 @@ const schema = new mongoose.Schema({
 const setImageUrl = (doc) => {
   //return image base url + image name
   if (doc.image) {
-    const imageUrl = `${process.env.BaseUrl}/signs/${doc.image}`;
+    const imageUrl = `${process.env.BaseUrl}/public/signs/${doc.image}`;
     doc.image = imageUrl;
   }
 };

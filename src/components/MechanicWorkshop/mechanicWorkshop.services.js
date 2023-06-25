@@ -3,7 +3,6 @@ const AppErr = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory = require("../Handlers/handler.factory");
-const LocationModel = require("../location/location.model");
 
 //rate
 exports.rateMechanic=factory.rate(mechanicModel);
@@ -12,7 +11,21 @@ exports.rateMechanic=factory.rate(mechanicModel);
 exports.reportMechanic=factory.report(mechanicModel);
 
 //create new service
-exports.createMechanicWorkshop = factory.createOne(mechanicModel)
+exports.createMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
+  const location = await LocationModel.create({
+    latitude: req.body.latitude,
+    longitude: req.body.longitude,
+    description: req.body.description,
+  });
+  delete req.body.latitude;
+  delete req.body.longitude;
+  delete req.body.description;
+
+  req.body.location = location._id;
+  const mechanic = await mechanicModel.create(req.body);
+
+  res.status(200).json({ message: "Verify your email" });
+});
 
 exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;
@@ -24,6 +37,7 @@ exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
   }
   const manitenceCenters = await mechanicModel
     .find(filter)
+    .select("-logedIn -emailConfirm -__v")
     .populate("service");
 
   searchResult = getNearestPlaces(manitenceCenters, latitude, longitude);

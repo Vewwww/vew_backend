@@ -1,59 +1,28 @@
-const {
-  signup,
-  emailVerify,
-  changePassword,
-  authinticate,
-} = require("./driver.auth");
-const {
-  createUser,
-  getUsers,
-  getUser,
-  updateUser,
-  reportDriver,
-  getGenderAnalytic,
+const { signup, emailVerify, changePassword, authinticate } = require('./driver.auth');
+const { createUser, updateUser, reportDriver, search } = require('./driver.services');
+const { allowedTo } = require('../Handlers/auth.factory');
+const driverValidation = require('./driver.validator');
+const maintenanceRoute = require('../MaintenanceCenter/maintenanceCenter.api');
+const mechanicRoute = require('../MechanicWorkshop/mechanicWorkshop.api');
+const gasStationRoute = require('../GasStation/gasStation.api');
+const winchRoute = require("../winch/winch.api");
+const requestRoute = require('../request/request.api');
+const chatRoute = require('../chat/chat.api');
+const carRoute = require('../Car/car.api');
+const router = require('express').Router();
 
-} = require("./driver.services");
-const { allowedTo } = require("../Handlers/auth.factory");
-const driverValidation = require("./driver.validator");
-const maintenanceRoute = require("../MaintenanceCenter/maintenanceCenter.api");
-const requestRoute = require("../request/request.api");
-const chatRoute = require("../chat/chat.api")
+router.use('/maintenanceCenter', authinticate, allowedTo('user'), maintenanceRoute);
+router.use('/gasStation', authinticate, allowedTo('user'), gasStationRoute);
+router.use('/mechanic', authinticate, allowedTo('user'), mechanicRoute);
+router.use('/winch', authinticate, allowedTo('user'), winchRoute);
+router.use('/request', authinticate, requestRoute);
+router.use('/chat', authinticate, allowedTo('user'), chatRoute);
+router.use('/car', authinticate, allowedTo('user'), carRoute);
 
-const router = require("express").Router();
-
-router.use(
-  "/maintenanceCenter",
-  authinticate,
-  allowedTo("user"),
-  maintenanceRoute
-);
-router.use(
-  "/request",
-  authinticate,
-  requestRoute
-);
-router.use(
-  "/chat",
-  authinticate,
-  allowedTo("user"),
-  chatRoute
-);
-
-
-router.route("/").get(authinticate, allowedTo("admin"), getUsers);
-router.get("/genderAnalytic",getGenderAnalytic);
-
-router
-  .route("/:id")
-  .get(authinticate, allowedTo("admin"), getUser)
-  .put(authinticate, allowedTo("user"), driverValidation, updateUser);
-router.patch(
-  "/changePassword/:id",
-  authinticate,
-  allowedTo("user"),
-  changePassword
-);
-router.post("/signup", driverValidation, signup, createUser);
-router.get("/verify/:token", emailVerify);
-router.patch("/report/:id",reportDriver);
+router.route('/').put(authinticate, allowedTo('user'), driverValidation, updateUser);
+router.patch('/changePassword/:id', authinticate, allowedTo('user'), changePassword);
+router.patch('/search', authinticate, allowedTo('user'), search);
+router.post('/signup', driverValidation, signup, createUser);
+router.get('/verify/:token', emailVerify);
+router.patch('/report/:id', reportDriver);
 module.exports = router;

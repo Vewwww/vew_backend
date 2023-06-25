@@ -21,7 +21,7 @@ exports.getNearestWinch = catchAsyncErr(async (req, res) => {
   socket.emit("emit-upload-locations");
   setTimeout(() => {}, 3000);
   const { latitude, longitude } = req.body;
-  const winches = await winchModel.find();
+  const winches = await winchModel.find().select("-logedIn -emailConfirm -__v");
 
   searchResult = getNearestPlaces(winches, latitude, longitude);
   res.status(200).json({ results: searchResult.length, data: searchResult });

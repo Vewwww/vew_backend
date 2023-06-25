@@ -1,0 +1,1745 @@
+[
+  {
+    "name": "Lada Riva/Classic",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada Niva/4x4",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada Samara",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada Kalina",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada Priora",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada Granta",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada Vesta",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada XRAY",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada Largus",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada 2101 (Zhiguli)",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada 2106 (Riva Export)",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada 2107 (Riva Export)",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada 2108 (Samara)",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada 2110 (Priora Export)",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada 2112 (Priora Estate)",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Lada 4x4 Urban (Niva Urban)",
+    "brand": "643528431c01869f2d835be7"
+  },
+  {
+    "name": "Kia Pride",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Sephia",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Sportage",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Rio",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Optima/Magentis",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Cerato/Forte",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Soul",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Sorento",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Ceed",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Picanto",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Carnival/Sedona (Minivan)",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Mohave/Borrego",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Stinger",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Niro (Hybrid, Plug-in Hybrid, and Electric variants)",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia Telluride",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia K5/Optima",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Kia EV6 (Electric vehicle)",
+    "brand": "643528431c01869f2d835c02"
+  },
+  {
+    "name": "Geely MK",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Emgrand EC7",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Emgrand X7",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Emgrand 7",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Emgrand 8",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Emgrand GS",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Emgrand GT",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Binrui",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Boyue",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Xingyue",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Jiaji",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Borui",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Vision",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Geely Yuanjing (GC series)",
+    "brand": "643528431c01869f2d835be8"
+  },
+  {
+    "name": "Jaguar XK120",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar E-Type",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar XJ6",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar XJ-S",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar XJ8/XJR",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar XKR",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar X-Type",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar XJ12",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar XJ220",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar S-Type",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar F-Type",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar XE",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar XF",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar XJ",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar F-Pace",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar E-Pace",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Jaguar I-Pace (Electric SUV)",
+    "brand": "643528431c01869f2d835be9"
+  },
+  {
+    "name": "Proton Saga",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton Wira",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton Persona",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton Satria",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton Gen-2",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton Perdana",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton Exora",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton Prevé",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton Suprima S",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton Iriz",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton Ertiga",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton X70",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton X50",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton Saga FLX",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Proton Waja",
+    "brand": "643528431c01869f2d835bea"
+  },
+  {
+    "name": "Jetour X70",
+    "brand": "643528431c01869f2d835be4"
+  },
+  {
+    "name": "Jetour X70S",
+    "brand": "643528431c01869f2d835be4"
+  },
+  {
+    "name": "Jetour X95",
+    "brand": "643528431c01869f2d835be4"
+  },
+  {
+    "name": "Jetour X90",
+    "brand": "643528431c01869f2d835be4"
+  },
+  {
+    "name": "Jetour X60",
+    "brand": "643528431c01869f2d835be4"
+  },
+  {
+    "name": "Jetour X40",
+    "brand": "643528431c01869f2d835be4"
+  },
+  {
+    "name": "Jetour X70 Plus",
+    "brand": "643528431c01869f2d835be4"
+  },
+  {
+    "name": "Peugeot 207",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 208",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 306",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 307",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 308",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 406",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 407",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 508",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 607",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 3008",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 5008",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 106",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 107",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 108",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 2008",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 4007",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 508",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 807",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot 9009 (concept car)",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Peugeot RCZ",
+    "brand": "643528431c01869f2d835be5"
+  },
+  {
+    "name": "Volvo XC90",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo XC60",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo XC40",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo S90",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo S60",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo V90",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo V60",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo V40",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo C70",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo C30",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo 850",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo S80",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo 240",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo 440",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo 960",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo PV444/544",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo Amazon (120/130/220)",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo P1800",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "Volvo 740/760/780",
+    "brand": "643528431c01869f2d835bed"
+  },
+  {
+    "name": "CUPRA Leon",
+    "brand": "643528431c01869f2d835bef"
+  },
+  {
+    "name": "CUPRA Ateca",
+    "brand": "643528431c01869f2d835bef"
+  },
+  {
+    "name": "CUPRA Formentor",
+    "brand": "643528431c01869f2d835bef"
+  },
+  {
+    "name": "Lexus ES",
+    "brand": "643528431c01869f2d835bf0"
+  },
+  {
+    "name": "Lexus GS",
+    "brand": "643528431c01869f2d835bf0"
+  },
+  {
+    "name": "Lexus LS",
+    "brand": "643528431c01869f2d835bf0"
+  },
+  {
+    "name": "Lexus IS",
+    "brand": "643528431c01869f2d835bf0"
+  },
+  {
+    "name": "Lexus RX",
+    "brand": "643528431c01869f2d835bf0"
+  },
+  {
+    "name": "Lexus NX",
+    "brand": "643528431c01869f2d835bf0"
+  },
+  {
+    "name": "Lexus GX",
+    "brand": "643528431c01869f2d835bf0"
+  },
+  {
+    "name": "Lexus LX",
+    "brand": "643528431c01869f2d835bf0"
+  },
+  {
+    "name": "Lexus LC",
+    "brand": "643528431c01869f2d835bf0"
+  },
+  {
+    "name": "Lexus RC",
+    "brand": "643528431c01869f2d835bf0"
+  },
+  {
+    "name": "Lexus UX",
+    "brand": "643528431c01869f2d835bf0"
+  },
+  {
+    "name": "Lexus CT",
+    "brand": "643528431c01869f2d835bf0"
+  },
+  {
+    "name": "Land Rover Defender",
+    "brand": "643528431c01869f2d835bf2"
+  },
+  {
+    "name": "Land Rover Discovery",
+    "brand": "643528431c01869f2d835bf2"
+  },
+  {
+    "name": "Land Rover Range Rover",
+    "brand": "643528431c01869f2d835bf2"
+  },
+  {
+    "name": "Land Rover Range Rover Sport",
+    "brand": "643528431c01869f2d835bf2"
+  },
+  {
+    "name": "Land Rover Range Rover Velar",
+    "brand": "643528431c01869f2d835bf2"
+  },
+  {
+    "name": "Land Rover Range Rover Evoque",
+    "brand": "643528431c01869f2d835bf2"
+  },
+  {
+    "name": "Land Rover Discovery Sport",
+    "brand": "643528431c01869f2d835bf2"
+  },
+  {
+    "name": "Dongfeng AX7",
+    "brand": "643528431c01869f2d835bf3"
+  },
+  {
+    "name": "Dongfeng Joyear",
+    "brand": "643528431c01869f2d835bf3"
+  },
+  {
+    "name": "Dongfeng Fengshen A30",
+    "brand": "643528431c01869f2d835bf3"
+  },
+  {
+    "name": "Dongfeng Fengxing CM7",
+    "brand": "643528431c01869f2d835bf3"
+  },
+  {
+    "name": "Dongfeng Fengxing T5",
+    "brand": "643528431c01869f2d835bf3"
+  },
+  {
+    "name": "Dongfeng Fengxing SX6",
+    "brand": "643528431c01869f2d835bf3"
+  },
+  {
+    "name": "Dongfeng Fengxing Jingye X5",
+    "brand": "643528431c01869f2d835bf3"
+  },
+  {
+    "name": "JAC S1",
+    "brand": "643528431c01869f2d835bf4"
+  },
+  {
+    "name": "JAC S2",
+    "brand": "643528431c01869f2d835bf4"
+  },
+  {
+    "name": "JAC S3",
+    "brand": "643528431c01869f2d835bf4"
+  },
+  {
+    "name": "JAC S4",
+    "brand": "643528431c01869f2d835bf4"
+  },
+  {
+    "name": "JAC S5",
+    "brand": "643528431c01869f2d835bf4"
+  },
+  {
+    "name": "JAC S7",
+    "brand": "643528431c01869f2d835bf4"
+  },
+  {
+    "name": "JAC IEV Series",
+    "brand": "643528431c01869f2d835bf4"
+  },
+  {
+    "name": "JAC Sunray",
+    "brand": "643528431c01869f2d835bf4"
+  },
+  {
+    "name": "Maserati Ghibli",
+    "brand": "643528431c01869f2d835bf5"
+  },
+  {
+    "name": "Maserati Quattroporte",
+    "brand": "643528431c01869f2d835bf5"
+  },
+  {
+    "name": "Maserati Levante",
+    "brand": "643528431c01869f2d835bf5"
+  },
+  {
+    "name": "Maserati GranTurismo",
+    "brand": "643528431c01869f2d835bf5"
+  },
+  {
+    "name": "Maserati GranCabrio",
+    "brand": "643528431c01869f2d835bf5"
+  },
+  {
+    "name": "Maserati MC20",
+    "brand": "643528431c01869f2d835bf5"
+  },
+  {
+    "name": "Soueast DX3",
+    "brand": "643528431c01869f2d835bf6"
+  },
+  {
+    "name": "Soueast DX7",
+    "brand": "643528431c01869f2d835bf6"
+  },
+  {
+    "name": "Soueast DX5",
+    "brand": "643528431c01869f2d835bf6"
+  },
+  {
+    "name": "Soueast DX9",
+    "brand": "643528431c01869f2d835bf6"
+  },
+  {
+    "name": "Soueast V3 Lingyue",
+    "brand": "643528431c01869f2d835bf6"
+  },
+  {
+    "name": "Soueast V5 Lingzhi",
+    "brand": "643528431c01869f2d835bf6"
+  },
+  {
+    "name": "Soueast A5",
+    "brand": "643528431c01869f2d835bf6"
+  },
+  {
+    "name": "Soueast A7",
+    "brand": "643528431c01869f2d835bf6"
+  },
+  {
+    "name": "Soueast EC35",
+    "brand": "643528431c01869f2d835bf6"
+  },
+  {
+    "name": "Haval H2",
+    "brand": "643528431c01869f2d835bf7"
+  },
+  {
+    "name": "Haval H4",
+    "brand": "643528431c01869f2d835bf7"
+  },
+  {
+    "name": "Haval H6",
+    "brand": "643528431c01869f2d835bf7"
+  },
+  {
+    "name": "Haval H7",
+    "brand": "643528431c01869f2d835bf7"
+  },
+  {
+    "name": "Haval H8",
+    "brand": "643528431c01869f2d835bf7"
+  },
+  {
+    "name": "Haval H9",
+    "brand": "643528431c01869f2d835bf7"
+  },
+  {
+    "name": "Haval F5",
+    "brand": "643528431c01869f2d835bf7"
+  },
+  {
+    "name": "Haval F7",
+    "brand": "643528431c01869f2d835bf7"
+  },
+  {
+    "name": "Haval F7x",
+    "brand": "643528431c01869f2d835bf7"
+  },
+  {
+    "name": "Haval F9",
+    "brand": "643528431c01869f2d835bf7"
+  },
+  {
+    "name": "Mini Cooper",
+    "brand": "643528431c01869f2d835bf9"
+  },
+  {
+    "name": "Mini Cooper S",
+    "brand": "643528431c01869f2d835bf9"
+  },
+  {
+    "name": "Mini Countryman",
+    "brand": "643528431c01869f2d835bf9"
+  },
+  {
+    "name": "Mini Clubman",
+    "brand": "643528431c01869f2d835bf9"
+  },
+  {
+    "name": "Mini Convertible",
+    "brand": "643528431c01869f2d835bf9"
+  },
+  {
+    "name": "Mini Paceman",
+    "brand": "643528431c01869f2d835bf9"
+  },
+  {
+    "name": "Mini John Cooper Works",
+    "brand": "643528431c01869f2d835bf9"
+  },
+  {
+    "name": "Porsche 356",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 911",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 914",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 924",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 928",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 944",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 959",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 968",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche Boxster",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche Carrera GT",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche Cayenne",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche Cayman",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche Macan",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche Panamera",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche Taycan",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 918 Spyder",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 550 Spyder",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 904 Carrera GTS",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 906 Carrera 6",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 907",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 908",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 910",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 917",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 935",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 936",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 956",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 962",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 964",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 993",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 996",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 997",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 991",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Porsche 992",
+    "brand": "643528431c01869f2d835beb"
+  },
+  {
+    "name": "Aston Martin DB1",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB2",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB2/4",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB4",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB4 GT Zagato",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB5",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB6",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DBS",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V8",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V8 Vantage",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V8 Volante",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V8 Zagato",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Lagonda",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V8 Zagato Volante",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Virage",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Vantage",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Virage Volante",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Vantage Volante",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Virage Shooting Brake",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V8 Coupe",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V8 Volante",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Virage Coupe",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V8 Vantage Coupe",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V8 Vantage Volante",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Vantage Zagato",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Virage Volante",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB7",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB7 Vantage",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB7 Vantage Volante",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB7 Zagato",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB7 GT",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB7 GTA",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB AR1",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB9",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB9 Volante",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB9 Coupe",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Vanquish",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Vanquish S",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V12 Vanquish",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V12 Vanquish S",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V12 Vantage",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V12 Vantage Roadster",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V12 Vantage S",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin V12 Vantage S Roadster",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Cygnet",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Rapide",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Rapide S",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Rapide AMR",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin One-77",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Vulcan",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB10",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB11",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB11 Volante",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DB11 AMR",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DBS Superleggera",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DBS Superleggera Volante",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Valkyrie",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Vantage ",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Vantage Roadster",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin Valhalla ",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  {
+    "name": "Aston Martin DBX",
+    "brand": "643528431c01869f2d835bfb"
+  },
+  { "name": "Chevrolet Camaro", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Corvette", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Impala", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Malibu", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Cruze", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Sonic", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Spark", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Volt", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Bolt EV", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Equinox", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Traverse", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Tahoe", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Suburban", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Colorado", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Silverado", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Express", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Trax", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Blazer", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Trailblazer", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Captiva", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Aveo", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Orlando", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet HHR", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Cavalier", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Lumina", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Monte Carlo", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet SSR", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Malibu Maxx", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Uplander", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Astro", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Venture", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Optra", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Prizm", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Tracker", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Metro", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Spectrum", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Nova", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Chevette", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Citation", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Monza", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Vega", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Bel Air", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Biscayne", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Caprice", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Celebrity", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Corsica", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Corvair", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet El Camino", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Lumina APV", "brand": "643528431c01869f2d835bfd" },
+  { "name": "Chevrolet Nomad", "brand": "643528431c01869f2d835bfd" },
+  { "name": "BMW 1 Series", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW 2 Series", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW 3 Series", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW 4 Series", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW 5 Series", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW 6 Series", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW 7 Series", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW 8 Series", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW Z3", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW Z4", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW Z8", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X1", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X2", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X3", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X4", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X5", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X6", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X7", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW i3", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW i8", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW M2", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW M3", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW M4", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW M5", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW M6", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X5 M", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X6 M", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X3 M", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X4 M", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X5 M50i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X6 M50i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X7 M50i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X3 M40i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X4 M40i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X5 M Competition", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X6 M Competition", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X3 M Competition", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X4 M Competition", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X6", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X2 M35i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X1 xDrive28i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X2 xDrive28i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X3 xDrive30i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X3 xDrive28i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X4 xDrive30i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X5 xDrive40i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X5 xDrive50i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X6 xDrive35i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X7 xDrive40i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BMW X7 xDrive50i", "brand": "643528431c01869f2d835bfe" },
+  { "name": "BYD e1", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD e2", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD e3", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD e5", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD S2", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD S3", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD S5", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD S6", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD S7", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD Song", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD Qin", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD Tang", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD Yuan", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD Han", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD F0", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD F3", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD F5", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD F6", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD G3", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD L3", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD M6", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD Qin Pro", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD Song MAX", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD Song PLUS", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD Song PRO", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD Tang EV", "brand": "643528431c01869f2d835bff" },
+  { "name": "BYD Yuan EV", "brand": "643528431c01869f2d835bff" },
+  { "name": "FIAT 500", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT 500X", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT 500L", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Panda", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Tipo", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Punto", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Qubo", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Ducato", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Fiorino", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Doblo", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Talento", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT 124 Spider", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT 500e", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Freemont", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Fullback", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Linea", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Mobi", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Palio", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Siena", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Strada", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Toro", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Uno", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Argo", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Cronos", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Grand Siena", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Novo Uno", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Palio Weekend", "brand": "643528431c01869f2d835c01" },
+  { "name": "FIAT Premio", "brand": "643528431c01869f2d835c01" },
+
+  { "name": "Brilliance H220", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance H230", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance H320", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance H330", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance H530", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance H3", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance V3", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance V5", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance V6", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance V7", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance FRV", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance M1", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance M2", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance M3", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance M20", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance M30", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance M35", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance M40", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance M50", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance M530", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance M70", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance M90", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance Junjie", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance Junjie FRV", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance Junjie FSV", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance Junjie Wagon", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance Junjie Cross", "brand": "643528431c01869f2d835c00" },
+  { "name": "Brilliance Jinbei", "brand": "643528431c01869f2d835c00" },
+  { "name": "Chery Tiggo 2", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Tiggo 3", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Tiggo 4", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Tiggo 5", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Tiggo 7", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Tiggo 8", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Arrizo 3", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Arrizo 5", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Arrizo 6", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Arrizo 7", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Arrizo GX", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Fulwin 2", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery QQ", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery QQ3", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery QQ6", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery QQme", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery QQme EV", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Cowin", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Cowin 3", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Cowin 5", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Cowin X1", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Cowin X3", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery Cowin X5", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery A3", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery A3 Sedan", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery A5", "brand": "643528431c01869f2d835c03" },
+  { "name": "Chery A6", "brand": "643528431c01869f2d835c03" },
+  { "name": "Mercedes-Benz A-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz B-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz C-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz CLA-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz CLS-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz E-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz G-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz GLA-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz GLB-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz GLC-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz GLE-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz GLS-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz S-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz AMG GT", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz EQC", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz GLE Coupe", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz GLC Coupe", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz GLS Maybach", "brand": "643528431c01869f2d835c04" },
+  {
+    "name": "Mercedes-Benz S-Class Maybach",
+    "brand": "643528431c01869f2d835c04"
+  },
+  { "name": "Mercedes-Benz SLC-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz SL-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz GLE Coupe", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz GLC Coupe", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz GLS Maybach", "brand": "643528431c01869f2d835c04" },
+  {
+    "name": "Mercedes-Benz S-Class Maybach",
+    "brand": "643528431c01869f2d835c04"
+  },
+  { "name": "Mercedes-Benz SLC-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz SL-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz Sprinter", "brand": "643528431c01869f2d835c04" },
+  { "name": "Mercedes-Benz V-Class", "brand": "643528431c01869f2d835c04" },
+  { "name": "Toyota Corolla", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Camry", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Yaris", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Prius", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Avalon", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Sienna", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Highlander", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota 4Runner", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Sequoia", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Land Cruiser", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota RAV4", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota C-HR", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Venza", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Tacoma", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Tundra", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Hilux", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Aygo", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Supra", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota GR 86", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Mirai", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Prius Prime", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota 86", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota GR Yaris", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota GR Supra", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Land Cruiser Prado", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota FJ Cruiser", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Fortuner", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Avanza", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Innova", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Rush", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota HiAce", "brand": "643528431c01869f2d835c06" },
+  { "name": "Toyota Proace", "brand": "643528431c01869f2d835c06" },
+  { "name": "Volkswagen Golf", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Polo", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Passat", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Jetta", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Arteon", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Tiguan", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Touareg", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen T-Roc", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen T-Cross", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen ID.3", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen ID.4", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen ID.5", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Up!", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Caddy", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Multivan", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen California", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Amarok", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Beetle", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Scirocco", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Eos", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Phaeton", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen Touareg", "brand": "643528431c01869f2d835c07" },
+  { "name": "Volkswagen XL1", "brand": "643528431c01869f2d835c07" },
+  { "name": "Renault Clio", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Captur", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Megane", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Scenic", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Kadjar", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Talisman", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Espace", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Zoe", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Twingo", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Koleos", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Laguna", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Fluence", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Kangoo", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Trafic", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Master", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Twizy", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Arkana", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Avantime", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Wind", "brand": "643528431c01869f2d835c08" },
+  { "name": "Renault Modus", "brand": "643528431c01869f2d835c08" },
+  { "name": "Suzuki Swift", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Alto", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Jimny", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Vitara", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Ignis", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Baleno", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Ciaz", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Ertiga", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki S-Cross", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Grand Vitara", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki SX4", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki XL7", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki APV", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Carry", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Kizashi", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Splash", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki X-90", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Liana", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Reno", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Suzuki Forenza", "brand": "643528431c01869f2d835c0a" },
+  { "name": "Audi A1", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi A3", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi A4", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi A5", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi A6", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi A7", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi A8", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi Q2", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi Q3", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi Q4", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi Q5", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi Q7", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi Q8", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi e-tron", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi TT", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi R8", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi RS3", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi RS4", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi RS5", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Audi RS6", "brand": "643528431c01869f2d835c0b" },
+  { "name": "Nissan Micra", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Sentra", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Versa", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Altima", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Maxima", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Juke", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Kicks", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Rogue", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Murano", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Pathfinder", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Armada", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Patrol", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan 370Z", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan GT-R", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Leaf", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan e-NV200", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan NV200", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan NV Passenger", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan NV Cargo", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Navara", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Frontier", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Titan", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan X-Trail", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Nissan Rogue Sport", "brand": "643528431c01869f2d835c0c" },
+  { "name": "Mazda2", "brand": "643528431c01869f2d835c0d" },
+  { "name": "Mazda3", "brand": "643528431c01869f2d835c0d" },
+  { "name": "Mazda6", "brand": "643528431c01869f2d835c0d" },
+  { "name": "Mazda CX-3", "brand": "643528431c01869f2d835c0d" },
+  { "name": "Mazda CX-30", "brand": "643528431c01869f2d835c0d" },
+  { "name": "Mazda CX-5", "brand": "643528431c01869f2d835c0d" },
+  { "name": "Mazda CX-8", "brand": "643528431c01869f2d835c0d" },
+  { "name": "Mazda CX-9", "brand": "643528431c01869f2d835c0d" },
+  { "name": "Mazda MX-5", "brand": "643528431c01869f2d835c0d" },
+  { "name": "Mazda MX-30", "brand": "643528431c01869f2d835c0d" },
+
+  { "name": "Daewoo Matiz", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Kalos", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Lacetti", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Nubira", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Espero", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Leganza", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Prince", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Chairman", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Rezzo", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Magnus", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Tosca", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Veritas", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Arcadia", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Tico", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Damas", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Labo", "brand": "643528431c01869f2d835c0e" },
+  { "name": "Daewoo Maepsy", "brand": "643528431c01869f2d835c0e" },
+
+  { "name": "Hyundai Accent", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Elantra", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Sonata", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Azera", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Veloster", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Ioniq", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Kona", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Tucson", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Santa Fe", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Palisade", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Genesis", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Equus", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Veracruz", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Terracan", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Creta", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Grand i10", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Xcent", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Eon", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Santro", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Venue", "brand": "643528431c01869f2d835c10" },
+  { "name": "Hyundai Atos", "brand": "643528431c01869f2d835c10" },
+  { "name": "Citroën C1", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën C3", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën C3 Aircross", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën C4 Cactus", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën C4", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën C4 Picasso", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën C5", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën C5 Aircross", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën C6", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën Berlingo", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën Jumpy", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën SpaceTourer", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën DS 3", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën DS 4", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën DS 5", "brand": "643528431c01869f2d835c11" },
+  { "name": "Citroën DS 7 Crossback", "brand": "643528431c01869f2d835c11" },
+  { "name": "MG 3", "brand": "643528431c01869f2d835c12" },
+  { "name": "MG 5", "brand": "643528431c01869f2d835c12" },
+  { "name": "MG ZS", "brand": "643528431c01869f2d835c12" },
+  { "name": "MG HS", "brand": "643528431c01869f2d835c12" },
+  { "name": "MG ZT", "brand": "643528431c01869f2d835c12" },
+  { "name": "MG TF", "brand": "643528431c01869f2d835c12" },
+  { "name": "MG RV8", "brand": "643528431c01869f2d835c12" },
+  { "name": "MG GS", "brand": "643528431c01869f2d835c12" },
+  { "name": "MG XPower SV", "brand": "643528431c01869f2d835c12" },
+  { "name": "MG 6", "brand": "643528431c01869f2d835c12" },
+  { "name": "MG EHS", "brand": "643528431c01869f2d835c12" },
+  { "name": "MG Marvel R", "brand": "643528431c01869f2d835c12" },
+
+  { "name": "Opel Corsa", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Astra", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Insignia", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Mokka", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Grandland", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Crossland", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Karl", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Zafira", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Combo", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Vivaro", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Movano", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Ampera", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Adam", "brand": "643528431c01869f2d835bfa" },
+  { "name": "Opel Cascada", "brand": "643528431c01869f2d835bfa" },
+
+  { "name": "SEAT Ibiza", "brand": "643528431c01869f2d835c15" },
+  { "name": "SEAT Leon", "brand": "643528431c01869f2d835c15" },
+  { "name": "SEAT Arona", "brand": "643528431c01869f2d835c15" },
+  { "name": "SEAT Ateca", "brand": "643528431c01869f2d835c15" },
+  { "name": "SEAT Tarraco", "brand": "643528431c01869f2d835c15" },
+  { "name": "SEAT Alhambra", "brand": "643528431c01869f2d835c15" },
+  { "name": "SEAT Mii", "brand": "643528431c01869f2d835c15" },
+  { "name": "SEAT Toledo", "brand": "643528431c01869f2d835c15" },
+  { "name": "SEAT Exeo", "brand": "643528431c01869f2d835c15" },
+  { "name": "SEAT Cordoba", "brand": "643528431c01869f2d835c15" },
+
+  { "name": "Ford Fiesta", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Focus", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Fusion", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Mustang", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford EcoSport", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Escape", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Edge", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Explorer", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Expedition", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Ranger", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford F-150", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford F-250", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Transit", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Transit Connect", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford GT", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Bronco", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Bronco Sport", "brand": "643528431c01869f2d835c16" },
+  { "name": "Ford Mach-E", "brand": "643528431c01869f2d835c16" },
+  { "name": "Honda Accord", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda Civic", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda CR-V", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda HR-V", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda Pilot", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda Passport", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda Odyssey", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda Ridgeline", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda Insight", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda Fit", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda CR-Z", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda S2000", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda NSX", "brand": "643528431c01869f2d835c18" },
+  { "name": "Honda Clarity", "brand": "643528431c01869f2d835c18" },
+  { "name": "DFSK Glory 580", "brand": "643528431c01869f2d835c19" },
+  { "name": "DFSK Glory 560", "brand": "643528431c01869f2d835c19" },
+  { "name": "DFSK Glory 330", "brand": "643528431c01869f2d835c19" },
+  { "name": "DFSK Glory 580 Pro", "brand": "643528431c01869f2d835c19" },
+  { "name": "DFSK Glory 580i", "brand": "643528431c01869f2d835c19" },
+  { "name": "DFSK Glory 330 Pro", "brand": "643528431c01869f2d835c19" },
+  { "name": "DFSK Glory 330i", "brand": "643528431c01869f2d835c19" },
+  { "name": "DFSK Glory i-Auto", "brand": "643528431c01869f2d835c19" },
+  { "name": "DFSK Seres 3", "brand": "643528431c01869f2d835c19" },
+  { "name": "DFSK Seres 5", "brand": "643528431c01869f2d835c19" },
+  { "name": "DFSK Seres 7", "brand": "643528431c01869f2d835c19" },
+  { "name": "DFSK Seres 8", "brand": "643528431c01869f2d835c19" },
+
+  { "name": "Jeep Wrangler", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep Grand Cherokee", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep Cherokee", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep Compass", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep Renegade", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep Gladiator", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep Wagoneer", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep Grand Wagoneer", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep Commander", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep Liberty", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep Patriot", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep Comanche", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep CJ", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep DJ", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep FC", "brand": "643528431c01869f2d835c1b" },
+  { "name": "Jeep Gladiator XMT", "brand": "643528431c01869f2d835c1b" },
+  { "name": "HUMMER H1", "brand": "643528431c01869f2d835c1e" },
+  { "name": "HUMMER H2", "brand": "643528431c01869f2d835c1e" },
+  { "name": "HUMMER H3", "brand": "643528431c01869f2d835c1e" },
+  { "name": "HUMMER H3T", "brand": "643528431c01869f2d835c1e" },
+  { "name": "HUMMER HX", "brand": "643528431c01869f2d835c1e" },
+  {
+    "name": "TESLA Model 3",
+    "brand": "643528431c01869f2d835c2c"
+  },
+  {
+    "name": "TESLA Model S",
+    "brand": "643528431c01869f2d835c2c"
+  },
+  {
+    "name": "TESLA Model X",
+    "brand": "643528431c01869f2d835c2c"
+  },
+  {
+    "name": "TESLA Model Y",
+    "brand": "643528431c01869f2d835c2c"
+  },
+  {
+    "name": "TESLA Roadster",
+    "brand": "643528431c01869f2d835c2c"
+  },
+  {
+    "name": "TESLA Cybertruck",
+    "brand": "643528431c01869f2d835c2c"
+  },
+  {"name": "Skoda Fabia", "brand": "643528431c01869f2d835c17"},
+{"name": "Skoda Octavia", "brand": "643528431c01869f2d835c17"},
+{"name": "Skoda Superb", "brand": "643528431c01869f2d835c17"},
+{"name": "Skoda Rapid", "brand": "643528431c01869f2d835c17"},
+{"name": "Skoda Karoq", "brand": "643528431c01869f2d835c17"},
+{"name": "Skoda Kodiaq", "brand": "643528431c01869f2d835c17"},
+{"name": "Skoda Kamiq", "brand": "643528431c01869f2d835c17"},
+{"name": "Skoda Scala", "brand": "643528431c01869f2d835c17"},
+{"name": "Skoda Yeti", "brand": "643528431c01869f2d835c17"},
+{"name": "Skoda Citigo", "brand": "643528431c01869f2d835c17"},
+{"name": "Skoda Roomster", "brand": "643528431c01869f2d835c17"}
+]
