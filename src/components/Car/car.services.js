@@ -29,10 +29,6 @@ exports.deleteCar = catchAsyncErr(async (req, res, next) => {
 });
 exports.getCarsOfDriver = catchAsyncErr(async (req, res, next) => {
   const { driverId } = req.params;
-
-
-
-
   const car = await carModel.find({ owner: driverId });
 
   if (!car) {
