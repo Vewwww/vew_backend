@@ -5,7 +5,7 @@ const validation = Joi.object({
     carType: Joi.string().required(),
     carModel: Joi.string().required(),
     year: Joi.string().required(),
-    plateNumber: Joi.string().alphanum().min(3).trim(true).required(),
+    plateNumber: Joi.string().min(3).trim(true).required(),
 }).options({ allowUnknown: true });
 
 carValidation = async (req, res, next) => {
@@ -14,7 +14,7 @@ carValidation = async (req, res, next) => {
     const { error } = validation.validate(obj);
 	if (error) {
         console.log(error);
-        return next(new AppError("no car found", 406));
+        return next(new AppError("invalid input", 406));
     } 
     next();
 
