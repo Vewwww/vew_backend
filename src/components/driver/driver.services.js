@@ -4,20 +4,6 @@ const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const carModel = require("../Car/car.model");
 const factory = require("../Handlers/handler.factory")
 const createNotification=require("../notification/notification.services")
-
-//Gender had problem analytic
-exports.getGenderAnalytic=catchAsyncErr(async(req,res,next)=>{
-  const document= await driverModel.find();
-  let driverLength=document.length;
-  console.log(typeof document, document);
-  let maleLength=document.filter(driver=>driver.gender=='male').length;
-  let femaleLength=document.filter(driver=>driver.gender=='female').length;
-  let maleRatio=maleLength/driverLength;
-  let femaleRatio=femaleLength/driverLength;
-  console.log(maleLength, femaleLength);
-
-  res.status(200).json({maleRatio,femaleRatio});
-})
 //report
 exports.reportDriver=factory.report(driverModel);
 // to add new user
@@ -27,14 +13,12 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
     cars = req.body.cars;
     delete req.body.cars;
   }
-
   let user = new driverModel(req.body);
   await user.save();
   createNotification(driverLisenceRenewalDate,CarLicenseRenewalDate,lastPeriodicMaintenanceDate,_id)
-
   let carsResult = [];
   if (cars.length) {
-    for (car of cars) {
+    for (const car of cars) {
       car.owner = user._id;
       const createdCar = new carModel(car);
       createdCar.save();
@@ -44,19 +28,7 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
   res.status(200).json({message:"Verify your email"});
 });
 
-// to get all Users
-exports.getUsers = catchAsyncErr(async (req, res) => {
-  let Users = await driverModel.find({});
-  res.status(200).json(Users);
-});
 
-// to get specific User
-exports.getUser = catchAsyncErr(async (req, res, next) => {
-  const { id } = req.params;
-  let User = await driverModel.findById(id);
-  !User && next(new AppError("User not found", 400));
-  User && res.status(200).json(User);
-});
 
 // to update specific User
 exports.updateUser = catchAsyncErr(async (req, res, next) => {
@@ -66,8 +38,7 @@ exports.updateUser = catchAsyncErr(async (req, res, next) => {
   !User && next(new AppError("User not found", 400));
   User && res.status(200).json(User);
 });
-
-
+//search
 exports.search = catchAsyncErr(async (req, res, next) => {
   const { keyword } = req.query;
   const { latitude, longitude } = req.body;
