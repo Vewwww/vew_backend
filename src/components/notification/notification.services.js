@@ -14,22 +14,27 @@ exports.createNotification = catchAsyncErr(async (averageMiles,driverLisenceRene
         notification = await notificationModel.insert(date, message)
         res.status(200).json(message)
     }
-    //how to access date years and months and modify them
     if (lastPeriodicMaintenanceDate) {
-        const date = lastPeriodicMaintenanceDate
+        const date = new Date(lastPeriodicMaintenanceDate);
         if (totalMiles > 9000) {
-            const years=totalMiles/(averageMiles*12)
-            const months=totalMiles%(averageMiles*12)
-            date.years+=years
-            if(date.months+months>12){
-                date.years+=1
-                date.months=(date.months+months)-12
-            }else{
-                date.months+=months
+            const years = Math.floor(totalMiles / (averageMiles * 12));
+            const months = Math.floor(totalMiles % (averageMiles * 12));
+    
+            date.setFullYear(date.getFullYear() + years);
+            date.setMonth(date.getMonth() + months);
+    
+            if (date.getMonth() > 11) {
+                date.setFullYear(date.getFullYear() + 1);
+                date.setMonth(date.getMonth() - 12);
             }
-            const message = `your periodic maintenance date is on ${date}`
-            notification = await notificationModel.insert(date, message)
-            res.status(200).json(message)
+    
+            const formattedDate = date.toISOString().slice(0, 10);
+            const message = `Your periodic maintenance date is on ${formattedDate}`;
+    
+           
+            notification = await notificationModel.insert(date, message);
+    
+            res.status(200).json(message);
         }
     }
 })

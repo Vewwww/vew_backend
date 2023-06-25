@@ -27,14 +27,19 @@ exports.deleteCar =  catchAsyncErr(async (req, res, next) => {
     }  
     res.status(204).send({message:"deleted"});
   });
-  exports.getCarsOfDriver=catchAsyncErr(async(req,res,next)=>{
-    const {driverId}=req.params
-    const car=await carModel.find({owner:driverId})
-    console.log(car);
+  exports.getCarsOfDriver = catchAsyncErr(async (req, res, next) => {
+    const { driverId } = req.params;
+    
+    
+   
+    
+    const car = await carModel.findOne({ owner: driverId });
+    
     if (!car) {
-      return next(new AppError(`No document found for this id ${driverId}`, 400));
+      return next(new AppError(`No document found for this owner ${driverId}`, 400));
+    } else {
+      res.status(200).json(car);
     }
-    else{
-    res.status(200).json({data:car})}
-    });
+  });
+  
     
