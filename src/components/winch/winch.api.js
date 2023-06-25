@@ -3,6 +3,8 @@ const {
   createWinch,
   reportWinch,
   rateWinch,
+  getWinch,
+  getWinches,
 } = require("./winch.services");
 const { signup, emailVerify, authinticate } = require("./winch.auth");
 const { allowedTo } = require("../Handlers/auth.factory");
@@ -18,5 +20,6 @@ router.get("/verify/:token", emailVerify);
 router.get("/getNearestWinch", getNearestWinch);
 router.patch("/report/:id", reportWinch);
 router.patch("/rate/:id", rateWinch);
+router.get("/", getWinches)
 
 module.exports = router;

@@ -27,18 +27,16 @@ exports.createNotification = catchAsyncErr(async (averageMiles,driverLisenceRene
                 date.setFullYear(date.getFullYear() + 1);
                 date.setMonth(date.getMonth() - 12);
             }
-    
+            date.setMonth(date.getMonth() - 1)
             const formattedDate = date.toISOString().slice(0, 10);
             const message = `Your periodic maintenance date is on ${formattedDate}`;
-    
-           
             notification = await notificationModel.insert(date, message);
     
             res.status(200).json(message);
         }
     }
 })
-//less than
+
 exports.getNotifications = catchAsyncErr(async(req,res,next)=>{
 
     let newNotifications = false;
