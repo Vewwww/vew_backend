@@ -15,6 +15,7 @@ exports.getUsers = catchAsyncErr(async (req, res) => {
   let winches = await winchModel.find({})
   res.status(200).json({ drivers: Users, mechanics: mechanics, winches: winches });
 });
+
 // to get specific User
 exports.getUser = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
@@ -44,24 +45,19 @@ exports.userStatistics = catchAsyncErr(async (req, res) => {
 )
 //top ten car models have issues
 exports.tenModelsHadIssues = catchAsyncErr(async (req, res) => {
-  const requests = await requestModel.find();
+  const requests = await requestModel.find().populate('car');
   const modelsHadIssues = {};
-
   for (const request of requests) {
-    const carModel = request.car.carType.carModel;
-
+    const carModel = request.car.carModel;
     if (!modelsHadIssues.hasOwnProperty(carModel)) {
       modelsHadIssues[carModel] = 0;
     }
-
-    modelsHadIssues[carModel]++;
+    modelsHadIssues[carModel]+=1;
   }
-
   const top10Models = Object.keys(modelsHadIssues)
     .sort((a, b) => modelsHadIssues[b] - modelsHadIssues[a])
     .slice(0, 10);
-
-  const hadIssues = await carModel.find({ carType: { $in: top10Models } }).populate('carType');
+  const hadIssues = await carModel.find({ _id: { $in: top10Models } }).populate('carType');
   res.status(200).json(hadIssues);
 });
 

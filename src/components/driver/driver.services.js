@@ -75,3 +75,8 @@ exports.search = catchAsyncErr(async (req, res, next) => {
     return next(AppError("No search keyword is provided", 400));
   }
 });
+
+exports.getDrivers = catchAsyncErr(async (req, res) => {
+  let Users = await driverModel.find({role:"user"});
+  res.status(200).json({ Users});
+});
