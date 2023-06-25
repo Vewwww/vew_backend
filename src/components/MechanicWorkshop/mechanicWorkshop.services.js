@@ -3,8 +3,6 @@ const AppErr = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory = require("../Handlers/handler.factory");
-require("../location/location.model");
-const LocationModel = require("../location/location.model");
 
 //rate
 exports.rateMechanic=factory.rate(mechanicModel);
@@ -39,7 +37,7 @@ exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
   }
   const manitenceCenters = await mechanicModel
     .find(filter)
-    .populate({ path: "location", select: "latitude longitude -_id" })
+    .select("-logedIn -emailConfirm -__v")
     .populate("service");
 
   searchResult = getNearestPlaces(manitenceCenters, latitude, longitude);

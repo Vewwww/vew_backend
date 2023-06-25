@@ -21,8 +21,8 @@ exports.getUser = catchAsyncErr(async (req, res, next) => {
 });
 //user statistics
 exports.userStatistics=catchAsyncErr(async(req,res)=>{
-  const numOfMechanists=await mechanicWorkshopModel.find({}).count()
-  const numOfWinches=await winchModel.find({}).count()
+  const numOfMechanists=await mechanicWorkshopModel.countDocuments()
+  const numOfWinches=await winchModel.countDocuments()
   const numOfDrivers=await driverModel.find({role:"user",emailConfirm:"true"}).count()
   const numOfAllUsers=numOfDrivers+numOfMechanists+numOfWinches
   const pecerntageDrivers=(numOfDrivers/numOfAllUsers)*100
@@ -59,3 +59,38 @@ exports.tenModelsHadIssues=catchAsyncErr(async(req,res)=>{
     let femaleRatio=femaleLength/driverLength;
     res.status(200).json({maleRatio,femaleRatio});
   })
+
+
+exports.getSeasonsAnalytics = catchAsyncErr(async (req, res, next) => {
+  const requestsCount = await requestModel.countDocuments();
+  const requests = await requestModel.find();
+
+  let seasons = {
+    summer: 0,
+    winter: 0,
+    autumn: 0,
+    spring: 0,
+  };
+
+  for (const request of requests) {
+    const requestMonth = request.created_at.getMonth + 1;
+    if (requestMonth in [3, 4, 5]) {
+      seasons.spring = seasons.spring + 1;
+    } else if (requestMonth in [6, 7, 8]) {
+      seasons.summer = seasons.summer + 1;
+    } else if (requestMonth in [9, 10, 11]) {
+      seasons.autumn = seasons.autumn + 1;
+    } else {
+      seasons.winter = seasons.winter + 1;
+    }
+  }
+
+  if(requestsCount >0){
+    seasons.spring = (seasons.spring / requestsCount) * 100;
+    seasons.summer = (seasons.summer / requestsCount) * 100;
+    seasons.autumn = (seasons.autumn / requestsCount) * 100;
+    seasons.winter = (seasons.winter / requestsCount) * 100;
+  }
+
+  res.status(200).json({ data: seasons });
+});

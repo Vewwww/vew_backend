@@ -205,40 +205,6 @@ exports.getWinchAcceptedRequests = catchAsyncErr(async (req, res, next) => {
   res.statu(200).json({ data: acceptedRequests });
 });
 
-/////////////////////   ADMIN   ///////////////////
-
-exports.getSeasonsAnalytics = catchAsyncErr(async (req, res, next) => {
-  const requestsCount = await RequestModel.countDocuments();
-  const requests = await RequestModel.find();
-
-  let seasons = {
-    summer: 0,
-    winter: 0,
-    autumn: 0,
-    spring: 0,
-  };
-
-  for (const request of requests) {
-    const requestMonth = request.created_at.getMonth + 1;
-    if (requestMonth in [3, 4, 5]) {
-      seasons.spring = seasons.spring + 1;
-    } else if (requestMonth in [6, 7, 8]) {
-      seasons.summer = seasons.summer + 1;
-    } else if (requestMonth in [9, 10, 11]) {
-      seasons.autumn = seasons.autumn + 1;
-    } else {
-      seasons.winter = seasons.winter + 1;
-    }
-  }
-
-  seasons.spring = (seasons.spring / requestsCount) * 100;
-  seasons.summer = (seasons.summer / requestsCount) * 100;
-  seasons.autumn = (seasons.autumn / requestsCount) * 100;
-  seasons.winter = (seasons.winter / requestsCount) * 100;
-
-  res.status(200).json({ data: seasons });
-});
-
 ////////////
 exports.createRequest = factory.createOne(RequestModel);
 

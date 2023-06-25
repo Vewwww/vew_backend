@@ -4,7 +4,7 @@ exports.allRequires = (app) => {
     "/maintenanceCenter",
     require("../components/MaintenanceCenter/maintenanceCenter.api")
   );
-  // app.use("/chat", require("../components/chat/chat.api"));
+  app.use("/chat", require("../components/chat/chat.api"));
   app.use("/cartype", require("../components/carBrand/carBrand.api.js"));
   app.use("/service", require("../components/Service/service.api"));
   app.use(

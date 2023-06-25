@@ -4,23 +4,30 @@ const AppError = require("../../utils/AppError");
 
 const winchModel = require("./winch.model");
 const carModel = require("../Car/car.model");
-const LocationModel = require("../location/location.model");
+const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
+const io = require("socket.io-client");
+const socket = io("http://localhost:3000");
+
+socket.on("connect", () => {
+  console.log("Connected to Socket.IO");
+});
 
 //rate
-exports.rateWinch=factory.rate(winchModel);
+exports.rateWinch = factory.rate(winchModel);
 //report
-exports.reportWinch=factory.report(winchModel);
+exports.reportWinch = factory.report(winchModel);
 
 exports.getNearestWinch = catchAsyncErr(async (req, res) => {
+  socket.emit("emit-upload-locations");
+  setTimeout(() => {}, 3000);
   const { latitude, longitude } = req.body;
-  const winches = await winchModel.find()
+  const winches = await winchModel.find().select("-logedIn -emailConfirm -__v");
 
   searchResult = getNearestPlaces(winches, latitude, longitude);
   res.status(200).json({ results: searchResult.length, data: searchResult });
 });
 
 exports.createWinch = catchAsyncErr(async (req, res) => {
-  
   let car = null;
   if (req.body.car) {
     car = req.body.car;
@@ -37,6 +44,16 @@ exports.createWinch = catchAsyncErr(async (req, res) => {
 
   res.status(200).json({ message: "Verify your email" });
 });
+
+exports.updateWinchLocation = async (data) => {
+  const winch = await winchModel.findByIdAndUpdate(
+    { _id: data.id },
+    {
+      "location.latitude": data.latitude,
+      "location.longitude": data.longitude,
+    }
+  );
+};
 
 exports.getWinches = catchAsyncErr(async (req, res, next) => {
   const winches = await winchModel.find();
@@ -91,6 +108,7 @@ exports.deleteWinch = catchAsyncErr(async (req, res, next) => {
 
   res.status(204).send();
 });
+
 //   exports.getWinch = asyncHandler(async (req, res, next) => {
 //     const { id } = req.params;
 

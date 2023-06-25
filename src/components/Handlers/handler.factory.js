@@ -128,7 +128,6 @@ exports.getOne = (Model) =>
 
 exports.getAll = (Model) =>
   catchAsyncErr(async (req, res) => {
-    console.log("got here");
     let filter = {};
     if (req.filterObject) {
       filter = req.filterObject;

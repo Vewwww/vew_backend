@@ -28,8 +28,6 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
   res.status(200).json({message:"Verify your email"});
 });
 
-
-
 // to update specific User
 exports.updateUser = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
@@ -77,5 +75,3 @@ exports.search = catchAsyncErr(async (req, res, next) => {
     return next(AppError("No search keyword is provided", 400));
   }
 });
-
-
