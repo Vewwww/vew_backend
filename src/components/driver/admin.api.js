@@ -9,7 +9,9 @@ const {
 } = require('./admin.services');
 const { authinticate } = require('../driver/driver.auth');
 const { allowedTo } = require('../Handlers/auth.factory');
-
+const carTypeRoute=require("../carBrand/carBrand.api")
+const carModelRoute=require("../carModel/carModel.api")
+const colorRoute=require("../color/color.api")
 const router = require('express').Router();
 router.route('/').post(authinticate, allowedTo('admin'), addAdmin);
 router.route('/userStatistics').get(authinticate, allowedTo('admin'), userStatistics);
@@ -18,4 +20,5 @@ router.get('/topModelsHadIssues', authinticate, allowedTo('admin'), tenModelsHad
 router.get('/seasonsAnalytics', authinticate, allowedTo('admin'), getSeasonsAnalytics);
 router.route('/').get(authinticate, allowedTo('admin'), getUsers);
 router.route('/:id').get(authinticate, allowedTo('admin'), getUser);
+
 module.exports = router;
