@@ -10,7 +10,7 @@ const {
 const router = express.Router();
 const {authinticate}=require("../driver/driver.auth")
 const { allowedTo } = require("../Handlers/auth.factory");
-router.route("/").post(authinticate,allowedTo("admin"),createColor).get(authinticate,allowedTo("user"),getColors);
-router.route("/:id").get(authinticate,allowedTo("admin"),getColor).put(authinticate,allowedTo("user"),updateColor).delete(authinticate,allowedTo("admin"),deleteColor);
+router.route("/").post(authinticate,allowedTo("admin"),createColor).get(getColors);
+router.route("/:id").get(getColor).put(authinticate,allowedTo("user"),updateColor).delete(authinticate,allowedTo("admin"),deleteColor);
 
 module.exports = router;

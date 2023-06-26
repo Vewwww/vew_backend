@@ -1,4 +1,12 @@
-const { getNearestWinch, createWinch, reportWinch, rateWinch, updateWinchAvailableState } = require('./winch.services');
+const {
+  getNearestWinch,
+  createWinch,
+  reportWinch,
+  rateWinch,
+  getWinch,
+  getWinches,
+  updateWinchAvailableState,
+} = require('./winch.services');
 const { signup, emailVerify, authinticate } = require('./winch.auth');
 const { allowedTo } = require('../Handlers/auth.factory');
 winchValidation = require('./winch.validator');
@@ -14,5 +22,6 @@ router.get('/getNearestWinch', getNearestWinch);
 router.patch('/updateAvailableState', authinticate, allowedTo('winch'), updateWinchAvailableState);
 router.patch('/report/:id', reportWinch);
 router.patch('/rate/:id', rateWinch);
+router.get('/', getWinches);
 
 module.exports = router;

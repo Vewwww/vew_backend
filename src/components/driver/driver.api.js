@@ -1,5 +1,5 @@
 const { signup, emailVerify, changePassword, authinticate } = require('./driver.auth');
-const { createUser, updateUser, reportDriver, search ,getNearest} = require('./driver.services');
+const { createUser, updateUser, reportDriver, search ,getDrivers,getNearest} = require('./driver.services');
 const { allowedTo } = require('../Handlers/auth.factory');
 const {driverValidation,driverValidateLocation} = require('./driver.validator');
 const maintenanceRoute = require('../MaintenanceCenter/maintenanceCenter.api');
@@ -19,11 +19,12 @@ router.use('/request', authinticate, requestRoute);
 router.use('/chat', authinticate, allowedTo('user'), chatRoute);
 router.use('/car', authinticate, allowedTo('user'), carRoute);
 
-router.route('/').put(authinticate, allowedTo('user'), driverValidation, updateUser);
+router.route('/').put(authinticate, allowedTo('user'), driverValidation, updateUser).get(getDrivers);
 router.patch('/changePassword/:id', authinticate, allowedTo('user'), changePassword);
 router.get('/search',driverValidateLocation, authinticate, allowedTo('user'), search);
 router.get('/getNearest',driverValidateLocation, authinticate, allowedTo('user'), getNearest);
 router.post('/signup', driverValidation, signup, createUser);
 router.get('/verify/:token', emailVerify);
 router.patch('/report/:id', reportDriver);
+
 module.exports = router;
