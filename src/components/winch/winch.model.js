@@ -68,10 +68,14 @@ const schema = new mongoose.Schema({
     type: String,
     default: "winch",
   },
+
   plateNumber:{
     type: String,
     required: [true, "plate number required"]
   }
+  available:{
+    type: Boolean,
+    default: true
 });
 schema.pre("save", async function (next) {
   this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
