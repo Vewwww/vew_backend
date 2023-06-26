@@ -29,7 +29,13 @@ const validation = Joi.object({
 
 }).options({ allowUnknown: true });
 
-driverValidation = async (req, res, next) => {
+const validateLocation = Joi.object({
+  latitude:Joi.number().required(),
+        longitude:Joi.number().required(),
+  
+}).options({ allowUnknown: true });
+
+exports.driverValidation = async (req, res, next) => {
   const obj = req.body;
   const { error } = validation.validate(obj);
   if (error) {
@@ -38,4 +44,13 @@ driverValidation = async (req, res, next) => {
   }
   next();
 };
-module.exports = driverValidation;
+
+exports.driverValidateLocation = async (req, res, next) => {
+  const obj = req.body;
+  const { error } = validateLocation.validate(obj);
+  if (error) {
+    console.log(error);
+    return next(new AppError(error.details[0].message, 400));
+  }
+  next();
+};
