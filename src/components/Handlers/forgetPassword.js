@@ -18,7 +18,7 @@ module.exports.resetPass = catchAsyncErr(async (options, role) => {
     html: `
       <div style="background:#bbf;padding:20px">
         <h1>${options.message}</h1>
-        <a href="http://localhost:3000/allusers/verifyPassword/${options.token}">reset password</a>
+        <a href="${process.env.BaseUrl}/allusers/verifyPassword/${options.token}">reset password</a>
       </div>
     `,
   });
