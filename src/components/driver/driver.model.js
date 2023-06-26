@@ -61,6 +61,10 @@ const schema = mongoose.Schema({
   logedIn:{
     type:Boolean,
     default:false
+  },
+  passwordReset:{
+    type:Boolean,
+    default:false
   }
 });
 schema.pre('save', async function (next) {

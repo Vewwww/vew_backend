@@ -22,7 +22,10 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
   }
   let user = new driverModel(req.body);
   await user.save();
-  createNotification(driverLisenceRenewalDate, CarLicenseRenewalDate, lastPeriodicMaintenanceDate, _id);
+
+
+//   createNotification(driverLisenceRenewalDate, CarLicenseRenewalDate, lastPeriodicMaintenanceDate, _id);
+
   let carsResult = [];
   if (cars.length) {
     for (const car of cars) {
