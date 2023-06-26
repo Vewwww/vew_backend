@@ -10,7 +10,7 @@ const { resetPass } = require("./forgetPassword");
 exports.signup = (model) => {
   return catchAsyncErr(async (req, res, next) => {
     email = req.body.email;
-    const isUser = await driverModel.findOne({ email });
+    isUser = await driverModel.findOne({ email });
     if(!isUser){
       isUser = await mechanicWorkshopModel.findOne({ email })
       if(!isUser){
