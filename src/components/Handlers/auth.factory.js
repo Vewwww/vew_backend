@@ -6,13 +6,18 @@ const driverModel = require("../driver/driver.model");
 const mechanicWorkshopModel = require("../MechanicWorkshop/mechanicWorkshop.model");
 const winchModel = require("../winch/winch.model");
 const { sendEmail } = require("./email.factory");
-
+const { resetPass } = require("./forgetPassword");
 exports.signup = (model) => {
   return catchAsyncErr(async (req, res, next) => {
     email = req.body.email;
-    const isUser = await model.findOne({ email });
+    const isUser = await driverModel.findOne({ email });
+    if(!isUser){
+      isUser = await mechanicWorkshopModel.findOne({ email })
+      if(!isUser){
+        isUser = await mechanicWorkshopModel.findOne({ email })
+      }
+    }
     if (isUser) return next(new AppError("user already exists", 401));
-
     let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
     await sendEmail({ email, token, message: "Hello" }, model);
     next();
@@ -179,3 +184,75 @@ exports.changePassword = (model) => {
     res.status(200).json(user);
   });
 };
+
+exports.forgetPassword = catchAsyncErr(async (req, res, next) => {
+  const email = req.body.email
+  let user = await driverModel.findOne({ email: req.body.email });
+  let role = "drivers";
+  if (!user) {
+    user = await mechanicWorkshopModel.findOne({ email: req.body.email });
+    role = "mechanicWorkshops";
+    if (!user) {
+      user = await winchModel.findOne({ email: req.body.email });
+      role = "winches";
+      if (!user) {
+        return next(new AppError("incorrect email ", 401));
+      }
+    }
+  }
+  let token = jwt.sign({ role, email }, process.env.JWT_PASSWORD);
+  await resetPass({ email, token, message: "Reset Your Password" }, role);
+  res.status(200).json("check your email")
+})
+exports.verifyPassword = catchAsyncErr(async (req, res, next) => {
+  const { token } = req.params;
+  jwt.verify(token, process.env.JWT_PASSWORD, async (err, decoded) => {
+    if (err) {
+      return next(new AppError("invalid token", 401));
+    } else {
+      const user = await driverModel.findOne({ email: decoded.email });
+      let model = driverModel; // Default model
+      if (!user) {
+        user = await mechanicWorkshopModel.findOne({ email: decoded.email });
+        model = mechanicWorkshopModel;
+
+        if (!user) {
+          user = await winchModel.findOne({ email: decoded.email });
+          model = winchModel;
+          if (!user) {
+            return next(new AppError("incorrect email", 401));
+          }
+        }
+      }
+      if (user) {
+        await model.findOneAndUpdate({ email: decoded.email },{ passwordReset: true });
+        res.status(200).send(`<h1 style="background:#fff">please write a new password in the app</h1>`);
+      } else {
+        res.status(404).send(`<h1 style="background:#fff">user not found</h1>`);
+      }
+    }
+  });
+});
+
+exports.resetPassword = catchAsyncErr(async (req, res, next) => {
+    
+    let user = await driverModel.findOne({ email: req.body.email })
+    model=driverModel
+    if (!user) {
+      user = await mechanicWorkshopModel.findOne({ email: req.body.email });
+      model=mechanicWorkshopModel
+      if (!user) {
+        user = await winchModel.findOne({ email: req.body.email });
+        model=winchModel
+        if (!user) {
+          return next(new AppError("incorrect email", 401));
+        }
+      }
+    }
+    if (user.passwordReset === true) {
+      await model.findOneAndUpdate({ email: req.body.email }, {password:req.body.password,passwordReset: false}, { new: true })
+      res.status(200).json(user);
+    } else {
+      res.status(401).json({ message: "Please check your email" });
+    }
+  })

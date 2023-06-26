@@ -28,20 +28,7 @@ exports.getNearestWinch = catchAsyncErr(async (req, res) => {
 });
 
 exports.createWinch = catchAsyncErr(async (req, res) => {
-  let car = null;
-  if (req.body.car) {
-    car = req.body.car;
-    delete req.body.car;
-  }
   const createdwinch = await winchModel.create(req.body);
-
-  let carResult = {};
-  if (car !== null) {
-    car.owner = createdwinch._id;
-    const createdCar = await carModel.create(car);
-    carResult = createdCar;
-  }
-
   res.status(200).json({ message: "Verify your email" });
 });
 
