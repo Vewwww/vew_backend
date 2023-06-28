@@ -6,8 +6,9 @@ const {
   getSeasonsAnalytics,
   getUsers,
   getUser,
+  
 } = require('./admin.services');
-const { authinticate } = require('../driver/driver.auth');
+const { authinticate, emailVerify } = require('../driver/driver.auth');
 const { allowedTo } = require('../Handlers/auth.factory');
 const mechanicRoute = require("../MechanicWorkshop/mechanicWorkshop.api")
 const driverRoute = require("./driver.api")
@@ -15,6 +16,7 @@ const winchRoute = require("../winch/winch.api")
 const router = require('express').Router();
 router.route('/').post(authinticate, allowedTo('admin'), addAdmin)
   .get(authinticate, allowedTo('admin'), getUsers)
+router.get('/verify/:token', emailVerify);
 router.use("/driver", authinticate, allowedTo('admin'), driverRoute)
 router.use("/mechanic", authinticate, allowedTo('admin'), mechanicRoute)
 router.use("/winch", authinticate, allowedTo('admin'), winchRoute);
