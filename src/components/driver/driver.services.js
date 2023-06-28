@@ -41,8 +41,8 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
 // to update specific User
 exports.updateUser = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
-  let User = await driverModel.findByIdAndUpdate(id, req.body, { new: true });
-
+  const {name,email,phoneNumber,driverLisenceRenewalDate}=req.body
+  let User = await driverModel.findByIdAndUpdate(id, {name,email,phoneNumber,driverLisenceRenewalDate}, { new: true });
   !User && next(new AppError('User not found', 400));
   User && res.status(200).json(User);
 });
