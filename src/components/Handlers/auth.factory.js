@@ -24,6 +24,7 @@ exports.signup = (model) => {
   });
 };
 
+
 exports.login = catchAsyncErr(async (req, res, next) => {
   let user = await driverModel.findOne({ email: req.body.email });
   let modelName = "driver";

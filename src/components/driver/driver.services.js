@@ -3,85 +3,61 @@ const AppError = require('../../utils/AppError');
 const { catchAsyncErr } = require('../../utils/CatchAsyncErr');
 const carModel = require('../Car/car.model');
 const factory = require('../Handlers/handler.factory');
-const createNotification = require('../notification/notification.services');
+const {
+  createDriverLicenseNotification,
+  updateDriverLicenseNotification,
+} = require('../notification/notification.services');
 
 const mechanicWorkshopModel = require('../MechanicWorkshop/mechanicWorkshop.model');
 const maintenanceCenterModel = require('../MaintenanceCenter/maintenanceCenter.model');
 const gasStationModel = require('../GasStation/gasStation.model');
 const winchModel = require('../winch/winch.model');
 const { getNearestPlaces } = require('../Handlers/getNearestPlaces');
+const { createCarForSignup } = require('../Car/car.services');
 
-//report
 exports.reportDriver = factory.report(driverModel);
-// to add new user
+
 exports.createUser = catchAsyncErr(async (req, res, next) => {
-  let cars = [];
-  if (req.body.cars) {
-    cars = req.body.cars;
-    delete req.body.cars;
-  }
+  // let car = {};
+  // if (req.body.car) {
+  //   car = req.body.car;
+  //   delete req.body.car;
+  // }
+
   let user = new driverModel(req.body);
   await user.save();
 
-
-//   createNotification(driverLisenceRenewalDate, CarLicenseRenewalDate, lastPeriodicMaintenanceDate, _id);
-
-  let carsResult = [];
-  if (cars.length) {
-    for (const car of cars) {
-      car.owner = user._id;
-      const createdCar = new carModel(car);
-      createdCar.save();
-      carsResult.push(createdCar);
-    }
+  if (req.body.driverLisenceRenewalDate) {
+    const notificationId = await createDriverLicenseNotification(req.driverLisenceRenewalDate, user._id);
+    user.driverLisenceRenewalNotification = notificationId;
+    user.save();
   }
+
+  if (req.body.car) {
+    await createCarForSignup(req.body.car, user._id);
+  }
+
+
   res.status(200).json({ message: 'Verify your email' });
 });
 
 // to update specific User
 exports.updateUser = catchAsyncErr(async (req, res, next) => {
-  const { id } = req.params;
-  const {name,email,phoneNumber,driverLisenceRenewalDate}=req.body
-  let User = await driverModel.findByIdAndUpdate(id, {name,email,phoneNumber,driverLisenceRenewalDate}, { new: true });
-  !User && next(new AppError('User not found', 400));
-  User && res.status(200).json(User);
-});
-//search
-exports.search = catchAsyncErr(async (req, res, next) => {
-  const { keyword } = req.query;
-  const { latitude, longitude } = req.body;
-
-  const ar_en_ = {
-    $or: [
-      { 'name.ar': { $regex: '.*' + keyword + '.*', $options: 'i' } },
-      { 'name.en': { $regex: '.*' + keyword + '.*', $options: 'i' } },
-    ],
-  };
-
-  const name_query = {
-    name: { $regex: '.*' + keyword + '.*', $options: 'i' },
-  };
-
-  if (keyword) {
-    const workshops = await mechanicWorkshopModel
-      .find(name_query)
-      .populate({ path: 'location', select: 'latitude longitude -_id' });
-    const maintenceCenters = await maintenanceCenterModel.find(ar_en_name_query);
-    const gasStations = await gasStationModel.find(name_query);
-    const winches = await winchModel.find(name_query);
-
-    let searchResult = [];
-    if (workshops) searchResult.push(...workshops);
-    if (maintenceCenters) searchResult.push(...maintenceCenters);
-    if (gasStations) searchResult.push(...gasStations);
-    if (winches) searchResult.push(...winches);
-
-    searchResult = getNearestPlaces(searchResult, latitude, longitude);
-
-    res.status(200).json({ results: searchResult.length, data: searchResult });
-  } else {
-    return next(AppError('No search keyword is provided', 400));
+  let user = await driverModel.findOne({_id:req.user._id});
+  if(!user) {
+    next(new AppError('No user found for this id', 404));
   }
+
+  if(req.body.driverLisenceRenewalDate){
+    if(user.driverLisenceRenewalNotification){
+      const notificationId = await updateDriverLicenseNotification(req.body.driverLisenceRenewalDate, user.driverLisenceRenewalNotification)
+    }else{
+      const notificationId = await createDriverLicenseNotification(req.body.driverLisenceRenewalDate,req.user._id)
+      req.body.driverLisenceRenewalNotification = notificationId;
+    }
+  }
+
+  res.status(200).json({data:user});
 });
 
 exports.search = catchAsyncErr(async (req, res, next) => {
@@ -105,7 +81,7 @@ exports.search = catchAsyncErr(async (req, res, next) => {
       .populate({ path: 'location', select: 'latitude longitude -_id' });
     const maintenceCenters = await maintenanceCenterModel.find(ar_en_name_query);
     const gasStations = await gasStationModel.find(name_query);
-    name_query.available=true;
+    name_query.available = true;
     const winches = await winchModel.find(name_query);
 
     let searchResult = [];
@@ -127,7 +103,7 @@ exports.getNearest = catchAsyncErr(async (req, res, next) => {
   const workshops = await mechanicWorkshopModel.find();
   const maintenceCenters = await maintenanceCenterModel.find();
   const gasStations = await gasStationModel.find();
-  const winches = await winchModel.find({available:true});
+  const winches = await winchModel.find({ available: true });
 
   let searchResult = [];
   if (workshops) searchResult.push(...workshops);
@@ -141,6 +117,6 @@ exports.getNearest = catchAsyncErr(async (req, res, next) => {
 });
 
 exports.getDrivers = catchAsyncErr(async (req, res) => {
-  let Users = await driverModel.find({role:"user"});
-  res.status(200).json({ Users});
+  let Users = await driverModel.find({ role: 'user' });
+  res.status(200).json({ Users });
 });
