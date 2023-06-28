@@ -2,7 +2,7 @@ const request = require("supertest");
 const baseURL = "http://localhost:3000"
 //const app=require("../../../app")
 describe("get signs", () => {
-    test("get driver pending request", async () => {
+    test("check if all signs information is defined", async () => {
         const res = await request(baseURL).get("/sign/");
 
         // const res = await request(app).get("/sign/");

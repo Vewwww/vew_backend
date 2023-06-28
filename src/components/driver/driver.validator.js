@@ -20,8 +20,7 @@ const validation = Joi.object({
         color: Joi.string().required(),
         plateNumber: Joi.string().required(),
       })
-    )
-    .required(),
+    ),
   report: Joi.object({
     reportsNumber: Joi.number().default(0),
     dateReport: Joi.date(),
