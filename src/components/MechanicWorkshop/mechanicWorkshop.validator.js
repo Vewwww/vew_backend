@@ -20,7 +20,7 @@ const validation = Joi.object({
     reportsNumber: Joi.number().default(0),
     dateReport: Joi.date(),
   }),
-  rate: Joi.number().default(4.5),
+  rate: Joi.number().default(0),
   isSuspended: Joi.boolean().default(false),
   emailConfirm: Joi.boolean().default(false),
   logedIn: Joi.boolean().default(false),
