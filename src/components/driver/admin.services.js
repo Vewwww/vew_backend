@@ -8,6 +8,11 @@ const requestModel = require("../request/request.model")
 const AppError = require("../../utils/AppError");
 const jwt = require("jsonwebtoken");
 const { sendEmail } = require("../Handlers/email.factory");
+exports.getAdmins = catchAsyncErr(async (req, res) => {
+  let admins = await driverModel.find({ role: "admin" });
+  res.status(200).json({ admins });
+});
+
 //add admin
 exports.addAdmin = catchAsyncErr(async (req, res, next) => {
   const role = "admin"
