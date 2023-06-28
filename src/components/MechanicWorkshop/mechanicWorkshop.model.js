@@ -50,7 +50,7 @@ const schema = new mongoose.Schema({
   },
   rate: {
     type: Number,
-    default: 4.5,
+    default: 0,
   },
   numOfRates: {
     type: Number,
@@ -66,8 +66,8 @@ const schema = new mongoose.Schema({
   },
   location: {
     description: {
-      ar: { type: String , default:"no arabic location description available"},
-      en: { type: String , default:"no english location description available"},
+      ar: { type: String, default: "no arabic location description available" },
+      en: { type: String, default: "no english location description available" },
     },
     latitude: {
       type: Number,

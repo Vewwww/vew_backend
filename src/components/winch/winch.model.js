@@ -36,7 +36,7 @@ const schema = new mongoose.Schema({
   },
   rate: {
     type: Number,
-    default: 4.5,
+    default: 0,
   },
   numOfRates: {
     type: Number,
@@ -68,7 +68,12 @@ const schema = new mongoose.Schema({
     type: String,
     default: "winch",
   },
-  available:{
+
+  plateNumber: {
+    type: String,
+    required: [true, "plate number required"]
+  },
+  available: {
     type: Boolean,
     default: true
   }

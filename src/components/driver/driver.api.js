@@ -28,5 +28,5 @@ router.get('/getNearest',validateLatandLon, authinticate, allowedTo('user'), get
 router.post('/signup', driverValidation, signup, createUser);
 router.get('/verify/:token', emailVerify);
 router.patch('/report/:id', reportDriver);
-
+router.put("/:id",authinticate, allowedTo('user'), updateUser)
 module.exports = router;

@@ -28,13 +28,13 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
   await user.save();
 
   if (req.body.driverLisenceRenewalDate) {
-    const notificationId = createDriverLicenseNotification(req.driverLisenceRenewalDate, user._id);
+    const notificationId = await createDriverLicenseNotification(req.driverLisenceRenewalDate, user._id);
     user.driverLisenceRenewalNotification = notificationId;
     user.save();
   }
 
   if (req.body.car) {
-    createCarForSignup(req.body.car, user._id);
+    await createCarForSignup(req.body.car, user._id);
   }
 
 
@@ -52,7 +52,7 @@ exports.updateUser = catchAsyncErr(async (req, res, next) => {
     if(user.driverLisenceRenewalNotification){
       const notificationId = await updateDriverLicenseNotification(req.body.driverLisenceRenewalDate, user.driverLisenceRenewalNotification)
     }else{
-      const notificationId = createDriverLicenseNotification(req.body.driverLisenceRenewalDate,req.user._id)
+      const notificationId = await createDriverLicenseNotification(req.body.driverLisenceRenewalDate,req.user._id)
       req.body.driverLisenceRenewalNotification = notificationId;
     }
   }

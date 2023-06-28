@@ -52,3 +52,9 @@ socket.on("upload-winch-location", () => {
 socket.on("disconnect", () => {
   console.log("Disconnected from Socket.IO");
 });
+
+test("test", async () => {
+
+  expect(200).toEqual(200)
+
+})

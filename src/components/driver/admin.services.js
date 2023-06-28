@@ -6,8 +6,37 @@ const factory = require("../Handlers/handler.factory")
 const carModel = require("../carModel/carModel.model");
 const requestModel = require("../request/request.model")
 const AppError = require("../../utils/AppError");
+const jwt = require("jsonwebtoken");
+const { sendEmail } = require("../Handlers/email.factory");
+
+exports.getAdmins = catchAsyncErr(async (req, res) => {
+  let admins = await driverModel.find({ role: "admin" });
+  res.status(200).json({ admins });
+});
+
 //add admin
-exports.addAdmin = factory.createOne(driverModel)
+exports.addAdmin = catchAsyncErr(async (req, res, next) => {
+  const role = "admin"
+  const email = req.body.email
+  let isUser = await driverModel.findOne({ email })
+  let model = driverModel
+  if (!isUser) {
+    isUser = await mechanicWorkshopModel.findOne({ email })
+    if (!isUser) {
+      isUser = await winchModel.findOne({ email })
+    }
+  }
+  if (isUser) {
+    return next(new AppError('Email already exists', 409))
+  }
+  let user = new driverModel(req.body);
+  await user.save();
+  user = await driverModel.findOneAndUpdate({ email }, { role }, { new: true })
+  let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
+  await sendEmail({ email, token, message: "Hello" }, model);
+  res.status(200).json(user)
+})
+
 // to get all Users
 exports.getUsers = catchAsyncErr(async (req, res) => {
   let Users = await driverModel.find({});
@@ -52,7 +81,7 @@ exports.tenModelsHadIssues = catchAsyncErr(async (req, res) => {
     if (!modelsHadIssues.hasOwnProperty(carModel)) {
       modelsHadIssues[carModel] = 0;
     }
-    modelsHadIssues[carModel]+=1;
+    modelsHadIssues[carModel] += 1;
   }
   const top10Models = Object.keys(modelsHadIssues)
     .sort((a, b) => modelsHadIssues[b] - modelsHadIssues[a])
@@ -63,10 +92,11 @@ exports.tenModelsHadIssues = catchAsyncErr(async (req, res) => {
 
 //Gender had problem analytic
 exports.getGenderAnalytic = catchAsyncErr(async (req, res, next) => {
-  const document = await driverModel.find();
+  const document = await requestModel.find().populate("driver");
+  console.log(document);
   let driverLength = document.length;
-  let maleLength = document.filter(driver => driver.gender == 'male').length;
-  let femaleLength = document.filter(driver => driver.gender == 'female').length;
+  let maleLength = document.filter(request => request.driver.gender == 'male').length;
+  let femaleLength = document.filter(request => request.driver.gender == 'female').length;
   let maleRatio = maleLength / driverLength;
   let femaleRatio = femaleLength / driverLength;
   res.status(200).json({ maleRatio, femaleRatio });
