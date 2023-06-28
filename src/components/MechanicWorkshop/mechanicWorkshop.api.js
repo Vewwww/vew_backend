@@ -9,6 +9,7 @@ const {
   signup,
   emailVerify,
   authinticate,
+  changePassword
 } = require("./mechanicWorkshop.auth");
 const { allowedTo } = require("../Handlers/auth.factory");
 const {mechanicValidation,validateLatandLon} = require("./mechanicWorkshop.validator");
@@ -22,6 +23,7 @@ router.use("/request", authinticate, allowedTo("mechanic"), requestRoutes);
 router.post("/signup", mechanicValidation, signup, createMechanicWorkshop);
 router.get("/getNearestMechanicWorkshop", validateLatandLon,getNearestMechanicWorkshop);
 router.get("/verify/:token", emailVerify);
+router.use("/changePassword", authinticate, allowedTo("mechanic"), changePassword);
 router.patch("/report/:id", reportMechanic);
 router.patch("/rate/:id", rateMechanic);
 router.get("/",getMechanicWorkshops)
