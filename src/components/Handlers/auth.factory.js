@@ -27,19 +27,19 @@ exports.signup = (model) => {
 exports.login = catchAsyncErr(async (req, res, next) => {
   let user = await driverModel.findOne({ email: req.body.email });
   let modelName = "driver";
-
-  if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
+  if (!user ||!(await bcrypt.compare(req.body.password, user.password))) {
     user = await mechanicWorkshopModel.findOne({ email: req.body.email });
     modelName = "mechanicworkshops";
-    if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
+    if (!user||!(await bcrypt.compare(req.body.password, user.password))) {
       user = await winchModel.findOne({ email: req.body.email });
       modelName = "winches";
-      if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
-        return next(new AppError("incorrect email or password", 401));
+      if (!user||!(await bcrypt.compare(req.body.password, user.password))) {
+        return next(new AppError("incorrect email or password", 401))
+        
       }
     }
   }
-
+  
   let token = jwt.sign({ modelName, userId: user._id }, process.env.JWT_KEY);
 
   if (user.emailConfirm === true) {
