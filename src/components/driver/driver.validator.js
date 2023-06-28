@@ -36,16 +36,29 @@ const validateLocation = Joi.object({
   longitude: Joi.number().required(),
 }).options({ allowUnknown: true });
 
-exports.driverValidation = async (req, res, next) => {
+const validateChangePassword = Joi.object({
+  changedPasswordAt: Joi.date(),
+  password: Joi.string().min(6).trim(true).required(),
+}).
+
+  exports.driverValidation = async (req, res, next) => {
+    const obj = req.body;
+    const { error } = validation.validate(obj);
+    if (error) {
+      console.log(error);
+      return next(new AppError(error.details[0].message, 400));
+    }
+    next();
+  };
+exports.ValidationPassword = async (req, res, next) => {
   const obj = req.body;
-  const { error } = validation.validate(obj);
+  const { error } = validateChangePassword.validate(obj);
   if (error) {
     console.log(error);
     return next(new AppError(error.details[0].message, 400));
   }
   next();
 };
-
 
 exports.validateLatandLon = async (req, res, next) => {
   const obj = req.body;
