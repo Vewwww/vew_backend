@@ -19,12 +19,12 @@ router.use('/request', authinticate, requestRoute);
 router.use('/chat', authinticate, allowedTo('user'), chatRoute);
 router.use('/car', authinticate, allowedTo('user'), carRoute);
 
-router.route('/').put(authinticate, allowedTo('user'), driverValidation, updateUser).get(getDrivers);
+router.route('/').get(getDrivers);
 router.patch('/changePassword/:id', authinticate, allowedTo('user'), changePassword);
 router.get('/search',driverValidateLocation, authinticate, allowedTo('user'), search);
 router.get('/getNearest',driverValidateLocation, authinticate, allowedTo('user'), getNearest);
 router.post('/signup', driverValidation, signup, createUser);
 router.get('/verify/:token', emailVerify);
 router.patch('/report/:id', reportDriver);
-
+router.put("/:id",authinticate, allowedTo('user'), updateUser)
 module.exports = router;
