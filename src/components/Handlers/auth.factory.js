@@ -174,7 +174,7 @@ exports.changePassword = (model) => {
     req.body.changedPasswordAt = Date.now();
     let user = await model.findById(id);
     !user && next(new AppError("User not found", 400));
-    if (user.password == req.body.password) {
+    if (await bcrypt.compare(req.body.password, user.password)) {
       return next(new AppError("This is already your current password", 400));
     }
     user = await model.findByIdAndUpdate(
