@@ -88,10 +88,12 @@ const schema = new mongoose.Schema({
   },
 });
 
-schema.pre("save", async function (next) {
-  this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
-  next();
-});
+schema.pre('save', async function (next) {
+  if(!this.password.startsWith("$")){
+    this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
+  }
+  next()
+})
 schema.pre("findOneAndUpdate", async function () {
   if (!this._update.password) return;
   this._update.password = await bcrypt.hash(

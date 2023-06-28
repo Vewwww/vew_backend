@@ -47,9 +47,6 @@ const schema = mongoose.Schema({
       },
     },
   },
-  driverLisenceRenewalDate: {
-    type: Date,
-  },
   isSuspended: {
     type: Boolean,
     default: false,
@@ -61,7 +58,12 @@ const schema = mongoose.Schema({
   logedIn:{
     type:Boolean,
     default:false
+  },
+  driverLisenceRenewalNotification:{
+    type:mongoose.Types.ObjectId,
+    ref:"notification"
   }
+  
 });
 schema.pre('save', async function (next) {
   if(!this.password.startsWith("$")){

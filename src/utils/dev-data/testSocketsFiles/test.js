@@ -1,14 +1,18 @@
 const io = require("socket.io-client");
-
 const socket = io("http://localhost:3000");
 
+////////////////  listen on connection  /////////////////////////
 socket.on("connect", () => {
   console.log("Connected to Socket.IO");
 });
 
+
+////////////////  Join Room  /////////////////////////
 let data = { room: "1687631416797-240479.68401361819" };
 socket.emit("join-room", data);
 
+
+/////////////////// send  message   /////////////////////
 data = {
   room: "1687631416797-240479.68401361819",
   chatId: "6497364ba7c02af5aef2109a",
@@ -17,10 +21,12 @@ data = {
 };
 socket.emit("send-message", data);
 
+
+////////////////   recieve message  ///////////////////////
 socket.on("recieve-message", (data) => {
   console.log("recieved message from test \ndata is : ", data);
   /*
-  recieved message from test 
+  data clients will recieve will be in this form 
   data is :  {
     room: '1687631416797-240479.68401361819',
     chatId: '6497364ba7c02af5aef2109a',
@@ -30,6 +36,9 @@ socket.on("recieve-message", (data) => {
   } */
 });
 
+
+
+////////////////   upload location  ///////////////////////
 socket.on("upload-winch-location", () => {
   const data = {
     id: "6491cc7dc2b3e3677686ac21",
@@ -39,6 +48,7 @@ socket.on("upload-winch-location", () => {
   socket.emit("update-winch-location", data);
 });
 
+//////////  listen on disconnect ////////////
 socket.on("disconnect", () => {
   console.log("Disconnected from Socket.IO");
 });
