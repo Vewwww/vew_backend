@@ -28,7 +28,7 @@ const validation = Joi.object({
   // longitude: Joi.number(),
 }).options({ allowUnknown: true });
 
-mechanicValidation = async (req, res, next) => {
+exports.mechanicValidation = async (req, res, next) => {
   const obj = req.body;
 
   const { error } = validation.validate(obj);
@@ -39,4 +39,20 @@ mechanicValidation = async (req, res, next) => {
 
   next();
 };
-module.exports = mechanicValidation;
+
+
+
+const validateLocation = Joi.object({
+  latitude: Joi.number().required(),
+  longitude: Joi.number().required(),
+}).options({ allowUnknown: true });
+
+exports.validateLatandLon = async (req, res, next) => {
+  const obj = req.body;
+  const { error } = validateLocation.validate(obj);
+  if (error) {
+    console.log(error);
+    return next(new AppError(error.details[0].message, 400));
+  }
+  next();
+};

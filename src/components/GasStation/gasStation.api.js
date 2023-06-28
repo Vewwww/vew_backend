@@ -1,17 +1,17 @@
-
-const express = require("express");
+const express = require('express');
 const {
   createGasStation,
   getGasStations,
   getGasStation,
   updateGasStation,
-deleteGasStation,
-  getNearestGasStations
-} = require("./gasStation.services");
+  deleteGasStation,
+  getNearestGasStations,
+} = require('./gasStation.services');
 
+const { validateLatandLon } = require('./gasStation.validator');
 const router = express.Router();
-router.get("/getNearestGasStations", getNearestGasStations);
-router.route("/").post(createGasStation).get(getGasStations);
-router.route("/:id").get(getGasStation).put(updateGasStation).delete(deleteGasStation);
+router.get('/getNearestGasStations', validateLatandLon, getNearestGasStations);
+router.route('/').post(createGasStation).get(getGasStations);
+router.route('/:id').get(getGasStation).put(updateGasStation).delete(deleteGasStation);
 
 module.exports = router;
