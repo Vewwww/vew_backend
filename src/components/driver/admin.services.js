@@ -6,8 +6,37 @@ const factory = require("../Handlers/handler.factory")
 const carModel = require("../carModel/carModel.model");
 const requestModel = require("../request/request.model")
 const AppError = require("../../utils/AppError");
+const jwt = require("jsonwebtoken");
+const { sendEmail } = require("../Handlers/email.factory");
+
+exports.getAdmins = catchAsyncErr(async (req, res) => {
+  let admins = await driverModel.find({ role: "admin" });
+  res.status(200).json({ admins });
+});
+
 //add admin
-exports.addAdmin = factory.createOne(driverModel)
+exports.addAdmin = catchAsyncErr(async (req, res, next) => {
+  const role = "admin"
+  const email = req.body.email
+  let isUser = await driverModel.findOne({ email })
+  let model = driverModel
+  if (!isUser) {
+    isUser = await mechanicWorkshopModel.findOne({ email })
+    if (!isUser) {
+      isUser = await winchModel.findOne({ email })
+    }
+  }
+  if (isUser) {
+    return next(new AppError('Email already exists', 409))
+  }
+  let user = new driverModel(req.body);
+  await user.save();
+  user = await driverModel.findOneAndUpdate({ email }, { role }, { new: true })
+  let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
+  await sendEmail({ email, token, message: "Hello" }, model);
+  res.status(200).json(user)
+})
+
 // to get all Users
 exports.getUsers = catchAsyncErr(async (req, res) => {
   let Users = await driverModel.find({});

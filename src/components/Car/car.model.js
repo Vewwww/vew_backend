@@ -34,6 +34,14 @@ const schema = mongoose.Schema({
     owner:{
         type:mongoose.Types.ObjectId,
         ref:"driver"
+    },
+    carLicenseRenewalNotifition:{
+        type:mongoose.Types.ObjectId,
+        ref:"notification"
+    },
+    periodicMaintenanceNotification:{
+        type:mongoose.Types.ObjectId,
+        ref:"notification"
     }
 })
 module.exports = mongoose.model("car",schema)

@@ -24,6 +24,7 @@ exports.signup = (model) => {
   });
 };
 
+
 exports.login = catchAsyncErr(async (req, res, next) => {
   let user = await driverModel.findOne({ email: req.body.email });
   let modelName = "driver";
@@ -55,6 +56,7 @@ exports.emailVerify = (model) => {
   return catchAsyncErr(async (req, res, next) => {
     const { token } = req.params;
     jwt.verify(token, process.env.EMAIL_JWT_KEY, async (err, decoded) => {
+      console.log(decoded);
       if (err) {
         return next(new AppError("invalid token", 401));
       } else {
