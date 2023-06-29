@@ -1,7 +1,7 @@
 const locationModel = require("./location.model");
 const AppErr = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
-const factory=require("../Handlers/handler.factory");
+const factory = require("../Handlers/handler.factory");
 
 //@desc   create location
 //@route  POST /api/v1/location
