@@ -14,7 +14,7 @@ exports.signup = (model) => {
     if (!isUser) {
       isUser = await mechanicWorkshopModel.findOne({ email });
       if (!isUser) {
-        isUser = await mechanicWorkshopModel.findOne({ email });
+        isUser = await winchModel.findOne({ email });
       }
     }
     if (isUser) return next(new AppError('user already exists', 401));
@@ -26,6 +26,7 @@ exports.signup = (model) => {
 
 exports.login = catchAsyncErr(async (req, res, next) => {
   let user = await driverModel.findOne({ email: req.body.email });
+
   let modelName = 'driver';
 
   if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
@@ -36,10 +37,11 @@ exports.login = catchAsyncErr(async (req, res, next) => {
       modelName = 'winches';
       if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
         return next(new AppError('incorrect email or password', 401));
+
       }
     }
   }
-
+  
   let token = jwt.sign({ modelName, userId: user._id }, process.env.JWT_KEY);
 
   if (user.emailConfirm === true) {
@@ -148,9 +150,10 @@ exports.changePassword = (model) => {
     const id = req.user._id;
     req.body.changedPasswordAt = Date.now();
     let user = await model.findById(id);
-    !user && next(new AppError('User not found', 400));
-    if (user.password == req.body.password) {
-      return next(new AppError('This is already your current password', 400));
+    !user && next(new AppError("User not found", 400));
+    if (await bcrypt.compare(req.body.password, user.password)) {
+      return next(new AppError("This is already your current password", 400));
+
     }
     user = await model.findByIdAndUpdate(id, { password: req.body.password }, { new: true });
     res.status(200).json(user);
