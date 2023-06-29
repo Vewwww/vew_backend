@@ -8,9 +8,7 @@ const { getNearestPlaces } = require('../Handlers/getNearestPlaces');
 const io = require('socket.io-client');
 const socket = io(`${process.env.BaseUrl}`);
 
-socket.on('connect', () => {
-  console.log('Connected to Socket.IO');
-});
+socket.on('connect', () => {});
 
 //rate
 exports.rateWinch = factory.rate(winchModel);
@@ -22,6 +20,7 @@ exports.getNearestWinch = catchAsyncErr(async (req, res) => {
   setTimeout(() => {}, 3000);
   const { latitude, longitude } = req.body;
   const winches = await winchModel.find({ available: true }).select('-logedIn -emailConfirm -__v');
+  socket.disconnect();
 
   searchResult = getNearestPlaces(winches, latitude, longitude);
   res.status(200).json({ results: searchResult.length, data: searchResult });
@@ -29,8 +28,7 @@ exports.getNearestWinch = catchAsyncErr(async (req, res) => {
 
 exports.createWinch = catchAsyncErr(async (req, res) => {
   const createdwinch = await winchModel.create(req.body);
-  res.status(200).json({ message: "Verify your email" });
-
+  res.status(200).json({ message: 'Verify your email' });
 });
 
 exports.updateWinchLocation = async (data) => {
@@ -97,7 +95,11 @@ exports.deleteWinch = catchAsyncErr(async (req, res, next) => {
   res.status(204).send();
 });
 exports.updateWinchAvailableState = catchAsyncErr(async (req, res, next) => {
-  const winch = await winchModel.findOneAndUpdate({ _id: req.user._id }, { available: req.body.available });
+  const winch = await winchModel.findOneAndUpdate(
+    { _id: req.user._id },
+    { available: req.body.available },
+    { new: true }
+  );
 
   if (!winch) {
     return next(new AppError('No winch found for this id', 404));
