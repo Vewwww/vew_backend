@@ -11,7 +11,17 @@ const { getNearestPlaces } = require("./getNearestPlaces");
 const winchModel = require("../winch/winch.model");
 const { sendEmail } = require("./email.factory");
 const schedule = require("node-schedule");
+const { Model } = require("mongoose");
+exports.sortOne = (Model) => {
+  return catchAsyncErr(async (req, res) => {
+    const document = await Model.find().sort({ name: - 1 });
 
+
+    res.status(200).json({
+      data: document,
+    });
+  });
+}
 exports.rate = (Model) =>
   catchAsyncErr(async (req, res, next) => {
     const { id } = req.params;
@@ -25,7 +35,7 @@ exports.rate = (Model) =>
     console.log(document.rate, rating);
     // 2 update rates
     console.log(typeof document.rate, typeof rating);
-    console.log(document.numOfRates,typeof document.numOfRates)
+    console.log(document.numOfRates, typeof document.numOfRates)
 
     await Model.findByIdAndUpdate(id, {
       rate:
@@ -33,7 +43,7 @@ exports.rate = (Model) =>
         (document.numOfRates + 1),
       numOfRates: document.numOfRates + 1,
     });
-console.log(document.numOfRates,typeof document.numOfRates)
+    console.log(document.numOfRates, typeof document.numOfRates)
     res.status(204).send();
   });
 
@@ -104,15 +114,16 @@ exports.updateOne = (Model) =>
     });
   });
 
-exports.createOne = (Model) =>{
+exports.createOne = (Model) => {
   return catchAsyncErr(async (req, res) => {
-  const document = await Model.create(req.body);
+    const document = await Model.create(req.body);
 
-  res.status(200).json({
-    data: document,
+    res.status(200).json({
+      data: document,
+    });
   });
-});}
-  
+}
+
 
 exports.getOne = (Model) =>
   catchAsyncErr(async (req, res, next) => {
