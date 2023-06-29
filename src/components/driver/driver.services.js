@@ -1,6 +1,8 @@
 const driverModel = require('./driver.model');
 const AppError = require('../../utils/AppError');
 const { catchAsyncErr } = require('../../utils/CatchAsyncErr');
+const jwt = require('jsonwebtoken');
+const { sendEmail } = require('../Handlers/email.factory');
 const carModel = require('../Car/car.model');
 const factory = require('../Handlers/handler.factory');
 const {
@@ -37,27 +39,42 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
     await createCarForSignup(req.body.car, user._id);
   }
 
-
   res.status(200).json({ message: 'Verify your email' });
 });
 
 // to update specific User
 exports.updateUser = catchAsyncErr(async (req, res, next) => {
-  let user = await driverModel.findOne({_id:req.user._id});
-  if(!user) {
-    next(new AppError('No user found for this id', 404));
+  let user = req.user;
+
+  if (req.body.email) {
+    email = req.body.email;
+    let isUser = await driverModel.findOne({ email });
+    if (!isUser) {
+      isUser = await mechanicWorkshopModel.findOne({ email });
+      if (!isUser) {
+        isUser = await winchModel.findOne({ email });
+      }
+    }
+    if (isUser) return next(new AppError('user with thes email already exists, please change your email', 401));
+    let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
+    await sendEmail({ email, token, message: 'Hello' }, driverModel);
   }
 
-  if(req.body.driverLisenceRenewalDate){
-    if(user.driverLisenceRenewalNotification){
-      const notificationId = await updateDriverLicenseNotification(req.body.driverLisenceRenewalDate, user.driverLisenceRenewalNotification)
-    }else{
-      const notificationId = await createDriverLicenseNotification(req.body.driverLisenceRenewalDate,req.user._id)
+  if (req.body.driverLisenceRenewalDate) {
+    if (user.driverLisenceRenewalNotification) {
+      const notificationId = await updateDriverLicenseNotification(
+        req.body.driverLisenceRenewalDate,
+        user.driverLisenceRenewalNotification
+      );
+    } else {
+      const notificationId = await createDriverLicenseNotification(req.body.driverLisenceRenewalDate, req.user._id);
       req.body.driverLisenceRenewalNotification = notificationId;
     }
   }
 
-  res.status(200).json({data:user});
+  user = await driverModel.findOneAndUpdate({ _id: req.user._id }, req.body, { new: true });
+
+  res.status(200).json({ data: user });
 });
 
 exports.search = catchAsyncErr(async (req, res, next) => {

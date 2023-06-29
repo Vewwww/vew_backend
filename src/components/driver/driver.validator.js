@@ -25,7 +25,7 @@ const validation = Joi.object({
     reportsNumber: Joi.number().default(0),
     dateReport: Joi.date(),
   }),
-  lisenceRenewalDate: Joi.date(),
+  driverLisenceRenewalDate: Joi.date(),
   isSuspended: Joi.boolean().default(false),
   emailConfirm: Joi.boolean().default(false),
   logedIn: Joi.boolean().default(false),
@@ -64,6 +64,32 @@ exports.validateLatandLon = async (req, res, next) => {
   const { error } = validateLocation.validate(obj);
   if (error) {
     console.log(error);
+    return next(new AppError(error.details[0].message, 400));
+  }
+  next();
+};
+
+
+
+
+
+const updateDriverValidation = Joi.object({
+  name: Joi.string().alphanum().min(3).max(15).trim(true).required(),
+  email: Joi.string().email().trim(true).required(),
+  phoneNumber: Joi.string()
+    .length(11)
+    .pattern(/^01\d{9}$/)
+    .trim(),
+  gender: Joi.string().valid('male', 'female'),
+  role: Joi.string().valid('admin', 'user').default('user'),
+  
+}).options({ allowUnknown: true });
+
+
+exports.validateUpdateProfile = async (req, res, next) => {
+  const obj = req.body;
+  const { error } = updateDriverValidation.validate(obj);
+  if (error) {
     return next(new AppError(error.details[0].message, 400));
   }
   next();
