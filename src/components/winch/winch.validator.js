@@ -9,11 +9,7 @@ const validation = Joi.object({
     .length(11)
     .pattern(/^01\d{9}$/)
     .required(),
-  car: Joi.object({
-    carType: Joi.string().required(),
-    color: Joi.string().required(),
-    plateNumber: Joi.string().required(),
-  }).required(),
+  plateNumber: Joi.string().required(),
   report: Joi.number().default(0),
   dateReport: Joi.date(),
   rate: Joi.number().default(4.5),
