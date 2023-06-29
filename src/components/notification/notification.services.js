@@ -20,7 +20,10 @@ exports.createCarLicenseNotification = async (carLicenseRenewalDate, driverId) =
 exports.createCarPeriodicDate = async (lastPeriodicMaintenanceDate, averageMiles, milesLimit, driverId) => {
   let date = new Date(lastPeriodicMaintenanceDate);
   const years = Math.trunc(milesLimit / (averageMiles * 12));
-  const months = Math.floor(milesLimit % (averageMiles * 12));
+  let months = Math.floor(milesLimit % (averageMiles * 12));
+  let str = String(months);
+  const substring = str.slice(0, 2);
+  months = Number(substring);
 
   date.setFullYear(date.getFullYear() + years);
   date.setMonth(date.getMonth() + months);
@@ -57,7 +60,10 @@ exports.updateCarLicenseNotification = async (carLicenseRenewalDate, noficationI
 exports.updateCarPeriodicDate = async (lastPeriodicMaintenanceDate, averageMiles, milesLimit, noficationId) => {
   const date = new Date(lastPeriodicMaintenanceDate);
   const years = Math.trunc(milesLimit / (averageMiles * 12));
-  const months = Math.floor(milesLimit % (averageMiles * 12));
+  let months = Math.floor(milesLimit % (averageMiles * 12));
+  let str = String(months);
+  const substring = str.slice(0, 2);
+  months = Number(substring);
 
   date.setFullYear(date.getFullYear() + years);
   date.setMonth(date.getMonth() + months);
@@ -77,8 +83,8 @@ exports.updateCarPeriodicDate = async (lastPeriodicMaintenanceDate, averageMiles
 
 exports.getNotifications = catchAsyncErr(async (req, res, next) => {
   let newNotifications = false;
-  const { toDayDate } = req.body;
-  const notifications = await notificationModel.findOne({ to: req.user._id, date: { $ls: toDayDate } });
+  const toDay = new Date(req.body.toDay);
+  const notifications = await notificationModel.find({ to: req.user._id, date: { $lt: toDay } });
 
   for (const notification of notifications) {
     if (notification.seen === false) {

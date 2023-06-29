@@ -8,16 +8,17 @@ const {
   updateCarLicenseNotification,
   updateCarPeriodicDate,
 } = require('../notification/notification.services');
+const notificationModel = require('../notification/notification.model');
 
 exports.createCarForSignup = async (car, driverId) => {
   car.owner = driverId;
 
   if (car.carLicenseRenewalDate) {
-    const notificationId =await createCarLicenseNotification(car.carLicenseRenewalDate, driverId);
+    const notificationId = await createCarLicenseNotification(car.carLicenseRenewalDate, driverId);
     car.carLicenseRenewalNotifition = notificationId;
   }
   if (car.lastPeriodicMaintenanceDate && car.averageMilesPerMonth && car.milesLimit) {
-    const notificationId =await createCarPeriodicDate(
+    const notificationId = await createCarPeriodicDate(
       car.lastPeriodicMaintenanceDate && car.averageMilesPerMonth && car.milesLimit,
       driverId
     );
@@ -33,7 +34,9 @@ exports.createCar = catchAsyncErr(async (req, res, next) => {
   }
   if (req.body.lastPeriodicMaintenanceDate && req.body.averageMilesPerMonth && req.body.milesLimit) {
     const notificationId = await createCarPeriodicDate(
-      req.body.lastPeriodicMaintenanceDate && req.body.averageMilesPerMonth && req.body.milesLimit,
+      req.body.lastPeriodicMaintenanceDate,
+      req.body.averageMilesPerMonth,
+      req.body.milesLimit,
       req.body.owner
     );
     req.body.periodicMaintenanceNotification = notificationId;
@@ -58,20 +61,22 @@ exports.updateCar = catchAsyncErr(async (req, res, next) => {
       );
       req.body.carLicenseRenewalNotifition = notificationId;
     } else {
-      const notificationId =await createCarLicenseNotification(req.body.carLicenseRenewalDate, car.owner);
+      const notificationId = await createCarLicenseNotification(req.body.carLicenseRenewalDate, car.owner);
       req.body.carLicenseRenewalNotifition = notificationId;
     }
   }
 
   if (req.body.lastPeriodicMaintenanceDate && req.body.averageMilesPerMonth && req.body.milesLimit) {
     if (car.periodicMaintenanceNotification) {
-      const notificationId =await updateCarPeriodicDate(
-        req.body.lastPeriodicMaintenanceDate && req.body.averageMilesPerMonth && req.body.milesLimit,
+      const notificationId = await updateCarPeriodicDate(
+        req.body.lastPeriodicMaintenanceDate,
+        req.body.averageMilesPerMonth,
+        req.body.milesLimit,
         car.periodicMaintenanceNotification
       );
       req.body.periodicMaintenanceNotification = notificationId;
     } else {
-      const notificationId =await createCarLicenseNotification(
+      const notificationId = await createCarLicenseNotification(
         req.body.lastPeriodicMaintenanceDate && req.body.averageMilesPerMonth && req.body.milesLimit,
         car.owner
       );
@@ -98,13 +103,22 @@ exports.getCar = catchAsyncErr(async (req, res, next) => {
 
 exports.deleteCar = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
-  const deletedCar = await carModel.findOneAndDelete({ _id: id });
-
-  if (!deletedCar) {
+  const car = carModel.findOne({ _id: id });
+  if (!car) {
     return next(new AppError('No car found for this id', 404));
   }
+
+  if (car.carLicenseRenewalNotifition) {
+    await notificationModel.findByIdAndDelete({ _id: car.carLicenseRenewalNotifition });
+  }
+  if (car.periodicMaintenanceNotification) {
+    await notificationModel.findByIdAndDelete({ _id: car.periodicMaintenanceNotification });
+  }
+
+  const deletedCar = await carModel.findOneAndDelete({ _id: id });
   res.status(204).send({ message: 'deleted' });
 });
+
 exports.getCarsOfDriver = catchAsyncErr(async (req, res, next) => {
   const { driverId } = req.params;
   const car = await carModel.find({ owner: driverId });
