@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const schema = mongoose.Schema({
   name: {
-     type: String, 
-     required: [true, "Arabic carType name required"] 
+    type: String,
+    required: [true, "Arabic carType name required"]
   },
-  brand:{
+  brand: {
     type: mongoose.Types.ObjectId,
-    ref:"carType",
+    ref: "carType",
   }
 });
 module.exports = mongoose.model("carModel", schema);
