@@ -14,7 +14,7 @@ exports.signup = (model) => {
     if (!isUser) {
       isUser = await mechanicWorkshopModel.findOne({ email });
       if (!isUser) {
-        isUser = await mechanicWorkshopModel.findOne({ email });
+        isUser = await winchModel.findOne({ email });
       }
     }
     if (isUser) return next(new AppError('user already exists', 401));
@@ -150,7 +150,6 @@ exports.changePassword = (model) => {
     const id = req.user._id;
     req.body.changedPasswordAt = Date.now();
     let user = await model.findById(id);
-
     !user && next(new AppError("User not found", 400));
     if (await bcrypt.compare(req.body.password, user.password)) {
       return next(new AppError("This is already your current password", 400));

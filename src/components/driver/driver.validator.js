@@ -39,11 +39,10 @@ const validateLocation = Joi.object({
 const validateChangePassword = Joi.object({
   changedPasswordAt: Joi.date(),
   password: Joi.string().min(6).trim(true).required(),
-}).
-
-  exports.driverValidation = async (req, res, next) => {
+})
+exports.driverValidation = async (req, res, next) => {
     const obj = req.body;
-    const { error } = validation.validate(obj);
+    const { error } =  validation.validate(obj);
     if (error) {
       console.log(error);
       return next(new AppError(error.details[0].message, 400));

@@ -1,7 +1,7 @@
 const { signup, emailVerify, changePassword, authinticate } = require('./driver.auth');
 const { createUser, updateUser, reportDriver, search, getDrivers, getNearest } = require('./driver.services');
 const { allowedTo } = require('../Handlers/auth.factory');
-const { driverValidation, validateLatandLon, ValidationPassword } = require('./driver.validator');
+const {  validateLatandLon, ValidationPassword,driverValidation } = require('./driver.validator');
 const { getNotifications } = require('../notification/notification.services');
 const maintenanceRoute = require('../MaintenanceCenter/maintenanceCenter.api');
 const mechanicRoute = require('../MechanicWorkshop/mechanicWorkshop.api');
@@ -20,7 +20,7 @@ router.use('/request', authinticate, requestRoute);
 router.use('/chat', authinticate, allowedTo('user'), chatRoute);
 router.use('/car', authinticate, allowedTo('user'), carRoute);
 
-router.route('/').put(authinticate, allowedTo('user'), driverValidation, updateUser).get(getDrivers);
+router.route('/').put(driverValidation,authinticate, allowedTo('user'), updateUser).get(getDrivers);
 router.route('/getNotifications').get(authinticate, allowedTo('user'), getNotifications);
 router.patch('/changePassword', ValidationPassword, authinticate, allowedTo('user'), changePassword);
 router.get('/search', validateLatandLon, authinticate, allowedTo('user'), search);
