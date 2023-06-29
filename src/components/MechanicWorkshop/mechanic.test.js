@@ -4,35 +4,23 @@ const app = 'http://localhost:3000';
 
 const token =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NDliOGRmMzRhYTg0MmU5NjA3ZTQ0OGUiLCJpYXQiOjE2ODgwMTc1ODl9.wW2t-6bDelRv7fGwgAkitpad8qd9PSj4fjb5RqtOdXE';
-
-describe('GET /driver/winch/getNearest', () => {
-  test('get nearest winch availability', async () => {
-    const res = await request(baseURL)
-      .get('/driver/winch/getNearestWinch')
-      .set('Authorization', `Bearer ${token}`)
-      .send({ latitude: 74798263984, longitude: 738294798 })
-      .set('Accept', 'application/json');
-    response.body.data.forEach((element) => {
-      expect(element.available).toBe(true);
-    });
-  });
-
+describe('GET /driver/mechanic/getNearestMechanicWorkshop', () => {
   describe("given a driver's latitude and longitude", () => {
-    test("should respond with a 200 and number of winches it's role is winch", async () => {
+    test("should respond with a 200 and number of mechanics it's role is mechanic", async () => {
       const response = await request(app)
-        .get('/driver/winch/getNearestWinch')
+        .get('/driver/mechanic/getNearestMechanicWorkshop')
         .set('Authorization', `Bearer ${token}`)
         .send({ latitude: 29.9193334, longitude: 30.8864163 });
       expect(response.statusCode).toBe(200);
       response.body.data.forEach((element) => {
-        expect(element.role).toBe('winch');
+        expect(element.role).toBe('mechanic');
       });
     });
   });
   describe('given latitude, and missing longitude', () => {
     test('should respond with a 400 and send message error "longitude" is required', async () => {
       const response = await request(app)
-        .get('/driver/winch/getNearestWinch')
+        .get('/driver/mechanic/getNearestMechanicWorkshop')
         .set('Authorization', `Bearer ${token}`)
         .send({ latitude: 29.9193334 });
       expect(response.statusCode).toBe(400);
@@ -42,11 +30,34 @@ describe('GET /driver/winch/getNearest', () => {
   describe('missing latitude, and given longitude', () => {
     test('should respond with a 400 and send message error "latitude" is required', async () => {
       const response = await request(app)
-        .get('/driver/winch/getNearestWinch')
+        .get('/driver/mechanic/getNearestMechanicWorkshop')
         .set('Authorization', `Bearer ${token}`)
         .send({ longitude: 30.8864163 });
       expect(response.statusCode).toBe(400);
       expect(response.body.err.error).toBe('"latitude" is required');
+    });
+  });
+});
+
+describe('GET /driver/mechanic/getNearestMechanicWorkshop?service=64837b87d4a3c95f4207e9df', () => {
+  describe("given service id query, driver's latitude and longitude", () => {
+    test('should respond with a 200 and number of mechanic workshops provide this service', async () => {
+      const response = await request(app)
+        .get('/driver/mechanic/getNearestMechanicWorkshop')
+        .set('Authorization', `Bearer ${token}`)
+        .query({
+          service: '64837b87d4a3c95f4207e9df',
+        })
+        .send({ latitude: 29.9193334, longitude: 30.8864163 });
+      expect(response.statusCode).toBe(200);
+
+      response.body.data.forEach((element) => {
+        let services = [];
+        for (let i = 0; i < element.service.length; i++) {
+          services.push(element.service[i]._id);
+        }
+        expect(services).toContain('64837b87d4a3c95f4207e9df');
+      });
     });
   });
 });
@@ -60,7 +71,7 @@ describe('POST /mechanic/signup', () => {
         gender: 'male',
       });
       expect(response.statusCode).toBe(400);
-      expect(response.body.err.error.includes('is required')).toBeTruthy();
+      expect(response.body.err.error.includes("is required")).toBeTruthy();
     });
   });
 });

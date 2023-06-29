@@ -7,9 +7,6 @@ require('dotenv').config({ path: './config/.env' });
 const globalMiddlewareErr = require('./src/utils/globalMiddlewareErr');
 const AppErr = require('./src/utils/AppError');
 const { allRequires } = require('./src/utils');
-const { dbConnection } = require('./src/database/dbConnection');
-const { socketConnection } = require('./src/utils/socket-io');
-const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -25,10 +22,4 @@ app.all('/*', (req, res, next) => {
 });
 app.use(globalMiddlewareErr);
 
-dbConnection();
-
-var server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-
-socketConnection(server, cors);
-
-module.exports = server;
+module.exports = app;

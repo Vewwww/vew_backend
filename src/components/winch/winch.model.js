@@ -1,24 +1,24 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const bcrypt = require("bcrypt")
+const bcrypt = require('bcrypt');
 const schema = new mongoose.Schema({
   name: {
     type: String,
-    require: [true, "owner name is required"],
+    require: [true, 'owner name is required'],
   },
   email: {
     type: String,
-    require: [true, "email is required"],
+    require: [true, 'email is required'],
   },
   password: {
     type: String,
-    require: [true, "password is required"],
+    require: [true, 'password is required'],
 
     min: 6,
   },
   phoneNumber: {
     type: String,
-    require: [true, "phone number is required"],
+    require: [true, 'phone number is required'],
   },
 
   report: {
@@ -53,11 +53,11 @@ const schema = new mongoose.Schema({
   location: {
     latitude: {
       type: Number,
-      required: [true, "Latitude required"],
+      required: [true, 'Latitude required'],
     },
     longitude: {
       type: Number,
-      required: [true, "Longitude required"],
+      required: [true, 'Longitude required'],
     },
   },
   logedIn: {
@@ -66,26 +66,25 @@ const schema = new mongoose.Schema({
   },
   role: {
     type: String,
-    default: "winch",
+    default: 'winch',
   },
-
   plateNumber: {
     type: String,
-    required: [true, "plate number required"]
+    required: [true, 'plate number required'],
   },
   available: {
     type: Boolean,
-    default: true
-  }
+    default: true,
+  },
 });
 schema.pre('save', async function (next) {
-  if(!this.password.startsWith("$")){
+  if (!this.password.startsWith('$')) {
     this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
   }
-  next()
-})
+  next();
+});
 schema.pre('findOneAndUpdate', async function () {
   if (!this._update.password) return;
   this._update.password = await bcrypt.hash(this._update.password, Number(process.env.ROUND));
-})
-module.exports = mongoose.model("winch", schema);
+});
+module.exports = mongoose.model('winch', schema);

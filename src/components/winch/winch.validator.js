@@ -28,7 +28,7 @@ exports.winchValidation = async (req, res, next) => {
 
   const { error } = validation.validate(obj);
   if (error) {
-    console.log(error);
+    // console.log(error);
     return next(new AppError(error.details[0].message, 400));
   }
   next();
@@ -43,7 +43,7 @@ exports.validateLatandLon = async (req, res, next) => {
   const obj = req.body;
   const { error } = validateLocation.validate(obj);
   if (error) {
-    console.log(error);
+    // console.log(error);
     return next(new AppError(error.details[0].message, 400));
   }
   next();
