@@ -12,6 +12,7 @@ const winchModel = require("../winch/winch.model");
 const { sendEmail } = require("./email.factory");
 const schedule = require("node-schedule");
 const { Model } = require("mongoose");
+
 exports.sortOne = (Model) => {
   return catchAsyncErr(async (req, res) => {
     const document = await Model.find().sort({ name: - 1 });

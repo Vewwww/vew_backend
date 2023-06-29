@@ -3,7 +3,7 @@ const modelsModel = require("./carModel.model");
 const factory = require("../Handlers/handler.factory");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 
-exports.sortCarModel = factory.sortOne(modelsModel);
+
 
 exports.createModel = factory.createOne(modelsModel)
 
@@ -12,7 +12,7 @@ exports.getModel = factory.getOne(modelsModel);
 
 exports.getModelOfBrand = catchAsyncErr(async (req, res, next) => {
   const { brandId } = req.params;
-  const document = await modelsModel.find({ brand: brandId });
+  const document = await modelsModel.find({ brand: brandId }).sort({ name: -1 });;
   if (!document) {
     return next(new AppError(`No document found for this id ${id}`, 400));
   }
