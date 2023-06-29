@@ -137,3 +137,13 @@ exports.getDrivers = catchAsyncErr(async (req, res) => {
   let Users = await driverModel.find({ role: 'user' });
   res.status(200).json({ Users });
 });
+
+exports.getProfile = catchAsyncErr(async (req, res) => {
+  const cars = await carModel.find({ owner: req.user._id });
+  delete req.user.password;
+  delete req.user.isSuspended;
+  delete req.user.emailConfirm;
+  delete req.user.logedIn;
+  delete req.user.passwordReset;
+  res.status(200).json({ data: { user: req.user, cars } });
+});

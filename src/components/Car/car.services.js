@@ -19,7 +19,7 @@ exports.createCarForSignup = async (car, driverId) => {
   }
   if (car.lastPeriodicMaintenanceDate && car.averageMilesPerMonth && car.milesLimit) {
     const notificationId = await createCarPeriodicDate(
-      car.lastPeriodicMaintenanceDate && car.averageMilesPerMonth && car.milesLimit,
+      car.lastPeriodicMaintenanceDate , car.averageMilesPerMonth , car.milesLimit,
       driverId
     );
     car.periodicMaintenanceNotification = notificationId;
@@ -77,7 +77,7 @@ exports.updateCar = catchAsyncErr(async (req, res, next) => {
       req.body.periodicMaintenanceNotification = notificationId;
     } else {
       const notificationId = await createCarLicenseNotification(
-        req.body.lastPeriodicMaintenanceDate && req.body.averageMilesPerMonth && req.body.milesLimit,
+        req.body.lastPeriodicMaintenanceDate , req.body.averageMilesPerMonth , req.body.milesLimit,
         car.owner
       );
       req.body.periodicMaintenanceNotification = notificationId;
