@@ -139,10 +139,10 @@ exports.getSeasonsAnalytics = catchAsyncErr(async (req, res, next) => {
 
 
 exports.getProfile = catchAsyncErr(async (req, res) => {
-  delete req.user.password
-  delete req.user.isSuspended
-  delete req.user.emailConfirm
-  delete req.user.logedIn
-  delete req.user.passwordReset
+  delete req.user._doc.password
+  delete req.user._doc.isSuspended
+  delete req.user._doc.emailConfirm
+  delete req.user._doc.logedIn
+  delete req.user._doc.passwordReset
   res.status(200).json({ data: req.user  });
 });

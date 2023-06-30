@@ -24,11 +24,11 @@ const schema = mongoose.Schema({
     },
     latitude: {
       type: Number,
-      required: [true, "Latitude required"],
+      require: [true, "Latitude required"],
     },
     longitude: {
       type: Number,
-      required: [true, "Longitude required"],
+      require: [true, "Longitude required"],
     },
   },
   isVerified: {

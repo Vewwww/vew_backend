@@ -3,8 +3,8 @@ const AppError = require('../../utils/AppError');
 
 const validation = Joi.object({
   name: {
-    ar: Joi.string().alphanum().min(3).trim(true).allow(" ,.'").required(),
-    en: Joi.string().alphanum().min(3).trim(true).allow(" ,.'").required(),
+    ar: Joi.string().min(3).trim(true).allow(" ,.'").required(),
+    en: Joi.string().min(3).trim(true).allow(" ,.'").required(),
   },
   phoneNumber: Joi.string().required(),
   carType: Joi.array().items(Joi.string()),

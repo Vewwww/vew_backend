@@ -26,9 +26,6 @@ router.route("/getMechanicUpcomingRequests").get(getMechanicUpcomingRequests);
 router.route("/geteMchanicAcceptedRequests").get(geteMchanicAcceptedRequests);
 
 //////////////////    Driver    ///////////////////
-router.route("/").post(createRequest)
-router.get("/getDriverPendingRequests", getDriverPendingRequests);
-router.get("/getDriverCurrentRequests", getDriverCurrentRequests);
-router.get("/previousRequests",getPreviousRequests)
+
 
 module.exports = router
