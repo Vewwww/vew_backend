@@ -1,5 +1,5 @@
 const io = require("socket.io-client");
-const socket = io("http://localhost:3000");
+const socket = io("https://vewwwapi.onrender.com");
 
 ////////////////  listen on connection  /////////////////////////
 socket.on("connect", () => {
@@ -16,8 +16,8 @@ socket.emit("join-room", data);
 data = {
   room: "1687631416797-240479.68401361819",
   chatId: "6497364ba7c02af5aef2109a",
-  sender: "648c8d9ce31d042b0c52b9fa",
-  content: "hello this message from test file .js",
+  sender: "649175b525cc8139f3affd4f",
+  content: "t3aaliii ?",
 };
 socket.emit("send-message", data);
 
@@ -52,9 +52,3 @@ socket.on("upload-winch-location", () => {
 socket.on("disconnect", () => {
   console.log("Disconnected from Socket.IO");
 });
-
-test("test", async () => {
-
-  expect(200).toEqual(200)
-
-})

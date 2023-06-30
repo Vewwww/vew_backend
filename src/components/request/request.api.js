@@ -10,6 +10,7 @@ const {
   getDriverPendingRequests,
   getDriverCurrentRequests,
   getPreviousRequests,
+  endRequest
 } = require("./request.services");
 const { authinticate } = require("../driver/driver.auth");
 const router = express.Router();
@@ -30,5 +31,7 @@ router.route("/").post(createRequest)
 router.get("/getDriverPendingRequests", getDriverPendingRequests);
 router.get("/getDriverCurrentRequests", getDriverCurrentRequests);
 router.get("/previousRequests",getPreviousRequests)
+
+router.get("/endRequest/:id", endRequest)
 
 module.exports = router

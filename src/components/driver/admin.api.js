@@ -8,6 +8,7 @@ const {
   getUser,
   getAdmins,
   getProfile,
+  getTopRoadsHadIssue
 } = require('./admin.services');
 const { authinticate, emailVerify } = require('../driver/driver.auth');
 const { allowedTo } = require('../Handlers/auth.factory');
@@ -19,8 +20,9 @@ const driverRoute = require('./driver.api');
 const winchRoute = require('../winch/winch.api');
 
 const router = require('express').Router();
-
-router.use('/maintenanceCenter', authinticate, allowedTo('admin'), maintenanceRoute);
+ 
+router.route('/maintenanceCenter').post(  maintenanceValidation, authinticate, allowedTo('admin'), createMaintenanceCenter).get( authinticate, allowedTo('admin'),getMaintenanceCenters);;
+router.route("/:id").get(getMaintenanceCenter).put(updateMaintenanceCenter).delete(deleteMaintenanceCenter);
 router.use('/gasStation', authinticate, allowedTo('admin'), gasStationRoute);
 router.use('/mechanic', authinticate, allowedTo('admin'), mechanicRoute);
 router.use('/driver', authinticate, allowedTo('admin'), driverRoute);
@@ -34,6 +36,7 @@ router.route('/userStatistics').get(authinticate, allowedTo('admin'), userStatis
 router.get('/genderAnalytics', authinticate, allowedTo('admin'), getGenderAnalytic);
 router.get('/topModelsHadIssues', authinticate, allowedTo('admin'), tenModelsHadIssues);
 router.get('/seasonsAnalytics', authinticate, allowedTo('admin'), getSeasonsAnalytics);
+router.get('/roadsAnalytics', authinticate, allowedTo('admin'), getTopRoadsHadIssue);
 router.route('/:id').get(authinticate, allowedTo('admin'), getUser);
 
 module.exports = router;

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 //isactive false | accepted false      || pending request [user]  || upcoming request [mechanic]
 //isActive true  | accepted true       || current request [user]  || Accepted request
@@ -14,27 +14,24 @@ const schema = new mongoose.Schema({
   },
   service: {
     type: mongoose.Types.ObjectId,
-    ref: "service",
+    ref: 'service',
   },
-  driver: { type: mongoose.Types.ObjectId, ref: "driver" },
-  car: { type: mongoose.Types.ObjectId, ref: "car" },
-  mechanic: { type: mongoose.Types.ObjectId, ref: "mechanicWorkshop" },
-  winch: { type: mongoose.Types.ObjectId, ref: "winch" },
+  driver: { type: mongoose.Types.ObjectId, ref: 'driver' },
+  car: { type: mongoose.Types.ObjectId, ref: 'car' },
+  mechanic: { type: mongoose.Types.ObjectId, ref: 'mechanicWorkshop' },
+  winch: { type: mongoose.Types.ObjectId, ref: 'winch' },
   location: {
-    description: {
-      ar: { type: String, default: "no arabic location description available" },
-      en: {
-        type: String,
-        default: "no english location description available",
-      },
+    road: {
+      type: String,
+      required: [true, 'road name required'],
     },
     latitude: {
       type: Number,
-      required: [true, "Latitude required"],
+      required: [true, 'Latitude required'],
     },
     longitude: {
       type: Number,
-      required: [true, "Longitude required"],
+      required: [true, 'Longitude required'],
     },
   },
   created_at: {
@@ -47,5 +44,5 @@ const schema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("request", schema);
+module.exports = mongoose.model('request', schema);
 //car,location,rideid,winch or mechanic id,accepted
