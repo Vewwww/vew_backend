@@ -62,20 +62,20 @@ exports.getMechanicWorkshops = catchAsyncErr(async (req, res, next) => {
 //get specific mechanic with id
 
 exports.getMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
-  const { id } = req.params;
+  const id = req.user._id;
   const mechanic = await mechanicModel.findById(id);
   if (!mechanic) {
     return next(new AppError("No mechanic found for this id", 404));
   }
   res.status(200).json({
     status: "success",
-    data: mechanic,
+    data: req.user,
   });
 });
 
 // update specific mechanic with id
 exports.updateMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
-  const { id } = req.params;
+  const id = req.user._id;
   const mechanic = req.body;
   const updatedMechanic = await mechanicModel.findOneAndUpdate(
     { _id: id },

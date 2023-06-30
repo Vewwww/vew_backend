@@ -1,16 +1,12 @@
 const {
   getNearestMechanicWorkshop,
   createMechanicWorkshop,
-  reportMechanic,
-  rateMechanic,
   getMechanicWorkshops,
 } = require('./mechanicWorkshop.services');
 const { signup, emailVerify, authinticate, changePassword } = require('./mechanicWorkshop.auth');
 const { allowedTo } = require('../Handlers/auth.factory');
 const { mechanicValidation, validateLatandLon } = require('./mechanicWorkshop.validator');
-const requestRoutes = require('../request/request.api');
 const router = require('express').Router();
-const chatRoute = require('../chat/chat.api');
 const {
   endRequest,
   acceptMechanicRequest,
@@ -24,6 +20,8 @@ router.post('/signup', mechanicValidation, signup, createMechanicWorkshop);
 router.get('/getNearestMechanicWorkshop', validateLatandLon, getNearestMechanicWorkshop);
 router.get('/verify/:token', emailVerify);
 router.patch('/changePassword', authinticate, allowedTo('mechanic'), changePassword);
+router.get('/getMechanicProfile', authinticate, allowedTo('mechanic'), getMechanicWorkshops);
+router.patch('/updateMechanicProfile', authinticate, allowedTo('mechanic'), updateMechanicWorkshop);
 
 /////////////////////////   Chat    ////////////////////////////
 router.get('/chat', authinticate, allowedTo('mechanic'), getUserChats);

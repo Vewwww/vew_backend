@@ -11,7 +11,7 @@ exports.getDriverCurrentRequests = catchAsyncErr(async (req, res) => {
     isActive: true,
     accepted: true,
     driver: req.user._id,
-  });
+  }).populate("service").populate("driver").populate("mechanic").populate("winch").populate("car");
   res.statu(200).json({ data: document });
 });
 
@@ -21,11 +21,11 @@ exports.getDriverPendingRequests = catchAsyncErr(async (req, res) => {
     isActive: false,
     accepted: false,
     driver: req.user._id,
-  });
+  }).populate("service").populate("driver").populate("mechanic").populate("winch").populate("car");
   res.status(200).json({ data: document });
 });
 exports.getPreviousRequests = catchAsyncErr(async (req, res) => {
-  const requests = await RequestModel.find({ isActive: false, accepted: true, driver: req.user._id });
+  const requests = await RequestModel.find({ isActive: false, accepted: true, driver: req.user._id, }).populate("service").populate("driver").populate("mechanic").populate("winch").populate("car");
   res.status(200).json({ previousRequests: requests });
 });
 
