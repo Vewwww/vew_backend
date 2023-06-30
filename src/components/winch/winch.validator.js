@@ -16,8 +16,8 @@ const validation = Joi.object({
   isSuspended: Joi.boolean(),
   emailConfirm: Joi.boolean(),
   location: Joi.object({
-    latitude: Joi.number(),
-    longitude: Joi.number(),
+    latitude: Joi.number().required(),
+    longitude: Joi.number().required(),
   }),
   logedIn: Joi.boolean().default(false),
   role: Joi.string().default('winch'),

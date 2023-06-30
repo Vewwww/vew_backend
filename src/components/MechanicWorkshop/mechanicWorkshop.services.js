@@ -14,9 +14,9 @@ exports.reportMechanic = factory.report(mechanicModel);
 //create new service
 exports.createMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   const location = await LocationModel.create({
-    latitude: req.body.latitude,
-    longitude: req.body.longitude,
-    description: req.body.description,
+    latitude: req.body.location.latitude,
+    longitude: req.body.location.longitude,
+    description: req.body.location.description,
   });
   delete req.body.latitude;
   delete req.body.longitude;
