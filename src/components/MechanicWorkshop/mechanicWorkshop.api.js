@@ -4,6 +4,7 @@ const {
   reportMechanic,
   rateMechanic,
   getMechanicWorkshops,
+  updateMechanicWorkshop,
 } = require("./mechanicWorkshop.services");
 const {
   signup,
@@ -24,5 +25,6 @@ router.post("/signup", mechanicValidation, signup, createMechanicWorkshop);
 router.get("/getNearestMechanicWorkshop", validateLatandLon, getNearestMechanicWorkshop);
 router.get("/verify/:token", emailVerify);
 router.patch("/changePassword", authinticate, allowedTo("mechanic"), changePassword);
-
+router.get('/getMechanicProfile', authinticate, allowedTo('mechanic'), getMechanicWorkshops);
+router.patch('/updateMechanicProfile', authinticate, allowedTo('mechanic'), updateMechanicWorkshop);
 module.exports = router;

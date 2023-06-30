@@ -11,7 +11,7 @@ exports.getDriverCurrentRequests = catchAsyncErr(async (req, res) => {
     isActive: true,
     accepted: true,
     driver: req.user._id,
-  });
+  }).populate("service").populate("driver").populate("mechanic").populate("winch").populate("car");
   res.statu(200).json({ data: document });
 });
 
@@ -21,11 +21,11 @@ exports.getDriverPendingRequests = catchAsyncErr(async (req, res) => {
     isActive: false,
     accepted: false,
     driver: req.user._id,
-  });
+  }).populate("service").populate("driver").populate("mechanic").populate("winch").populate("car");
   res.status(200).json({ data: document });
 });
-exports.getPreviousRequests=catchAsyncErr(async(req,res)=>{
-  const requests = await RequestModel.find({isActive: false,accepted: true,driver: req.user._id,});
+exports.getPreviousRequests = catchAsyncErr(async (req, res) => {
+  const requests = await RequestModel.find({ isActive: false, accepted: true, driver: req.user._id, }).populate("service").populate("driver").populate("mechanic").populate("winch").populate("car");
   res.status(200).json({ previousRequests: requests });
 })
 
@@ -59,7 +59,7 @@ exports.getMechanicPendingRequests = catchAsyncErr(async (req, res, next) => {
 
 ///////////////   MECHANIC    ////////////////////
 exports.acceptMechanicRequest = catchAsyncErr(async (req, res, next) => {
-  const {driverId}= req.body
+  const { driverId } = req.body
   let request = RequestModel.findOne({
     driver: driverId,
     mechanic: req.user._id,
@@ -134,7 +134,7 @@ exports.geteMchanicAcceptedRequests = catchAsyncErr(async (req, res, next) => {
 
 //////////////////    WINCH    ///////////////////
 exports.acceptWinchRequest = catchAsyncErr(async (req, res, next) => {
-  const {driverId}= req.body
+  const { driverId } = req.body
   let request = RequestModel.findOne({
     driver: driverId,
     winch: req.user._id,
