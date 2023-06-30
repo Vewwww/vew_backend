@@ -24,8 +24,14 @@ const validation = Joi.object({
   isSuspended: Joi.boolean().default(false),
   emailConfirm: Joi.boolean().default(false),
   logedIn: Joi.boolean().default(false),
-  // latitude: Joi.number(),
-  // longitude: Joi.number(),
+  location:Joi.object({
+    description: {
+      ar:Joi.string() ,
+      en:Joi.string() ,
+    },
+    latitude: Joi.number().required(),
+  longitude: Joi.number().required()
+  })
 }).options({ allowUnknown: true });
 
 exports.mechanicValidation = async (req, res, next) => {
