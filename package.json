@@ -1,13 +1,14 @@
 {
   "name": "vewww",
   "version": "1.0.0",
-  "description": "",
+  "description": "will be edited",
   "main": "app.js",
   "scripts": {
     "test": "jest --testTimeout=10000",
     "build": "npm install && npm run build",
     "start:dev": "nodemon server.js",
-    "test-specific-file": "jest src/components/driver/driver.test.js"
+    "test-specific-file": "jest src/components/driver/driver.test.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -48,5 +49,13 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vewwww/vew_backend-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vewwww/vew_backend-/issues"
+  },
+  "homepage": "https://github.com/Vewwww/vew_backend-#readme"
 }

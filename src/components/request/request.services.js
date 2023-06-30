@@ -47,20 +47,20 @@ exports.createfilterObject = catchAsyncErr((req, res, next) => {
 //isActive true  | accepted true       || current request [user]  || Accepted request
 //isactive false | accepted true       || previos request [user]  ||
 
-//protectedRoute
+// protectedRoute
 exports.getMechanicPendingRequests = catchAsyncErr(async (req, res, next) => {
   const upcomingRequests = await RequestModel.find({
     isActive: false,
     accepted: false,
     mechanist: req.user._id,
   });
-  res.statu(200).json({ data: upcomingRequests });
+  res.status(200).json({ data: upcomingRequests });
 });
 
 exports.endRequest = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
   const request = await RequestModel.findOneAndUpdate(
-    { _id, id },
+    { _id: id },
     {
       isActive: false,
       accepted: true,
@@ -71,29 +71,28 @@ exports.endRequest = catchAsyncErr(async (req, res, next) => {
   if (!request) {
     return next(new AppErr('No request found for this driver and mechanic', 404));
   }
-  res.statu(200).json({ message: 'request has been end successfuly' });
+  res.status(200).json({ message: 'request has been end successfuly' });
 });
 
 ///////////////   MECHANIC    ////////////////////
 exports.acceptMechanicRequest = catchAsyncErr(async (req, res, next) => {
-  const { driverId } = req.body;
-  let request = RequestModel.findOne({
-    driver: driverId,
-    mechanic: req.user._id,
+  const { id } = req.params;
+  let request =await RequestModel.findOne({
+    _id: id,
   })
     .populate({ path: 'service' })
     .populate({ path: 'driver' })
     .populate({ path: 'car' })
     .populate({ path: 'mechanic' });
   if (!request) {
-    return next(new AppErr('No request found for this driver and mechanic', 404));
+    return next(new AppErr('No request found for this id', 404));
   }
 
-  reqest.isActive = true;
+  request.isActive = true;
   request.accepted = true;
   await request.save();
 
-  const chat = await createChat(driverId, req.user._id);
+  const chat = await createChat(request.driver, req.user._id);
   if (!chat) {
     reqest.isActive = false;
     request.accepted = false;
@@ -107,7 +106,7 @@ exports.acceptMechanicRequest = catchAsyncErr(async (req, res, next) => {
 exports.getMechanicUpcomingRequests = catchAsyncErr(async (req, res, next) => {
   const newRequests = false;
 
-  const upcomingRequests = await RequestModel.findOne({
+  const upcomingRequests = await RequestModel.find({
     isActive: false,
     accepted: false,
     mechanic: req.user._id,
@@ -117,19 +116,19 @@ exports.getMechanicUpcomingRequests = catchAsyncErr(async (req, res, next) => {
     .populate({ path: 'car' })
     .populate({ path: 'mechanic' });
 
-  for (request of upcomingRequests) {
+  for (let request of upcomingRequests) {
     if (request.isSeen === false) {
       request.isSeen = true;
-      await requset.save();
+      await request.save();
       newRequests = true;
     }
   }
 
-  res.statu(200).json({ newRequests, data: upcomingRequests });
+  res.status(200).json({ newRequests, data: upcomingRequests });
 });
 
 exports.geteMchanicAcceptedRequests = catchAsyncErr(async (req, res, next) => {
-  const acceptedRequests = await RequestModel.findOne({
+  const acceptedRequests = await RequestModel.find({
     isActive: true,
     accepted: true,
     mechanic: req.user._id,
@@ -144,24 +143,20 @@ exports.geteMchanicAcceptedRequests = catchAsyncErr(async (req, res, next) => {
 
 //////////////////    WINCH    ///////////////////
 exports.acceptWinchRequest = catchAsyncErr(async (req, res, next) => {
-  const { driverId } = req.body;
-  let request = RequestModel.findOne({
-    driver: driverId,
-    winch: req.user._id,
-  })
-    .populate({ path: 'service' })
+  const { id } = req.params;
+  let request = await RequestModel.findById(id)
     .populate({ path: 'driver' })
     .populate({ path: 'car' })
     .populate({ path: 'winch' });
   if (!request) {
-    return next(new AppErr('No request found for this driver and winch', 404));
+    return next(new AppErr('No request found for this id', 404));
   }
 
-  reqest.isActive = true;
+  request.isActive = true;
   request.accepted = true;
-  await request.save();
 
-  const chat = await createChat(driverId, req.user._id);
+
+  const chat = await createChat(request.driver, req.user._id);
   if (!chat) {
     reqest.isActive = false;
     request.accepted = false;
@@ -175,37 +170,34 @@ exports.acceptWinchRequest = catchAsyncErr(async (req, res, next) => {
 exports.getWinchUpcomingRequests = catchAsyncErr(async (req, res, next) => {
   let newRequests = false;
 
-  const upcomingRequests = await RequestModel.findOne({
+  const upcomingRequests = await RequestModel.find({
     isActive: false,
     accepted: false,
     winch: req.user._id,
   })
-    .populate({ path: 'service' })
     .populate({ path: 'driver' })
     .populate({ path: 'car' })
     .populate({ path: 'winch' });
 
-  for (request of upcomingRequests) {
+  for (let request of upcomingRequests) {
     if (request.isSeen === false) {
       request.isSeen = true;
-      await requset.save();
+      await request.save();
       newRequests = true;
     }
   }
 
-  res.statu(200).json({ newRequests, data: upcomingRequests });
+  res.status(200).json({ newRequests, data: upcomingRequests });
 });
 
 exports.getWinchAcceptedRequests = catchAsyncErr(async (req, res, next) => {
-  const acceptedRequests = await RequestModel.findOne({
+  const acceptedRequests = await RequestModel.find({
     isActive: true,
     accepted: true,
     winch: req.user._id,
-  })
-    .populate({ path: 'service' })
-    .populate({ path: 'driver' })
-    .populate({ path: 'car' })
-    .populate({ path: 'winch' });
+  }).populate({ path: 'driver' })
+  .populate({ path: 'car' })
+  .populate({ path: 'winch' });
 
   res.status(200).json({ data: acceptedRequests });
 });

@@ -41,7 +41,7 @@ exports.login = catchAsyncErr(async (req, res, next) => {
       }
     }
   }
-  
+
   let token = jwt.sign({ modelName, userId: user._id }, process.env.JWT_KEY);
 
   if (user.emailConfirm === true) {

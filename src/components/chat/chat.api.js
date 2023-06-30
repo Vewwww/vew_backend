@@ -7,6 +7,6 @@ const {
 
 const router = express.Router();
 
-router.route("/").post(createChatCrud).get(getUserChats);
-router.route("/:id").delete(deleteChat);
+
+
 module.exports = router;

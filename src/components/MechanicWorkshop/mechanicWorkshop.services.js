@@ -1,21 +1,22 @@
 const mechanicModel = require("./mechanicWorkshop.model");
-const AppErr = require("../../utils/AppError");
+const LocationModel = require("../location/location.model");
+
+const AppError = require("../../utils/AppError");
 const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
 const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
 const factory = require("../Handlers/handler.factory");
-
 //rate
-exports.rateMechanic=factory.rate(mechanicModel);
+exports.rateMechanic = factory.rate(mechanicModel);
 
 //report
-exports.reportMechanic=factory.report(mechanicModel);
+exports.reportMechanic = factory.report(mechanicModel);
 
 //create new service
 exports.createMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   const location = await LocationModel.create({
-    latitude: req.body.latitude,
-    longitude: req.body.longitude,
-    description: req.body.description,
+    latitude: req.body.location.latitude,
+    longitude: req.body.location.longitude,
+    description: req.body.location.description,
   });
   delete req.body.latitude;
   delete req.body.longitude;

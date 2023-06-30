@@ -7,12 +7,14 @@ const { catchAsyncErr } = require("./CatchAsyncErr");
 
 exports.resizeImage = catchAsyncErr(async (req, res, next) => {
   const fileName = `sign-${uuidv4()}-${Date.now()}.jpeg`;
+  console.log(req.file);
+  console.log(fileName);
   if (req.file) {
     await sharp(req.file.buffer)
       .resize(600, 600)
       .toFormat('jpeg')
       .jpeg({ quality: 90 })
-      .toFile(`uploads/signs/${fileName}`);
+      .toFile(`public/signs/${fileName}`);
 
     req.body.image = fileName;
   }

@@ -7,4 +7,5 @@ router.route("/").post(authinticate, allowedTo("admin"), createModel).get(getMod
 router.route("/:brandId").get(getModelOfBrand)
 router.route("/:id").get(getModel)
 
+
 module.exports = router;

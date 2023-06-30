@@ -12,9 +12,8 @@ const {
 } = require("./maintenanceCenter.services");
 
 const router = express.Router();
-router.route("/getNearestMaintenanceCenters").get(validateLatandLon,getNearestMaintenanceCenters);
-router.route("/").post( maintenanceValidation, createMaintenanceCenter).get(getMaintenanceCenters);
-router.route("/:id").get(getMaintenanceCenter).put(updateMaintenanceCenter).delete(deleteMaintenanceCenter);
+
+// router.route("/:id").get(getMaintenanceCenter);
 
 
 

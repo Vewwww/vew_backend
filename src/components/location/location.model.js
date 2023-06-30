@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const schema = new mongoose.Schema({
   description: {
-    ar: { type: String},
-    en: { type: String},
+    ar: { type: String },
+    en: { type: String },
   },
   latitude: {
     type: Number,

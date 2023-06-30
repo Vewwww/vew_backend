@@ -154,16 +154,20 @@ exports.getTopRoadsHadIssue = catchAsyncErr(async (req, res) => {
     topRoadsHadIssue[request.location.road] += 1;
   }
 
-  topRoadsHadIssue = topRoadsHadIssue.sort((a, b) => topRoadsHadIssue[b] - topRoadsHadIssue[a]).slice(0, 20);
+  console.log(topRoadsHadIssue)
+  topRoadsHadIssue = Object.entries(topRoadsHadIssue).sort((a, b) => topRoadsHadIssue[b] - topRoadsHadIssue[a]).slice(0, 20);
+  for (const element of topRoadsHadIssue) {
+    topRoadsHadIssue[element[0]] = element[1];
+  }
 
   res.status(200).json(topRoadsHadIssue);
 });
 
 exports.getProfile = catchAsyncErr(async (req, res) => {
-  delete req.user.password;
-  delete req.user.isSuspended;
-  delete req.user.emailConfirm;
-  delete req.user.logedIn;
-  delete req.user.passwordReset;
-  res.status(200).json({ data: req.user });
+  delete req.user._doc.password
+  delete req.user._doc.isSuspended
+  delete req.user._doc.emailConfirm
+  delete req.user._doc.logedIn
+  delete req.user._doc.passwordReset
+  res.status(200).json({ data: req.user  });
 });

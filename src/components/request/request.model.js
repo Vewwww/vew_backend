@@ -23,15 +23,15 @@ const schema = new mongoose.Schema({
   location: {
     road: {
       type: String,
-      required: [true, 'road name required'],
+      require: [true, 'road name required'],
     },
     latitude: {
       type: Number,
-      required: [true, 'Latitude required'],
+      require: [true, "Latitude required"],
     },
     longitude: {
       type: Number,
-      required: [true, 'Longitude required'],
+      require: [true, "Longitude required"],
     },
   },
   created_at: {

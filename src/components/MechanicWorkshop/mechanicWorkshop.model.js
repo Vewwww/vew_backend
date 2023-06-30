@@ -71,11 +71,11 @@ const schema = new mongoose.Schema({
     },
     latitude: {
       type: Number,
-      required: [true, "Latitude required"],
+      require: [true, "Latitude required"],
     },
     longitude: {
       type: Number,
-      required: [true, "Longitude required"],
+      require: [true, "Longitude required"],
     },
   },
   logedIn: {
@@ -89,7 +89,7 @@ const schema = new mongoose.Schema({
 });
 
 schema.pre('save', async function (next) {
-  if(!this.password.startsWith("$")){
+  if (!this.password.startsWith("$")) {
     this.password = await bcrypt.hash(this.password, Number(process.env.ROUND));
   }
   next()
