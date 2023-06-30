@@ -10,8 +10,7 @@ const {
 
 const { validateLatandLon } = require('./gasStation.validator');
 const router = express.Router();
-router.get('/getNearestGasStations', validateLatandLon, getNearestGasStations);
-router.route('/').post(createGasStation).get(getGasStations);
-router.route('/:id').get(getGasStation).put(updateGasStation).delete(deleteGasStation);
+
+// router.route('/:id').get(getGasStation)
 
 module.exports = router;

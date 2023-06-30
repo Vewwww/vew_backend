@@ -7,11 +7,9 @@ const {
   deleteCarType,
   sortCarType,
 } = require("./carBrand.services");
-const { authinticate } = require("../driver/driver.auth")
-const { allowedTo } = require("../Handlers/auth.factory");
 const router = express.Router();
 router.route("/sort").get(sortCarType);
-router.route("/").post(authinticate, allowedTo("admin"), createCarType).get(sortCarType);
-router.route("/:id").get(getCarType).put(authinticate, allowedTo("admin"), updateCarType).delete(authinticate, allowedTo("admin"), deleteCarType);
+router.route("/").post(createCarType).get(sortCarType);
+router.route("/:id").get(getCarType).put(updateCarType).delete(deleteCarType);
 
 module.exports = router;

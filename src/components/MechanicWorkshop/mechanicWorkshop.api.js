@@ -24,7 +24,5 @@ router.post("/signup", mechanicValidation, signup, createMechanicWorkshop);
 router.get("/getNearestMechanicWorkshop", validateLatandLon, getNearestMechanicWorkshop);
 router.get("/verify/:token", emailVerify);
 router.patch("/changePassword", authinticate, allowedTo("mechanic"), changePassword);
-router.patch("/report/:id", reportMechanic);
-router.patch("/rate/:id", rateMechanic);
-router.get("/", getMechanicWorkshops)
+
 module.exports = router;

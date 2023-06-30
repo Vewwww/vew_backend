@@ -21,8 +21,7 @@ router.get('/verify/:token', emailVerify);
 router.patch('/changePassword', authinticate, allowedTo('winch'), changePassword);
 router.get('/getNearestWinch', validateLatandLon,getNearestWinch);
 router.patch('/updateAvailableState', authinticate, allowedTo('winch'), updateWinchAvailableState);
-router.patch('/report/:id', reportWinch);
-router.patch('/rate/:id', rateWinch);
-router.get('/', getWinches);
+
+
 
 module.exports = router;
