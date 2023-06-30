@@ -11,7 +11,7 @@ const { allRequires } = require('./src/utils');
 app.use(cors());
 app.use(express.json());
 app.use('/public', express.static(path.join(__dirname, 'public')));
-if (process.env.MODE_ENV == 'developmet') {
+if (process.env.MODE_ENV == 'development') {
   app.use(morgan('dev'));
 }
 

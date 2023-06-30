@@ -10,6 +10,10 @@ exports.createMaintenanceCenter = factory.createOne(MaintanenceCenterModel);
 exports.getNearestMaintenanceCenters = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;
   let filter = {};
+
+  let maint = await MaintanenceCenterModel.findOne({_id: new Object("643572f93a73cf328e14adbf")})
+    console.log(maint);
+
   if (req.query.carType) {
     filter = {
       carType: {
@@ -21,8 +25,7 @@ exports.getNearestMaintenanceCenters = catchAsyncErr(async (req, res) => {
   if (req.query.isVerified) {
     filter.isVerified = req.query.isVerified;
   }
-
-  console.log(filter);
+// {carType: {$type:"array", $elemMatch:{ $eq:"643528431c01869f2d835c11"}}}
   const manitenceCenters = await MaintanenceCenterModel.find(filter).populate(
     "carType"
   );

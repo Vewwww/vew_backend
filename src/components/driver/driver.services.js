@@ -140,10 +140,10 @@ exports.getDrivers = catchAsyncErr(async (req, res) => {
 
 exports.getProfile = catchAsyncErr(async (req, res) => {
   const cars = await carModel.find({ owner: req.user._id });
-  delete req.user.password;
-  delete req.user.isSuspended;
-  delete req.user.emailConfirm;
-  delete req.user.logedIn;
-  delete req.user.passwordReset;
+  delete req.user._doc.password;
+  delete req.user._doc.isSuspended;
+  delete req.user._doc.emailConfirm;
+  delete req.user._doc.logedIn;
+  delete req.user._doc.passwordReset;
   res.status(200).json({ data: { user: req.user, cars } });
 });
