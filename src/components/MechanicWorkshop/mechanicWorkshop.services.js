@@ -1,10 +1,10 @@
-const mechanicModel = require("./mechanicWorkshop.model");
-const LocationModel = require("../location/location.model");
+const mechanicModel = require('./mechanicWorkshop.model');
+const LocationModel = require('../location/location.model');
 
-const AppError = require("../../utils/AppError");
-const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
-const { getNearestPlaces } = require("../Handlers/getNearestPlaces");
-const factory = require("../Handlers/handler.factory");
+const AppError = require('../../utils/AppError');
+const { catchAsyncErr } = require('../../utils/CatchAsyncErr');
+const { getNearestPlaces } = require('../Handlers/getNearestPlaces');
+const factory = require('../Handlers/handler.factory');
 //rate
 exports.rateMechanic = factory.rate(mechanicModel);
 
@@ -13,19 +13,9 @@ exports.reportMechanic = factory.report(mechanicModel);
 
 //create new service
 exports.createMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
-  const location = await LocationModel.create({
-    latitude: req.body.location.latitude,
-    longitude: req.body.location.longitude,
-    description: req.body.location.description,
-  });
-  delete req.body.latitude;
-  delete req.body.longitude;
-  delete req.body.description;
-
-  req.body.location = location._id;
   const mechanic = await mechanicModel.create(req.body);
 
-  res.status(200).json({ message: "Verify your email" });
+  res.status(200).json({ message: 'Verify your email' });
 });
 
 exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
@@ -33,13 +23,10 @@ exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
   let filter = {};
   if (req.query.service) {
     filter = {
-      service: { $type: "array", $elemMatch: { $eq: req.query.service } },
+      service: { $type: 'array', $elemMatch: { $eq: req.query.service } },
     };
   }
-  const manitenceCenters = await mechanicModel
-    .find(filter)
-    .select("-logedIn -emailConfirm -__v")
-    .populate("service");
+  const manitenceCenters = await mechanicModel.find(filter).select('-logedIn -emailConfirm -__v').populate('service');
 
   searchResult = getNearestPlaces(manitenceCenters, latitude, longitude);
   res.status(200).json({ results: searchResult.length, data: searchResult });
@@ -49,11 +36,11 @@ exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
 exports.getMechanicWorkshops = catchAsyncErr(async (req, res, next) => {
   const mechanics = await mechanicModel.find();
   if (!mechanics) {
-    return next(new AppError("no mechanic found", 404));
+    return next(new AppError('no mechanic found', 404));
   }
 
   res.status(200).json({
-    status: "success",
+    status: 'success',
     results: mechanics.length,
     data: mechanics,
   });
@@ -63,12 +50,13 @@ exports.getMechanicWorkshops = catchAsyncErr(async (req, res, next) => {
 
 exports.getMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   const id = req.user._id;
-  const mechanic = await mechanicModel.findById(id);
+  console.log('req.user');
+  const mechanic = await mechanicModel.findOne({ _id: id }).populate({ path: 'service' });
   if (!mechanic) {
-    return next(new AppError("No mechanic found for this id", 404));
+    return next(new AppError('No mechanic found for this id', 404));
   }
   res.status(200).json({
-    status: "success",
+    status: 'success',
     data: req.user,
   });
 });
@@ -77,19 +65,15 @@ exports.getMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
 exports.updateMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   const id = req.user._id;
   const mechanic = req.body;
-  const updatedMechanic = await mechanicModel.findOneAndUpdate(
-    { _id: id },
-    mechanic,
-    {
-      new: true,
-    }
-  );
+  const updatedMechanic = await mechanicModel.findOneAndUpdate({ _id: id }, mechanic, {
+    new: true,
+  });
   if (!mechanic) {
-    return next(new AppError("No mechanic found for this id", 404));
+    return next(new AppError('No mechanic found for this id', 404));
   }
 
   res.status(201).json({
-    status: "success",
+    status: 'success',
     data: updatedMechanic,
   });
 });
@@ -101,7 +85,7 @@ exports.deleteMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   const deletedMechanic = await mechanicModel.findOneAndDelete({ _id: id });
 
   if (!deletedMechanic) {
-    return next(new AppError("No mechanic found for this id", 404));
+    return next(new AppError('No mechanic found for this id', 404));
   }
 
   res.status(204).send();
