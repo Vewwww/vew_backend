@@ -6,6 +6,8 @@ const winchModel = require('./winch.model');
 const carModel = require('../Car/car.model');
 const { getNearestPlaces } = require('../Handlers/getNearestPlaces');
 const io = require('socket.io-client');
+const mechanicWorkshopModel = require('../MechanicWorkshop/mechanicWorkshop.model');
+const driverModel = require('../driver/driver.model');
 const socket = io(`${process.env.BaseUrl}`);
 
 socket.on('connect', () => { });
@@ -69,6 +71,24 @@ exports.getWinch = catchAsyncErr(async (req, res, next) => {
 exports.updateWinch = catchAsyncErr(async (req, res, next) => {
   const id = req.user._id;
   const winch = req.body;
+
+
+  if (req.body.email) {
+    email = req.body.email;
+    let isUser = await driverModel.findOne({ email });
+    if (!isUser) {
+      isUser = await mechanicWorkshopModel.findOne({ email });
+      if (!isUser) {
+        isUser = await winchModel.findOne({ email });
+      }
+    }
+    if (isUser) return next(new AppError('user with thes email already exists, please change your email', 401));
+    let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
+    user.emailConfirm = false;
+    user.save();
+    await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, winchModel);
+  }
+
   const updatedWinch = await winchModel.findOneAndUpdate({ _id: id }, winch, {
     new: true,
   });

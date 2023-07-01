@@ -30,7 +30,7 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
   await user.save();
 
   if (req.body.driverLisenceRenewalDate) {
-    const notificationId = await createDriverLicenseNotification(req.driverLisenceRenewalDate, user._id);
+    const notificationId = await createDriverLicenseNotification(req.body.driverLisenceRenewalDate, user._id);
     user.driverLisenceRenewalNotification = notificationId;
     user.save();
   }
@@ -57,7 +57,9 @@ exports.updateUser = catchAsyncErr(async (req, res, next) => {
     }
     if (isUser) return next(new AppError('user with thes email already exists, please change your email', 401));
     let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
-    await sendEmail({ email, token, message: 'Hello' }, driverModel);
+    user.emailConfirm = false;
+    user.save();
+    await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, driverModel);
   }
 
   if (req.body.driverLisenceRenewalDate) {

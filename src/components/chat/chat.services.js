@@ -25,7 +25,7 @@ const populateTheOtherUser = async (usersIds, chatsOwnerId) => {
   var user;
 
   for (const userId of usersIds) {
-    if (userId !== chatsOwnerId) {
+    if (userId.toString() != chatsOwnerId.toString()) {
       user = await populateUser(userId);
     }
   }

@@ -2,9 +2,12 @@ const { catchAsyncErr } = require('../../utils/CatchAsyncErr');
 const notificationModel = require('./notification.model');
 
 exports.createDriverLicenseNotification = async (driverLisenceRenewalDate, driverId) => {
+  console.log(driverLisenceRenewalDate)
   let date = new Date(driverLisenceRenewalDate);
+  console.log(date)
   const message = `your driving lisence renewal date is on ${date}`;
   date.setDate(date.getDate() - 7);
+  console.log(date)
   const notification = await notificationModel.create({ date, message, to: driverId });
   return notification._id;
 };

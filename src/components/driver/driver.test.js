@@ -82,6 +82,20 @@ describe('POST /driver/search?keyword=ahmed', () => {
 });
 
 describe('validity of password & email', () => {
+  test('Verify validity of email in the register to be success', async () => {
+    const res = await request(baseURL)
+      .post('/driver/signup')
+      .send({
+        name: 'maged',
+        email: 'maged@gmail.com',
+        password: '1234567',
+        phoneNumber: '01145785437',
+        gender: 'male',
+      })
+      .set('Accept', 'application/json');
+    expect(res.statusCode).toBe(200);
+  });
+
   test('Verify validity of password in the register to be success', async () => {
     const res = await request(baseURL)
       .post('/driver/signup')
