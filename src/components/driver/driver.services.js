@@ -143,17 +143,18 @@ exports.getDrivers = catchAsyncErr(async (req, res) => {
 exports.getProfile = catchAsyncErr(async (req, res) => {
   const cars = await carModel
     .find({ owner: req.user._id })
-    .select("-averageMilesPerMonth -lastPeriodicMaintenanceDate")
+    .select(
+      '-averageMilesPerMonth -lastPeriodicMaintenanceDate -carLicenseRenewalNotifition -periodicMaintenanceNotification -owner -__v'
+    )
     .populate({ path: 'carModel', select: '-__v -brand' })
     .populate({ path: 'carType', select: '-__v' })
-    .populate({ path: 'color', select: '-__v' })
-    .populate({ path: 'carLicenseRenewalNotifition', select: ' date  -_id' })
-    .populate({ path: 'periodicMaintenanceNotification', select: ' date  -_id' });
+    .populate({ path: 'color', select: '-__v' });
 
   const user = await driverModel
     .findOne({ _id: req.user._id })
-    .select('-report -__v -isSuspended -password -emailConfirm -logedIn -passwordReset -lisenceRenewalDate')
-    .populate({ path: 'driverLisenceRenewalNotification', select: 'date -_id' });
+    .select(
+      '-report -__v -isSuspended -password -emailConfirm -logedIn -passwordReset -lisenceRenewalDate -driverLisenceRenewalNotification'
+    );
 
   res.status(200).json({ data: { user, cars } });
 });
