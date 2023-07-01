@@ -13,16 +13,6 @@ const { sendEmail } = require("./email.factory");
 const schedule = require("node-schedule");
 const { Model } = require("mongoose");
 
-exports.sortOne = (Model) => {
-  return catchAsyncErr(async (req, res) => {
-    const document = await Model.find().sort({ name: - 1 });
-
-
-    res.status(200).json({
-      data: document,
-    });
-  });
-}
 exports.rate = (Model) =>
   catchAsyncErr(async (req, res, next) => {
     const { id } = req.params;
