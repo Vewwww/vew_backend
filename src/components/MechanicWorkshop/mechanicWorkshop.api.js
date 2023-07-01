@@ -2,6 +2,7 @@ const {
   getNearestMechanicWorkshop,
   createMechanicWorkshop,
   getMechanicWorkshops,
+  updateMechanicWorkshop,
 } = require('./mechanicWorkshop.services');
 const { signup, emailVerify, authinticate, changePassword } = require('./mechanicWorkshop.auth');
 const { allowedTo } = require('../Handlers/auth.factory');

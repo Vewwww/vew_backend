@@ -1,55 +1,45 @@
 const { dbConnection } = require('../../database/dbConnection');
+const fs = require('fs');
 // const maintenace = require('../../components/MaintenanceCenter/maintenanceCenter.model');
-const maintenace = require("../../../src/components/MaintenanceCenter/maintenanceCenter.model")
+const maintenanceModel = require('../../../src/components/MaintenanceCenter/maintenanceCenter.model');
 const mongoose = require('mongoose');
 
-//add this line to db connection
-//require("dotenv").config({ path: "./config/.env" });
+const maintenances = JSON.parse(
+  fs.readFileSync('src/utils/dev-data/scrapping/maintenances.json', { encoding: 'utf-8' })
+);
+
 dbConnection();
 const ObjectId = mongoose.Types.ObjectId;
 
+console.log(maintenances[0])
 const refactorMaintenance = async () => {
-  try {
-    let documents = await maintenace.find();
+  for (let document of maintenances) {
+    let newCarTypes = [];
 
-    for (let document of documents) {
-      let newCarTypes = [];
+    document._id = new ObjectId(document._id);
 
-      for (const carTypeString of document.carType) {
-        const isValidObjectId = mongoose.Types.ObjectId.isValid(carTypeString);
-        if (isValidObjectId) {
-          const carTypeId = new ObjectId(carTypeString);
-          newCarTypes.push(carTypeId);
-        } else {
-          console.warn(`Invalid ObjectId: ${carTypeString}`);
-        }
+    for (const carTypeString of document.carType) {
+      const isValidObjectId = mongoose.Types.ObjectId.isValid(carTypeString);
+      if (isValidObjectId) {
+        const carTypeId = new ObjectId(carTypeString);
+        newCarTypes.push(carTypeId);
+      } else {
+        console.warn(`Invalid ObjectId: ${carTypeString}`);
       }
-
-      document.carType = newCarTypes;
-      // await document.save();
-      // console.log(document)
-      // console.log(document._doc)
-
-      // let maint= await maintenace.findByIdAndUpdate({_id:document._id.toString()},{carType: document._doc.carType})
-      // await maint.save();
     }
+    document.carType = newCarTypes;
 
-    // console.log(documents)
+    let maint = await maintenanceModel.create(document)
+    console.log(maint)
 
-
-    let maint = await maintenace.findById(new ObjectId("643572f93a73cf328e14adbf"));
-    maint = await maintenace.findById("643572f93a73cf328e14adbf");
-    console.log(maint);
-    // for (let document of documents) {
-    //   console.log(document._id.toString());
-    //   // await document.save();
-    // }
-    console.log('Migration completed successfully.');
-    process.exit(0);
-  } catch (error) {
-    console.error('Migration error:', error);
-    process.exit(1);
   }
+
+    // console.log(maintenances[0])
+
+  // fs.writeFileSync('src/utils/dev-data/maintenaceCenters.json', JSON.stringify(maintenances), function (err) {
+  //   if (err) throw err;
+  //   console.log('Saved!');
+  // });
 };
 
 refactorMaintenance();
