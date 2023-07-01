@@ -4,7 +4,7 @@ const AppError = require("../../../utils/AppError");
 const validation = Joi.object({
     caseKeyWords: Joi.array().items(Joi.string()).required(),
     solution: Joi.string().trim().required(),
-    serviceId: Joi.string().required()
+    serviceId: Joi.string()
 }).options({ allowUnknown: true });
 
 caseValidation = async (req, res, next) => {

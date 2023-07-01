@@ -2,7 +2,7 @@ const Joi = require("joi");
 const AppError = require("../../../utils/AppError");
 
 const validation = Joi.object({
-    carTyquestionpe: Joi.string().trim().required(),
+    question: Joi.string().trim().required(),
     choices: Joi.array().items(
         Joi.object({
             choice: Joi.string().trim().required(),
