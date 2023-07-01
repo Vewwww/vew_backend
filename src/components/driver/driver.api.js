@@ -46,12 +46,12 @@ router.get(
 router.get('/getNearestGasStations', validateLatandLon, authinticate, allowedTo('user'), getNearestGasStations);
 
 /////////////////////////   Mechanic    ////////////////////////////
-router.patch('mechanic/report/:id', authinticate, allowedTo('user'), reportMechanic);
-router.patch('mechanic/rate/:id', authinticate, allowedTo('user'), rateMechanic);
+router.patch('/mechanic/report/:id', authinticate, allowedTo('user'), reportMechanic);
+router.patch('/mechanic/rate/:id', authinticate, allowedTo('user'), rateMechanic);
 
 /////////////////////////   Winch    ////////////////////////////
-router.patch('winch/report/:id', authinticate, allowedTo('user'), reportWinch);
-router.patch('winch/rate/:id', authinticate, allowedTo('user'), rateWinch);
+router.patch('/winch/report/:id', authinticate, allowedTo('user'), reportWinch);
+router.patch('/winch/rate/:id', authinticate, allowedTo('user'), rateWinch);
 
 /////////////////////////   Signs    ////////////////////////////
 router.get('/sign', authinticate, allowedTo('user'), getSigns);
