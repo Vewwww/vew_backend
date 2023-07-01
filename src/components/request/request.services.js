@@ -4,6 +4,7 @@ const MechanistModel = require('./request.model');
 const AppErr = require('../../utils/AppError');
 const { createChat } = require('../chat/chat.services');
 const factory = require('../Handlers/handler.factory');
+const { boolean } = require('joi');
 
 //get Driver Current Requests
 exports.getDriverCurrentRequests = catchAsyncErr(async (req, res) => {
@@ -26,7 +27,14 @@ exports.getDriverPendingRequests = catchAsyncErr(async (req, res) => {
 });
 exports.getPreviousRequests = catchAsyncErr(async (req, res) => {
   const requests = await RequestModel.find({ isActive: false, accepted: true, driver: req.user._id, }).populate("service").populate("driver").populate("mechanic").populate("winch").populate("car");
-  res.status(200).json({ previousRequests: requests });
+  let isWinch;
+  const result = []
+  requests.forEach(element => {
+    (element.winch) ? isWinch = true : false;
+    result.push({ ...element, isWinch: isWinch })
+
+  })
+  res.status(200).json({ previousRequests: result });
 });
 
 exports.createfilterObject = catchAsyncErr((req, res, next) => {
@@ -77,7 +85,7 @@ exports.endRequest = catchAsyncErr(async (req, res, next) => {
 ///////////////   MECHANIC    ////////////////////
 exports.acceptMechanicRequest = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
-  let request =await RequestModel.findOne({
+  let request = await RequestModel.findOne({
     _id: id,
   })
     .populate({ path: 'service' })
@@ -196,8 +204,8 @@ exports.getWinchAcceptedRequests = catchAsyncErr(async (req, res, next) => {
     accepted: true,
     winch: req.user._id,
   }).populate({ path: 'driver' })
-  .populate({ path: 'car' })
-  .populate({ path: 'winch' });
+    .populate({ path: 'car' })
+    .populate({ path: 'winch' });
 
   res.status(200).json({ data: acceptedRequests });
 });
