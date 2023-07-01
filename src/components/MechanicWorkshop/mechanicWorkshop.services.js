@@ -52,13 +52,14 @@ exports.getMechanicWorkshops = catchAsyncErr(async (req, res, next) => {
 
 exports.getMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   const id = req.user._id;
-  const mechanic = await mechanicModel.findOne({ _id: id }).populate({ path: 'service' });
+  console.log('req.user');
+  const mechanic = await mechanicModel.findOne({ _id: id }).populate("service");
   if (!mechanic) {
     return next(new AppError('No mechanic found for this id', 404));
   }
   res.status(200).json({
     status: 'success',
-    data: req.user,
+    data: mechanic,
   });
 });
 
