@@ -12,8 +12,28 @@ exports.getDriverCurrentRequests = catchAsyncErr(async (req, res) => {
     isActive: true,
     accepted: true,
     driver: req.user._id,
-  }).populate("service").populate("driver").populate("mechanic").populate("winch").populate("car");
-  res.statu(200).json({ data: document });
+  })
+    .select('-__v -isSeen -isActive -accepted')
+    .populate({ path: 'service', select: '-__v' })
+    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'mechanic', select: 'name rate ownerName phoneNumber' })
+    .populate({ path: 'winch', select: 'name plateNumber rate' })
+    .populate({
+      path: 'car',
+      populate: { path: 'carType', model: 'carType', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'color', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'carModel', select: '-__v -brand' },
+      select: '-owner',
+    });
+  res.status(200).json({ data: document });
 });
 
 //get driver pending req
@@ -22,18 +42,57 @@ exports.getDriverPendingRequests = catchAsyncErr(async (req, res) => {
     isActive: false,
     accepted: false,
     driver: req.user._id,
-  }).populate("service").populate("driver").populate("mechanic").populate("winch").populate("car");
+  })
+    .select('-__v -isSeen -isActive -accepted')
+    .populate({ path: 'service', select: '-__v' })
+    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'mechanic', select: 'name rate ownerName phoneNumber' })
+    .populate({ path: 'winch', select: 'name plateNumber rate' })
+    .populate({
+      path: 'car',
+      populate: { path: 'carType', model: 'carType', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'color', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'carModel', select: '-__v -brand' },
+      select: '-owner',
+    });
   res.status(200).json({ data: document });
 });
 exports.getPreviousRequests = catchAsyncErr(async (req, res) => {
-  const requests = await RequestModel.find({ isActive: false, accepted: true, driver: req.user._id, }).populate("service").populate("driver").populate("mechanic").populate("winch").populate("car");
+  const requests = await RequestModel.find({ isActive: false, accepted: true, driver: req.user._id })
+    .select('-__v -isSeen -isActive -accepted')
+    .populate({ path: 'service', select: '-__v' })
+    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'mechanic', select: 'name rate ownerName phoneNumber' })
+    .populate({ path: 'winch', select: 'name plateNumber rate' })
+    .populate({
+      path: 'car',
+      populate: { path: 'carType', model: 'carType', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'color', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'carModel', select: '-__v -brand' },
+      select: '-owner',
+    });
   let isWinch;
-  const result = []
-  requests.forEach(element => {
-    (element.winch) ? isWinch = true : false;
-    result.push({ ...element, isWinch: isWinch })
-
-  })
+  const result = [];
+  requests.forEach((element) => {
+    element.winch ? (isWinch = true) : false;
+    result.push({ ...element._doc, isWinch: isWinch });
+  });
   res.status(200).json({ previousRequests: result });
 });
 
@@ -88,10 +147,25 @@ exports.acceptMechanicRequest = catchAsyncErr(async (req, res, next) => {
   let request = await RequestModel.findOne({
     _id: id,
   })
-    .populate({ path: 'service' })
-    .populate({ path: 'driver' })
-    .populate({ path: 'car' })
-    .populate({ path: 'mechanic' });
+    .select('-__v -isSeen -isActive -accepted')
+    .populate({ path: 'service', select: '-__v' })
+    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'mechanic', select: 'name rate ownerName phoneNumber' })
+    .populate({
+      path: 'car',
+      populate: { path: 'carType', model: 'carType', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'color', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'carModel', select: '-__v -brand' },
+      select: '-owner',
+    });
   if (!request) {
     return next(new AppErr('No request found for this id', 404));
   }
@@ -119,10 +193,25 @@ exports.getMechanicUpcomingRequests = catchAsyncErr(async (req, res, next) => {
     accepted: false,
     mechanic: req.user._id,
   })
-    .populate({ path: 'service' })
-    .populate({ path: 'driver' })
-    .populate({ path: 'car' })
-    .populate({ path: 'mechanic' });
+    .select('-__v -isSeen -isActive -accepted')
+    .populate({ path: 'service', select: '-__v' })
+    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'mechanic', select: 'name rate ownerName phoneNumber' })
+    .populate({
+      path: 'car',
+      populate: { path: 'carType', model: 'carType', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'color', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'carModel', select: '-__v -brand' },
+      select: '-owner',
+    });
 
   for (let request of upcomingRequests) {
     if (request.isSeen === false) {
@@ -141,10 +230,25 @@ exports.geteMchanicAcceptedRequests = catchAsyncErr(async (req, res, next) => {
     accepted: true,
     mechanic: req.user._id,
   })
-    .populate({ path: 'service' })
-    .populate({ path: 'driver' })
-    .populate({ path: 'car' })
-    .populate({ path: 'mechanic' });
+    .select('-__v -isSeen -isActive -accepted')
+    .populate({ path: 'service', select: '-__v' })
+    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'mechanic', select: 'name rate ownerName phoneNumber' })
+    .populate({
+      path: 'car',
+      populate: { path: 'carType', model: 'carType', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'color', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'carModel', select: '-__v -brand' },
+      select: '-owner',
+    });
 
   res.status(200).json({ data: acceptedRequests });
 });
@@ -153,16 +257,30 @@ exports.geteMchanicAcceptedRequests = catchAsyncErr(async (req, res, next) => {
 exports.acceptWinchRequest = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
   let request = await RequestModel.findById(id)
-    .populate({ path: 'driver' })
-    .populate({ path: 'car' })
-    .populate({ path: 'winch' });
+    .select('-__v -isSeen -isActive -accepted')
+    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'winch', select: 'name plateNumber rate' })
+    .populate({
+      path: 'car',
+      populate: { path: 'carType', model: 'carType', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'color', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'carModel', select: '-__v -brand' },
+      select: '-owner',
+    });
   if (!request) {
     return next(new AppErr('No request found for this id', 404));
   }
 
   request.isActive = true;
   request.accepted = true;
-
 
   const chat = await createChat(request.driver, req.user._id);
   if (!chat) {
@@ -183,9 +301,24 @@ exports.getWinchUpcomingRequests = catchAsyncErr(async (req, res, next) => {
     accepted: false,
     winch: req.user._id,
   })
-    .populate({ path: 'driver' })
-    .populate({ path: 'car' })
-    .populate({ path: 'winch' });
+    .select('-__v -isSeen -isActive -accepted')
+    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'winch', select: 'name plateNumber rate' })
+    .populate({
+      path: 'car',
+      populate: { path: 'carType', model: 'carType', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'color', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'carModel', select: '-__v -brand' },
+      select: '-owner',
+    });
 
   for (let request of upcomingRequests) {
     if (request.isSeen === false) {
@@ -203,9 +336,25 @@ exports.getWinchAcceptedRequests = catchAsyncErr(async (req, res, next) => {
     isActive: true,
     accepted: true,
     winch: req.user._id,
-  }).populate({ path: 'driver' })
-    .populate({ path: 'car' })
-    .populate({ path: 'winch' });
+  })
+    .select('-__v -isSeen -isActive -accepted')
+    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'winch', select: 'name plateNumber rate' })
+    .populate({
+      path: 'car',
+      populate: { path: 'carType', model: 'carType', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'color', select: '-__v' },
+      select: '-owner',
+    })
+    .populate({
+      path: 'car',
+      populate: { path: 'carModel', select: '-__v -brand' },
+      select: '-owner',
+    });
 
   res.status(200).json({ data: acceptedRequests });
 });

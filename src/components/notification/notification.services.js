@@ -2,12 +2,12 @@ const { catchAsyncErr } = require('../../utils/CatchAsyncErr');
 const notificationModel = require('./notification.model');
 
 exports.createDriverLicenseNotification = async (driverLisenceRenewalDate, driverId) => {
-  console.log(driverLisenceRenewalDate)
+  console.log(driverLisenceRenewalDate);
   let date = new Date(driverLisenceRenewalDate);
-  console.log(date)
+  console.log(date);
   const message = `your driving lisence renewal date is on ${date}`;
   date.setDate(date.getDate() - 7);
-  console.log(date)
+  console.log(date);
   const notification = await notificationModel.create({ date, message, to: driverId });
   return notification._id;
 };
@@ -86,8 +86,7 @@ exports.updateCarPeriodicDate = async (lastPeriodicMaintenanceDate, averageMiles
 
 exports.getNotifications = catchAsyncErr(async (req, res, next) => {
   let newNotifications = false;
-  const toDay = new Date(req.body.toDay);
-  const notifications = await notificationModel.find({ to: req.user._id, date: { $lt: toDay } });
+  const notifications = await notificationModel.find({ to: req.user._id, date: { $lt: new Date() } });
 
   for (const notification of notifications) {
     if (notification.seen === false) {
