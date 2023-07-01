@@ -4,8 +4,8 @@ const schema = mongoose.Schema({
         type: String,
         trim: true
     },
-    choises: [{
-        choise: { type: String, trim: true },
+    choices: [{
+        choice: { type: String, trim: true },
         keywords: []
     }]
 
