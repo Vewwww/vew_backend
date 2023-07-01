@@ -9,6 +9,7 @@ const {
   getAdmins,
   getProfile,
   getTopRoadsHadIssue,
+  updateProfile,
 } = require('./admin.services');
 const { authinticate, emailVerify } = require('../driver/driver.auth');
 const { allowedTo } = require('../Handlers/auth.factory');
@@ -30,6 +31,7 @@ const { getWinches } = require('../winch/winch.services');
 const { resizeImage, uploadSingleFile } = require('../../utils/fileUpload');
 const { createSign } = require('../Sign/sign.services');
 const { getDrivers } = require('./driver.services');
+const { validateUpdateProfile } = require('./driver.validator');
 
 const router = require('express').Router();
 
@@ -71,6 +73,7 @@ router.post('/sign', authinticate, allowedTo('admin'), uploadSingleFile('image')
 ///////////////////////  Admin  ///////////////////////
 router.route('/').post(authinticate, allowedTo('admin'), addAdmin).get(authinticate, allowedTo('admin'), getUsers);
 router.route('/getProfile').get(authinticate, allowedTo('admin'), getProfile);
+router.route('/updateProfile').patch(validateUpdateProfile, authinticate, allowedTo('admin'), updateProfile);
 router.get('/admins', authinticate, allowedTo('admin'), getAdmins);
 router.get('/verify/:token', emailVerify);
 router.route('/userStatistics').get(authinticate, allowedTo('admin'), userStatistics);

@@ -19,7 +19,6 @@ const { getUserChats } = require('../chat/chat.services');
 
 // router.use('/:mechanitId/request', requestRoute);
 router.post('/signup', mechanicValidation, signup, createMechanicWorkshop);
-router.get('/getNearestMechanicWorkshop', validateLatandLon, getNearestMechanicWorkshop);
 router.get('/verify/:token', emailVerify);
 router.patch('/changePassword', authinticate, allowedTo('mechanic'), changePassword);
 router.get('/getMechanicProfile', authinticate, allowedTo('mechanic'), getMechanicWorkshop);

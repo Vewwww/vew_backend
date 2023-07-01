@@ -2,7 +2,7 @@ const Joi = require('joi');
 const AppError = require('../../utils/AppError');
 
 const validation = Joi.object({
-  name: Joi.string().alphanum().min(3).max(15).trim(true).required(),
+  name: Joi.string().min(3).max(15).trim(true).required(),
   email: Joi.string().email().trim(true).required(),
   changedPasswordAt: Joi.date(),
   password: Joi.string().min(6).trim(true).required(),
@@ -74,8 +74,8 @@ exports.validateLatandLon = async (req, res, next) => {
 
 
 const updateDriverValidation = Joi.object({
-  name: Joi.string().alphanum().min(3).max(15).trim(true).required(),
-  email: Joi.string().email().trim(true).required(),
+  name: Joi.string().min(3).max(15).trim(true),
+  email: Joi.string().email().trim(true),
   phoneNumber: Joi.string()
     .length(11)
     .pattern(/^01\d{9}$/)

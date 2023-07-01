@@ -21,9 +21,7 @@ router.post('/signup', winchValidation, signup, createWinch);
 router.get('/verify/:token', emailVerify);
 router.get('/getWinchProfile', authinticate, allowedTo('winch'), getWinch);
 router.patch('/updateWinchProfile', authinticate, allowedTo('winch'), updateWinch);
-
 router.patch('/changePassword', authinticate, allowedTo('winch'), changePassword);
-router.get('/getNearestWinch', validateLatandLon, getNearestWinch);
 router.patch('/updateAvailableState', authinticate, allowedTo('winch'), updateWinchAvailableState);
 
 /////////////////////////   Chat    ////////////////////////////

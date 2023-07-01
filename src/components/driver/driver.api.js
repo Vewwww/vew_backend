@@ -18,8 +18,8 @@ const {
 const { getNotifications } = require('../notification/notification.services');
 const { getNearestMaintenanceCenters } = require('../MaintenanceCenter/maintenanceCenter.services');
 const { getNearestGasStations } = require('../GasStation/gasStation.services');
-const { reportMechanic, rateMechanic } = require('../MechanicWorkshop/mechanicWorkshop.services');
-const { reportWinch, rateWinch } = require('../winch/winch.services');
+const { reportMechanic, rateMechanic, getNearestMechanicWorkshop } = require('../MechanicWorkshop/mechanicWorkshop.services');
+const { reportWinch, rateWinch, getNearestWinch } = require('../winch/winch.services');
 const { getSigns, getSign } = require('../Sign/sign.services');
 const {
   createRequest,
@@ -48,10 +48,12 @@ router.get('/getNearestGasStations', validateLatandLon, authinticate, allowedTo(
 /////////////////////////   Mechanic    ////////////////////////////
 router.patch('/mechanic/report/:id', authinticate, allowedTo('user'), reportMechanic);
 router.patch('/mechanic/rate/:id', authinticate, allowedTo('user'), rateMechanic);
+router.get('/getNearestMechanicWorkshop', validateLatandLon, getNearestMechanicWorkshop);
 
 /////////////////////////   Winch    ////////////////////////////
 router.patch('/winch/report/:id', authinticate, allowedTo('user'), reportWinch);
 router.patch('/winch/rate/:id', authinticate, allowedTo('user'), rateWinch);
+router.get('/getNearestWinch', validateLatandLon, getNearestWinch);
 
 /////////////////////////   Signs    ////////////////////////////
 router.get('/sign', authinticate, allowedTo('user'), getSigns);
