@@ -26,6 +26,7 @@ const {
   getDriverPendingRequests,
   getDriverCurrentRequests,
   getPreviousRequests,
+  deleteRequest,
 } = require('../request/request.services');
 const { getUserChats } = require('../chat/chat.services');
 const { getCarsOfDriver, updateCar, deleteCar, createCar } = require('../Car/car.services');
@@ -65,6 +66,7 @@ router.post('/createWinchRequest', validateCreateWinchRequest, authinticate, all
 router.get('/request/getDriverPendingRequests', authinticate, allowedTo('user'), getDriverPendingRequests);
 router.get('/request/getDriverCurrentRequests', authinticate, allowedTo('user'), getDriverCurrentRequests);
 router.get('/request/previousRequests', authinticate, allowedTo('user'), getPreviousRequests);
+router.delete('/request/:id', authinticate, allowedTo('user'), deleteRequest);
 
 /////////////////////////   Chat    ////////////////////////////
 router.get('/chat', authinticate, allowedTo('user'), getUserChats);

@@ -331,6 +331,7 @@ exports.getWinchUpcomingRequests = catchAsyncErr(async (req, res, next) => {
   res.status(200).json({ newRequests, data: upcomingRequests });
 });
 
+
 exports.getWinchAcceptedRequests = catchAsyncErr(async (req, res, next) => {
   const acceptedRequests = await RequestModel.find({
     isActive: true,
@@ -359,6 +360,25 @@ exports.getWinchAcceptedRequests = catchAsyncErr(async (req, res, next) => {
   res.status(200).json({ data: acceptedRequests });
 });
 
+exports.rejectRequest = catchAsyncErr(async (req, res, next) => {
+  const {id}=req.params
+  const request = await RequestModel.find({_id:id})
+
+  if(!request){
+    return next(new AppErr('no request found for this id', 404));
+  }
+
+  const date = new Date();
+  const message = `Your request has been rejected unfortunately, please make another request`
+  createNotification(date,message,request.driver)
+
+  request = await RequestModel.findOneAndDelete({
+    _id:id
+  })
+    
+  res.status(204).json({ data: "request rejected successfuly" });
+});
+
 ////////////
 exports.createRequest = factory.createOne(RequestModel);
 
@@ -369,4 +389,4 @@ exports.createRequest = factory.createOne(RequestModel);
 // exports.updateRequest = factory.updateOne(RequestModel);
 
 // // delete specific request with id
-// exports.deleteRequest = factory.deleteOne(RequestModel);
+exports.deleteRequest = factory.deleteOne(RequestModel);

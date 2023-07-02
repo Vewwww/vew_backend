@@ -12,9 +12,7 @@ const { signup, emailVerify, authinticate, changePassword } = require('./winch.a
 const { allowedTo } = require('../Handlers/auth.factory');
 const { winchValidation, validateLatandLon } = require('./winch.validator');
 const router = require('express').Router();
-const requestRoutes = require('../request/request.api');
-const chatRoute = require('../chat/chat.api');
-const { endRequest, acceptWinchRequest, getWinchUpcomingRequests, getWinchAcceptedRequests } = require('../request/request.services');
+const { endRequest, acceptWinchRequest, getWinchUpcomingRequests, getWinchAcceptedRequests, rejectRequest } = require('../request/request.services');
 const { getUserChats } = require('../chat/chat.services');
 
 router.post('/signup', winchValidation, signup, createWinch);
@@ -32,5 +30,6 @@ router.get('/acceptWinchRequest/:id',authinticate, allowedTo('winch'),acceptWinc
 router.get('/getWinchUpcomingRequests',authinticate, allowedTo('winch'),getWinchUpcomingRequests);
 router.get('/getWinchAcceptedRequests',authinticate, allowedTo('winch'),getWinchAcceptedRequests);
 router.get('/endRequest/:id',authinticate,allowedTo('winch'), endRequest);
+router.delete('/request/:id',authinticate,allowedTo('winch'), rejectRequest);
 
 module.exports = router;

@@ -84,6 +84,7 @@ exports.updateCarPeriodicDate = async (lastPeriodicMaintenanceDate, averageMiles
   return notification._id;
 };
 
+
 exports.getNotifications = catchAsyncErr(async (req, res, next) => {
   let newNotifications = false;
   const notifications = await notificationModel.find({ to: req.user._id, date: { $lt: new Date() } });
@@ -97,3 +98,8 @@ exports.getNotifications = catchAsyncErr(async (req, res, next) => {
   }
   res.status(200).json({ newNotifications, data: notifications });
 });
+
+
+exports.createNotification = async (date,message,to) => {
+  const notification = await notificationModel.create({ to,date,message });
+};

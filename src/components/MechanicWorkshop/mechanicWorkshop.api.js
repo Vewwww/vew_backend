@@ -14,6 +14,7 @@ const {
   acceptMechanicRequest,
   getMechanicUpcomingRequests,
   geteMchanicAcceptedRequests,
+  rejectRequest,
 } = require('../request/request.services');
 const { getUserChats } = require('../chat/chat.services');
 
@@ -32,5 +33,7 @@ router.get('/acceptMechanicRequest/:id', authinticate, allowedTo('mechanic'), ac
 router.get('/getMechanicUpcomingRequests', authinticate, allowedTo('mechanic'), getMechanicUpcomingRequests);
 router.get('/geteMchanicAcceptedRequests', authinticate, allowedTo('mechanic'), geteMchanicAcceptedRequests);
 router.get('/endRequest/:id', authinticate, endRequest);
+router.delete('/request/:id',authinticate,allowedTo('mechanic'), rejectRequest);
+
 
 module.exports = router;
