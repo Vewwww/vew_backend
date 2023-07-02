@@ -5,6 +5,7 @@ const AppErr = require('../../utils/AppError');
 const { createChat } = require('../chat/chat.services');
 const factory = require('../Handlers/handler.factory');
 const { boolean } = require('joi');
+const { createNotification } = require('../notification/notification.services');
 
 //get Driver Current Requests
 exports.getDriverCurrentRequests = catchAsyncErr(async (req, res) => {
@@ -362,7 +363,7 @@ exports.getWinchAcceptedRequests = catchAsyncErr(async (req, res, next) => {
 
 exports.rejectRequest = catchAsyncErr(async (req, res, next) => {
   const {id}=req.params
-  const request = await RequestModel.find({_id:id})
+  let request = await RequestModel.find({_id:id})
 
   if(!request){
     return next(new AppErr('no request found for this id', 404));
@@ -370,7 +371,7 @@ exports.rejectRequest = catchAsyncErr(async (req, res, next) => {
 
   const date = new Date();
   const message = `Your request has been rejected unfortunately, please make another request`
-  createNotification(date,message,request.driver)
+  await createNotification(date,message,request.driver)
 
   request = await RequestModel.findOneAndDelete({
     _id:id
