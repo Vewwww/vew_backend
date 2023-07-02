@@ -1,17 +1,17 @@
-const AppError = require("../../utils/AppError");
-const { catchAsyncErr } = require("../../utils/CatchAsyncErr");
-const ApiFeatures = require("../../utils/ApiFeatures");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const driverModel = require("../driver/driver.model");
-const mechanicWorkshopModel = require("../MechanicWorkshop/mechanicWorkshop.model");
-const gasStationModel = require("../GasStation/gasStation.model");
-const maintenanceCenterModel = require("../MaintenanceCenter/maintenanceCenter.model");
-const { getNearestPlaces } = require("./getNearestPlaces");
-const winchModel = require("../winch/winch.model");
-const { sendEmail } = require("./email.factory");
-const schedule = require("node-schedule");
-const { Model } = require("mongoose");
+const AppError = require('../../utils/AppError');
+const { catchAsyncErr } = require('../../utils/CatchAsyncErr');
+const ApiFeatures = require('../../utils/ApiFeatures');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const driverModel = require('../driver/driver.model');
+const mechanicWorkshopModel = require('../MechanicWorkshop/mechanicWorkshop.model');
+const gasStationModel = require('../GasStation/gasStation.model');
+const maintenanceCenterModel = require('../MaintenanceCenter/maintenanceCenter.model');
+const { getNearestPlaces } = require('./getNearestPlaces');
+const winchModel = require('../winch/winch.model');
+const { sendEmail } = require('./email.factory');
+const schedule = require('node-schedule');
+const { Model } = require('mongoose');
 
 exports.rate = (Model) =>
   catchAsyncErr(async (req, res, next) => {
@@ -26,15 +26,13 @@ exports.rate = (Model) =>
     console.log(document.rate, rating);
     // 2 update rates
     console.log(typeof document.rate, typeof rating);
-    console.log(document.numOfRates, typeof document.numOfRates)
+    console.log(document.numOfRates, typeof document.numOfRates);
 
     await Model.findByIdAndUpdate(id, {
-      rate:
-        (document.rate * document.numOfRates + rating) /
-        (document.numOfRates + 1),
+      rate: (document.rate * document.numOfRates + rating) / (document.numOfRates + 1),
       numOfRates: document.numOfRates + 1,
     });
-    console.log(document.numOfRates, typeof document.numOfRates)
+    console.log(document.numOfRates, typeof document.numOfRates);
     res.status(204).send();
   });
 
@@ -95,9 +93,7 @@ exports.updateOne = (Model) =>
       new: true,
     });
     if (!document) {
-      return next(
-        new AppError(`No document found for this id: ${req.params.id}`, 400)
-      );
+      return next(new AppError(`No document found for this id: ${req.params.id}`, 400));
     }
 
     res.status(200).json({
@@ -113,8 +109,7 @@ exports.createOne = (Model) => {
       data: document,
     });
   });
-}
-
+};
 
 exports.getOne = (Model) =>
   catchAsyncErr(async (req, res, next) => {
@@ -136,10 +131,7 @@ exports.getAll = (Model) =>
     }
     const documentsCounts = await Model.countDocuments();
     //Build query
-    const apiFeatures = new ApiFeatures(Model.find(filter), req.query)
-      .fields()
-      .sort()
-      .filter();
+    const apiFeatures = new ApiFeatures(Model.find(filter), req.query).fields().sort().filter();
 
     const { mongooseQuery, paginationResult } = apiFeatures;
 
