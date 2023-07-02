@@ -5,7 +5,7 @@ const schema = new mongoose.Schema({
     en: {
       type: String,
       trim:true,
-      require: [true, "Sign name is required"],
+      required: [true, "Sign name is required"],
     },
     ar: {
       type: String,
@@ -15,12 +15,13 @@ const schema = new mongoose.Schema({
 
   },
   image: {
-    type:String
+    type:String,
+    required: [true, "Sign image is required"],
   },
   description: {
     en: {
       type: String,
-      require: [true, "Sign description is required"],
+      required: [true, "Sign description is required"],
     },
     ar: {
       type: String,
@@ -32,7 +33,7 @@ const schema = new mongoose.Schema({
   solution: {
     en: {
       type: String,
-      require: [true, "Solution is required"],
+      required: [true, "Solution is required"],
 
     },
     ar: {
