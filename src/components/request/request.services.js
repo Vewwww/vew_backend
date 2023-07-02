@@ -15,7 +15,7 @@ exports.getDriverCurrentRequests = catchAsyncErr(async (req, res) => {
   })
     .select('-__v -isSeen -isActive -accepted')
     .populate({ path: 'service', select: '-__v' })
-    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'driver', select: 'name phoneNumber' })
     .populate({ path: 'mechanic', select: 'name rate ownerName phoneNumber' })
     .populate({ path: 'winch', select: 'name plateNumber rate' })
     .populate({
@@ -45,7 +45,7 @@ exports.getDriverPendingRequests = catchAsyncErr(async (req, res) => {
   })
     .select('-__v -isSeen -isActive -accepted')
     .populate({ path: 'service', select: '-__v' })
-    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'driver', select: 'name phoneNumber' })
     .populate({ path: 'mechanic', select: 'name rate ownerName phoneNumber' })
     .populate({ path: 'winch', select: 'name plateNumber rate' })
     .populate({
@@ -69,7 +69,7 @@ exports.getPreviousRequests = catchAsyncErr(async (req, res) => {
   const requests = await RequestModel.find({ isActive: false, accepted: true, driver: req.user._id })
     .select('-__v -isSeen -isActive -accepted')
     .populate({ path: 'service', select: '-__v' })
-    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'driver', select: 'name phoneNumber' })
     .populate({ path: 'mechanic', select: 'name rate ownerName phoneNumber' })
     .populate({ path: 'winch', select: 'name plateNumber rate' })
     .populate({
@@ -93,7 +93,7 @@ exports.getPreviousRequests = catchAsyncErr(async (req, res) => {
     element.winch ? (isWinch = true) : false;
     result.push({ ...element._doc, isWinch: isWinch });
   });
-  res.status(200).json({ previousRequests: result });
+  res.status(200).json({ data: result });
 });
 
 exports.createfilterObject = catchAsyncErr((req, res, next) => {
@@ -149,7 +149,7 @@ exports.acceptMechanicRequest = catchAsyncErr(async (req, res, next) => {
   })
     .select('-__v -isSeen -isActive -accepted')
     .populate({ path: 'service', select: '-__v' })
-    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'driver', select: 'name phoneNumber' })
     .populate({ path: 'mechanic', select: 'name rate ownerName phoneNumber' })
     .populate({
       path: 'car',
@@ -195,7 +195,7 @@ exports.getMechanicUpcomingRequests = catchAsyncErr(async (req, res, next) => {
   })
     .select('-__v -isSeen -isActive -accepted')
     .populate({ path: 'service', select: '-__v' })
-    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'driver', select: 'name phoneNumber' })
     .populate({ path: 'mechanic', select: 'name rate ownerName phoneNumber' })
     .populate({
       path: 'car',
@@ -232,7 +232,7 @@ exports.geteMchanicAcceptedRequests = catchAsyncErr(async (req, res, next) => {
   })
     .select('-__v -isSeen -isActive -accepted')
     .populate({ path: 'service', select: '-__v' })
-    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'driver', select: 'name phoneNumber' })
     .populate({ path: 'mechanic', select: 'name rate ownerName phoneNumber' })
     .populate({
       path: 'car',
@@ -258,7 +258,7 @@ exports.acceptWinchRequest = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
   let request = await RequestModel.findById(id)
     .select('-__v -isSeen -isActive -accepted')
-    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'driver', select: 'name phoneNumber' })
     .populate({ path: 'winch', select: 'name plateNumber rate' })
     .populate({
       path: 'car',
@@ -302,7 +302,7 @@ exports.getWinchUpcomingRequests = catchAsyncErr(async (req, res, next) => {
     winch: req.user._id,
   })
     .select('-__v -isSeen -isActive -accepted')
-    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'driver', select: 'name phoneNumber' })
     .populate({ path: 'winch', select: 'name plateNumber rate' })
     .populate({
       path: 'car',
@@ -338,7 +338,7 @@ exports.getWinchAcceptedRequests = catchAsyncErr(async (req, res, next) => {
     winch: req.user._id,
   })
     .select('-__v -isSeen -isActive -accepted')
-    .populate({ path: 'driver', select: 'name' })
+    .populate({ path: 'driver', select: 'name phoneNumber' })
     .populate({ path: 'winch', select: 'name plateNumber rate' })
     .populate({
       path: 'car',

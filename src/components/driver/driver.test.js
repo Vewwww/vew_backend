@@ -58,8 +58,8 @@ describe('POST /driver/signup', () => {
 });
 
 describe('POST /driver/search?keyword=ahmed', () => {
-  describe('if any required attribute is missing', () => {
-    test('should respond with a 400 and send message error "attribute name" is required', async () => {
+  describe('driver search for service provider has a specific neme ', () => {
+    test('should respond with a 200 and send list of service providers has key word in their name', async () => {
       const response = await request(app)
         .get('/driver/search')
         .set('Authorization', `Bearer ${token}`)

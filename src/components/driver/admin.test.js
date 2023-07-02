@@ -17,7 +17,7 @@ describe('POST /admin', () => {
       password: '<PASSWORD>!',
       phoneNumber: '+973-65487654',
       gender: 'male',
-      cars: '[]',
+      car: {}
     });
 
     expect(response.status).toBe(200);
