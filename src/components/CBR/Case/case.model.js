@@ -9,5 +9,8 @@ const schema = mongoose.Schema({
         type: mongoose.Schema.ObjectId,
         ref: "service",
     },
+    maintenanceCenter: Boolean,
+    mechanic: Boolean,
+    gasStation: Boolean
 });
 module.exports = mongoose.model("case", schema);
