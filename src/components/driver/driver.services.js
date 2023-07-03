@@ -136,7 +136,7 @@ exports.getNearest = catchAsyncErr(async (req, res, next) => {
 });
 
 exports.getDrivers = catchAsyncErr(async (req, res) => {
-  let Users = await driverModel.find({ role: 'user' });
+  let Users = await driverModel.find({ role: 'user' ,emailConfirm:true});
   res.status(200).json({ Users });
 });
 

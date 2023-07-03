@@ -8,8 +8,8 @@ const {
   getUser,
   getAdmins,
   getProfile,
-  getTopRoadsHadIssue,
   updateProfile,
+  getTopAreasHadIssue,
 } = require('./admin.services');
 const { authinticate, emailVerify } = require('../driver/driver.auth');
 const { allowedTo } = require('../Handlers/auth.factory');
@@ -59,7 +59,7 @@ router
 router.get('/mechanic', authinticate, allowedTo('admin'), getMechanicWorkshops);
 
 ///////////////////////  allUsers  ///////////////////////
-router.get('user/:id', authinticate, allowedTo('admin'), getUser);
+router.get('/user', authinticate, allowedTo('admin'), getUsers);
 
 ///////////////////////  Winch  ///////////////////////
 router.get('/winch', authinticate, allowedTo('admin'), getWinches);
@@ -80,7 +80,7 @@ router.route('/userStatistics').get(authinticate, allowedTo('admin'), userStatis
 router.get('/genderAnalytics', authinticate, allowedTo('admin'), getGenderAnalytic);
 router.get('/topModelsHadIssues', authinticate, allowedTo('admin'), tenModelsHadIssues);
 router.get('/seasonsAnalytics', authinticate, allowedTo('admin'), getSeasonsAnalytics);
-router.get('/roadsAnalytics', authinticate, allowedTo('admin'), getTopRoadsHadIssue);
+router.get('/roadsAnalytics', getTopAreasHadIssue);
 router.route('/:id').get(authinticate, allowedTo('admin'), getUser);
 
 module.exports = router;

@@ -44,7 +44,7 @@ exports.updateWinchLocation = async (data) => {
 };
 
 exports.getWinches = catchAsyncErr(async (req, res, next) => {
-  const winches = await winchModel.find();
+  const winches = await winchModel.find({emailConfirm:true});
   if (!winches) {
     return next(new AppError('no winch fount', 404));
   }
