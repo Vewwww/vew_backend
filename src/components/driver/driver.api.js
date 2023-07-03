@@ -73,7 +73,7 @@ router.get('/chat', authinticate, allowedTo('user'), getUserChats);
 
 /////////////////////////   Car    ////////////////////////////
 router.get('/car/carOwner/:driverId', authinticate, allowedTo('user'), getCarsOfDriver);
-router.post('/car/', carValidation, authinticate, allowedTo('user'), createCar);
+router.post('/car', carValidation, authinticate, allowedTo('user'), createCar);
 router
   .route('/car/:id')
   .put(carValidation, authinticate, allowedTo('user'), updateCar)

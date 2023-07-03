@@ -7,6 +7,9 @@ const factory = require('../Handlers/handler.factory');
 const { boolean } = require('joi');
 const { createNotification } = require('../notification/notification.services');
 
+const io = require('socket.io-client');
+const socket = io(`${process.env.BaseUrl}`);
+
 //get Driver Current Requests
 exports.getDriverCurrentRequests = catchAsyncErr(async (req, res) => {
   const document = await RequestModel.find({
@@ -171,6 +174,9 @@ exports.acceptMechanicRequest = catchAsyncErr(async (req, res, next) => {
     return next(new AppErr('No request found for this id', 404));
   }
 
+  let roomData = { room: req._id };
+  socket.emit('emit-request-accepted-or-rejected', roomData) 
+
   request.isActive = true;
   request.accepted = true;
   await request.save();
@@ -280,6 +286,9 @@ exports.acceptWinchRequest = catchAsyncErr(async (req, res, next) => {
     return next(new AppErr('No request found for this id', 404));
   }
 
+  let roomData = { room: request._id };
+  socket.emit('emit-request-accepted-or-rejected', roomData);
+
   request.isActive = true;
   request.accepted = true;
 
@@ -332,7 +341,6 @@ exports.getWinchUpcomingRequests = catchAsyncErr(async (req, res, next) => {
   res.status(200).json({ newRequests, data: upcomingRequests });
 });
 
-
 exports.getWinchAcceptedRequests = catchAsyncErr(async (req, res, next) => {
   const acceptedRequests = await RequestModel.find({
     isActive: true,
@@ -362,26 +370,40 @@ exports.getWinchAcceptedRequests = catchAsyncErr(async (req, res, next) => {
 });
 
 exports.rejectRequest = catchAsyncErr(async (req, res, next) => {
-  const {id}=req.params
-  let request = await RequestModel.find({_id:id})
+  const { id } = req.params;
+  let request = await RequestModel.find({ _id: id });
 
-  if(!request){
+  if (!request) {
     return next(new AppErr('no request found for this id', 404));
   }
 
   const date = new Date();
-  const message = `Your request has been rejected unfortunately, please make another request`
-  await createNotification(date,message,request.driver)
+  const message = `Your request has been rejected unfortunately, please make another request`;
+  await createNotification(date, message, request.driver);
 
   request = await RequestModel.findOneAndDelete({
-    _id:id
-  })
-    
-  res.status(204).json({ data: "request rejected successfuly" });
+    _id: id,
+  });
+
+  res.status(204).json({ data: 'request rejected successfuly' });
 });
 
 ////////////
-exports.createRequest = factory.createOne(RequestModel);
+exports.createRequest = catchAsyncErr(async (req, res) => {
+  const document = await RequestModel.create(req.body);
+  if (document.winch) {
+    let roomData = { room: document.winch };
+    socket.emit('emit-request-created', roomData);
+  }
+  if (document.mechanic) {
+    let roomData = { room: document.mechanic };
+    socket.emit('emit-request-created', roomData); 
+  }
+
+  res.status(200).json({
+    data: document,
+  });
+});
 
 // //get specific request with id
 // exports.getRequest = factory.getOne(RequestModel);
