@@ -36,7 +36,7 @@ exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
 
 //get all mechanic
 exports.getMechanicWorkshops = catchAsyncErr(async (req, res, next) => {
-  const mechanics = await mechanicModel.find();
+  const mechanics = await mechanicModel.find({emailConfirm:true});
   if (!mechanics) {
     return next(new AppError('no mechanic found', 404));
   }

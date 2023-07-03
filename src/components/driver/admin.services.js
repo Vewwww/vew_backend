@@ -8,9 +8,11 @@ const requestModel = require('../request/request.model');
 const AppError = require('../../utils/AppError');
 const jwt = require('jsonwebtoken');
 const { sendEmail } = require('../Handlers/email.factory');
+// const geolocationAPI = require('geolocationAPI');
+
 
 exports.getAdmins = catchAsyncErr(async (req, res) => {
-  let admins = await driverModel.find({ role: 'admin' });
+  let admins = await driverModel.find({ role: 'admin', emailConfirm: true });
   res.status(200).json({ admins });
 });
 
@@ -39,25 +41,25 @@ exports.addAdmin = catchAsyncErr(async (req, res, next) => {
 
 // to get all Users
 exports.getUsers = catchAsyncErr(async (req, res) => {
-  let Users = await driverModel.find({});
-  let mechanics = await mechanicWorkshopModel.find({});
-  let winches = await winchModel.find({});
+  let Users = await driverModel.find({ emailConfirm: true });
+  let mechanics = await mechanicWorkshopModel.find({ emailConfirm: true });
+  let winches = await winchModel.find({ emailConfirm: true });
   res.status(200).json({ drivers: Users, mechanics: mechanics, winches: winches });
 });
 
 // to get specific User
 exports.getUser = catchAsyncErr(async (req, res, next) => {
-  const { id } = req.params;
-  let User = await driverModel.findById(id);
+  const {id} = req.params;
+  let User = await driverModel.find({_id:id,emailConfirm:true});
   if (!User) {
-    let User = await mechanicWorkshopModel.findById(id);
-    User && res.status(200).json(User);
+    User = await mechanicWorkshopModel.findById({_id:id,emailConfirm:true});
+    if (!User) {
+      User = await winchModel.findById({_id:id,emailConfirm:true});
+      if (!User) {
+        return next(new AppError('User not found', 400));
+      }
+    }
   }
-  if (!User) {
-    let User = await winchModel.findById(id);
-    User && res.status(200).json(User);
-  }
-  !User && next(new AppError('User not found', 400));
   User && res.status(200).json(User);
 });
 //user statistics
@@ -142,28 +144,92 @@ exports.getSeasonsAnalytics = catchAsyncErr(async (req, res, next) => {
   res.status(200).json({ data: seasons });
 });
 
-//top 20 roads
-exports.getTopRoadsHadIssue = catchAsyncErr(async (req, res) => {
+// function degrees_to_radians(degrees) {
+//   return degrees * (Math.PI / 180);
+// }
+
+// function hav(theta) {
+//   return (1 - Math.cos(theta)) / 2;
+// }
+
+// function calculateDistence(lat1, lon1, lat2, lon2) {
+//   lat1 = degrees_to_radians(lat1);
+//   lon1 = degrees_to_radians(lon1);
+//   lat2 = degrees_to_radians(lat2);
+//   lon2 = degrees_to_radians(lon2);
+
+//   dLat = lat1 - lat2;
+//   dLon = lon1 - lon2;
+
+//   const R = 6371;
+//   //hav(theta) = (1-cons(theta)) /2
+
+//   //Haversin angle
+//   const havAngle = hav(dLat) + Math.cos(lat1) * Math.cos(lat2) * hav(dLon);
+//   const centralAngle = 2 * Math.atan2(Math.sqrt(havAngle), Math.sqrt(1 - havAngle));
+//   distance = R * centralAngle;
+//   return distance;
+// }
+
+exports.getTopAreasHadIssue = catchAsyncErr(async (req, res) => {
   const requests = await requestModel.find();
-  let topRoadsHadIssue = {};
-
+  const topAreasHadIssue = {};
   for (const request of requests) {
-    if (!topRoadsHadIssue.hasOwnProperty(request.location.road)) {
-      topRoadsHadIssue[request.location.road] = 0;
+    const { latitude, longitude } = request.location;
+    const area = `${latitude.toFixed(2)}, ${longitude.toFixed(2)}`;
+    if (!topAreasHadIssue.hasOwnProperty(area)) {
+      topAreasHadIssue[area] = 0;
     }
-    topRoadsHadIssue[request.location.road] += 1;
+    topAreasHadIssue[area] += 1;
   }
+  const sortedAreas = Object.entries(topAreasHadIssue)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 20)
+    .reduce((acc, [area, count]) => {
+      acc[area] = count;
+      return acc;
+    }, {});
 
-  console.log(topRoadsHadIssue);
-  topRoadsHadIssue = Object.entries(topRoadsHadIssue)
-    .sort((a, b) => topRoadsHadIssue[b] - topRoadsHadIssue[a])
-    .slice(0, 20);
-  for (const element of topRoadsHadIssue) {
-    topRoadsHadIssue[element[0]] = element[1];
-  }
-
-  res.status(200).json(topRoadsHadIssue);
+  res.status(200).json(sortedAreas);
 });
+
+
+// exports.getTopAreasHadIssue = catchAsyncErr(async (req, res) => {
+//   const { latitude, longitude } = req.body; 
+//   const precision = 4;
+//   const requests = await requestModel.find();
+//   let topAreasHadIssue = {};
+
+//   for (const request of requests) {
+//     const distance = calculateDistence(
+//       latitude,
+//       longitude,
+//       request.location.latitude,
+//       request.location.longitude
+//     );
+
+//     if (distance <= 10) { 
+//       const roundedLat = roundCoordinate(request.location.latitude, precision);
+//       const roundedLng = roundCoordinate(request.location.longitude, precision);
+//       const area = [roundedLat, roundedLng];
+//       if (!topAreasHadIssue.hasOwnProperty(area)) {
+//         topAreasHadIssue[area] = 0;
+//       }
+//       topAreasHadIssue[area] += 1;
+//     }
+//   }
+
+//   console.log(topAreasHadIssue);
+//   topAreasHadIssue = Object.entries(topAreasHadIssue)
+//     .sort((a, b) => b[1] - a[1])
+//     .slice(0, 20)
+//     .reduce((acc, [area, count]) => {
+//       acc[area] = count;
+//       return acc;
+//     }, {});
+
+//   res.status(200).json(topAreasHadIssue);
+// });
 
 exports.getProfile = catchAsyncErr(async (req, res) => {
   delete req.user._doc.password;
