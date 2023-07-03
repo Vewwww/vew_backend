@@ -80,7 +80,7 @@ router.route('/userStatistics').get(authinticate, allowedTo('admin'), userStatis
 router.get('/genderAnalytics', authinticate, allowedTo('admin'), getGenderAnalytic);
 router.get('/topModelsHadIssues', authinticate, allowedTo('admin'), tenModelsHadIssues);
 router.get('/seasonsAnalytics', authinticate, allowedTo('admin'), getSeasonsAnalytics);
-router.get('/roadsAnalytics', getTopAreasHadIssue);
-router.route('/:id').get(authinticate, allowedTo('admin'), getUser);
+router.get('/roadsAnalytics',authinticate, allowedTo('admin'), getTopAreasHadIssue);
+router.get('/:id',authinticate, allowedTo('admin'), getUser);
 
 module.exports = router;
