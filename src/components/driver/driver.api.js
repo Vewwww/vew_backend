@@ -58,7 +58,7 @@ router.get('/getNearestWinch', validateLatandLon, getNearestWinch);
 
 /////////////////////////   Signs    ////////////////////////////
 router.get('/sign', authinticate, allowedTo('user'), getSigns);
-router.get('sign/:id', authinticate, allowedTo('user'), getSign);
+router.get('/sign/:id', authinticate, allowedTo('user'), getSign);
 
 /////////////////////////   Request    ////////////////////////////
 router.post('/createMechanicRequest', validateCreateMechanicRequest, authinticate, allowedTo('user'), createRequest);
@@ -72,10 +72,10 @@ router.delete('/request/:id', authinticate, allowedTo('user'), deleteRequest);
 router.get('/chat', authinticate, allowedTo('user'), getUserChats);
 
 /////////////////////////   Car    ////////////////////////////
-router.get('car/carOwner/:driverId', authinticate, allowedTo('user'), getCarsOfDriver);
-router.post('car/', carValidation, authinticate, allowedTo('user'), createCar);
+router.get('/car/carOwner/:driverId', authinticate, allowedTo('user'), getCarsOfDriver);
+router.post('/car/', carValidation, authinticate, allowedTo('user'), createCar);
 router
-  .route('car/:id')
+  .route('/car/:id')
   .put(carValidation, authinticate, allowedTo('user'), updateCar)
   .delete(authinticate, allowedTo('user'), deleteCar);
 
