@@ -12,7 +12,7 @@ const { sendEmail } = require('../Handlers/email.factory');
 
 
 exports.getAdmins = catchAsyncErr(async (req, res) => {
-  let admins = await driverModel.find({ role: 'admin' ,emailConfirm:true});
+  let admins = await driverModel.find({ role: 'admin', emailConfirm: true });
   res.status(200).json({ admins });
 });
 
@@ -41,23 +41,25 @@ exports.addAdmin = catchAsyncErr(async (req, res, next) => {
 
 // to get all Users
 exports.getUsers = catchAsyncErr(async (req, res) => {
-  let Users = await driverModel.find({emailConfirm:true});
-  let mechanics = await mechanicWorkshopModel.find({emailConfirm:true});
-  let winches = await winchModel.find({emailConfirm:true});
+  let Users = await driverModel.find({ emailConfirm: true });
+  let mechanics = await mechanicWorkshopModel.find({ emailConfirm: true });
+  let winches = await winchModel.find({ emailConfirm: true });
   res.status(200).json({ drivers: Users, mechanics: mechanics, winches: winches });
 });
 
 // to get specific User
 exports.getUser = catchAsyncErr(async (req, res, next) => {
-  const id = req.params;
-  let User = await driverModel.find({id,emailConfirm:true});
+  const {id} = req.params;
+  let User = await driverModel.find({_id:id,emailConfirm:true});
   if (!User) {
-    User = await mechanicWorkshopModel.find({id,emailConfirm:true});
-  if (!User) {
-     User = await winchModel.find({id,emailConfirm:true});
+    User = await mechanicWorkshopModel.findById({_id:id,emailConfirm:true});
+    if (!User) {
+      User = await winchModel.findById({_id:id,emailConfirm:true});
+      if (!User) {
+        return next(new AppError('User not found', 400));
+      }
+    }
   }
-  !User && next(new AppError('User not found', 400));
-}
   User && res.status(200).json(User);
 });
 //user statistics
