@@ -18,8 +18,11 @@ exports.createCarForSignup = async (car, driverId) => {
     car.carLicenseRenewalNotifition = notificationId;
   }
   if (car.lastPeriodicMaintenanceDate && car.averageMilesPerMonth && car.milesLimit) {
+    car.miles=milesLimit
     const notificationId = await createCarPeriodicDate(
-      car.lastPeriodicMaintenanceDate , car.averageMilesPerMonth , car.milesLimit,
+      car.lastPeriodicMaintenanceDate,
+      car.averageMilesPerMonth,
+      car.milesLimit,
       driverId
     );
     car.periodicMaintenanceNotification = notificationId;
@@ -33,6 +36,7 @@ exports.createCar = catchAsyncErr(async (req, res, next) => {
     req.body.carLicenseRenewalNotifition = notificationId;
   }
   if (req.body.lastPeriodicMaintenanceDate && req.body.averageMilesPerMonth && req.body.milesLimit) {
+    req.body.miles=milesLimit
     const notificationId = await createCarPeriodicDate(
       req.body.lastPeriodicMaintenanceDate,
       req.body.averageMilesPerMonth,
@@ -77,7 +81,9 @@ exports.updateCar = catchAsyncErr(async (req, res, next) => {
       req.body.periodicMaintenanceNotification = notificationId;
     } else {
       const notificationId = await createCarLicenseNotification(
-        req.body.lastPeriodicMaintenanceDate , req.body.averageMilesPerMonth , req.body.milesLimit,
+        req.body.lastPeriodicMaintenanceDate,
+        req.body.averageMilesPerMonth,
+        req.body.milesLimit,
         car.owner
       );
       req.body.periodicMaintenanceNotification = notificationId;
@@ -121,7 +127,15 @@ exports.deleteCar = catchAsyncErr(async (req, res, next) => {
 
 exports.getCarsOfDriver = catchAsyncErr(async (req, res, next) => {
   const { driverId } = req.params;
-  const car = await carModel.find({ owner: driverId });
+  // -lastPeriodicMaintenanceDate -averageMilesPerMonth -miles
+  const car = await carModel
+    .find({ owner: driverId })
+    .select(
+      '-__v -owner -periodicMaintenanceNotification -carLicenseRenewalNotifition '
+    )
+    .populate({ path: 'color', select: '-__v' })
+    .populate({ path: 'carType', select: '-__v' })
+    .populate({ path: 'carModel', select: '-__v -brand' });
 
   if (!car) {
     return next(new AppError(`No document found for this owner ${driverId}`, 400));
