@@ -86,8 +86,7 @@ const schema = new mongoose.Schema({
     type: String,
     default: "mechanic",
   },
-  passwordChangedAt: {
-    type: Date},
+  passwordChangedAt: Date,
 });
 
 schema.pre('save', async function (next) {
