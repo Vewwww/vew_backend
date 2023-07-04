@@ -95,12 +95,11 @@ exports.authinticate = (model) => {
 
     if (currentUser.logedIn === false)
       return next(new AppError('you are no longer logedin, please login to get access to this route', 401));
-
-    // if (currentUser.passwordChangedAt) {
-    //   const passwordChangedTimeStamp = parseInt(currentUser.passwordChangedAt.getTime() / 1000, 10);
-    //   if (passwordChangedTimeStamp > decoded.iat)
-    //     return next(new ApiError('user recently changed his password, please login again'), 401);
-    // }
+    if (currentUser.passwordChangedAt) {
+      const passwordChangedTimeStamp = parseInt(currentUser.passwordChangedAt.getTime() / 1000, 10);
+      if (passwordChangedTimeStamp > decoded.iat)
+        return next(new ApiError('user recently changed his password, please login again'), 401);
+    }
     req.user = currentUser;
     next();
   });
