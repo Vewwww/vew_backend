@@ -19,7 +19,7 @@ const schema = mongoose.Schema({
     required: [true, 'password required'],
     minlength: [6, 'minlength 6 characters'],
   },
-  changedPasswordAt: {
+  passwordChangedAt: {
     type: Date},
   phoneNumber: {
     type: String,
