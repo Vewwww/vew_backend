@@ -18,9 +18,10 @@ function calculateDistence(lat1, lon1, lat2, lon2) {
   const R = 6371;
   //hav(theta) = (1-cons(theta)) /2
 
-  //Haversin angle
-  const havAngle = hav(dLat) + Math.cos(lat1) * Math.cos(lat2) * hav(dLon);
-  const centralAngle = 2 * Math.atan2(Math.sqrt(havAngle), Math.sqrt(1 - havAngle));
+  const havOfTheta = hav(dLat) + Math.cos(lat1) * Math.cos(lat2) * hav(dLon);
+
+  const centralAngle = Math.acos(1 - 2 * havOfTheta);
+
   distance = R * centralAngle;
   return distance;
 }
@@ -73,7 +74,6 @@ exports.getNearestPlaces = (places, userLat, userLon) => {
   if (places.length > 30) {
     places = places.slice(0, 30);
   }
-
 
   return places;
 };
