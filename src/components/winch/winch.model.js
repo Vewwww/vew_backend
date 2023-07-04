@@ -76,7 +76,7 @@ const schema = new mongoose.Schema({
     type: Boolean,
     default: true,
   },
-  changedPasswordAt: {
+  passwordChangedAt: {
     type: Date},
 });
 schema.pre('save', async function (next) {

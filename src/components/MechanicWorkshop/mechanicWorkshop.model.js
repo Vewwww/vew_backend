@@ -86,7 +86,7 @@ const schema = new mongoose.Schema({
     type: String,
     default: "mechanic",
   },
-  changedPasswordAt: {
+  passwordChangedAt: {
     type: Date},
 });
 

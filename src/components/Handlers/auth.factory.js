@@ -147,7 +147,7 @@ exports.allowedTo = (...roles) => {
 exports.changePassword = (model) => {
   return catchAsyncErr(async (req, res, next) => {
     const id = req.user._id;
-    req.body.changedPasswordAt = Date.now();
+    req.body.passwordChangedAt = Date.now();
     let user = await model.findById(id);
     !user && next(new AppError("User not found", 400));
     if (await bcrypt.compare(req.body.password, user.password)) {
