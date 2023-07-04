@@ -1,12 +1,13 @@
 const mongoose = require("mongoose")
 const schema = mongoose.Schema({
-    question: {
+    category: {
         type: String,
         trim: true
     },
-    choices: [{
-        choice: { type: String, trim: true },
-        keywords: []
+    questions: [{
+        subQuestion: { type: String, trim: true },
+        yesKeywords: [],
+        noKeywords: []
     }]
 
 })

@@ -2,11 +2,13 @@ const Joi = require("joi");
 const AppError = require("../../../utils/AppError");
 
 const validation = Joi.object({
-    question: Joi.string().trim().required(),
-    choices: Joi.array().items(
+    category: Joi.string().trim().required(),
+    questions: Joi.array().items(
         Joi.object({
-            choice: Joi.string().trim().required(),
-            keywords: Joi.array().items(Joi.string()).required()
+            subQuestion: Joi.string().trim().required(),
+            yesKeywords: Joi.array().items(Joi.string()).required(),
+            noKeywords: Joi.array().items(Joi.string()).required()
+
         })
     ).required()
 }).options({ allowUnknown: true });

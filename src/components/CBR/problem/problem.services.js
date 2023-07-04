@@ -15,7 +15,10 @@ exports.updateProblem = factory.updateOne(problemModel);
 
 exports.getUnsolved = catchAsyncErr(async (req, res, next) => {
     const unsolvedProblem = await problemModel.find({ isSolved: false });
-    res.status(204).send(unsolvedProblem);
+    // console.log(unsolvedProblem);
+    res.status(200).json({
+        data: unsolvedProblem
+    });
 });
 
 exports.deleteProblem = catchAsyncErr(async (req, res, next) => {
