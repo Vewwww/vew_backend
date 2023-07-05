@@ -291,6 +291,7 @@ exports.acceptWinchRequest = catchAsyncErr(async (req, res, next) => {
 
   request.isActive = true;
   request.accepted = true;
+  await request.save();
 
   const chat = await createChat(request.driver, req.user._id);
   if (!chat) {
