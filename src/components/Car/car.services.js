@@ -18,7 +18,6 @@ exports.createCarForSignup = async (car, driverId) => {
     car.carLicenseRenewalNotifition = notificationId;
   }
   if (car.lastPeriodicMaintenanceDate && car.averageMilesPerMonth && car.milesLimit) {
-    car.miles=milesLimit
     const notificationId = await createCarPeriodicDate(
       car.lastPeriodicMaintenanceDate,
       car.averageMilesPerMonth,
@@ -36,7 +35,6 @@ exports.createCar = catchAsyncErr(async (req, res, next) => {
     req.body.carLicenseRenewalNotifition = notificationId;
   }
   if (req.body.lastPeriodicMaintenanceDate && req.body.averageMilesPerMonth && req.body.milesLimit) {
-    req.body.miles=milesLimit
     const notificationId = await createCarPeriodicDate(
       req.body.lastPeriodicMaintenanceDate,
       req.body.averageMilesPerMonth,
