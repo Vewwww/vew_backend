@@ -107,7 +107,7 @@ exports.getGenderAnalytic = catchAsyncErr(async (req, res, next) => {
   for (let i = 0; i < document.length; i++) {
     if (document[i].driver) {
       if (document[i].driver.gender == 'male') {
-        maleLenth += 1;
+        maleLength += 1;
         driverLength+=1;
       } else {
         femaleLength += 1;
