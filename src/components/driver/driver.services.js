@@ -48,7 +48,7 @@ exports.updateUser = catchAsyncErr(async (req, res, next) => {
 
   if (req.body.email) {
     email = req.body.email;
-    let isUser = await driverModel.findOne({ email });
+    let isUser = await driverModel.findById(user._id);
     if (!isUser) {
       isUser = await mechanicWorkshopModel.findOne({ email });
       if (!isUser) {
