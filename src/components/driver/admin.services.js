@@ -104,12 +104,22 @@ exports.tenModelsHadIssues = catchAsyncErr(async (req, res) => {
 //Gender had problem analytic
 exports.getGenderAnalytic = catchAsyncErr(async (req, res, next) => {
   const document = await requestModel.find().populate('driver');
-  console.log(document);
-  let driverLength = document.length;
-  let maleLength = document.filter((request) => request.driver.gender == 'male').length;
-  let femaleLength = document.filter((request) => request.driver.gender == 'female').length;
-  let maleRatio = maleLength / driverLength;
-  let femaleRatio = femaleLength / driverLength;
+  let driverLength = 0;
+  let maleLength = 0;
+  let femaleLength = 0;
+  for (let i = 0; i < document.length; i++) {
+    if (document[i].driver) {
+      if (document[i].driver.gender == 'male') {
+        maleLength += 1;
+        driverLength+=1;
+      } else {
+        femaleLength += 1;
+        driverLength+=1;
+      }
+    }
+  }
+  let maleRatio = Math.floor((maleLength / driverLength) * 100);
+  let femaleRatio = Math.floor((femaleLength / driverLength) * 100);
   res.status(200).json({ maleRatio, femaleRatio });
 });
 
