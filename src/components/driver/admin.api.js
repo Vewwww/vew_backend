@@ -10,6 +10,7 @@ const {
   getProfile,
   updateProfile,
   getTopAreasHadIssue,
+  getTopRoadsHadIssue,
 } = require('./admin.services');
 const { authinticate, emailVerify } = require('../driver/driver.auth');
 const { allowedTo } = require('../Handlers/auth.factory');
@@ -29,7 +30,7 @@ const {
 const { getMechanicWorkshops } = require('../MechanicWorkshop/mechanicWorkshop.services');
 const { getWinches } = require('../winch/winch.services');
 const { resizeImage, uploadSingleFile } = require('../../utils/fileUpload');
-const { createSign } = require('../Sign/sign.services');
+const { createSign, getSigns } = require('../Sign/sign.services');
 const { getDrivers } = require('./driver.services');
 const { validateUpdateProfile } = require('./driver.validator');
 
@@ -68,7 +69,7 @@ router.get('/winch', authinticate, allowedTo('admin'), getWinches);
 router.get('/driver', authinticate, allowedTo('admin'), getDrivers);
 
 ///////////////////////  Signs  ///////////////////////
-router.post('/sign', authinticate, allowedTo('admin'), uploadSingleFile('image'), resizeImage, createSign);
+router.post('/sign', authinticate, allowedTo('admin'), uploadSingleFile('image'), resizeImage, createSign).get(authinticate, allowedTo('admin'),getSigns);
 
 ///////////////////////  Admin  ///////////////////////
 router.route('/').post(authinticate, allowedTo('admin'), addAdmin).get(authinticate, allowedTo('admin'), getUsers);
@@ -80,7 +81,7 @@ router.route('/userStatistics').get(authinticate, allowedTo('admin'), userStatis
 router.get('/genderAnalytics', authinticate, allowedTo('admin'), getGenderAnalytic);
 router.get('/topModelsHadIssues', authinticate, allowedTo('admin'), tenModelsHadIssues);
 router.get('/seasonsAnalytics', authinticate, allowedTo('admin'), getSeasonsAnalytics);
-router.get('/roadsAnalytics',authinticate, allowedTo('admin'), getTopAreasHadIssue);
+router.get('/roadsAnalytics',authinticate, allowedTo('admin'), getTopRoadsHadIssue);
 router.get('/:id',authinticate, allowedTo('admin'), getUser);
 
 module.exports = router;
