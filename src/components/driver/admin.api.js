@@ -69,7 +69,7 @@ router.get('/winch', authinticate, allowedTo('admin'), getWinches);
 router.get('/driver', authinticate, allowedTo('admin'), getDrivers);
 
 ///////////////////////  Signs  ///////////////////////
-router.post('/sign', authinticate, allowedTo('admin'), uploadSingleFile('image'), resizeImage, createSign).get(authinticate, allowedTo('admin'),getSigns);
+router.route('/sign').post( authinticate, allowedTo('admin'), uploadSingleFile('image'), resizeImage, createSign).get(authinticate, allowedTo('admin'),getSigns);
 
 ///////////////////////  Admin  ///////////////////////
 router.route('/').post(authinticate, allowedTo('admin'), addAdmin).get(authinticate, allowedTo('admin'), getUsers);
