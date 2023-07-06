@@ -10,6 +10,7 @@ const jwt = require('jsonwebtoken');
 const { sendEmail } = require('../Handlers/email.factory');
 // const geolocationAPI = require('geolocationAPI');
 
+
 exports.getAdmins = catchAsyncErr(async (req, res) => {
   let admins = await driverModel.find({ role: 'admin', emailConfirm: true });
   res.status(200).json({ admins });
@@ -48,12 +49,12 @@ exports.getUsers = catchAsyncErr(async (req, res) => {
 
 // to get specific User
 exports.getUser = catchAsyncErr(async (req, res, next) => {
-  const { id } = req.params;
-  let User = await driverModel.find({ _id: id, emailConfirm: true });
+  const {id} = req.params;
+  let User = await driverModel.find({_id:id,emailConfirm:true});
   if (!User) {
-    User = await mechanicWorkshopModel.findById({ _id: id, emailConfirm: true });
+    User = await mechanicWorkshopModel.findById({_id:id,emailConfirm:true});
     if (!User) {
-      User = await winchModel.findById({ _id: id, emailConfirm: true });
+      User = await winchModel.findById({_id:id,emailConfirm:true});
       if (!User) {
         return next(new AppError('User not found', 400));
       }
@@ -61,7 +62,6 @@ exports.getUser = catchAsyncErr(async (req, res, next) => {
   }
   User && res.status(200).json(User);
 });
-
 //user statistics
 exports.userStatistics = catchAsyncErr(async (req, res) => {
   const numOfMechanists = await mechanicWorkshopModel.countDocuments();
@@ -157,48 +157,28 @@ exports.getSeasonsAnalytics = catchAsyncErr(async (req, res, next) => {
   res.status(200).json({ data: seasons });
 });
 
-// exports.getTopAreasHadIssue = catchAsyncErr(async (req, res) => {
-//   const requests = await requestModel.find();
-//   const topAreasHadIssue = {};
-//   for (const request of requests) {
-//     const { latitude, longitude } = request.location;
-//     const area = `${latitude.toFixed(2)}, ${longitude.toFixed(2)}`;
-//     if (!topAreasHadIssue.hasOwnProperty(area)) {
-//       topAreasHadIssue[area] = 0;
-//     }
-//     topAreasHadIssue[area] += 1;
-//   }
-//   const sortedAreas = Object.entries(topAreasHadIssue)
-//     .sort((a, b) => b[1] - a[1])
-//     .slice(0, 20)
-//     .reduce((acc, [area, count]) => {
-//       acc[area] = count;
-//       return acc;
-//     }, {});
-
-//   res.status(200).json(sortedAreas);
-// });
-
-exports.getTopRoadsHadIssue = catchAsyncErr(async (req, res) => {
+exports.getTopAreasHadIssue = catchAsyncErr(async (req, res) => {
   const requests = await requestModel.find();
-  let topRoadsHadIssue = {};
-
+  const topAreasHadIssue = {};
   for (const request of requests) {
-    if (!topRoadsHadIssue.hasOwnProperty(request.location.road)) {
-      topRoadsHadIssue[request.location.road] = 0;
+    const { latitude, longitude } = request.location;
+    const area = `${latitude.toFixed(2)}, ${longitude.toFixed(2)}`;
+    if (!topAreasHadIssue.hasOwnProperty(area)) {
+      topAreasHadIssue[area] = 0;
     }
-    topRoadsHadIssue[request.location.road] += 1;
+    topAreasHadIssue[area] += 1;
   }
-
-  topRoadsHadIssue = Object.entries(topRoadsHadIssue)
+  const sortedAreas = Object.entries(topAreasHadIssue)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 20)
-    .reduce((acc, [road, count]) => {
-      acc[road] = count;
+    .reduce((acc, [area, count]) => {
+      acc[area] = count;
       return acc;
     }, {});
-  res.status(200).json(topRoadsHadIssue);
+
+  res.status(200).json(sortedAreas);
 });
+
 
 exports.getProfile = catchAsyncErr(async (req, res) => {
   delete req.user._doc.password;
