@@ -37,7 +37,6 @@ exports.login = catchAsyncErr(async (req, res, next) => {
       modelName = 'winches';
       if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
         return next(new AppError('incorrect email or password', 401));
-
       }
     }
   }
@@ -149,10 +148,9 @@ exports.changePassword = (model) => {
     const id = req.user._id;
     req.body.passwordChangedAt = Date.now();
     let user = await model.findById(id);
-    !user && next(new AppError("User not found", 400));
+    !user && next(new AppError('User not found', 400));
     if (await bcrypt.compare(req.body.password, user.password)) {
-      return next(new AppError("This is already your current password", 400));
-
+      return next(new AppError('This is already your current password', 400));
     }
     user = await model.findByIdAndUpdate(id, { password: req.body.password }, { new: true });
     res.status(200).json(user);
@@ -233,40 +231,4 @@ exports.resetPassword = catchAsyncErr(async (req, res, next) => {
     res.status(401).json({ message: 'Please check your email' });
   }
 });
-exports.updateProfile = (model) => {
- return catchAsyncErr(async (req, res, next) => {
-    const id = req.user._id;
 
-    if (req.body.email) {
-      let user = await model.findById(id)
-      email = req.body.email;
-      if (user.email != email) {
-        let isUser = await driverModel.findOne({ email });
-        if (!isUser) {
-          isUser = await mechanicModel.findOne({ email });
-          if (!isUser) {
-            isUser = await winchModel.findOne({ email });
-          }
-        }
-        if (isUser) return next(new AppError('user with thes email already exists, please change your email', 401));
-        let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
-        user.emailConfirm = false;
-        user.save();
-        await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, mechanicModel);
-      }
-    }
-    const updatedUser = await model.findOneAndUpdate({ _id: id }, req.body, {
-      new: true,
-    });
-    if (!updatedUser) {
-      return next(new AppError('No user found for this id', 404));
-    }
-    res.status(201).json({
-      status: 'success',
-      data: updatedUser,
-    });
-  }
-
-
-  )
-};

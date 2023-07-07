@@ -109,25 +109,7 @@ exports.updateWinchAvailableState = catchAsyncErr(async (req, res, next) => {
 //     });
 //   });
 
-// // update specific winch with id
-//   exports.updateWinch = catchAsyncErr(async (req, res) => {
-//     const { id } = req.params;
-//     const  _winch  = req.body;
-//     const updatedWinch = await winch.findOneAndUpdate({ _id: id }, _winch, {
-//       new: true,
-//     });
-
-//     console.log(_winch);
-
-//     if (!updatedWinch) {
-//       return next(new AppErr("No winch found for this id", 404));
-//     }
-
-//     res.status(201).json({
-//       status: "success",
-//       data: updatedWinch,
-//     });
-//   });
+exports.updateProfile=factory.updateProfile(winchModel)
 
 // // delete specific winch with id
 

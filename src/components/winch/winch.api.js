@@ -6,13 +6,19 @@ const {
   getWinch,
   getWinches,
   updateWinchAvailableState,
-  updateWinch,
+  updateProfile
 } = require('./winch.services');
-const { signup, emailVerify, authinticate, changePassword, updateProfile } = require('./winch.auth');
+const { signup, emailVerify, authinticate, changePassword } = require('./winch.auth');
 const { allowedTo } = require('../Handlers/auth.factory');
 const { winchValidation, validateLatandLon } = require('./winch.validator');
 const router = require('express').Router();
-const { endRequest, acceptWinchRequest, getWinchUpcomingRequests, getWinchAcceptedRequests, rejectRequest } = require('../request/request.services');
+const {
+  endRequest,
+  acceptWinchRequest,
+  getWinchUpcomingRequests,
+  getWinchAcceptedRequests,
+  rejectRequest,
+} = require('../request/request.services');
 const { getUserChats } = require('../chat/chat.services');
 
 router.post('/signup', winchValidation, signup, createWinch);
@@ -26,10 +32,10 @@ router.patch('/updateAvailableState', authinticate, allowedTo('winch'), updateWi
 router.get('/chat', authinticate, allowedTo('winch'), getUserChats);
 
 //////////////////    Request    ///////////////////
-router.get('/acceptWinchRequest/:id',authinticate, allowedTo('winch'),acceptWinchRequest);
-router.get('/getWinchUpcomingRequests',authinticate, allowedTo('winch'),getWinchUpcomingRequests);
-router.get('/getWinchAcceptedRequests',authinticate, allowedTo('winch'),getWinchAcceptedRequests);
-router.get('/endRequest/:id',authinticate,allowedTo('winch'), endRequest);
-router.delete('/request/:id',authinticate,allowedTo('winch'), rejectRequest);
+router.get('/acceptWinchRequest/:id', authinticate, allowedTo('winch'), acceptWinchRequest);
+router.get('/getWinchUpcomingRequests', authinticate, allowedTo('winch'), getWinchUpcomingRequests);
+router.get('/getWinchAcceptedRequests', authinticate, allowedTo('winch'), getWinchAcceptedRequests);
+router.get('/endRequest/:id', authinticate, allowedTo('winch'), endRequest);
+router.delete('/request/:id', authinticate, allowedTo('winch'), rejectRequest);
 
 module.exports = router;
