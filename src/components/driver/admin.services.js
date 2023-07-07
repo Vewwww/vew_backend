@@ -94,7 +94,7 @@ exports.tenModelsHadIssues = catchAsyncErr(async (req, res) => {
 
   const top10Models = Object.keys(topModels);
 
-  const hadIssues = await carModel.find({ _id: { $in: top10Models } }).populate('carType');
+  const hadIssues = await carModel.find({ _id: { $in: top10Models } }).populate('brand');
   res.status(200).json(hadIssues);
 });
 
@@ -108,10 +108,10 @@ exports.getGenderAnalytic = catchAsyncErr(async (req, res, next) => {
     if (document[i].driver) {
       if (document[i].driver.gender == 'male') {
         maleLength += 1;
-        driverLength+=1;
+        driverLength += 1;
       } else {
         femaleLength += 1;
-        driverLength+=1;
+        driverLength += 1;
       }
     }
   }
