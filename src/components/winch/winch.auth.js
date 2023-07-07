@@ -5,3 +5,4 @@ exports.signup = authFactory.signup(winchModel);
 exports.emailVerify = authFactory.emailVerify(winchModel);
 exports.authinticate = authFactory.authinticate(winchModel);
 exports.changePassword = authFactory.changePassword(winchModel);
+exports.updateProfile=authFactory.updateProfile(winchModel)

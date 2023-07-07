@@ -44,24 +44,24 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
 
 // to update specific User
 exports.updateUser = catchAsyncErr(async (req, res, next) => {
-  let user = req.user;
-
   if (req.body.email) {
+    let user = await model.findById(id)
     email = req.body.email;
-    let isUser = await driverModel.findById(user._id);
-    if (!isUser) {
-      isUser = await mechanicWorkshopModel.findOne({ email });
+    if (user.email != email) {
+      let isUser = await driverModel.findOne({ email });
       if (!isUser) {
-        isUser = await winchModel.findOne({ email });
+        isUser = await mechanicModel.findOne({ email });
+        if (!isUser) {
+          isUser = await winchModel.findOne({ email });
+        }
       }
+      if (isUser) return next(new AppError('user with thes email already exists, please change your email', 401));
+      let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
+      user.emailConfirm = false;
+      user.save();
+      await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, mechanicModel);
     }
-    if (isUser) return next(new AppError('user with thes email already exists, please change your email', 401));
-    let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
-    user.emailConfirm = false;
-    user.save();
-    await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, driverModel);
   }
-
   if (req.body.driverLisenceRenewalDate) {
     if (user.driverLisenceRenewalNotification) {
       const notificationId = await updateDriverLicenseNotification(
@@ -136,7 +136,7 @@ exports.getNearest = catchAsyncErr(async (req, res, next) => {
 });
 
 exports.getDrivers = catchAsyncErr(async (req, res) => {
-  let Users = await driverModel.find({ role: 'user' ,emailConfirm:true});
+  let Users = await driverModel.find({ role: 'user', emailConfirm: true });
   res.status(200).json({ Users });
 });
 

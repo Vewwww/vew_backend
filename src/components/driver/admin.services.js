@@ -2,14 +2,14 @@ const { catchAsyncErr } = require('../../utils/CatchAsyncErr');
 const mechanicWorkshopModel = require('../MechanicWorkshop/mechanicWorkshop.model');
 const winchModel = require('../winch/winch.model');
 const driverModel = require('./driver.model');
-const factory = require('../Handlers/handler.factory');
+const factory = require('../Handlers/auth.factory')
 const carModel = require('../carModel/carModel.model');
 const requestModel = require('../request/request.model');
 const AppError = require('../../utils/AppError');
 const jwt = require('jsonwebtoken');
 const { sendEmail } = require('../Handlers/email.factory');
 // const geolocationAPI = require('geolocationAPI');
-
+exports.updateProfile=factory.updateProfile(driverModel)
 exports.getAdmins = catchAsyncErr(async (req, res) => {
   let admins = await driverModel.find({ role: 'admin', emailConfirm: true });
   res.status(200).json({ admins });
@@ -94,7 +94,7 @@ exports.tenModelsHadIssues = catchAsyncErr(async (req, res) => {
 
   const top10Models = Object.keys(topModels);
 
-  const hadIssues = await carModel.find({ _id: { $in: top10Models } }).populate('carType');
+  const hadIssues = await carModel.find({ _id: { $in: top10Models } }).populate('brand');
   res.status(200).json(hadIssues);
 });
 
@@ -108,10 +108,10 @@ exports.getGenderAnalytic = catchAsyncErr(async (req, res, next) => {
     if (document[i].driver) {
       if (document[i].driver.gender == 'male') {
         maleLength += 1;
-        driverLength+=1;
+        driverLength += 1;
       } else {
         femaleLength += 1;
-        driverLength+=1;
+        driverLength += 1;
       }
     }
   }
@@ -206,26 +206,4 @@ exports.getProfile = catchAsyncErr(async (req, res) => {
   res.status(200).json({ data: req.user });
 });
 
-exports.updateProfile = catchAsyncErr(async (req, res, next) => {
-  let user = req.user;
 
-  if (req.body.email) {
-    email = req.body.email;
-    let isUser = await driverModel.findOne({ email });
-    if (!isUser) {
-      isUser = await mechanicWorkshopModel.findOne({ email });
-      if (!isUser) {
-        isUser = await winchModel.findOne({ email });
-      }
-    }
-    if (isUser) return next(new AppError('user with thes email already exists, please change your email', 401));
-    let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
-    user.emailConfirm = false;
-    user.save();
-    await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, driverModel);
-  }
-
-  user = await driverModel.findOneAndUpdate({ _id: req.user._id }, req.body, { new: true });
-
-  res.status(200).json({ data: user });
-});
