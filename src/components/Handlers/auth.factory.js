@@ -37,7 +37,6 @@ exports.login = catchAsyncErr(async (req, res, next) => {
       modelName = 'winches';
       if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
         return next(new AppError('incorrect email or password', 401));
-
       }
     }
   }
@@ -149,10 +148,9 @@ exports.changePassword = (model) => {
     const id = req.user._id;
     req.body.passwordChangedAt = Date.now();
     let user = await model.findById(id);
-    !user && next(new AppError("User not found", 400));
+    !user && next(new AppError('User not found', 400));
     if (await bcrypt.compare(req.body.password, user.password)) {
-      return next(new AppError("This is already your current password", 400));
-
+      return next(new AppError('This is already your current password', 400));
     }
     user = await model.findByIdAndUpdate(id, { password: req.body.password }, { new: true });
     res.status(200).json(user);
@@ -234,11 +232,11 @@ exports.resetPassword = catchAsyncErr(async (req, res, next) => {
   }
 });
 exports.updateProfile = (model) => {
- return catchAsyncErr(async (req, res, next) => {
+  return catchAsyncErr(async (req, res, next) => {
     const id = req.user._id;
 
     if (req.body.email) {
-      let user = await model.findById(id)
+      let user = req.user;
       email = req.body.email;
       if (user.email != email) {
         let isUser = await driverModel.findOne({ email });
@@ -265,8 +263,5 @@ exports.updateProfile = (model) => {
       status: 'success',
       data: updatedUser,
     });
-  }
-
-
-  )
+  });
 };

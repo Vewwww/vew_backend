@@ -45,7 +45,7 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
 // to update specific User
 exports.updateUser = catchAsyncErr(async (req, res, next) => {
   if (req.body.email) {
-    let user = await model.findById(id)
+    let user = req.user;
     email = req.body.email;
     if (user.email != email) {
       let isUser = await driverModel.findOne({ email });
