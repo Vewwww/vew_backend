@@ -5,3 +5,4 @@ exports.signup = authFactory.signup(mechanicModel);
 exports.emailVerify = authFactory.emailVerify(mechanicModel);
 exports.authinticate = authFactory.authinticate(mechanicModel);
 exports.changePassword = authFactory.changePassword(mechanicModel);
+exports.updateProfile=authFactory.updateProfile(mechanicModel)
