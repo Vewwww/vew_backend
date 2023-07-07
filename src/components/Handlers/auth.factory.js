@@ -43,6 +43,10 @@ exports.login = catchAsyncErr(async (req, res, next) => {
 
   let token = jwt.sign({ modelName, userId: user._id }, process.env.JWT_KEY);
 
+  if (user.isSuspended == true) {
+    res.status(403).json({ message: 'user is suspended' });
+  }
+
   if (user.emailConfirm === true) {
     user.logedIn = true;
     user.save();
@@ -231,4 +235,3 @@ exports.resetPassword = catchAsyncErr(async (req, res, next) => {
     res.status(401).json({ message: 'Please check your email' });
   }
 });
-
