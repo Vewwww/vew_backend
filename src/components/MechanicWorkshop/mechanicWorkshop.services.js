@@ -63,42 +63,10 @@ exports.getMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   });
 });
 
-// update specific mechanic with id
-exports.updateMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
-  const id = req.user._id;
-  const mechanic = req.body;
 
-  if (req.body.email) {
-    email = req.body.email;
-    let isUser = await driverModel.findOne({ email });
-    if (!isUser) {
-      isUser = await mechanicModel.findOne({ email });
-      if (!isUser) {
-        isUser = await winchModel.findOne({ email });
-      }
-    }
-    if (isUser) return next(new AppError('user with thes email already exists, please change your email', 401));
-    let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
-    user.emailConfirm = false;
-    user.save();
-    await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, mechanicModel);
-  }
-
-  const updatedMechanic = await mechanicModel.findOneAndUpdate({ _id: id }, mechanic, {
-    new: true,
-  });
-  if (!mechanic) {
-    return next(new AppError('No mechanic found for this id', 404));
-  }
-
-  res.status(201).json({
-    status: 'success',
-    data: updatedMechanic,
-  });
-});
+exports.updateProfile = factory.updateProfile(mechanicModel)
 
 // delete specific mechanic with id
-
 exports.deleteMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
   const deletedMechanic = await mechanicModel.findOneAndDelete({ _id: id });
