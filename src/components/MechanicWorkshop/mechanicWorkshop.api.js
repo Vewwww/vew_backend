@@ -5,7 +5,7 @@ const {
   updateMechanicWorkshop,
   getMechanicWorkshop,
 } = require('./mechanicWorkshop.services');
-const { signup, emailVerify, authinticate, changePassword } = require('./mechanicWorkshop.auth');
+const { signup, emailVerify, authinticate, changePassword, updateProfile } = require('./mechanicWorkshop.auth');
 const { allowedTo } = require('../Handlers/auth.factory');
 const { mechanicValidation, validateLatandLon } = require('./mechanicWorkshop.validator');
 const router = require('express').Router();
@@ -23,7 +23,7 @@ router.post('/signup', mechanicValidation, signup, createMechanicWorkshop);
 router.get('/verify/:token', emailVerify);
 router.patch('/changePassword', authinticate, allowedTo('mechanic'), changePassword);
 router.get('/getMechanicProfile', authinticate, allowedTo('mechanic'), getMechanicWorkshop);
-router.patch('/updateMechanicProfile', authinticate, allowedTo('mechanic'), updateMechanicWorkshop);
+router.patch('/updateMechanicProfile', authinticate, allowedTo('mechanic'), updateProfile);
 
 /////////////////////////   Chat    ////////////////////////////
 router.get('/chat', authinticate, allowedTo('mechanic'), getUserChats);
