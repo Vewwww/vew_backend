@@ -67,40 +67,7 @@ exports.getWinch = catchAsyncErr(async (req, res, next) => {
     data: req.user,
   });
 });
-// update specific winch with id
-exports.updateWinch = catchAsyncErr(async (req, res, next) => {
-  const id = req.user._id;
-  const winch = req.body;
 
-
-  if (req.body.email) {
-    email = req.body.email;
-    let isUser = await driverModel.findOne({ email });
-    if (!isUser) {
-      isUser = await mechanicWorkshopModel.findOne({ email });
-      if (!isUser) {
-        isUser = await winchModel.findOne({ email });
-      }
-    }
-    if (isUser) return next(new AppError('user with thes email already exists, please change your email', 401));
-    let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
-    user.emailConfirm = false;
-    user.save();
-    await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, winchModel);
-  }
-
-  const updatedWinch = await winchModel.findOneAndUpdate({ _id: id }, winch, {
-    new: true,
-  });
-  if (!winch) {
-    return next(new AppError('No winch found for this id', 404));
-  }
-
-  res.status(201).json({
-    status: 'success',
-    data: updatedWinch,
-  });
-});
 
 // delete specific winch with id
 

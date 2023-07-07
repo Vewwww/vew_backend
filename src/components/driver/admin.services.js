@@ -83,18 +83,21 @@ exports.tenModelsHadIssues = catchAsyncErr(async (req, res) => {
   const requests = await requestModel.find().populate('car');
   const modelsHadIssues = {};
   for (const request of requests) {
-    const carModel = request.car.carModel;
-    if (!modelsHadIssues.hasOwnProperty(carModel)) {
-      modelsHadIssues[carModel] = 0;
+    if (request.car && request.car.carModel) {
+      const carModel = request.car.carModel;
+      if (!modelsHadIssues.hasOwnProperty(carModel)) {
+        modelsHadIssues[carModel] = 0;
+      }
+      modelsHadIssues[carModel] += 1;
     }
-    modelsHadIssues[carModel] += 1;
   }
 
-  let topModels = modelsHadIssues.sort((a, b) => modelsHadIssues[b] - modelsHadIssues[a]).slice(0, 10);
+  const topModels = Object.entries(modelsHadIssues)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([key]) => key);
 
-  const top10Models = Object.keys(topModels);
-
-  const hadIssues = await carModel.find({ _id: { $in: top10Models } }).populate('brand');
+  const hadIssues = await carModel.find({ _id: { $in: topModels } }).populate('brand');
   res.status(200).json(hadIssues);
 });
 
