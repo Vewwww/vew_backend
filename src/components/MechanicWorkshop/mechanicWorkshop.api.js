@@ -4,8 +4,9 @@ const {
   getMechanicWorkshops,
   updateMechanicWorkshop,
   getMechanicWorkshop,
+  updateProfile
 } = require('./mechanicWorkshop.services');
-const { signup, emailVerify, authinticate, changePassword, updateProfile } = require('./mechanicWorkshop.auth');
+const { signup, emailVerify, authinticate, changePassword } = require('./mechanicWorkshop.auth');
 const { allowedTo } = require('../Handlers/auth.factory');
 const { mechanicValidation, validateLatandLon } = require('./mechanicWorkshop.validator');
 const router = require('express').Router();

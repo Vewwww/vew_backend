@@ -2,7 +2,7 @@ const { catchAsyncErr } = require('../../utils/CatchAsyncErr');
 const mechanicWorkshopModel = require('../MechanicWorkshop/mechanicWorkshop.model');
 const winchModel = require('../winch/winch.model');
 const driverModel = require('./driver.model');
-const factory = require('../Handlers/auth.factory')
+const factory = require('../Handlers/handler.factory')
 const carModel = require('../carModel/carModel.model');
 const requestModel = require('../request/request.model');
 const AppError = require('../../utils/AppError');
@@ -97,7 +97,11 @@ exports.tenModelsHadIssues = catchAsyncErr(async (req, res) => {
     .slice(0, 10)
     .map(([key]) => key);
 
-  const hadIssues = await carModel.find({ _id: { $in: topModels } }).populate('brand');
+  let hadIssues = await carModel.find({ _id: { $in: topModels } }).populate('brand');
+  hadIssues = hadIssues.map(elm =>{
+    return {model: elm.name, brand:elm.brand.name.en} ; 
+  })
+
   res.status(200).json(hadIssues);
 });
 
