@@ -4,10 +4,7 @@ const ApiFeatures = require('../../utils/ApiFeatures');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const driverModel = require('../driver/driver.model');
-const mechanicWorkshopModel = require('../MechanicWorkshop/mechanicWorkshop.model');
-const gasStationModel = require('../GasStation/gasStation.model');
-const maintenanceCenterModel = require('../MaintenanceCenter/maintenanceCenter.model');
-const { getNearestPlaces } = require('./getNearestPlaces');
+const mechanicModel = require('../MechanicWorkshop/mechanicWorkshop.model');
 const winchModel = require('../winch/winch.model');
 const { sendEmail } = require('./email.factory');
 const schedule = require('node-schedule');
@@ -142,39 +139,37 @@ exports.getAll = (Model) =>
     });
   });
 
+exports.updateProfile = (model) => {
+  return catchAsyncErr(async (req, res, next) => {
+    const id = req.user._id;
 
-
-  exports.updateProfile = (model) => {
-    return catchAsyncErr(async (req, res, next) => {
-      const id = req.user._id;
-  
-      if (req.body.email) {
-        let user = req.user;
-        email = req.body.email;
-        if (user.email != email) {
-          let isUser = await driverModel.findOne({ email });
+    if (req.body.email) {
+      let user = req.user;
+      email = req.body.email;
+      if (user.email != email) {
+        let isUser = await driverModel.findOne({ email });
+        if (!isUser) {
+          isUser = await mechanicModel.findOne({ email });
           if (!isUser) {
-            isUser = await mechanicModel.findOne({ email });
-            if (!isUser) {
-              isUser = await winchModel.findOne({ email });
-            }
+            isUser = await winchModel.findOne({ email });
           }
-          if (isUser) return next(new AppError('user with thes email already exists, please change your email', 401));
-          let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
-          user.emailConfirm = false;
-          user.save();
-          await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, mechanicModel);
         }
+        if (isUser) return next(new AppError('user with thes email already exists, please change your email', 401));
+        let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
+        user.emailConfirm = false;
+        user.save();
+        await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, mechanicModel);
       }
-      const updatedUser = await model.findOneAndUpdate({ _id: id }, req.body, {
-        new: true,
-      });
-      if (!updatedUser) {
-        return next(new AppError('No user found for this id', 404));
-      }
-      res.status(201).json({
-        status: 'success',
-        data: updatedUser,
-      });
+    }
+    const updatedUser = await model.findOneAndUpdate({ _id: id }, req.body, {
+      new: true,
     });
-  };
+    if (!updatedUser) {
+      return next(new AppError('No user found for this id', 404));
+    }
+    res.status(201).json({
+      status: 'success',
+      data: updatedUser,
+    });
+  });
+};
