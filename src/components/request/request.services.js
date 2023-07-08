@@ -174,7 +174,8 @@ exports.acceptMechanicRequest = catchAsyncErr(async (req, res, next) => {
     return next(new AppErr('No request found for this id', 404));
   }
 
-  let roomData = { room: req._id };
+  let roomData = { room:request._id };
+
   socket.emit('emit-request-accepted-or-rejected', roomData) 
 
   request.isActive = true;
