@@ -11,7 +11,7 @@ let data = { room: '64a9a2c8f74c145f4fa795dc' };
 // room : winch or mechanic id   || stackholder winch, mechanic
 socket.emit('join-room', data);
 
-let data = { room: '64a9a2c8f74c145f4fa795dc' };
+data = { room: '64a9a2c8f74c145f4fa795dc' };
 // room: request id              || stackholder driver, winch, mechanic
 socket.emit('join-room', data);
 
