@@ -1,13 +1,10 @@
 const request = require('supertest');
-// const app = 'http://localhost:3000'; // Replace with the path to your app
-const app = require('../../../app');
+const app = 'http://localhost:3000'; // Replace with the path to your app
+// const app = require('../../../app');
 const uuid = require('uuid');
-const driverModel = require('./driver.model');
-const mechanicWorkshopModel = require('../MechanicWorkshop/mechanicWorkshop.model');
-const winchModel = require('../winch/winch.model');
 describe('POST /admin', () => {
   let authToken =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NDkxNzViNTI1Y2M4MTM5ZjNhZmZkNGYiLCJpYXQiOjE2ODc5MTM2Mjd9.aOWz2Gw23S-wtKY9MduRMhy7o69Irt3w7QRe8iQKIvk';
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NGE4OThjOGJhZjQ4N2RkMzA5NTY1NDIiLCJpYXQiOjE2ODg4NTI0Mjh9.BzdQIChI2Inw91VtyqReKsrRqIHDsTeIog2fLnBO_dM';
 
   test('should return 200 if the user is created successfully', async () => {
     const uniqueEmail = `testuser-${uuid.v4()}@gmail.com`;
@@ -25,7 +22,7 @@ describe('POST /admin', () => {
     expect(response.body.emailConfirm).toBe(false);
   });
   authToken =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NDkxNzViNTI1Y2M4MTM5ZjNhZmZkNGYiLCJpYXQiOjE2ODc5MTM2Mjd9.aOWz2Gw23S-wtKY9MduRMhy7o69Irt3w7QRe8iQKIvk';
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NGE4OThjOGJhZjQ4N2RkMzA5NTY1NDIiLCJpYXQiOjE2ODg4NTI0Mjh9.BzdQIChI2Inw91VtyqReKsrRqIHDsTeIog2fLnBO_dM';
   test('should return 200 if the user is created successfully', async () => {
     const uniqueEmail = `test${uuid.v4()}@gmail.com`;
     const response = await request(app).post('/admin').set('Authorization', `Bearer ${authToken}`).send({
@@ -57,7 +54,7 @@ describe('POST /admin', () => {
 });
 describe('GET /admin/seasonsAnalytics', () => {
   let authToken =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NDkxNzViNTI1Y2M4MTM5ZjNhZmZkNGYiLCJpYXQiOjE2ODc5MTM2Mjd9.aOWz2Gw23S-wtKY9MduRMhy7o69Irt3w7QRe8iQKIvk';
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NGE4OThjOGJhZjQ4N2RkMzA5NTY1NDIiLCJpYXQiOjE2ODg4NTI0Mjh9.BzdQIChI2Inw91VtyqReKsrRqIHDsTeIog2fLnBO_dM';
   test('should return status 200 and autumn,spring,summer and winter is defined', async () => {
     const response = await request(app).get('/admin/seasonsAnalytics').set('Authorization', `Bearer ${authToken}`);
     expect(response.status).toBe(200);
@@ -69,7 +66,7 @@ describe('GET /admin/seasonsAnalytics', () => {
 });
 describe('GET /admin/genderAnalytics', () => {
   authToken =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NDkxNzViNTI1Y2M4MTM5ZjNhZmZkNGYiLCJpYXQiOjE2ODc5MTM2Mjd9.aOWz2Gw23S-wtKY9MduRMhy7o69Irt3w7QRe8iQKIvk';
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NGE4OThjOGJhZjQ4N2RkMzA5NTY1NDIiLCJpYXQiOjE2ODg4NTI0Mjh9.BzdQIChI2Inw91VtyqReKsrRqIHDsTeIog2fLnBO_dM';
   test('should return status 200 and male,female percentages', async () => {
     const response = await request(app).get('/admin/genderAnalytics').set('Authorization', `Bearer ${authToken}`);
     expect(response.status).toBe(200);
@@ -77,43 +74,11 @@ describe('GET /admin/genderAnalytics', () => {
     expect(response.body.femaleRatio).toBeDefined();
   });
 });
-describe('POST /allusers/login', () => {
-  // afterAll(async () => {
-  //     await user.dropCollection(user);
-  //     await user.dropDatabase();
-  //     await user.close();
-  //     await app.close();
-  //  });
-  test('should return 200 and token if the user is verified email successfully', async () => {
-    const response = await request(app).post('/allusers/login').send({
-      email: 'vewww.vew@gmail.com',
-      password: '123456',
-    });
-    expect(response.status).toBe(200);
-    expect(response.body.user.emailConfirm).toBe(true);
-    expect(response.body.token).toBeDefined();
-  }, 70000);
-  test('should return 401 if email is incorrect', async () => {
-    const response = await request(app).post('/allusers/login').send({
-      email: 'vewww.vew@gmail',
-      password: '123456',
-    });
-    expect(response.status).toBe(401);
-  }, 70000);
-  test('should return 401 if password is incorrect ', async () => {
-    const response = await request(app).post('/allusers/login').send({
-      email: 'vewww.vew@gmail.com',
-      password: '12',
-    });
-    expect(response.status).toBe(401);
-  }, 70000);
-});
-
 describe('GET /admin/driver', () => {
   const token =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NDkxNzViNTI1Y2M4MTM5ZjNhZmZkNGYiLCJpYXQiOjE2ODgwMTQxODd9.RPU0DL1WBazP_H4jOOwPEaotVM55dXr4jHtlfqVn3Ps';
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NGE4OThjOGJhZjQ4N2RkMzA5NTY1NDIiLCJpYXQiOjE2ODg4NTI0Mjh9.BzdQIChI2Inw91VtyqReKsrRqIHDsTeIog2fLnBO_dM';
   test('should respond with a 200 and send send list of drivers', async () => {
-    const response = await request(app).set('Authorization', `Bearer ${token}`).get('/admin/driver');
+    const response = await request(app).get('/admin/driver');
     expect(response.statusCode).toBe(200);
     response.body.data.forEach((element) => {
       expect(element.role).toBe('user');
@@ -154,7 +119,7 @@ describe('POST /allusers/login', () => {
   }, 70000);
   test('should return 401 if email and password are correct but did not verify email', async () => {
     const response = await request(app).post('/allusers/login').send({
-      email: 'test7aa20990-1a77-4256-87b3-bd33a2c4797d@gmail.com',
+      email: 'test06799bec-df38-49ee-b320-abfc178b298d@gmail.com',
       password: '<PASSWORD>!',
     });
     expect(response.status).toBe(401);
