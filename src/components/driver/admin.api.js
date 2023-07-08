@@ -27,6 +27,11 @@ const {
   updateGasStation,
   deleteGasStation,
 } = require('../GasStation/gasStation.services');
+
+const { createCase } = require("../CBR/Case/case.services");
+const { caseValidation } = require("../CBR/Case/case.validator");
+const { createQuestion } = require("../CBR/Question/question.services");
+const { questionValidation } = require("../CBR/Question/question.validator");
 const { getMechanicWorkshops } = require('../MechanicWorkshop/mechanicWorkshop.services');
 const { getWinches } = require('../winch/winch.services');
 const { resizeImage, uploadSingleFile } = require('../../utils/fileUpload');
@@ -69,7 +74,7 @@ router.get('/winch', authinticate, allowedTo('admin'), getWinches);
 router.get('/driver', authinticate, allowedTo('admin'), getDrivers);
 
 ///////////////////////  Signs  ///////////////////////
-router.route('/sign').post( authinticate, allowedTo('admin'), uploadSingleFile('image'), resizeImage, createSign).get(authinticate, allowedTo('admin'),getSigns);
+router.route('/sign').post(authinticate, allowedTo('admin'), uploadSingleFile('image'), resizeImage, createSign).get(authinticate, allowedTo('admin'), getSigns);
 
 ///////////////////////  Admin  ///////////////////////
 router.route('/').post(authinticate, allowedTo('admin'), addAdmin).get(authinticate, allowedTo('admin'), getUsers);
@@ -81,7 +86,9 @@ router.route('/userStatistics').get(authinticate, allowedTo('admin'), userStatis
 router.get('/genderAnalytics', authinticate, allowedTo('admin'), getGenderAnalytic);
 router.get('/topModelsHadIssues', authinticate, allowedTo('admin'), tenModelsHadIssues);
 router.get('/seasonsAnalytics', authinticate, allowedTo('admin'), getSeasonsAnalytics);
-router.get('/roadsAnalytics',authinticate, allowedTo('admin'), getTopRoadsHadIssue);
-router.get('/:id',authinticate, allowedTo('admin'), getUser);
+router.route("/cbr").post(authinticate, allowedTo('admin'), caseValidation, createCase);
+router.route("/question").post(authinticate, allowedTo('admin'), questionValidation, createQuestion)
+router.get('/roadsAnalytics', authinticate, allowedTo('admin'), getTopRoadsHadIssue);
+router.get('/:id', authinticate, allowedTo('admin'), getUser);
 
 module.exports = router;

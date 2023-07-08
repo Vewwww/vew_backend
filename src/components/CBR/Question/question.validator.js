@@ -13,7 +13,7 @@ const validation = Joi.object({
     ).required()
 }).options({ allowUnknown: true });
 
-questionValidation = async (req, res, next) => {
+exports.questionValidation = async (req, res, next) => {
     const obj = req.body;
 
     const { error } = validation.validate(obj);
@@ -24,4 +24,3 @@ questionValidation = async (req, res, next) => {
     next();
 
 };
-module.exports = questionValidation;

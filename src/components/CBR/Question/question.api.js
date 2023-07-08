@@ -8,7 +8,7 @@ const {
     getAllCategories,
     getQuestionsByCategory
 } = require("./question.services");
-const questionValidation = require("./question.validator");
+const { questionValidation } = require("./question.validator");
 
 const router = express.Router();
 router.route("/category/:category").get(getQuestionsByCategory);
