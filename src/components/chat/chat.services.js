@@ -91,7 +91,7 @@ exports.getUserChats = catchAsyncErr(async (req, res, next) => {
       newChats = true;
     }
     for (let j = 0; j < chats[i].messages.length; j++) {
-      if (chats[i].messages[j].sender != req.user._id && chats[i].messages[j].seen === false) {
+      if (chats[i].messages[j].sender.toString() != req.user._id.toString() && chats[i].messages[j].seen === false) {
         newChats = true;
         await ChatModel.findOneAndUpdate(
           { _id: chats[i]._id, 'messages._id': chats[i].messages[j]._id },
