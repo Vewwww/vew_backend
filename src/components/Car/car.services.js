@@ -9,6 +9,7 @@ const {
   updateCarPeriodicDate,
 } = require('../notification/notification.services');
 const notificationModel = require('../notification/notification.model');
+const driverModel = require('../driver/driver.model');
 
 exports.createCarForSignup = async (car, driverId) => {
   car.owner = driverId;
@@ -107,9 +108,20 @@ exports.getCar = catchAsyncErr(async (req, res, next) => {
 
 exports.deleteCar = catchAsyncErr(async (req, res, next) => {
   const { id } = req.params;
-  const car = carModel.findOne({ _id: id });
+  const car = await carModel.findOne({ _id: id });
+  console.log(car);
   if (!car) {
     return next(new AppError('No car found for this id', 404));
+  }
+
+  const driverCars = await carModel.find({ owner: car.owner });
+  if (driverCars.length < 2) {
+    return next(
+      new AppError(
+        'sorry, system can not delete the only car you have, please add onther car then delete this car',
+        403
+      )
+    );
   }
 
   if (car.carLicenseRenewalNotifition) {
@@ -120,6 +132,7 @@ exports.deleteCar = catchAsyncErr(async (req, res, next) => {
   }
 
   const deletedCar = await carModel.findOneAndDelete({ _id: id });
+
   res.status(204).send({ message: 'deleted' });
 });
 
@@ -128,9 +141,7 @@ exports.getCarsOfDriver = catchAsyncErr(async (req, res, next) => {
   // -lastPeriodicMaintenanceDate -averageMilesPerMonth -miles
   const car = await carModel
     .find({ owner: driverId })
-    .select(
-      '-__v -owner -periodicMaintenanceNotification -carLicenseRenewalNotifition '
-    )
+    .select('-__v -owner -periodicMaintenanceNotification -carLicenseRenewalNotifition ')
     .populate({ path: 'color', select: '-__v' })
     .populate({ path: 'carType', select: '-__v' })
     .populate({ path: 'carModel', select: '-__v -brand' });
