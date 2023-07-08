@@ -96,19 +96,15 @@ exports.search = catchAsyncErr(async (req, res, next) => {
   };
 
   if (keyword) {
-    const workshops = await mechanicWorkshopModel
-      .find(name_query)
-      .populate({ path: 'location', select: 'latitude longitude -_id' });
-    const maintenceCenters = await maintenanceCenterModel.find(ar_en_name_query);
+    const maintenceCenters = await maintenanceCenterModel.find(ar_en_name_query).populate('carType');
     const gasStations = await gasStationModel.find(name_query);
-    name_query.available = true;
-    const winches = await winchModel.find(name_query);
+    name_query.isSuspended=false ;
+    const workshops = await mechanicWorkshopModel.find(name_query).populate('service');
 
     let searchResult = [];
     if (workshops) searchResult.push(...workshops);
     if (maintenceCenters) searchResult.push(...maintenceCenters);
     if (gasStations) searchResult.push(...gasStations);
-    if (winches) searchResult.push(...winches);
 
     searchResult = getNearestPlaces(searchResult, latitude, longitude);
 
@@ -120,16 +116,14 @@ exports.search = catchAsyncErr(async (req, res, next) => {
 
 exports.getNearest = catchAsyncErr(async (req, res, next) => {
   const { latitude, longitude } = req.body;
-  const workshops = await mechanicWorkshopModel.find();
-  const maintenceCenters = await maintenanceCenterModel.find();
+  const workshops = await mechanicWorkshopModel.find({isSuspended:false}).populate('service');
+  const maintenceCenters = await maintenanceCenterModel.find().populate('carType');
   const gasStations = await gasStationModel.find();
-  const winches = await winchModel.find({ available: true });
 
   let searchResult = [];
   if (workshops) searchResult.push(...workshops);
   if (maintenceCenters) searchResult.push(...maintenceCenters);
   if (gasStations) searchResult.push(...gasStations);
-  if (winches) searchResult.push(...winches);
 
   searchResult = getNearestPlaces(searchResult, latitude, longitude);
 

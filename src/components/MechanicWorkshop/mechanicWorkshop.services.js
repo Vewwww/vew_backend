@@ -22,7 +22,7 @@ exports.createMechanicWorkshop = catchAsyncErr(async (req, res, next) => {
 
 exports.getNearestMechanicWorkshop = catchAsyncErr(async (req, res) => {
   const { latitude, longitude } = req.body;
-  let filter = {};
+  let filter = {isSuspended:false};
   if (req.query.service) {
     filter = {
       service: { $type: 'array', $elemMatch: { $eq: req.query.service } },

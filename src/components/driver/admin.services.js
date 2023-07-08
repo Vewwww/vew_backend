@@ -201,6 +201,13 @@ exports.getTopRoadsHadIssue = catchAsyncErr(async (req, res) => {
       acc[road] = count;
       return acc;
     }, {});
+
+    topRoadsHadIssue = Object.entries(topRoadsHadIssue).map(function(keyValuePair) {
+      return {
+        "name": keyValuePair[0],
+        "value": keyValuePair[1]
+      };
+    });
   res.status(200).json(topRoadsHadIssue);
 });
 

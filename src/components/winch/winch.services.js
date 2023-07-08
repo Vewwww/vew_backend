@@ -10,7 +10,7 @@ const mechanicWorkshopModel = require('../MechanicWorkshop/mechanicWorkshop.mode
 const driverModel = require('../driver/driver.model');
 const socket = io(`${process.env.BaseUrl}`);
 
-socket.on('connect', () => { });
+socket.on('connect', () => {});
 
 //rate
 exports.rateWinch = factory.rate(winchModel);
@@ -19,9 +19,9 @@ exports.reportWinch = factory.report(winchModel);
 
 exports.getNearestWinch = catchAsyncErr(async (req, res) => {
   socket.emit('emit-upload-locations');
-  setTimeout(() => { }, 3000);
+  setTimeout(() => {}, 3000);
   const { latitude, longitude } = req.body;
-  const winches = await winchModel.find({ available: true }).select('-logedIn -emailConfirm -__v');
+  const winches = await winchModel.find({ available: true, isSuspended: false }).select('-logedIn -emailConfirm -__v');
   socket.disconnect();
 
   searchResult = getNearestPlaces(winches, latitude, longitude);
@@ -44,7 +44,7 @@ exports.updateWinchLocation = async (data) => {
 };
 
 exports.getWinches = catchAsyncErr(async (req, res, next) => {
-  const winches = await winchModel.find({emailConfirm:true});
+  const winches = await winchModel.find({ emailConfirm: true });
   if (!winches) {
     return next(new AppError('no winch fount', 404));
   }
@@ -67,7 +67,6 @@ exports.getWinch = catchAsyncErr(async (req, res, next) => {
     data: req.user,
   });
 });
-
 
 // delete specific winch with id
 
@@ -109,7 +108,7 @@ exports.updateWinchAvailableState = catchAsyncErr(async (req, res, next) => {
 //     });
 //   });
 
-exports.updateProfile=factory.updateProfile(winchModel)
+exports.updateProfile = factory.updateProfile(winchModel);
 
 // // delete specific winch with id
 
