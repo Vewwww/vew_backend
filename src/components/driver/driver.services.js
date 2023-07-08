@@ -44,8 +44,9 @@ exports.createUser = catchAsyncErr(async (req, res, next) => {
 
 // to update specific User
 exports.updateUser = catchAsyncErr(async (req, res, next) => {
+  let user = req.user;
   if (req.body.email) {
-    let user = req.user;
+    
     email = req.body.email;
     if (user.email != email) {
       let isUser = await driverModel.findOne({ email });
@@ -59,7 +60,7 @@ exports.updateUser = catchAsyncErr(async (req, res, next) => {
       let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
       user.emailConfirm = false;
       user.save();
-      await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, mechanicModel);
+      await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, driverModel);
     }
   }
   if (req.body.driverLisenceRenewalDate) {

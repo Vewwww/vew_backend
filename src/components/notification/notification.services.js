@@ -49,6 +49,7 @@ exports.updateDriverLicenseNotification = async (driverLisenceRenewalDate, nofic
   const message = `your driving lisence renewal date is on ${date}`;
   date.setDate(date.getDate() - 7);
   const notification = await notificationModel.findOneAndUpdate({ _id: noficationId }, { date, message });
+  console.log(notification._id)
   return notification._id;
 };
 

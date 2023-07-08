@@ -152,13 +152,14 @@ exports.updateProfile = (model) => {
           isUser = await mechanicModel.findOne({ email });
           if (!isUser) {
             isUser = await winchModel.findOne({ email });
+            console.log(model);
           }
         }
         if (isUser) return next(new AppError('user with thes email already exists, please change your email', 401));
         let token = jwt.sign({ email }, process.env.EMAIL_JWT_KEY);
         user.emailConfirm = false;
         user.save();
-        await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, mechanicModel);
+        await sendEmail({ email, token, message: 'please verify you are the owner of this email' }, model);
       }
     }
     const updatedUser = await model.findOneAndUpdate({ _id: id }, req.body, {
