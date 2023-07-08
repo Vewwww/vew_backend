@@ -7,7 +7,7 @@ const validation = Joi.object({
     serviceId: Joi.string()
 }).options({ allowUnknown: true });
 
-caseValidation = async (req, res, next) => {
+exports.caseValidation = async (req, res, next) => {
     const obj = req.body;
 
     const { error } = validation.validate(obj);
@@ -18,4 +18,3 @@ caseValidation = async (req, res, next) => {
     next();
 
 };
-module.exports = caseValidation;

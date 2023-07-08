@@ -7,7 +7,7 @@ const {
     deleteCase,
     findSolution
 } = require("./case.services");
-const caseValidation = require("./case.validator");
+const { caseValidation } = require("./case.validator");
 
 const router = express.Router();
 router.route("/cbr").post(findSolution);
