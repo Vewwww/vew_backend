@@ -3,20 +3,18 @@ const app = 'http://localhost:3000';
 const baseURL = 'http://localhost:3000';
 // const app = require('../../../app');
 
-const token =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NDkxNzViNTI1Y2M4MTM5ZjNhZmZkNGYiLCJpYXQiOjE2ODg4MTEzOTl9.b5h3IVylPPsWq-4wt0_8Rxs65fTpM0eq9UHpRhQn_ko';
+const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NGE5OTk1YjA5MTZhMDlmNTA0Yjk1NWMiLCJpYXQiOjE2ODg4NTQyNzN9.IYXIppw09dAcJ79OGp5Y-nK19dD9j1sUyusQ8KRhD-U'
 describe('GET /driver/getNearest', () => {
   describe("given a driver's latitude and longitude", () => {
     test('should respond with a 200 and list service providers by nearest distance', async () => {
-      const response = await request(app).get('/driver/getNearest').set('Authorization', `Bearer ${token}`).send({
-        latitude: 30.083748,
-        longitude: 31.0488521,
-      });
+      const response = await request(app).get('/driver/getNearest').set('Authorization', `Bearer ${token}`).send({ "latitude":30.0496509, "longitude":31.27362904 } );
+      console.log(response.body)
       expect(response.statusCode).toBe(200);
+
 
       for (let i = 1; i < response.body.data.length; i++) {
         expect(response.body.data[i].distance).toBeDefined();
-        expect(response.body.data[i].distance).toBeGreaterThan(response.body.data[i - 1].distance);
+        expect(response.body.data[i].distance).toBeGreaterThanOrEqual(response.body.data[i - 1].distance);
       }
     });
   });

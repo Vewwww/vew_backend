@@ -76,6 +76,8 @@ schema.pre('save', async function (next) {
 });
 schema.pre('findOneAndUpdate', async function () {
   if (!this._update.password) return;
-  this._update.password = await bcrypt.hash(this._update.password, Number(process.env.ROUND));
+  if (!this._update.password.startsWith('$')) {
+    this._update.password = await bcrypt.hash(this._update.password, Number(process.env.ROUND));
+  }
 });
 module.exports = mongoose.model('driver', schema);

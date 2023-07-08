@@ -58,7 +58,7 @@ router.get('/getNearestWinch', validateLatandLon, getNearestWinch);
 
 /////////////////////////   Signs    ////////////////////////////
 router.get('/sign', authinticate, allowedTo('user'), getSigns);
-router.get('/sign/:id', authinticate, allowedTo('user'), getSign);
+router.get('/sign/:id', authinticate, allowedTo('user','admin'), getSign);
 
 /////////////////////////   Request    ////////////////////////////
 router.post('/createMechanicRequest', validateCreateMechanicRequest, authinticate, allowedTo('user'), createRequest);
