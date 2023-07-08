@@ -4,22 +4,22 @@ const baseURL = 'http://localhost:3000';
 // const app = require('../../../app');
 
 const token =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NDliOGRmMzRhYTg0MmU5NjA3ZTQ0OGUiLCJpYXQiOjE2ODgwMTQ4Mzd9.R_lfJRdAnfyR4PuBPFA8yxege3PHYya4dB7Ly2X3I1s';
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2RlbE5hbWUiOiJkcml2ZXIiLCJ1c2VySWQiOiI2NDkxNzViNTI1Y2M4MTM5ZjNhZmZkNGYiLCJpYXQiOjE2ODg4MTEzOTl9.b5h3IVylPPsWq-4wt0_8Rxs65fTpM0eq9UHpRhQn_ko';
 describe('GET /driver/getNearest', () => {
-    describe("given a driver's latitude and longitude", () => {
-      test('should respond with a 200 and list service providers by nearest distance', async () => {
-        const response = await request(app).get('/driver/getNearest').set('Authorization', `Bearer ${token}`).send({
-          latitude: 30.083748,
-          longitude: 31.0488521,
-        });
-        expect(response.statusCode).toBe(200);
-
-        for (let i = 1; i < response.body.data.length; i++) {
-          expect(response.body.data[i].distance).toBeDefined();
-          expect(response.body.data[i].distance).toBeGreaterThan(response.body.data[i - 1].distance);
-        }
+  describe("given a driver's latitude and longitude", () => {
+    test('should respond with a 200 and list service providers by nearest distance', async () => {
+      const response = await request(app).get('/driver/getNearest').set('Authorization', `Bearer ${token}`).send({
+        latitude: 30.083748,
+        longitude: 31.0488521,
       });
+      expect(response.statusCode).toBe(200);
+
+      for (let i = 1; i < response.body.data.length; i++) {
+        expect(response.body.data[i].distance).toBeDefined();
+        expect(response.body.data[i].distance).toBeGreaterThan(response.body.data[i - 1].distance);
+      }
     });
+  });
   describe('given latitude, and missing longitude', () => {
     test('should respond with a 400 and send message error "longitude" is required', async () => {
       const response = await request(app)
